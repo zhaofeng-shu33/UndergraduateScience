@@ -37,43 +37,43 @@
 \begin{document}
 
 
-\U{4f7f}\U{7528}Euclidean algorithm to compute the rational Pad\'{e}
+使用Euclidean algorithm to compute the rational Pad\'{e}
 approximant:
 
-\U{4e3e}\U{4f8b},\U{8bfe}\U{4e0a}\U{4ee5} $\log \left( 1+x\right) $ \U{7684}$%
-R_{2,1}\left( x\right) $\U{4e3a}\U{4f8b},\U{5206}\U{522b}\U{4ecb}\U{7ecd}%
-\U{4e86}\U{7528}\U{89e3}\U{77e9}\U{9635}\U{65b9}\U{7a0b}\U{7ec4}\U{548c}%
-\U{8fde}\U{5206}\U{5f0f}\U{7684}\U{65b9}\U{6cd5}\U{6c42}\U{89e3}\U{6b64}Pad%
-\'{e} approximant,\U{5b9e}\U{9645}\U{4e5f}\U{53ef}\U{7528}\U{9ad8}\U{4ee3}%
-\U{5b66}\U{8fc7}\U{7684}Euclidean algorithm\U{6c42}\U{89e3}\U{4e4b}.$%
+举例,课上以 $\log \left( 1+x\right) $ 的$%
+R_{2,1}\left( x\right) $为例,分别介绍%
+了用解矩阵方程组和%
+连分式的方法求解此Pad%
+\'{e} approximant,实际也可用高代%
+学过的Euclidean algorithm求解之.$%
 R_{2,1}\left( x\right) =\frac{P_{2}\left( x\right) }{Q_{1}\left( x\right) }$
 
-$R_{2,1}\left( x\right) $\U{4e0e}$\tilde{P}\left( x\right) =x-\frac{x^{2}}{2}%
-+\frac{x^{3}}{3}$\U{5728}$0$\U{5904}\U{76f8}\U{7b49} up to \U{4e09}\U{9636}%
-\U{5bfc},\U{53ef}\U{7406}\U{89e3}\U{4e3a}$R_{2,1}\left( x\right) $\U{4f5c}
+$R_{2,1}\left( x\right) $与$\tilde{P}\left( x\right) =x-\frac{x^{2}}{2}%
++\frac{x^{3}}{3}$在$0$处相等 up to 三阶%
+导,可理解为$R_{2,1}\left( x\right) $作
 formal
 
-power series expansion \U{524d}4\U{9879}\U{622a}\U{65ad}\U{4e3a}$\tilde{P}%
-\left( x\right) $,\U{5373}$\frac{P_{2}\left( x\right) }{Q_{1}\left( x\right) 
+power series expansion 前4项截断为$\tilde{P}%
+\left( x\right) $,即$\frac{P_{2}\left( x\right) }{Q_{1}\left( x\right) 
 }=\tilde{P}\left( x\right) \qquad \func{mod}\left( x^{4}\right) $
 
-\U{5373}\U{5b58}\U{5728}\U{591a}\U{9879}\U{5f0f}$K\left( x\right)
+即存在多项式$K\left( x\right)
 ,s.t.P_{2}\left( x\right) (=\tilde{P}\left( x\right) Q_{1}\left( x\right)
 +Q_{1}\left( x\right) K\left( x\right) x^{4})=\tilde{P}\left( x\right)
-Q_{1}\left( x\right) +K_{1}\left( x\right) x^{4},$\U{5176}\U{4e2d}$x^{4}$%
-\U{4e0e}$\tilde{P}\left( x\right) $\U{5df2}\U{77e5},\U{4e8e}\U{662f}\U{53ef}%
-\U{4ee5}\U{7528}Euclidean algorithm\U{5bf9}$x^{4}$\U{4e0e}$\tilde{P}\left(
-x\right) $\U{505a}\U{8f97}\U{8f6c}\U{76f8}\U{9664},\U{76f4}\U{5230}\U{4f59}%
-\U{9879}\U{7684}\U{6b21}\U{6570}\U{4e3a}$2,$\U{53ea}\U{8981}\U{51d1}\U{51fa}$%
+Q_{1}\left( x\right) +K_{1}\left( x\right) x^{4},$其中$x^{4}$%
+与$\tilde{P}\left( x\right) $已知,于是可%
+以用Euclidean algorithm对$x^{4}$与$\tilde{P}\left(
+x\right) $做辗转相除,直到余%
+项的次数为$2,$只要凑出$%
 P_{2}\left( x\right) =\tilde{P}\left( x\right) Q_{1}\left( x\right)
-+K_{1}\left( x\right) x^{4}$\U{7684}\U{8868}\U{8fbe}\U{5f0f}\U{5373}\U{53ef},%
-\U{5bf9}\U{4e8e}\U{6b64}\U{9898},\U{7528}\U{8ba1}\U{7b97}\U{8f6f}\U{4ef6}%
-\U{7b97}\U{4e00}\U{6b65}$x^{4}$\U{5173}\U{4e8e}$\tilde{P}\left( x\right) $%
-\U{7684}\U{5e26}\U{4f59}\U{9664}\U{6cd5}\U{5373}\U{7ed9}\U{51fa}\U{5546}%
-\U{4e3a}$Q_{1}\left( x\right) $\U{4f59}\U{6570}\U{4e3a}$P_{2}\left( x\right)
-.$\U{6ce8}\U{610f}$K_{1}\left( x\right) \left( =Q_{1}\left( x\right) K\left(
-x\right) \right) $\U{5728}\U{8fd9}\U{91cc}\U{53d6}1,\U{4f46}\U{5b83}\U{7684}%
-\U{6b21}\U{6570}\U{662f}\U{5728}\U{6a21}$x^{4}$\U{7684}\U{610f}\U{4e49}%
-\U{4e0b}\U{8bb2}\U{7684}.
++K_{1}\left( x\right) x^{4}$的表达式即可,%
+对于此题,用计算软件%
+算一步$x^{4}$关于$\tilde{P}\left( x\right) $%
+的带余除法即给出商%
+为$Q_{1}\left( x\right) $余数为$P_{2}\left( x\right)
+.$注意$K_{1}\left( x\right) \left( =Q_{1}\left( x\right) K\left(
+x\right) \right) $在这里取1,但它的%
+次数是在模$x^{4}$的意义%
+下讲的.
 
 \end{document}
