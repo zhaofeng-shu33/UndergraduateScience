@@ -1,3 +1,4 @@
+// mkdir -p build && g++ matrix_inverse_with_GJ_Method.cpp -o build/GJ
 #include<iostream>
 #include<fstream>
 #include <cstring>
