@@ -1,0 +1,87 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      2101,         77]
+NotebookOptionsPosition[      1846,         63]
+NotebookOutlinePosition[      2202,         79]
+CellTagsIndexPosition[      2159,         76]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", "3", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"e", "=", "2.71828"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"e1", "=", 
+     RowBox[{"Sum", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"-", "1"}], ")"}], "^", "i"}], "*", 
+        FractionBox[
+         RowBox[{"5", "^", "i"}], 
+         RowBox[{"i", "!"}]]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "0", ",", "9"}], "}"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"e2", "=", 
+     RowBox[{"1", "/", 
+      RowBox[{"Sum", "[", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"5", "^", "i"}], 
+         RowBox[{"i", "!"}]], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", "0", ",", "9"}], "}"}]}], "]"}]}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Abs", "[", 
+      RowBox[{"e1", "-", 
+       RowBox[{"e", "^", 
+        RowBox[{"-", "5"}]}]}], "]"}], ",", 
+     RowBox[{"Abs", "[", 
+      RowBox[{"e2", "-", 
+       RowBox[{"e", "^", 
+        RowBox[{"-", "5"}]}]}], "]"}]}], "}"}]}]}]], "Input",
+ CellChangeTimes->{{3.651442177297686*^9, 3.651442197892864*^9}}]
+},
+WindowSize->{707, 505},
+WindowMargins->{{192, Automatic}, {38, Automatic}},
+FrontEndVersion->"9.0 for Microsoft Windows (32-bit) (2013\:5e742\:670813\
+\:65e5)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 1285, 41, 186, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

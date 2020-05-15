@@ -1,0 +1,168 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      4662,        159]
+NotebookOptionsPosition[      4333,        142]
+NotebookOutlinePosition[      4689,        158]
+CellTagsIndexPosition[      4646,        155]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"scientificIndex", "=", 
+   RowBox[{"Function", "[", 
+    RowBox[{"x", ",", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"t", "=", "0"}], ",", 
+         RowBox[{"x1", "=", "x"}]}], "}"}], ",", 
+       RowBox[{
+        RowBox[{"While", "[", 
+         RowBox[{
+          RowBox[{"x1", ">", "1"}], ",", 
+          RowBox[{
+           RowBox[{"x1", "/=", "10"}], ";", 
+           RowBox[{"t", "++"}], ";"}]}], "]"}], ";", 
+        RowBox[{"While", "[", 
+         RowBox[{
+          RowBox[{"x1", "<", "0.1"}], ",", 
+          RowBox[{
+           RowBox[{"x1", "*=", "10"}], ";", 
+           RowBox[{"t", "--"}], ";"}]}], "]"}], ";", "t"}]}], "]"}]}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"significantFigure", "=", 
+   RowBox[{"Function", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"x", ",", "x1"}], "}"}], ",", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"i", "=", "0"}], ",", 
+         RowBox[{"t", "=", 
+          RowBox[{"scientificIndex", "[", "x1", "]"}]}]}], "}"}], ",", 
+       RowBox[{
+        RowBox[{"While", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Abs", "[", 
+            RowBox[{"x", "-", "x1"}], "]"}], "\[LessEqual]", 
+           RowBox[{"0.5", "*", 
+            RowBox[{"10", "^", 
+             RowBox[{"(", 
+              RowBox[{"t", "-", "i"}], ")"}]}]}]}], ",", 
+          RowBox[{"i", "++"}]}], "]"}], ";", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"SetPrecision", "[", 
+           RowBox[{
+            RowBox[{"N", "[", 
+             RowBox[{"ScientificForm", "[", 
+              FractionBox[
+               RowBox[{"Abs", "[", 
+                RowBox[{"x", "-", "x1"}], "]"}], "x"], "]"}], "]"}], ",", 
+            "3"}], "]"}], ",", 
+          RowBox[{"i", "-", "1"}]}], "}"}]}]}], "]"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"e", "=", "2.7182818"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"list", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"e", ",", "e", ",", 
+       FractionBox["e", "100"], ",", 
+       FractionBox["e", "100"]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2.7", ",", "2.718", ",", "0.027", ",", "0.02718"}], "}"}]}], 
+    "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"MapThread", "[", 
+  RowBox[{"significantFigure", ",", "list"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6552479210483456`*^9, 3.6552479373191743`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     TagBox[
+      InterpretationBox[
+       RowBox[{"\<\"6.73\"\>", "\[Times]", 
+        SuperscriptBox["10", "\<\"-3\"\>"]}],
+       0.0067254984380206691`3.,
+       AutoDelete->True],
+      ScientificForm], ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TagBox[
+      InterpretationBox[
+       RowBox[{"\<\"1.04\"\>", "\[Times]", 
+        SuperscriptBox["10", "\<\"-4\"\>"]}],
+       0.00010366842760755`3.,
+       AutoDelete->True],
+      ScientificForm], ",", "4"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TagBox[
+      InterpretationBox[
+       RowBox[{"\<\"6.73\"\>", "\[Times]", 
+        SuperscriptBox["10", "\<\"-3\"\>"]}],
+       0.0067254984380207107`3.,
+       AutoDelete->True],
+      ScientificForm], ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TagBox[
+      InterpretationBox[
+       RowBox[{"\<\"1.04\"\>", "\[Times]", 
+        SuperscriptBox["10", "\<\"-4\"\>"]}],
+       0.0001036684276075296`3.,
+       AutoDelete->True],
+      ScientificForm], ",", "4"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.6551991924489985`*^9, 3.6552479493139935`*^9}]
+}, Open  ]]
+},
+WindowSize->{707, 505},
+WindowMargins->{{Automatic, 239}, {24, Automatic}},
+FrontEndVersion->"9.0 for Microsoft Windows (32-bit) (2013\:5e742\:670813\
+\:65e5)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 2556, 76, 250, "Input"],
+Cell[3138, 100, 1179, 39, 33, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
