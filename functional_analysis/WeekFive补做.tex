@@ -240,7 +240,7 @@ n}{\sum }}\beta _{i}\alpha _{i}\implies \underset{i=1}{\overset{n}{\sum }}%
 $\left( B\right) \implies \left( A\right) :$Notice that in this problem
 there is no norm defined in E.
 
-The proof should rely on induction. for n=1,if f1 \U{4e0d}\U{6052}\U{4e3a}0,
+The proof should rely on induction. for n=1,if f1 不恒为0,
 we can find $x,s.t.$
 
 $f_{1}\left( x\right) =\alpha _{1}.$ Suppose the conclusion is true for
@@ -251,7 +251,7 @@ $
 If we assume $\left( \alpha _{1},..\alpha _{k}\right) \notin R\left( \varphi
 \right) ,$where $\varphi \left( x\right) =\left( f_{1}\left( x\right)
 ,..f_{k}\left( x\right) \right) ,$using the conclusion from Ex 1.9, we can
-find $\beta _{1},..\beta _{k}$ \U{4e0d}\U{5168}\U{4e3a}\U{96f6},s.t. $\beta
+find $\beta _{1},..\beta _{k}$ 不全为零,s.t. $\beta
 _{1}f_{1}+..+\beta _{k}f_{k}\left( x\right) $ $\leq \beta _{1}\alpha
 _{1}+..+\beta _{k}\alpha _{k},\forall x\in E\implies \beta
 _{1}f_{1}+..+\beta _{k}f_{k}=0.$
@@ -259,31 +259,31 @@ _{1}f_{1}+..+\beta _{k}f_{k}=0.$
 \bigskip If $f_{k}$ is linear indepedent with $f_{1},..f_{k-1},$then $\beta
 _{k}=0\implies $ $\beta _{1}f_{1}+..+\beta _{k-1}f_{k-1}=0,$
 
-\U{5bf9}\U{4e0d}\U{5168}\U{4e3a}\U{96f6}\U{7684}$\left( \beta _{1},..\beta
-_{k-1}\right) $\U{6210}\U{7acb},\U{8fd9}\U{4e0e}$\left(
-f_{1},..f_{k-1}\right) $ are linearly indepedent\U{77db}\U{76fe}.
+对不全为零的$\left( \beta _{1},..\beta
+_{k-1}\right) $成立,这与$\left(
+f_{1},..f_{k-1}\right) $ are linearly indepedent矛盾.
 
 Then $f_{k}$ is linear depedent with $f_{1},..f_{k-1},\implies \exists
 \left( \beta _{1},..\beta _{k-1}\right) \in R^{k-1},s.t.f_{k}=\beta
 _{1}f_{1}+..+\beta _{k-1}f_{k-1}$
 
-\U{7531}\U{6761}\U{4ef6}B,$\alpha _{k}=\beta _{1}\alpha _{1}+..+\beta
+由条件B,$\alpha _{k}=\beta _{1}\alpha _{1}+..+\beta
 _{k-1}\alpha _{k-1},$
 
 $f_{k}\left( x\right) =\beta _{1}f_{1}\left( x\right) +..+\beta
 _{k-1}f_{k-1}\left( x\right) =\beta _{1}\alpha _{1}+..+\beta _{k-1}\alpha
 _{k-1}=\alpha _{k}.$
 
-\U{56e0}\U{6b64}\U{5bf9}$\left( f_{1},..f_{k-1}\right) $ are linearly
-indepedent\U{7684}\U{60c5}\U{5f62}n=k\U{4e5f}\U{6210}\U{7acb}.
+因此对$\left( f_{1},..f_{k-1}\right) $ are linearly
+indepedent的情形n=k也成立.
 
-\U{4e00}\U{822c}\U{7684},\U{53ef}\U{4ee5}\U{4ece}$\left(
-f_{1},..f_{k-1}\right) $\U{4e2d}\U{53d6}\U{51fa}\U{6781}\U{5927}\U{65e0}%
-\U{5173}\U{7ec4},\U{8fd9}\U{65f6}\U{6784}\U{9020}\U{7684}$\varphi $\U{7684}%
-\U{7ef4}\U{6570}\U{5c31}\U{8981}\U{76f8}\U{5e94}\U{5730}\U{964d}\U{4e3a}%
-\U{6781}\U{5927}\U{65e0}\U{5173}\U{7ec4}\U{7684}\U{7ef4}\U{6570}.\U{7531}%
-\U{5f52}\U{7eb3}\U{5047}\U{8bbe}\U{53ef}\U{77e5}\U{5bf9}\U{4efb}\U{610f}%
-\U{6b63}\U{6574}\U{6570}n$\left( B\right) \implies \left( A\right) $\U{6210}%
-\U{7acb}.
+一般的,可以从$\left(
+f_{1},..f_{k-1}\right) $中取出极大无%
+关组,这时构造的$\varphi $的%
+维数就要相应地降为%
+极大无关组的维数.由%
+归纳假设可知对任意%
+正整数n$\left( B\right) \implies \left( A\right) $成%
+立.
 
 \end{document}
