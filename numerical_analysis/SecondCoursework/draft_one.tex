@@ -1,8 +1,7 @@
-\documentclass[10pt]{article}
+\documentclass[10pt]{ctexart}
 \newcounter{myCounter}
 \newcommand{\head}[1]{\textbf{#1}}
 \newcommand{\keyword}[2][\bfseries]{{#1#2}}
-\usepackage{CJK}%preamble part
 \usepackage{graphicx}
 \usepackage{epstopdf}
 \usepackage[colorlinks,
@@ -13,35 +12,34 @@
 \begin{document}
 
 
-\begin{CJK}{GBK}{song}
-\title{¼ÆËãÊµ¼ùµÚ¶şÖÜ×÷Òµ} % This is the title
-\author{Êı33 ÕÔ·á 2013012178}
+\title{è®¡ç®—å®è·µç¬¬äºŒå‘¨ä½œä¸š} % This is the title
+\author{æ•°33 èµµä¸° 2013012178}
 \date{Auguest 26,2016}
 \maketitle
 \section{Abstract}
-·Ö±ğÓÃÏÔÊ½Å·À­·¨ºÍÌİĞÎ·¨¸ø³ö\fbox{\keyword[\itshape]{Adams-Bashforth}}
-Çó½âµÄ³õÖµÌõ¼ş£¬Ó¡Ö¤¿ÎÉÏ½²µÄÁ½ÖÖ¸ø³õÖµµÄ·½·¨¾ùÊÇ¶ş½×µÄ¡£
+åˆ†åˆ«ç”¨æ˜¾å¼æ¬§æ‹‰æ³•å’Œæ¢¯å½¢æ³•ç»™å‡º\fbox{\keyword[\itshape]{Adams-Bashforth}}
+æ±‚è§£çš„åˆå€¼æ¡ä»¶ï¼Œå°è¯è¯¾ä¸Šè®²çš„ä¸¤ç§ç»™åˆå€¼çš„æ–¹æ³•å‡æ˜¯äºŒé˜¶çš„ã€‚
 \section{presentation}
 \setlength{\parindent}{2em}
-  ¶Ô¸ø¶¨µÄ2²½ÏÔÊ½µÄ\fbox{\keyword[\itshape]{Adams-Bashforth}} ·½·¨:
+  å¯¹ç»™å®šçš„2æ­¥æ˜¾å¼çš„\fbox{\keyword[\itshape]{Adams-Bashforth}} æ–¹æ³•:
   
-ÆäµÚÒ»ÌØÕ÷¶àÏîÊ½Îª\(x^2-x=0\),ÓĞÁ½¸öµ¥¸ù\(x=0,1\),¹Ê¸Ã·½·¨ÊÇ\keyword{ÎÈ¶¨}µÄ¡£
-Æä¾Ö²¿½Ø¶ÏÎó²îÎª\(T_{n+2}=0.42h^3O(1)\),
-ÆäÖĞO(1)Îª\(y^{(3)}(x_n)\)µÄÁ¿¼¶¡£ ¹Ê¸Ã·½·¨µÄÊÕÁ²½×Îª2£¬Ó¦Ñ¡È¡¾Ö²¿½Ø¶ÏÎó²îÎª$O(h^2)$µÄµ¥²½·½·¨¸ø³õÖµ¡£
+å…¶ç¬¬ä¸€ç‰¹å¾å¤šé¡¹å¼ä¸º\(x^2-x=0\),æœ‰ä¸¤ä¸ªå•æ ¹\(x=0,1\),æ•…è¯¥æ–¹æ³•æ˜¯\keyword{ç¨³å®š}çš„ã€‚
+å…¶å±€éƒ¨æˆªæ–­è¯¯å·®ä¸º\(T_{n+2}=0.42h^3O(1)\),
+å…¶ä¸­O(1)ä¸º\(y^{(3)}(x_n)\)çš„é‡çº§ã€‚ æ•…è¯¥æ–¹æ³•çš„æ”¶æ•›é˜¶ä¸º2ï¼Œåº”é€‰å–å±€éƒ¨æˆªæ–­è¯¯å·®ä¸º$O(h^2)$çš„å•æ­¥æ–¹æ³•ç»™åˆå€¼ã€‚
 
-ÈôÓÃ¸Ã·½·¨Çó½â $$ Y'(t)=-Y(t)+2cos(t),Y(0)=1 $$
-¸Ã·½·¨µÄ×¼È·½âÎª$Y(t)=sin(t)+cos(t)$ÓÃ$h=0.1$Å·À­·¨¸ø³õÖµÇó½âºó×÷³öÆäÍ¼ÏñÈçÏÂËùÊ¾:
+è‹¥ç”¨è¯¥æ–¹æ³•æ±‚è§£ $$ Y'(t)=-Y(t)+2cos(t),Y(0)=1 $$
+è¯¥æ–¹æ³•çš„å‡†ç¡®è§£ä¸º$Y(t)=sin(t)+cos(t)$ç”¨$h=0.1$æ¬§æ‹‰æ³•ç»™åˆå€¼æ±‚è§£åä½œå‡ºå…¶å›¾åƒå¦‚ä¸‹æ‰€ç¤º:
 \begin{figure}[!ht]
 \centering
 \includegraphics[scale=0.4]{figure1.eps}
 \caption{\(sin(x)+cos(x)\)}
 \end{figure}
 
-È¡Ê±¼ä²½³¤·Ö±ğÎª$$h=0.1,0.05,0.025,0.0125$$
-¼ÆËã½á¹ûÈçÏÂ±íËùÊ¾:\\
+å–æ—¶é—´æ­¥é•¿åˆ†åˆ«ä¸º$$h=0.1,0.05,0.025,0.0125$$
+è®¡ç®—ç»“æœå¦‚ä¸‹è¡¨æ‰€ç¤º:\\
 
 \begin{table}[!ht]
-\caption{ÏÔÊ½Å·À­·¨×¼±¸³õÖµ \qquad\qquad\quad ÌİĞÎ·¨×¼±¸³õÖµ}
+\caption{æ˜¾å¼æ¬§æ‹‰æ³•å‡†å¤‡åˆå€¼ \qquad\qquad\quad æ¢¯å½¢æ³•å‡†å¤‡åˆå€¼}
 \begin{tabular}{ccccp{1.5cm}}
 \hline
 \head{h} & \head{t} & \head{y(t)} & \head{Error} & \head{Relative Error} \\
@@ -64,12 +62,12 @@
 \end{tabular}
 \end{table}
 
-ÓÉÉÏ±í¿ÉÒÔ¿´³öt=3Ö®ºóÁ½ÖÖ·½·¨µÄÊıÖµÎó²îÒÑ¾­·Ç³£½Ó½ü£¬¸üÏêÏ¸µÄÎó²î±í¿É²Î¼û£º\href{multiframe.html}{Îó²î±í}
-ÓÉLog-LogÍ¼¿ÉµÃµ½Á½ÖÖ·½·¨µÄÊÕÁ²½×ÈçÏÂ±í:\\
+ç”±ä¸Šè¡¨å¯ä»¥çœ‹å‡ºt=3ä¹‹åä¸¤ç§æ–¹æ³•çš„æ•°å€¼è¯¯å·®å·²ç»éå¸¸æ¥è¿‘ï¼Œæ›´è¯¦ç»†çš„è¯¯å·®è¡¨å¯å‚è§ï¼š\href{multiframe.html}{è¯¯å·®è¡¨}
+ç”±Log-Logå›¾å¯å¾—åˆ°ä¸¤ç§æ–¹æ³•çš„æ”¶æ•›é˜¶å¦‚ä¸‹è¡¨:\\
 
 \begin{tabular}{ccc}
 \hline
-\head{h} & \head{ÏÔÊ½Å·À­·¨×¼±¸³õÖµ} & \head{ÌİĞÎ·¨×¼±¸³õÖµ}\\
+\head{h} & \head{æ˜¾å¼æ¬§æ‹‰æ³•å‡†å¤‡åˆå€¼} & \head{æ¢¯å½¢æ³•å‡†å¤‡åˆå€¼}\\
 \hline
 2  & 1.94 & 1.97\\
 3  & 1.99 & 2.00\\
@@ -77,6 +75,5 @@
 \end{tabular}
 
 \section{bibliography}
-\end{CJK}
 
 \end{document}
