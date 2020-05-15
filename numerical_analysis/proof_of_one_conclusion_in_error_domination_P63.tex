@@ -1,0 +1,67 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Thursday, October 01, 2015 13:14:29}
+%TCIDATA{LastRevised=Thursday, October 01, 2015 13:23:51}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{macros.tex}
+
+\begin{document}
+
+
+Proof of Thm 4.3 lefthand in textbook P63
+
+$Ax=b,A$ is a $n\times n$ real matrix, $b$ is a n-dimensional column vector,
+x is the solution of this linear
+
+equation. Suppose $\widetilde{x}$ is the approximate solution to the
+equation, corresponding to the remaider 
+
+$r=b-A\widetilde{x}.$Then 
+
+$\frac{1}{cond(A)}\frac{\left\Vert r\right\Vert }{\left\Vert b\right\Vert }%
+\leq \frac{\left\Vert \widetilde{x}-x\right\Vert }{\left\Vert x\right\Vert }.
+$
+
+Proof: $r=A\left( x-\widetilde{x}\right) .$
+
+$\frac{1}{cond(A)}\frac{\left\Vert r\right\Vert }{\left\Vert b\right\Vert }=%
+\frac{1}{\left\Vert A\right\Vert \left\Vert A^{-1}\right\Vert }\frac{%
+\left\Vert A\left( x-\widetilde{x}\right) \right\Vert }{\left\Vert
+b\right\Vert }\leq \frac{1}{\left\Vert A\right\Vert \left\Vert
+A^{-1}\right\Vert }\frac{\left\Vert A\right\Vert \left\Vert \left( x-%
+\widetilde{x}\right) \right\Vert }{\left\Vert b\right\Vert }=\frac{%
+\left\Vert \left( x-\widetilde{x}\right) \right\Vert }{\left\Vert
+A^{-1}\right\Vert \left\Vert b\right\Vert }\leq \frac{\left\Vert \left( x-%
+\widetilde{x}\right) \right\Vert }{\left\Vert A^{-1}b\right\Vert }=\frac{%
+\left\Vert \widetilde{x}-x\right\Vert }{\left\Vert x\right\Vert }$
+
+\end{document}

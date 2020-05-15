@@ -1,0 +1,318 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Monday, October 19, 2015 23:38:54}
+%TCIDATA{LastRevised=Thursday, October 29, 2015 00:54:06}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{macros.tex}
+
+\begin{document}
+
+
+\bigskip \U{8d75}\U{4e30} 2013012178 Numerical Analysis \U{7b2c}\U{56db}%
+\U{7ae0}\U{7eb8}\U{5236}\U{4f5c}\U{4e1a}
+
+\FRAME{ftbpF}{4.4996in}{0.3727in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";display "USEDEF";valid_file "T";width
+4.4996in;height 0.3727in;depth 0pt;original-width 5.8764in;original-height
+0.7498in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'NWKFKQ07.wmf';tempfile-properties "XPR";}}
+
+\bigskip a\U{4e3a}\U{65b9}\U{7a0b}$f\left( x\right) =x^{2}-a$\U{5728}\U{67d0}%
+\U{95ed}\U{533a}\U{95f4}\U{4e0a}\U{7684}\U{5355}\U{6839},
+
+\U{7531}\U{8fed}\U{4ee3}\U{51fd}\U{6570}\U{7684}\U{6784}\U{9020}\U{53ef}%
+\U{77e5}:$\varphi _{3}\left( x\right) =x-\frac{f\left( x\right) }{f^{\prime
+}\left( x\right) }+\frac{f\left( x\right) ^{2}}{2}\frac{d^{2}}{dt^{2}}%
+f^{-1}\left( t\right) _{|t=f\left( x\right) }$
+
+$=x-\frac{x^{2}-a}{2x}+\frac{\left( x^{2}-a\right) ^{2}}{2}\frac{d^{2}}{%
+dt^{2}}\sqrt{t+a}_{|t=x^{2}-a}=\frac{x}{2}+\frac{a}{2x}-\frac{\left(
+x^{2}-a\right) ^{2}}{2}\frac{1}{4x^{3}}=\allowbreak \allowbreak \frac{3}{8}x+%
+\frac{3}{4}\frac{a}{x}-\frac{1}{8}\frac{a^{2}}{x^{3}}.$
+
+\FRAME{ftbpF}{5.118in}{0.6849in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";display "USEDEF";valid_file "T";width
+5.118in;height 0.6849in;depth 0pt;original-width 13.1555in;original-height
+1.2081in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'NWVPGE00.wmf';tempfile-properties "XPR";}}
+
+\U{7531}\U{8bfe}\U{672c}P111 Thm3.2\U{77e5}\U{6b64}\U{65f6}$\alpha $\U{4e5f}%
+\U{662f}\U{52a0}\U{901f}\U{540e}\U{7684}\U{51fd}\U{6570}$\psi \left(
+x\right) =x-\frac{\left[ \phi \left( x\right) -x\right] ^{2}}{\phi \left(
+\phi \left( x\right) \right) -2\phi \left( x\right) +x}$ \U{7684}\U{4e0d}%
+\U{52a8}\U{70b9},\U{4e3a}\U{8bc1}$\psi \left( x\right) $\U{4ea7}\U{751f}%
+\U{7684}\U{8fed}\U{4ee3}\U{5e8f}\U{5217}\U{81f3}\U{5c11}2\U{9636}\U{6536}%
+\U{655b},\U{53ea}\U{9700}\U{8bc1}$\psi ^{\prime }\left( \alpha \right) =0,$%
+\U{4e3a}\U{6b64},\U{5148}\U{5bf9}$\phi \left( x\right) $\U{5728}$\alpha $%
+\U{5904}\U{505a}Taylor expansion\U{5f97}: $\phi (x)=\alpha +\left( x-\alpha
+\right) \phi ^{\prime }\left( \alpha \right) +o(x-\alpha )$
+
+$\phi \left( \phi \left( x\right) \right) =\alpha +\left( \alpha +\left(
+x-\alpha \right) \phi ^{\prime }\left( \alpha \right) +o(x-\alpha )-\alpha
+\right) \phi ^{\prime }\left( \alpha \right) $
+
+$+\left( \alpha +\left( x-\alpha \right) \phi ^{\prime }\left( \alpha
+\right) +o(x-\alpha )-\alpha \right) o\left( 1\right) =\alpha +\left(
+x-\alpha \right) \phi ^{\prime 2}\left( \alpha \right) +o(x-\alpha )$
+
+$\left( \text{Noticing that }\frac{d}{dx}\phi \left( \phi \left( x\right)
+\right) _{|x=\alpha }=\phi ^{\prime 2}\left( \alpha \right) ,\text{it is
+also possible to directly expand }\phi \left( \phi \left( x\right) \right)
+\right) $
+
+$\phi \left( x\right) -x=\left( x-\alpha \right) \left( -1+\phi ^{\prime
+}\left( \alpha \right) +o\left( 1\right) \right) $
+
+$\implies \psi \left( x\right) =x-\frac{\left[ \phi \left( x\right) -x\right]
+^{2}}{\phi \left( \phi \left( x\right) \right) -2\phi \left( x\right) +x}=x-%
+\frac{\left( x-\alpha \right) ^{2}\left( -1+\phi ^{\prime }\left( \alpha
+\right) +o\left( 1\right) \right) ^{2}}{\alpha +\left( x-\alpha \right) \phi
+^{\prime 2}\left( \alpha \right) +o(x-\alpha )-2\left[ \alpha +\left(
+x-\alpha \right) \phi ^{\prime }\left( \alpha \right) +o(x-\alpha )\right] +x%
+}$
+
+$=x-\frac{\left( x-\alpha \right) ^{2}\left( -1+\phi ^{\prime }\left( \alpha
+\right) +o\left( 1\right) \right) ^{2}}{x-\alpha +\left( x-\alpha \right)
+(\phi ^{\prime 2}\left( \alpha \right) -2\phi ^{\prime }\left( \alpha
+\right) )+o(x-\alpha )}=x-\frac{\left( x-\alpha \right) \left( -1+\phi
+^{\prime }\left( \alpha \right) +o\left( 1\right) \right) ^{2}}{\left( \phi
+^{\prime }\left( \alpha \right) -1\right) ^{2}+o(1)}$
+
+$\frac{\psi \left( x\right) -\alpha }{x-\alpha }=1-\frac{\left( -1+\phi
+^{\prime }\left( \alpha \right) +o\left( 1\right) \right) ^{2}}{\left( \phi
+^{\prime }\left( \alpha \right) -1\right) ^{2}+o(1)},$notice that $\phi
+^{\prime }\left( \alpha \right) -1\neq 0\implies \frac{d}{dx}\psi \left(
+x\right) _{|x=\alpha }=\underset{x->\alpha }{\lim }\frac{\psi \left(
+x\right) -\alpha }{x-\alpha }=1-\frac{\left( -1+\phi ^{\prime }\left( \alpha
+\right) \right) ^{2}}{\left( \phi ^{\prime }\left( \alpha \right) -1\right)
+^{2}}=0\boxtimes $
+
+\FRAME{ftbpF}{5.7778in}{1.1848in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";display "USEDEF";valid_file "T";width
+5.7778in;height 1.1848in;depth 0pt;original-width 13.044in;original-height
+2.6256in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'NWVR9401.wmf';tempfile-properties "XPR";}}
+
+$\left( 1\right) $ $\phi \left( x\right) =x-\frac{f\left( x\right) }{%
+f^{\prime }\left( x\right) }=x-\frac{x^{3}-3x-1}{3x^{2}-3}=\allowbreak \frac{%
+1}{3}\frac{2x^{3}+1}{x^{2}-1};$
+
+$x_{0}=2,x_{1}=\phi \left( x_{0}\right) =\allowbreak \frac{1}{3}\frac{%
+2\times 2^{3}+1}{2^{2}-1}=\allowbreak \frac{17}{9};$
+
+$x_{2}=\phi \left( x_{1}\right) =\allowbreak \frac{1}{3}\frac{2\times \left( 
+\frac{17}{9}\right) ^{3}+1}{\left( \frac{17}{9}\right) ^{2}-1}=\allowbreak 
+\frac{10\,555}{5616}=\allowbreak 1.\,\allowbreak 879\,5.$
+
+$x_{2}$ has four-digits significant figure.
+
+$\left( 2\right) x_{0}=1,x_{1}=2,$by the formula of recursion: $%
+x_{k+1}=x_{k}-\frac{f\left( x_{k}\right) \left( x_{k}-x_{k-1}\right) }{%
+f\left( x_{k}\right) -f\left( x_{k-1}\right) },$
+
+$x_{2}=2-\frac{f\left( 2\right) }{f\left( 2\right) -f\left( 1\right) }=\frac{%
+7}{4};$
+
+$x_{3}=x_{2}-\frac{f\left( x_{2}\right) \left( x_{2}-x_{1}\right) }{f\left(
+x_{2}\right) -f\left( x_{1}\right) }=\frac{7}{4}-\frac{f\left( \frac{7}{4}%
+\right) \left( -\frac{1}{4}\right) }{f\left( \frac{7}{4}\right) -1}=\frac{226%
+}{121};$
+
+Similarly, $x_{4}=1.8806,x_{5}=1.8793,$which has four-digits significant
+figure.
+
+$\left( 3\right) $Take $x_{0}=1,x_{1}=1.5,x_{2}=2,$programming gives the
+following results:
+
+$x_{3}=1.87394,$which already has four-digits significant figure.
+
+\FRAME{ftbpF}{5.4094in}{0.7195in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";display "USEDEF";valid_file "T";width
+5.4094in;height 0.7195in;depth 0pt;original-width 13.1002in;original-height
+1.2782in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'NWVTEP02.wmf';tempfile-properties "XPR";}}
+
+Newton's Method:$\phi \left( x\right) =x-\frac{f\left( x\right) }{f^{\prime
+}\left( x\right) }=x-\frac{\left( \frac{x}{2}-\sin x\right) }{1-2\cos x}%
+,x_{0}=\frac{\pi }{2},$programming gives the following results:
+
+\{x$_{1}=$1.7854, x$_{2}=$1.84456, 1.87083, 1.88335, 1.88946, 1.89249,
+1.89399,
+
+1.89475, 1.89512, 1.89531, 1.8954, 1.89545, 1.89547, 1.89548, x$_{15}=$%
+1.89549\}
+
+$\implies x_{12}=$1.89545 has 5-digits significant figure.
+
+Let $\mu \left( x\right) =\frac{f\left( x\right) }{f^{\prime }\left(
+x\right) }=\frac{\left( \frac{x}{2}-\sin x\right) }{1-2\cos x},$then $\mu
+\left( x\right) $ has the same root with $f\left( x\right) $ but with
+multiplicity one. Using Newton's Method for $\mu \left( x\right) $ gives: $%
+\phi \left( x\right) =x-\frac{\mu \left( x\right) }{\mu ^{\prime }\left(
+x\right) }=\FRAME{itbpF}{1.9865in}{0.4696in}{0in}{}{}{Figure}{\special%
+{language "Scientific Word";type "GRAPHIC";display "USEDEF";valid_file
+"T";width 1.9865in;height 0.4696in;depth 0in;original-width
+2.5624in;original-height 0.5941in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'NWVUWL04.wmf';tempfile-properties "XPR";}}.$
+
+$x_{0}=\frac{\pi }{2},$programming gives the following results:
+
+\{1.80175, 1.88963, x$_{3}=$1.89547, 1.89549, 1.89549\}, and x$_{3}$ has
+5-digits significant figure.
+
+\FRAME{ftbpF}{4.5in}{0.9in}{0in}{}{}{Figure}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"T";width 4.5in;height 0.9in;depth 0in;original-width
+12.8217in;original-height 2.501in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'NWXTF500.wmf';tempfile-properties "XPR";}}
+
+Solution: $Jf=\left( 
+\begin{array}{cc}
+A-\lambda I & -x \\ 
+2x^{T} & 0%
+\end{array}%
+\right) _{\left( n+1\right) ^{2}},$where $A-\lambda I$ is a n$\times n$
+matrix and $x\in R.$ 
+
+the iteration function is $\phi \binom{x}{\lambda }=\binom{x}{\lambda }%
+-\left( Jf\right) ^{-1}\binom{Ax-\lambda x}{x^{T}x-1}.$Below we give
+analytic simplification of $\phi \binom{x}{\lambda },$ such method is said
+to be important because if we have $\left( x^{T},\lambda \right) $ near to
+the exact eigenvector $\left( \text{but }\lambda \neq \lambda _{\func{real}%
+}\right) $and eigenvalue of A and we also assume the normalization condition
+x$^{T}x=1$,then we can proceed one-step Newton's method and get a more
+accurate solution, the result is $\binom{\frac{\left( A-\lambda I\right)
+^{-1}x}{x^{T}\left( A-\lambda I\right) ^{-1}x}}{\lambda +\frac{1}{%
+x^{T}\left( A-\lambda I\right) ^{-1}x}}.$ This is the 
+
+solution to the linear equation system $\binom{x_{s}}{\lambda _{s}}=\phi 
+\binom{x}{\lambda }_{|x^{T}x=1},$and we can verify this result by
+rearranging this equation $Jf\binom{x_{s}-x}{\lambda _{s}-\lambda }=-\binom{%
+Ax-\lambda x}{0}.$Below is another approach to get the same equation system:
+
+\FRAME{ftbpF}{4.4996in}{2.0461in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";display "USEDEF";valid_file "T";width
+4.4996in;height 2.0461in;depth 0pt;original-width 7.0309in;original-height
+4.3647in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'NWXULY01.wmf';tempfile-properties "XPR";}}
+
+Notice that in the one dimensional equation, $2x^{T}\left( x_{s}-x\right) =0,
+$2 is trivial and (4.4) is equivalent to
+
+$\binom{x_{s}}{\lambda _{s}}=\phi \binom{x}{\lambda }_{|x^{T}x=1}.$
+
+To get an explicit expression of $\phi \binom{x}{\lambda },$we need to
+calculate $Jf^{-1}.$We assume that the initial value $\lambda _{0}$ is not 
+
+the eigenvalue of A, otherwise we can solve $\left( A-\lambda I\right) x=0$
+to get the exact solution of  $F\binom{x}{\lambda }=0.$
+
+We can assume the inverse matrix of $Jf$ has the form $Jf^{-1}=\left( 
+\begin{array}{cc}
+B & \beta  \\ 
+\alpha ^{T} & c%
+\end{array}%
+\right) ,$
+
+\bigskip Using the relation  $Jf\cdot Jf^{-1}=I_{n+1}$ gives: $\left(
+A-\lambda I\right) B-x\alpha ^{T}=I_{n}\left( 1\right) ,\left( A-\lambda
+I\right) \beta =cx\left( 2\right) ,x^{T}B=0\left( 3\right) ,2x^{T}\beta
+=1\left( 4\right) .$
+
+From $\left( 2,4\right) $ follows that $c=\frac{1}{2x^{T}\left( A-\lambda
+I\right) ^{-1}x},\beta =\frac{\left( A-\lambda I\right) ^{-1}x}{2x^{T}\left(
+A-\lambda I\right) ^{-1}x}.$
+
+Using the relation $Jf^{-1}\cdot Jf=I_{n+1}$ gives: 
+
+$B\left( A-\lambda I\right) +2\beta x^{T}=I_{n}\left( 5\right) ,Bx=0\left(
+6\right) ,\alpha ^{T}\left( A-\lambda I\right) +2cx^{T}=0\left( 7\right)
+,-\alpha ^{T}x=1\left( 8\right) $
+
+From $\left( 7\right) $ follows that $\alpha =\frac{-\left( A^{T}-\lambda
+I\right) ^{-1}x}{x^{T}\left( A-\lambda I\right) ^{-1}x},$combining with $%
+\left( 1\right) $ gives further $B=\left( A-\lambda I\right) ^{-1}-\frac{%
+\left( A-\lambda I\right) ^{-1}xx^{T}\left( A-\lambda I\right) ^{-1}}{%
+x^{T}\left( A-\lambda I\right) ^{-1}x}.$
+
+We can verify the rightousness of $\left( 3,5,6,8\right) .$
+
+Next we substitute $Jf^{-1}=$ $\left( 
+\begin{array}{cc}
+B & \beta  \\ 
+\alpha ^{T} & c%
+\end{array}%
+\right) $ into $\binom{x}{\lambda }-\left( Jf\right) ^{-1}\binom{Ax-\lambda x%
+}{x^{T}x-1},$ after simplification gives $\binom{\frac{\left(
+1+x^{T}x\right) \left( A-\lambda \right) ^{-1}x}{2x^{T}\left( A-\lambda
+I\right) ^{-1}x}}{\lambda +\frac{1+x^{T}x}{2x^{T}\left( A-\lambda I\right)
+^{-1}x}}.$
+
+If $x^{T}x=1,$we get the above results $\binom{\frac{\left( A-\lambda
+I\right) ^{-1}x}{x^{T}\left( A-\lambda I\right) ^{-1}x}}{\lambda +\frac{1}{%
+x^{T}\left( A-\lambda I\right) ^{-1}x}},$which is a more accurate solution
+after one-iteration.
+
+Below is a numerical example: consider the following matrix, which has
+unique real eigenvalue 4 and corresponds the eigenvector $\left(
+-1,-1,1\right) .$ \FRAME{ftbpF}{2.0418in}{0.9003in}{0pt}{}{}{Figure}{\special%
+{language "Scientific Word";type "GRAPHIC";display "USEDEF";valid_file
+"T";width 2.0418in;height 0.9003in;depth 0pt;original-width
+3.1358in;original-height 1.5627in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'NWXVQ902.wmf';tempfile-properties "XPR";}}
+
+Starting from \{-0.85/$\sqrt{3}$, -0.95/$\sqrt{3}$, 0.9/$\sqrt{3}$,
+3.9\},programming produces the following results based on Newton's method
+(we do not use the explicit form, since it contains the inverse matrix and
+when $\lambda $ is very near to the real eigenvalue, the matrix is very
+ill-conditioned and programming . Instead we solve linear equation system
+about $x_{k}$ in the k$-th$ step.
+
+\{-0.58166, -0.580349, 0.581341, 4.01181\}, \{-0.577363, -0.577361,
+0.577364, 4.00007\},
+
+\{-0.57735, -0.57735, 0.57735, 4.\}, \{-0.57735, -0.57735, 0.57735, 4.\}.
+
+We can see that $x_{4}$ is very near to the exact solution, if we start from
+points in R$^{4}$ in a small neighborhood of $\left( \frac{-1}{\sqrt{3}},%
+\frac{-1}{\sqrt{3}},\frac{1}{\sqrt{3}},4\right) .$
+
+\end{document}

@@ -1,0 +1,412 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Sunday, September 27, 2015 19:40:53}
+%TCIDATA{LastRevised=Saturday, October 10, 2015 14:18:31}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+%TCIDATA{ComputeDefs=
+%$[A$
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{macros.tex}
+
+\begin{document}
+
+
+\bigskip Numurical Analysis \U{8d75}\U{4e30} 2013012178
+
+Problem 1:
+
+The initial adjoint matrix takes the form:
+
+2\qquad 1\qquad -3\qquad -1\qquad \TEXTsymbol{\vert}\qquad 1\qquad 0\qquad
+0\qquad 0\qquad
+
+3\qquad 1\qquad 0\qquad 7\qquad \TEXTsymbol{\vert}\qquad 0\qquad 1\qquad
+0\qquad 0\qquad
+
+-1\qquad 2\qquad 4\qquad -2\qquad \TEXTsymbol{\vert}\qquad 0\qquad 0\qquad
+1\qquad 0\qquad
+
+1\qquad 0\qquad -1\qquad 5\qquad \TEXTsymbol{\vert}\qquad 0\qquad 0\qquad
+0\qquad 1\qquad
+
+Exchanging the 2 row with the 1 row gives:
+
+3\qquad 1\qquad 0\qquad 7\qquad \TEXTsymbol{\vert}\qquad 0\qquad 1\qquad
+0\qquad 0\qquad
+
+2\qquad 1\qquad -3\qquad -1\qquad \TEXTsymbol{\vert}\qquad 1\qquad 0\qquad
+0\qquad 0\qquad
+
+-1\qquad 2\qquad 4\qquad -2\qquad \TEXTsymbol{\vert}\qquad 0\qquad 0\qquad
+1\qquad 0\qquad
+
+1\qquad 0\qquad -1\qquad 5\qquad \TEXTsymbol{\vert}\qquad 0\qquad 0\qquad
+0\qquad 1\qquad
+
+Normalization of the 1 row gives:
+
+1\qquad 0.33\qquad 0\qquad 2.3\qquad \TEXTsymbol{\vert}\qquad 0\qquad
+0.33\qquad 0\qquad 0\qquad
+
+2\qquad 1\qquad -3\qquad -1\qquad \TEXTsymbol{\vert}\qquad 1\qquad 0\qquad
+0\qquad 0\qquad
+
+-1\qquad 2\qquad 4\qquad -2\qquad \TEXTsymbol{\vert}\qquad 0\qquad 0\qquad
+1\qquad 0\qquad
+
+1\qquad 0\qquad -1\qquad 5\qquad \TEXTsymbol{\vert}\qquad 0\qquad 0\qquad
+0\qquad 1\qquad
+
+Elimination of the elements below the (1,1) position gives:
+
+1\qquad 0.33\qquad 0\qquad 2.3\qquad \TEXTsymbol{\vert}\qquad 0\qquad
+0.33\qquad 0\qquad 0\qquad
+
+0\qquad 0.33\qquad -3\qquad -5.7\qquad \TEXTsymbol{\vert}\qquad 1\qquad
+-0.67\qquad 0\qquad 0\qquad
+
+0\qquad 2.3\qquad 4\qquad 0.33\qquad \TEXTsymbol{\vert}\qquad 0\qquad
+0.33\qquad 1\qquad 0\qquad
+
+0\qquad -0.33\qquad -1\qquad 2.7\qquad \TEXTsymbol{\vert}\qquad 0\qquad
+-0.33\qquad 0\qquad 1\qquad
+
+Exchanging the 3 row with the 2 row gives:
+
+1\qquad 0.33\qquad 0\qquad 2.3\qquad \TEXTsymbol{\vert}\qquad 0\qquad
+0.33\qquad 0\qquad 0\qquad
+
+0\qquad 2.3\qquad 4\qquad 0.33\qquad \TEXTsymbol{\vert}\qquad 0\qquad
+0.33\qquad 1\qquad 0\qquad
+
+0\qquad 0.33\qquad -3\qquad -5.7\qquad \TEXTsymbol{\vert}\qquad 1\qquad
+-0.67\qquad 0\qquad 0\qquad
+
+0\qquad -0.33\qquad -1\qquad 2.7\qquad \TEXTsymbol{\vert}\qquad 0\qquad
+-0.33\qquad 0\qquad 1\qquad
+
+Normalization of the 2 row gives:
+
+1\qquad 0.33\qquad 0\qquad 2.3\qquad \TEXTsymbol{\vert}\qquad 0\qquad
+0.33\qquad 0\qquad 0\qquad
+
+0\qquad 1\qquad 1.7\qquad 0.14\qquad \TEXTsymbol{\vert}\qquad 0\qquad
+0.14\qquad 0.43\qquad 0\qquad
+
+0\qquad 0.33\qquad -3\qquad -5.7\qquad \TEXTsymbol{\vert}\qquad 1\qquad
+-0.67\qquad 0\qquad 0\qquad
+
+0\qquad -0.33\qquad -1\qquad 2.7\qquad \TEXTsymbol{\vert}\qquad 0\qquad
+-0.33\qquad 0\qquad 1\qquad
+
+Elimination of the elements below the (2,2) position gives:
+
+1\qquad 0.33\qquad 0\qquad 2.3\qquad \TEXTsymbol{\vert}\qquad 0\qquad
+0.33\qquad 0\qquad 0\qquad
+
+0\qquad 1\qquad 1.7\qquad 0.14\qquad \TEXTsymbol{\vert}\qquad 0\qquad
+0.14\qquad 0.43\qquad 0\qquad
+
+0\qquad 0\qquad -3.6\qquad -5.7\qquad \TEXTsymbol{\vert}\qquad 1\qquad
+-0.71\qquad -0.14\qquad 0\qquad
+
+0\qquad 0\qquad -0.43\qquad 2.7\qquad \TEXTsymbol{\vert}\qquad 0\qquad
+-0.29\qquad 0.14\qquad 1\qquad
+
+Normalization of the 3 row gives:
+
+1\qquad 0.33\qquad 0\qquad 2.3\qquad \TEXTsymbol{\vert}\qquad 0\qquad
+0.33\qquad 0\qquad 0\qquad
+
+0\qquad 1\qquad 1.7\qquad 0.14\qquad \TEXTsymbol{\vert}\qquad 0\qquad
+0.14\qquad 0.43\qquad 0\qquad
+
+-0\qquad -0\qquad 1\qquad 1.6\qquad \TEXTsymbol{\vert}\qquad -0.28\qquad
+0.2\qquad 0.04\qquad -0\qquad
+
+0\qquad 0\qquad -0.43\qquad 2.7\qquad \TEXTsymbol{\vert}\qquad 0\qquad
+-0.29\qquad 0.14\qquad 1\qquad
+
+Elimination of the elements below the (3,3) position gives:
+
+1\qquad 0.33\qquad 0\qquad 2.3\qquad \TEXTsymbol{\vert}\qquad 0\qquad
+0.33\qquad 0\qquad 0\qquad
+
+0\qquad 1\qquad 1.7\qquad 0.14\qquad \TEXTsymbol{\vert}\qquad 0\qquad
+0.14\qquad 0.43\qquad 0\qquad
+
+-0\qquad -0\qquad 1\qquad 1.6\qquad \TEXTsymbol{\vert}\qquad -0.28\qquad
+0.2\qquad 0.04\qquad -0\qquad
+
+0\qquad 0\qquad 0\qquad 3.4\qquad \TEXTsymbol{\vert}\qquad -0.12\qquad
+-0.2\qquad 0.16\qquad 1\qquad
+
+Normalization of the final row gives:
+
+1\qquad 0.33\qquad 0\qquad 2.3\qquad \TEXTsymbol{\vert}\qquad 0\qquad
+0.33\qquad 0\qquad 0\qquad
+
+0\qquad 1\qquad 1.7\qquad 0.14\qquad \TEXTsymbol{\vert}\qquad 0\qquad
+0.14\qquad 0.43\qquad 0\qquad
+
+-0\qquad -0\qquad 1\qquad 1.6\qquad \TEXTsymbol{\vert}\qquad -0.28\qquad
+0.2\qquad 0.04\qquad -0\qquad
+
+0\qquad 0\qquad 0\qquad 1\qquad \TEXTsymbol{\vert}\qquad -0.035\qquad
+-0.059\qquad 0.047\qquad 0.29\qquad
+
+Elimination of the elements above the (4,4) position gives:
+
+1\qquad 0.33\qquad 0\qquad 0\qquad \TEXTsymbol{\vert}\qquad 0.082\qquad
+0.47\qquad -0.11\qquad -0.69\qquad
+
+0\qquad 1\qquad 1.7\qquad 0\qquad \TEXTsymbol{\vert}\qquad 0.005\qquad
+0.15\qquad 0.42\qquad -0.042\qquad
+
+-0\qquad -0\qquad 1\qquad 0\qquad \TEXTsymbol{\vert}\qquad -0.22\qquad
+0.29\qquad -0.035\qquad -0.47\qquad
+
+0\qquad 0\qquad 0\qquad 1\qquad \TEXTsymbol{\vert}\qquad -0.035\qquad
+-0.059\qquad 0.047\qquad 0.29\qquad
+
+Elimination of the elements above the (3,3) position gives:
+
+1\qquad 0.33\qquad 0\qquad 0\qquad \TEXTsymbol{\vert}\qquad 0.082\qquad
+0.47\qquad -0.11\qquad -0.69\qquad
+
+0\qquad 1\qquad 0\qquad 0\qquad \TEXTsymbol{\vert}\qquad 0.39\qquad
+-0.35\qquad 0.48\qquad -0.042\qquad
+
+-0\qquad -0\qquad 1\qquad 0\qquad \TEXTsymbol{\vert}\qquad -0.22\qquad
+0.29\qquad -0.035\qquad -0.47\qquad
+
+0\qquad 0\qquad 0\qquad 1\qquad \TEXTsymbol{\vert}\qquad -0.035\qquad
+-0.059\qquad 0.047\qquad 0.29\qquad
+
+Elimination of the elements above the (2,2) position gives:
+
+1\qquad 0\qquad 0\qquad 0\qquad \TEXTsymbol{\vert}\qquad -0.047\qquad
+0.59\qquad -0.11\qquad -0.69\qquad
+
+0\qquad 1\qquad 0\qquad 0\qquad \TEXTsymbol{\vert}\qquad 0.39\qquad
+-0.35\qquad 0.48\qquad -0.042\qquad
+
+-0\qquad -0\qquad 1\qquad 0\qquad \TEXTsymbol{\vert}\qquad -0.22\qquad
+0.29\qquad -0.035\qquad -0.47\qquad
+
+0\qquad 0\qquad 0\qquad 1\qquad \TEXTsymbol{\vert}\qquad -0.035\qquad
+-0.059\qquad 0.047\qquad 0.29\qquad
+
+The matrix on the right hand of the vertical line is the required inverse
+matrix:
+
+-0.0471\qquad 0.588\qquad -0.11\qquad -0.686\qquad
+
+0.388\qquad -0.353\qquad 0.482\qquad -0.042\qquad
+
+-0.224\qquad 0.294\qquad -0.0353\qquad -0.471\qquad
+
+-0.0353\qquad -0.0588\qquad 0.0471\qquad 0.294\qquad
+
+Problem 2:
+
+$\left( 1\right) $Initial condition: $l_{1}=\sqrt{b_{1}}$and $m_{2}=\frac{%
+a_{2}}{l_{1}};$
+
+Recursive formula: $l_{i}=\sqrt{b_{i}-m_{i}^{2}}$ and $m_{i+1}=\frac{a_{i+1}%
+}{l_{i}}.$
+
+$\left( 2\right) A=L^{T}L$ and euqation system $Ax=d\iff L\left(
+L^{T}x\right) =d.$
+
+We first solve $Ly=d,$then solve $L^{T}x=y.$
+
+For $Ly=d.\qquad \qquad \qquad \qquad \qquad $For $L^{T}x=y$
+
+$\bigskip \QATOPD\{ . {y_{1}=\frac{d_{1}}{l_{1}}}{y_{i}=\frac{%
+d_{i}-m_{i}y_{i-1}}{l_{i}},i=2,3...n}\qquad \qquad \qquad \QATOPD\{ . {x_{n}=%
+\frac{y_{n}}{l_{n}}}{x_{i}=\frac{y_{i}-m_{i+1}x_{i+1}}{l_{i}},i=n-1,n-2...1}$
+
+\FRAME{ftbpF}{4.5in}{0.9in}{0in}{}{}{Figure}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"T";width 4.5in;height 0.9in;depth 0in;original-width
+9.6548in;original-height 1.945in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'NVJO4D03.wmf';tempfile-properties "XPR";}}
+
+Problem3 Proof: Since $\det A=\det A^{T},$we only need to show the result
+for $A^{T},$that is
+
+we show that $\left\vert \det A\right\vert ^{2}\leq \underset{i=1}{\overset{n%
+}{\Pi }}\underset{j=1}{\overset{n}{\sum }}\left\vert a_{ji}\right\vert ^{2}$
+
+$A=QR,$where Q is an orthogonal matrix and R is an upper right triangular
+matrix.
+
+$\left\vert \det A\right\vert ^{2}=\left\vert \det Q\right\vert
+^{2}\left\vert \det R\right\vert ^{2}=\left\vert \det R\right\vert ^{2}=%
+\underset{i=1}{\overset{n}{\Pi }}\left\vert r_{ii}\right\vert ^{2}.$
+
+Let $A=\left( \vec{a}_{1},\vec{a}_{2}...\vec{a}_{n}\right) ,$where $\vec{a}%
+_{i}$ represents the column vector of matrix A.
+
+Since orthogonal transformation does not change the Euclid norm of the
+column vector,
+
+$\left\Vert Q^{-1}\vec{a}_{i}\right\Vert =\left\Vert \vec{a}_{i}\right\Vert
+\implies \underset{j=1}{\overset{i}{\sum }}\left\vert r_{ji}\right\vert ^{2}=%
+\underset{j=1}{\overset{n}{\sum }}\left\vert a_{ji}\right\vert ^{2}$
+.Multiplying n equalities for $i=1,2...n$ gives
+
+$\underset{i=1}{\overset{n}{\Pi }}\underset{j=1}{\overset{i}{\sum }}%
+\left\vert r_{ji}\right\vert ^{2}$=$\underset{i=1}{\overset{n}{\Pi }}%
+\underset{j=1}{\overset{n}{\sum }}\left\vert a_{ji}\right\vert ^{2}$ $%
+\implies \underset{i=1}{\overset{n}{\Pi }}\left\vert r_{ii}\right\vert
+^{2}\leq \underset{i=1}{\overset{n}{\Pi }}\underset{j=1}{\overset{n}{\sum }}%
+\left\vert a_{ji}\right\vert ^{2}.$
+
+That is $\left\vert \det A\right\vert ^{2}\leq \underset{i=1}{\overset{n}{%
+\Pi }}\underset{j=1}{\overset{n}{\sum }}\left\vert a_{ji}\right\vert ^{2}$ .
+
+\FRAME{ftbpF}{4.5in}{0.9in}{0in}{}{}{Figure}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"T";width 4.5in;height 0.9in;depth 0in;original-width
+8.3766in;original-height 1.708in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'NVJHIB00.wmf';tempfile-properties "XPR";}}
+
+Problem 4
+
+Proof: $\left( 1\right) \left\Vert x\right\Vert _{A}\geq 0$ and $\left\Vert
+x\right\Vert _{A}=0\implies x^{T}Ax=0\implies x=0,$ since $A$ is positive
+definite.
+
+$\left( 2\right) \left\Vert \lambda x\right\Vert _{A}=<A\lambda x,\lambda
+x>^{1/2}=\left\vert \lambda \right\vert <Ax,x>=\left\vert \lambda
+\right\vert \left\Vert x\right\Vert _{A}.$
+
+$\left( 3\right) $By Cholesky Decomposition's method, we can find $L\in \NEG%
+{R}^{n\times n},s.t.A=L^{T}L.$
+
+Then $\left\Vert x\right\Vert _{A}=<L^{T}Lx,x>=\left\Vert Lx\right\Vert
+_{2}, $where $\left\Vert \cdot \right\Vert _{2}$ represents Euclid norm on $%
+\NEG{R}^{n}.$
+
+$\left\Vert x+y\right\Vert _{A}=\left\Vert L\left( x+y\right) \right\Vert
+_{2}=\left\Vert Lx+Ly\right\Vert _{2}\leq \left\Vert Lx\right\Vert
+_{2}+\left\Vert Ly\right\Vert _{2}=\left\Vert x\right\Vert _{A}+\left\Vert
+y\right\Vert _{A}.$
+
+By $\left( 1,2,3\right) $ $\left\Vert \cdot \right\Vert _{A}$ is a norm on $%
+\NEG{R}^{n}.$
+
+\FRAME{ftbpF}{4.5in}{0.9in}{0in}{}{}{Figure}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"T";width 4.5in;height 0.9in;depth 0in;original-width
+8.4881in;original-height 1.2358in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'NVJI8601.wmf';tempfile-properties "XPR";}}
+
+\bigskip Problem 5
+
+Solution: Since A is symmetric, $cond(A)_{2}=\frac{\left\vert \lambda _{\max
+}\right\vert }{\left\vert \lambda _{\min }\right\vert },$where $\lambda $
+represents the eigenvalue of A.
+
+Solve the equation $\det (\lambda I-A)=0,$ we get $\lambda _{1,2}=99\pm 
+\sqrt{9802}=99\pm \allowbreak 13\sqrt{58}.$
+
+$\implies cond(A)_{2}=\left\vert \frac{99+13\sqrt{58}}{99-13\sqrt{58}}%
+\right\vert =\left( 13\sqrt{58}+99\right) ^{2}=\allowbreak 2574\sqrt{58}%
++19\,603.$
+
+$cond(A)_{\infty }=\left\Vert A\right\Vert _{\infty }\left\Vert
+A^{-1}\right\Vert _{\infty },$where $\left\Vert \cdot \right\Vert _{\infty }$
+represents the infinity norm on $\NEG{R}^{2}.$
+
+$\left\Vert A\right\Vert _{\infty }=\underset{i=1or2}{\max }\left(
+\left\vert a_{i1}\right\vert +\left\vert a_{i2}\right\vert \right)
+=199.A^{-1}=\left( 
+\begin{array}{cc}
+-98 & 99 \\ 
+99 & 100%
+\end{array}%
+\right) .$
+
+and $\left\Vert A^{-1}\right\Vert _{\infty }=199.\implies cond\left(
+A\right) _{\infty }=199^{2}=\allowbreak 39\,601.$
+
+\FRAME{ftbpF}{4.5in}{0.9in}{0in}{}{}{Figure}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"T";width 4.5in;height 0.9in;depth 0in;original-width
+9.7663in;original-height 1.7227in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'NVJIRP02.wmf';tempfile-properties "XPR";}}%
+Problem 6 \bigskip Proof:
+
+$\frac{1}{cond\left( A\right) _{2}}=\frac{\lambda }{\left\Vert A\right\Vert
+_{2}}\iff \left\Vert A^{-1}\right\Vert _{2}=\frac{1}{\lambda }.$Below the
+notation of subscript is omitted for convenience.
+
+We know if $\left\Vert A^{-1}\right\Vert \left\Vert B\right\Vert <1,$then $%
+A+B=A(I+A^{-1}B)$ is non-singular.
+
+In other word, if $A+B$ is singular, we must have $\left\Vert
+A^{-1}\right\Vert \left\Vert B\right\Vert \geq 1.$
+
+$\implies \left\Vert A^{-1}\right\Vert \geq \frac{1}{\left\Vert B\right\Vert 
+}\implies \left\Vert A^{-1}\right\Vert \geq \frac{1}{\lambda }.\left(
+1\right) $
+
+\bigskip By the theory of singular decomposition, $A=VDU^{T},$where $%
+D_{n\times n}=diag\left( \mu _{1},\mu _{2},...,\mu _{n}\right) ,$
+
+$\mu _{1}\geq \mu _{2}\geq ...\geq \mu _{n}$ and by the definition $%
+\left\Vert A\right\Vert _{2}=\mu _{1}\left( \text{the maximum of singular
+value}\right) .$
+
+$A^{-1}=UD^{-1}V^{-1},\implies \left\Vert A^{-1}\right\Vert =\frac{1}{\mu
+_{n}}.$Without loss of generality, we can assume $A=D,$
+
+otherwise we can always revise $B$ as $VBU^{T}$ without changing the norm of
+B$.$ We choose
+
+$A+B=diag\left( \mu _{1},\mu _{2},...,\mu _{n-1},0\right) .$Then $B=\left(
+0,0,...,0,-\mu _{n}\right) .$
+
+$\left\Vert A^{-1}\right\Vert =\frac{1}{\mu _{n}}=\frac{1}{\left\Vert
+B\right\Vert }\leq \frac{1}{\lambda }.\left( 2\right) $
+
+By $\left( 1,2\right) $ the proof is complete.$\boxtimes $
+
+\end{document}

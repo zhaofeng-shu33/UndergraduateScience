@@ -1,0 +1,196 @@
+
+\documentclass{article}
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Saturday, November 07, 2015 19:44:57}
+%TCIDATA{LastRevised=Sunday, November 08, 2015 15:41:25}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{macros.tex}
+
+\begin{document}
+
+
+\bigskip \bigskip \U{8d75}\U{4e30} 2013012178 Numerical Analysis \U{7b2c}5 
+\U{7ae0}\U{7eb8}\U{5236}\U{4f5c}\U{4e1a}
+
+\bigskip 1. Since $\left\{ x^{\left( 1\right) },..x^{\left( n\right)
+}\right\} $ is a basis of R$^{n},v^{\left( 0\right) }=v_{1}x^{\left(
+1\right) }+\underset{i=2}{\overset{n}{\sum }}v_{i}x^{\left( i\right) },$
+
+$\left\Vert v^{\left( k\right) }\right\Vert _{2}v^{\left( k\right)
+}=A^{k}v^{\left( 0\right) }=v_{1}\lambda _{1}^{k}x^{\left( 1\right) }+%
+\underset{i=2}{\overset{n}{\sum }}\lambda _{i}^{k}v_{i}x^{\left( i\right)
+}=\lambda _{1}^{k}\left( v_{1}x^{\left( 1\right) }+\underset{i=2}{\overset{n}%
+{\sum }}\left( \frac{\lambda _{i}}{\lambda _{1}}\right) ^{k}v_{i}x^{\left(
+i\right) }\right) $
+
+$R_{k}=\left( Av^{\left( k\right) },v^{\left( k\right) }\right) =\frac{%
+\left( v_{1}\lambda _{1}x^{\left( 1\right) }+\underset{i=2}{\overset{n}{\sum 
+}}\lambda _{2}\left( \frac{\lambda _{i}}{\lambda _{1}}\right)
+^{k}v_{i}x^{\left( i\right) },v_{1}x^{\left( 1\right) }+\underset{i=2}{%
+\overset{n}{\sum }}\left( \frac{\lambda _{i}}{\lambda _{1}}\right)
+^{k}v_{i}x^{\left( i\right) }\right) }{\left\Vert v_{1}x^{\left( 1\right) }+%
+\underset{i=2}{\overset{n}{\sum }}\left( \frac{\lambda _{i}}{\lambda _{1}}%
+\right) ^{k}v_{i}x^{\left( i\right) }\right\Vert _{2}^{2}}$
+
+$=\frac{\lambda _{1}v_{1}^{2}\left\Vert x^{\left( 1\right) }\right\Vert
+_{2}^{2}+O\left( \left\vert \frac{\lambda _{2}}{\lambda _{1}}\right\vert
+\right) ^{k}}{v_{1}^{2}\left\Vert x^{\left( 1\right) }\right\Vert
+_{2}^{2}+O\left( \left\vert \frac{\lambda _{2}}{\lambda _{1}}\right\vert
+\right) ^{k}}$
+
+$\implies R_{k}-\lambda _{1}=\frac{O\left( \left\vert \frac{\lambda _{2}}{%
+\lambda _{1}}\right\vert \right) ^{k}}{v_{1}^{2}\left\Vert x^{\left(
+1\right) }\right\Vert _{2}^{2}+O\left( \left\vert \frac{\lambda _{2}}{%
+\lambda _{1}}\right\vert \right) ^{k}}=O\left( \left\vert \frac{\lambda _{2}%
+}{\lambda _{1}}\right\vert \right) ^{k},$that is 
+
+$\left\vert R_{k}-\lambda _{1}\right\vert \leq Cr^{k},r=\left\vert \frac{%
+\lambda _{2}}{\lambda _{1}}\right\vert ,k=1,2..$
+
+2. Householder and Givens Transformations are orthogonal$\implies c^{2}=3.$
+
+We calculate for the case $c=\sqrt{3},$ and $c=-\sqrt{3}$ is similar.
+
+$w=\left( 1,1,1\right) ^{T}-\left( \sqrt{3},0,0\right) ^{T},H=I_{3}-2\frac{%
+ww^{T}}{\left\Vert w\right\Vert _{2}^{2}}$
+
+$=\frac{1}{6-2\sqrt{3}}%
+\begin{pmatrix}
+2\sqrt{3}-2 & 2\sqrt{3}-2 & 2\sqrt{3}-2 \\ 
+2\sqrt{3}-2 & 4-2\sqrt{3} & -2 \\ 
+2\sqrt{3}-2 & -2 & 4-2\sqrt{3}%
+\end{pmatrix}%
+,Hw=\left( \sqrt{3},0,0\right) ^{T}.$
+
+Using the geometric interpretation of Givens Transformation in R$^{3},$ 
+
+we first rotate $w$ around $z$ axis to make its y-coordinate vanish.
+
+Such rotation matrix can be taken as G$_{1}=%
+\begin{pmatrix}
+\frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2} & 0 \\ 
+-\frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2} & 0 \\ 
+0 & 0 & 1%
+\end{pmatrix}%
+.$
+
+G$_{1}w=\left( \sqrt{2},0,1\right) ^{T}.$Let $G_{2}=%
+\begin{pmatrix}
+\frac{\sqrt{6}}{3} & 0 & \frac{\sqrt{3}}{3} \\ 
+0 & 1 & 0 \\ 
+-\frac{\sqrt{3}}{3} & 0 & \frac{\sqrt{6}}{3}%
+\end{pmatrix}%
+.$
+
+$G_{2}G_{1}w=\left( \sqrt{3},0,0\right) ^{T}.J=G_{1}G_{2}=%
+\begin{pmatrix}
+\frac{\sqrt{3}}{3} & \frac{\sqrt{2}}{2} & \frac{\sqrt{6}}{6} \\ 
+-\frac{\sqrt{3}}{3} & \frac{\sqrt{2}}{2} & -\frac{\sqrt{6}}{6} \\ 
+-\frac{\sqrt{3}}{3} & 0 & \frac{\sqrt{6}}{3}%
+\end{pmatrix}%
+.$
+
+3.Using Givens Transformation can realize QR Decomposition of upper
+Hessenberg matrix H as follows:
+
+First choose $\theta _{1},s.t.H_{1}=J\left( 1,2,\theta _{1}\right) H$ that
+makes the $\left( 2,1\right) $-element of H$_{1}$ vanish. For $i>j+1,$the  $%
+\left( i,j\right) $-element of H$_{1}$ is $\underset{k=1}{\overset{n}{\sum }}
+$ $J\left( 1,2,\theta _{1}\right) _{i,k}H_{k,j}.$Since $i>j+1\geq 2,$the
+non-zero term in the summation satisfies $k=i,$then 
+
+$\underset{k=1}{\overset{n}{\sum }}$ $J\left( 1,2,\theta _{1}\right)
+_{i,k}H_{k,j}=H_{i,j}$ follows. Since $H$ is upper Hessenberg matrix, 
+
+$H_{i,j}=0,$for $i>j+1.$ Then $H_{1}$ is an upper Hessenberg matrix with $%
+H_{1,2,1}=0.$
+
+Suppose we proceed to the s-th step, and 
+
+H$_{s}=J\left( s,s+1,\theta s\right) ..J\left( 1,2,\theta _{1}\right) H$ is
+an upper Hesenberg matrix with H$_{s,i,i-1}=0,$for $i=2,3..s$. Then we
+choose $\theta _{s+1},s.t.H_{s+1}=J\left( s+1,s+2,\theta _{s+1}\right) H_{s}$
+that makes the $\left( s+1,s+2\right) $-element of H$_{s+1}$ vanish. To show
+the structure of $H_{s+1},$by the property of Givens tranformation we only
+need to consider $i=s+1$ and $s+2,$since other rows are unchanged. For $%
+i>j+1,$the $\left( i,j\right) $-element of H$_{2}$ is
+
+$\underset{k=1}{\overset{n}{\sum }}$ $J\left( s+1,s+2,\theta _{s+1}\right)
+_{i,k}H_{s,k,j}.$For non-vanishing term of $J\left( s+1,s+2,\theta
+_{s+1}\right) _{i,k}$
+
+$k\geq i>j+1,$but then $H_{s,k,j}$ vanish for such case since $H_{s,k,j}$ is
+an upper Hessenberg matrix. $\implies H_{s+1}$ is an upper Hessenberg matrix
+with H$_{s+1,i,i-1}=0,$for $i=2,3..s,s+1.$ By induction we show that 
+
+$Q^{T}=J\left( n-1,n,\theta _{n-1}\right) ..J\left( 1,2,\theta _{1}\right)
+,R:=Q^{T}H$ is an upper trianglar matrix.
+
+Further, $Q=J\left( 1,2,-\theta _{1}\right) ..J\left( n-1,n,-\theta
+_{n-1}\right) .$
+
+\bigskip To show $Q$ is upper Hessenberg matrix, consider $Q_{s}=J\left(
+1,2,-\theta _{1}\right) ..J\left( s,s+1,-\theta _{n-1}\right) .$ And suppose 
+$Q_{s}$ is upper Hessenberg matrix with $Q_{s,i+1,i}=0,i=n,n-1,s+1$. $%
+Q_{s+1}=Q_{s}J\left( s+1,s+2,-\theta _{n-1}\right) .$We need only consider
+for j=s+1 and j=s+2.
+
+$Q_{s+1,i,j,i>j+1}=$ $\underset{k=1}{\overset{n}{\sum }}$ $Q_{s,i,k}J\left(
+s+1,s+2,-\theta _{n-1}\right) _{k,j}.j=s+1,$
+
+$Q_{s+1,i,j,i>j+1}=Q_{s,i,j}J\left( s+1,s+2,-\theta _{n-1}\right)
+_{s+1,s+1}+Q_{s,i,s+2}J\left( s+1,s+2,-\theta _{n-1}\right) _{s+2,s+1}$
+
+Since $Q_{s,i,j,i>j+1}=0,Q_{s,s+3,s+2}=0\left( \text{induction assumption}%
+\right) ,Q_{s+1,i,j,i>j+1}=0,$
+
+Similarly, $j=s+2,Q_{s+1,i,j,i>j+1}=0.$By induction$\implies Q=Q_{n-1}$ is
+upper Hessenberg matrix.
+
+Then the original H has QR Decomposition $H=QR.$
+
+Let $H^{\prime }=RQ,H_{i,j,i>j+1}^{\prime }=$ $\underset{k=1}{\overset{n}{%
+\sum }}$ $R_{i,k}Q_{k,j},$ the non-vanishing term satisfies 
+
+$i\leq k,k\leq j+1\implies i\leq j+1,$impossible$\implies
+H_{i,j,i>j+1}^{\prime }=0\implies $
+
+$H^{\prime }$ is upper Hessenberg matrix. Therefore, Hessenberg matrix is
+unchanged under QR algorithm.
+
+\end{document}

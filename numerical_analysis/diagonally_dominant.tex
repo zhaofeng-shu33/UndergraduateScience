@@ -1,0 +1,170 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Wednesday, September 16, 2015 15:35:16}
+%TCIDATA{LastRevised=Wednesday, September 16, 2015 23:56:57}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{macros.tex}
+
+\begin{document}
+
+
+$\FRAME{itbpF}{4.5in}{0.9in}{0in}{}{}{Figure}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"T";width 4.5in;height 0.9in;depth 0in;original-width
+9.3962in;original-height 2.6671in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'NURK3H01.wmf';tempfile-properties "XPR";}}$
+
+Proof:
+
+(b) Consider $A-\lambda I,$ if $\func{Re}(\lambda )\leq 0,$and $A-\lambda I$
+is still a strictly diagonally
+
+dominant matrix, which is nonsingular from (a), but contradicts with the fact
+
+that there exists an eigenvector $v$ such that $\left( A-\lambda I\right)
+v=0.$Therefore,
+
+$\func{Re}(\lambda )\geq 0.$
+
+Problem: (1)p-norm in $R^{n}$ means $||$x$||_{p}=\left( \overset{n}{\underset%
+{i=1}{\sum }}\left\vert x_{i}\right\vert ^{p}\right) ^{\frac{1}{p}}, $show
+that $||x||_{p}\leq ||x||_{q}$ if $p>q.$
+
+Brief proof: Let $x=(x_{1},x_{2}...x_{n})^{T},$then $\frac{\left\vert
+x_{i}\right\vert }{\left\vert \left\vert x\right\vert \right\vert _{p}}\leq
+1,$therefore $\left( \frac{\left\vert x_{i}\right\vert }{\left\vert
+\left\vert x\right\vert \right\vert _{p}}\right) ^{p}\leq \left( \frac{%
+\left\vert x_{i}\right\vert }{\left\vert \left\vert x\right\vert \right\vert
+_{p}}\right) ^{q}.$
+
+Add the equations from $i=1$ to $i=n,$ we can get $1<\frac{\left\vert
+x_{i}\right\vert ^{q}}{\left( \overset{n}{\underset{i=1}{\sum }}\left\vert
+x_{i}\right\vert ^{p}\right) ^{\frac{q}{p}}},$which simplied to
+
+$||x||_{p}\leq ||x||_{q}.$
+
+(2)Show that $\underset{p\rightarrow \infty }{\lim }$ $||$x$||_{p}=\underset{%
+1\leq i\leq n}{\max }\left\vert x_{i}\right\vert ,$which is the definition
+of $\infty -$norm on $R_{n}:\left\vert \left\vert \cdot \right\vert
+\right\vert _{\infty }$.
+
+Brief proof: from the inequality $\underset{1\leq i\leq n}{\max }\left\vert
+x_{i}\right\vert \leq \left( \overset{n}{\underset{i=1}{\sum }}\left\vert
+x_{i}\right\vert ^{p}\right) ^{\frac{1}{p}}\leq \underset{1\leq i\leq n}{n^{%
+\frac{1}{p}}\max }\left\vert x_{i}\right\vert ,$let $p\rightarrow \infty $
+and then the
+
+conclusion follows.
+
+(3)Show that all the norms in $R^{n}$ are equivalent, which means there
+exists $C_{1},C_{2}>0$ such that
+
+$C_{1}\left\vert \left\vert x\right\vert \right\vert _{\alpha }\leq
+||x||_{\beta }\leq C_{2}\left\vert \left\vert x\right\vert \right\vert
+_{\alpha }$ holds for any two norms $\left\vert \left\vert \cdot \right\vert
+\right\vert _{\alpha },\left\vert \left\vert \cdot \right\vert \right\vert
+_{\beta }.$
+
+Complete Proof: By the transmitting property of the norm, we need only show
+the case for $\alpha =\infty .$
+
+Let $\{e_{1,}e_{2}...e_{n}\}$ be a base of $R^{n}:,$and $\left\vert
+\left\vert e_{i}\right\vert \right\vert _{a}$ represents the value of $e_{i}$
+under the arbitrary
+
+norm $\left\vert \left\vert \cdot \right\vert \right\vert _{a}.$For any $%
+x\in R^{n},x=\overset{n}{\underset{i=1}{\sum }}x_{i}e_{i},\left\vert
+\left\vert x\right\vert \right\vert _{a}=\left\vert \left\vert \overset{n}{%
+\underset{i=1}{\sum }}x_{i}e_{i}\right\vert \right\vert _{a}\leq \overset{n}{%
+\underset{i=1}{\sum }}\left\vert \left\vert e_{i}\right\vert \right\vert
+_{a}\left\vert x_{i}\right\vert \leq \left\vert \left\vert x\right\vert
+\right\vert _{\infty }\overset{n}{\underset{i=1}{\sum }}\left\vert
+\left\vert e_{i}\right\vert \right\vert _{a},$ which shows
+
+that we can let $C_{2}=\left( \overset{n}{\underset{i=1}{\sum }}\left\vert
+\left\vert e_{i}\right\vert \right\vert _{a}\right) ^{-1}$and we have shown
+that $||x||_{a}\leq C_{2}\left\vert \left\vert x\right\vert \right\vert
+_{\infty }.$
+
+To show there exists $C_{1}$ such that $C_{1}\left\vert \left\vert
+x\right\vert \right\vert _{\infty }\leq ||x||_{a}$ holds for any $x\in
+R^{n}. $ Firstly we notice that
+
+the continuous function$\left\Vert \cdot \right\Vert _{a}$ has positive
+minimum on the closed subset $U$ of $R^{n}:U=\{\left\Vert y\right\Vert
+_{\infty }=1\},$
+
+since every element of $U$ is nonzero, the minimum can not be zero by the
+definity property of any norm.
+
+then we notice that $\frac{x}{\left\Vert x\right\Vert _{\infty }}\in U,$ it
+follows that the minimum $C_{1}\leq \frac{\left\Vert x\right\Vert _{a}}{%
+\left\Vert x\right\Vert _{\infty }}$ by the property of absolutely \qquad
+\qquad\ \ 
+
+homogeneity of the norm. Hence the proof of the equivalence of any norm on $%
+R^{n}$ is complete. $\boxtimes $
+
+(3) Show that$\left\langle R^{n},\left\Vert \cdot \right\Vert
+_{p}\right\rangle $ is complete space, where 1$\leq p\leq \infty $.
+
+From the equivalence of norms on $R^{n}$(2) we only need to show the results
+for one p, for example p=2,i.e. 
+
+Euclid norm. SInce $\left\vert x_{i}\right\vert \leq ||x||_{2}$ holds for  1$%
+\leq i\leq n,$from the Cauthy sequence$\left\{ x^{k}=\left(
+x_{1}^{k},x_{2}^{k},...x_{n}^{k}\right) \right\} _{k=1}^{\infty }$ in $R^{n}$
+it follows that $\{x_{i}^{k}\}_{k=1}^{\infty }$ is a Cauthy sequence in $%
+R^{1}$ for $1\leq i\leq n,$ and by the completeness of $R^{1}$ it follows
+that there exists $x_{i}$ such that $x_{i}^{k}\rightarrow x^{k}$ as $%
+i\rightarrow \infty ,$and from $||x^{k}-x||_{2}\leq \overset{n}{\underset{i=1%
+}{\sum }}\left\vert \left\vert x_{i}^{k}-x_{i}\right\vert \right\vert ,$%
+where $x=\left( x_{1},x_{2},...x_{n}\right) $
+
+it follows that $x^{k}\rightarrow x$ according to the norm $\left\Vert \cdot
+\right\Vert _{2}.$
+
+(4) Show that $\left\langle C_{[a,b]},\left\Vert \cdot \right\Vert _{\max
+}\right\rangle $ is complete (i.e. Banach space), where $C_{[a,b]}$
+represents all the continuous functions on the interval $[a,b].$
+
+Refer to the proof of "dual space of normed space is complete" in file
+"Functional Analysis", or 
+
+Vladimir A. Zorich's "Mathematical Analysis":Volume Two,Chapter 9,section5
+"the complete metric space".
+
+\end{document}

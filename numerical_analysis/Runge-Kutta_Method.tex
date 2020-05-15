@@ -1,0 +1,160 @@
+
+\documentclass{article}
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Wednesday, December 30, 2015 17:20:59}
+%TCIDATA{LastRevised=Wednesday, December 30, 2015 23:29:55}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{macros.tex}
+
+\begin{document}
+
+
+\U{9690}\U{5f0f}\U{4e00}\U{7ea7}\U{4e8c}\U{9636}Runge-Kutta\U{65b9}\U{6cd5}%
+\U{63a8}\U{5bfc}:
+
+\U{8bbe}\U{7ebf}\U{6027}\U{8fed}\U{4ee3}\U{516c}\U{5f0f}\U{6709}\U{5f62}%
+\U{5f0f}$y_{n+1}=y_{n}+bhk,$
+
+\U{5176}\U{4e2d}$k=f\left( t_{n}+ch,y_{n}+akh\right) ,$
+
+\U{5c40}\U{90e8}\U{622a}\U{65ad}\U{8bef}\U{5dee}\U{4e3a}$L\left( y\left(
+t_{n}\right) ,h\right) =y\left( t_{n+1}\right) -y\left( t_{n}\right)
+-bhf\left( t_{n}+ch,y_{n}+akh\right) $
+
+\U{5728}$t=t_{n}$\U{5904}\U{505a}Taylor\U{5c55}\U{5f00}\U{5f97}$L\left(
+y\left( t_{n}\right) ,h\right) =y^{\prime }\left( t_{n}\right) h+\frac{%
+y^{\prime \prime }\left( t_{n}\right) }{2}h^{2}+O\left( h^{3}\right)
+-bh\left( y^{\prime }\left( t_{n}\right) +\frac{\partial f}{\partial t}ch+%
+\frac{\partial f}{\partial y}afh+O\left( h^{2}\right) \right) $
+
+\U{8003}\U{8651}\U{5230}$y^{\prime \prime }\left( t_{n}\right) =\frac{%
+\partial f}{\partial t}+\frac{\partial f}{\partial y}y^{\prime }\left(
+t_{n}\right) $
+
+$\implies L\left( y\left( t_{n}\right) ,h\right) =y^{\prime }\left(
+t_{n}\right) h+\frac{y^{\prime \prime }\left( t_{n}\right) }{2}%
+h^{2}-bh\left( y^{\prime }\left( t_{n}\right) +\frac{\partial f}{\partial t}%
+ch+\left( y^{\prime \prime }\left( t_{n}\right) -\frac{\partial f}{\partial t%
+}\right) ah\right) +O\left( h^{3}\right) $
+
+$=\left( 1-b\right) y^{\prime }\left( t_{n}\right) h+\left( \left( \frac{1}{2%
+}-ab\right) y^{\prime \prime }\left( t_{n}\right) -b\frac{\partial f}{%
+\partial t}\left( c-a\right) \right) h^{2}+O\left( h^{3}\right) $
+
+\U{82e5}\U{8981}\U{6c42}\U{7cbe}\U{5ea6}\U{8fbe}3\U{9636}\U{5219}\U{6709}$%
+b=1,a=\frac{1}{2},c=\frac{1}{2}$
+
+\bigskip 
+
+\U{9690}\U{5f0f}\U{4e8c}\U{7ea7}\U{4e8c}\U{9636}Runge-Kutta\U{65b9}\U{6cd5}%
+\U{63a8}\U{5bfc}:
+
+\U{8bbe}\U{7ebf}\U{6027}\U{8fed}\U{4ee3}\U{516c}\U{5f0f}\U{6709}\U{5f62}%
+\U{5f0f}$y_{n+1}=y_{n}+h\left( b_{1}k_{1}+b_{2}k_{2}\right) ,$
+
+\U{5176}\U{4e2d}$k_{1}=f\left( t_{n}+\left( a_{1}+a_{2}\right)
+h,y_{n}+\left( a_{1}k_{1}+a_{2}k_{2}\right) h\right) ,$
+
+$k_{2}=f\left( t_{n}+\left( a_{3}+a_{4}\right) h,y_{n}+\left(
+a_{3}k_{1}+a_{4}k_{2}\right) h\right) ,$
+
+\U{5c40}\U{90e8}\U{622a}\U{65ad}\U{8bef}\U{5dee}\U{4e3a}$L\left( y\left(
+t_{n}\right) ,h\right) =$
+
+$y\left( t_{n+1}\right) -y\left( t_{n}\right) -b_{1}hf\left( t_{n}+\left(
+a_{1}+a_{2}\right) h,y_{n}+\left( a_{1}k_{1}+a_{2}k_{2}\right) h\right) $
+
+$-b_{2}hf\left( t_{n}+\left( a_{3}+a_{4}\right) h,y_{n}+\left(
+a_{3}k_{1}+a_{4}k_{2}\right) h\right) $
+
+\U{5728}$t=t_{n}$\U{5904}\U{505a}Taylor\U{5c55}\U{5f00}\U{5f97}$L\left(
+y\left( t_{n}\right) ,h\right) =y^{\prime }\left( t_{n}\right) h+\frac{%
+y^{\prime \prime }\left( t_{n}\right) }{2}h^{2}+O\left( h^{3}\right) $
+
+$-b_{1}h\left( y^{\prime }\left( t_{n}\right) +\frac{\partial f}{\partial t}%
+\left( a_{1}+a_{2}\right) h+\frac{\partial f}{\partial y}\left(
+a_{1}k_{1}+a_{2}k_{2}\right) h+O\left( h^{2}\right) \right) $
+
+\bigskip $-b_{2}h\left( y^{\prime }\left( t_{n}\right) +\frac{\partial f}{%
+\partial t}\left( a_{3}+a_{4}\right) h+\frac{\partial f}{\partial y}\left(
+a_{3}k_{1}+a_{4}k_{2}\right) h+O\left( h^{2}\right) \right) $
+
+\bigskip \U{82e5}\U{53ea}\U{505a}2\U{9636}\U{8fd1}\U{4f3c},$k_{1},k_{2}$%
+\U{5747}\U{53ef}\U{7528}$y^{\prime }\left( t_{n}\right) +O\left( h\right) $%
+\U{6765}\U{8fd1}\U{4ee3}\U{66ff}
+
+$L\left( y\left( t_{n}\right) ,h\right) =\left( 1-b_{1}-b_{2}\right)
+y^{\prime }\left( t_{n}\right) h+\frac{y^{\prime \prime }\left( t_{n}\right) 
+}{2}h^{2}+O\left( h^{3}\right) $
+
+$-b_{1}h\left( \frac{\partial f}{\partial t}\left( a_{1}+a_{2}\right) h+%
+\frac{\partial f}{\partial y}y^{\prime }\left( t_{n}\right) \left(
+a_{1}+a_{2}\right) h\right) $
+
+\bigskip $-b_{2}h\left( \frac{\partial f}{\partial t}\left(
+a_{3}+a_{4}\right) h+\frac{\partial f}{\partial y}y^{\prime }\left(
+t_{n}\right) \left( a_{3}+a_{4}\right) h\right) $
+
+\bigskip \U{5c55}\U{5f00}\U{5230}$L\left( y\left( t_{n}\right) ,h\right)
+=O\left( h^{5}\right) ,$\U{53ef}\U{5f97}\U{5230}2\U{7ea7}4\U{9636}\U{7684}%
+Runge Kutta \U{9690}\U{5f0f}\U{683c}\U{5f0f}
+
+\FRAME{ftbpF}{4.5in}{0.9in}{0in}{}{}{Figure}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"T";width 4.5in;height 0.9in;depth 0in;original-width
+5.514in;original-height 1.7365in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'O0618K00.bmp';tempfile-properties "XPR";}}
+
+\U{8003}\U{8651}\U{5230}$y^{\prime \prime }\left( t_{n}\right) =\frac{%
+\partial f}{\partial t}+\frac{\partial f}{\partial y}y^{\prime }\left(
+t_{n}\right) $
+
+$L\left( y\left( t_{n}\right) ,h\right) =\left( 1-b_{1}-b_{2}\right)
+y^{\prime }\left( t_{n}\right) h+\left( \frac{1}{2}-b_{1}\left(
+a_{1}+a_{2}\right) -b_{2}\left( a_{3}+a_{4}\right) \right) y^{\prime \prime
+}\left( t_{n}\right) h^{2}+O\left( h^{3}\right) $
+
+$\implies L\left( y\left( t_{n}\right) ,h\right) =y^{\prime }\left(
+t_{n}\right) h+\frac{y^{\prime \prime }\left( t_{n}\right) }{2}%
+h^{2}-bh\left( y^{\prime }\left( t_{n}\right) +\frac{\partial f}{\partial t}%
+ch+\left( y^{\prime \prime }\left( t_{n}\right) -\frac{\partial f}{\partial t%
+}\right) ah\right) +O\left( h^{3}\right) $
+
+$=\left( 1-b\right) y^{\prime }\left( t_{n}\right) h+\left( \left( \frac{1}{2%
+}-ab\right) y^{\prime \prime }\left( t_{n}\right) -b\frac{\partial f}{%
+\partial t}\left( c-a\right) \right) h^{2}+O\left( h^{3}\right) $
+
+\U{82e5}\U{8981}\U{6c42}\U{7cbe}\U{5ea6}\U{8fbe}3\U{9636}\U{5219}\U{6709}$%
+b=1,a=\frac{1}{2},c=\frac{1}{2}$
+
+\end{document}
