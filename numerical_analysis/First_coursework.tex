@@ -62,7 +62,7 @@ such that
 $x^{\ast }=\pm 10^{k}\times 0.d_{1}d_{2}...d_{i}...,d_{i}\in \{$integer 0%
 \symbol{126}9\} and d$_{1}\neq 0.$Then f(x,x*) returns the relative error
 and the significant figure.  the relative error can be easily calculated
-from formular $|\frac{x-x\text{*}}{x}|$, while the significant figure can be
+from formular $|\frac{x-x\textrm{*}}{x}|$, while the significant figure can be
 calculated using simple cycle program. From the definition of significant
 figure, we assume at first this figure i = 0; While \TEXTsymbol{\vert}x - x1%
 \TEXTsymbol{\vert} $\leq $ 1/2$\ast $10\symbol{94}(k - i), we let i=i+1;
@@ -74,7 +74,8 @@ relative error is set precision to 3 digits:
 
 %FRAME
 
-%FRAMESolution (1) \ Let A=$\arctan
+%FRAME
+Solution (1) \ Let A=$\arctan
 (N+1)-\arctan (N),$then $\tan A=\frac{1}{1+N(N+1)}\rightarrow A=\arctan (%
 \frac{1}{1+N(N+1)}),$
 
@@ -84,7 +85,7 @@ relative error is set precision to 3 digits:
 \frac{1}{3}\frac{1}{(1+N(N+1))^{3}}+...$
 
 \qquad \qquad\ (2) take the reciprocal,i.e. calculate $\frac{2}{x(\sqrt{x%
-\text{-}\frac{1}{x}}+\sqrt{x+\frac{1}{x}})}$
+\textrm{-}\frac{1}{x}}+\sqrt{x+\frac{1}{x}})}$
 
 \ \ \ \ (3) $\ln (x+1)-\ln (x)=\ln (1+\frac{1}{x})\approx \frac{1}{x}-\frac{1%
 }{2}\frac{1}{x^{2}}+...$
