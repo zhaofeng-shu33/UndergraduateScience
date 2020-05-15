@@ -1,0 +1,71 @@
+
+\documentclass{article}
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Sunday, September 27, 2015 20:47:57}
+%TCIDATA{LastRevised=Sunday, September 27, 2015 21:03:44}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+If $a_{j+k}\leq a_{j}a_{k}.$
+
+Then show that $\underset{j->\infty }{\lim }\sqrt[j]{a_{j}}$exists and
+equals $\inf \{\sqrt[j]{a_{j}},j\geq 1\}.$
+
+Proof: By the given inequality follows $a_{jk}\leq a_{j}^{k}\rightarrow \sqrt%
+[jk]{a_{jk}}\leq \sqrt[j]{a_{j}}$
+
+Let $k\rightarrow \infty ,$ take the superium limit on the lefthand, then $%
+\underset{k-\infty }{\overline{\lim }}\sqrt[k]{a_{k}}\leq \sqrt[j]{a_{j}}$%
+for any $j\geq 1.$
+
+Let $j\rightarrow \infty ,$take the inferior limit on the righthand, then  $%
+\underset{k-\infty }{\overline{\lim }}\sqrt[k]{a_{k}}\leq \underset{j-\infty 
+}{\underline{\lim }}\sqrt[j]{a_{j}}.$
+
+It follows that  $\underset{j->\infty }{\lim }\sqrt[j]{a_{j}}$exists and $%
+\left( 1\right) $smaller than any $\sqrt[j]{a_{j}}.$
+
+On the other hand, $\forall \epsilon >0,$ $\underset{j->\infty }{\lim }\sqrt[%
+j]{a_{j}}\geq \sqrt[k]{a_{k}}-\epsilon $ for $k>N_{\epsilon }\rightarrow $ $%
+\underset{j->\infty }{\lim }\sqrt[j]{a_{j}}=\inf \{\sqrt[j]{a_{j}},j\geq 1\}.
+$
+
+\end{document}

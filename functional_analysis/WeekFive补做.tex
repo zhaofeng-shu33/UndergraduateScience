@@ -1,0 +1,289 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Wednesday, October 21, 2015 21:56:03}
+%TCIDATA{LastRevised=Saturday, November 21, 2015 16:31:43}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+\bigskip Functional Analysis \ Week Five Second
+
+Problem 1.8
+
+$\left( a\right) $Since $C$ is bounded above by $M_{1}$, if $p\left(
+x\right) =0,\forall \epsilon >0,\exists 0<\alpha <\epsilon ,s.t.\frac{x}{%
+\alpha }\in C.$
+
+$M_{1}\geq \left\Vert \frac{x}{\alpha }\right\Vert \geq \frac{\left\Vert
+x\right\Vert }{\epsilon },$hence $\left\Vert x\right\Vert =0,$otherwise we
+let $\epsilon ->0$ in the inequality and get a contradiction.
+
+Since $C$ is symmtric, $p\left( x\right) =p\left( -x\right) $ by the
+definition of $p.$Then from $p\left( \lambda x\right) =\lambda p\left(
+x\right) $,for positive $\lambda ,$it holds as well for $\lambda \in \NEG{R}.
+$
+
+Combined with sub-linear property of $p\left( \cdot \right) ,$we conclude
+that $p\left( \cdot \right) $ is a norm on $E.$Below we show that there
+exists two positive constants $c_{1},c_{2},s.t.c_{1}\left\Vert x\right\Vert
+\leq p\left( x\right) \leq c_{2}\left\Vert x\right\Vert ,c_{2}$ can be taken
+as $M$ found in lemma 2. We again use the bounded property of $C$, $\exists
+B\left( 0,\delta \right) \subset C\implies p\left( z\right) >m_{2},$for any $%
+z\in \partial B\left( 0,\delta \right) ,$otherwise, we have points belonging
+to $C$ and $\frac{x}{\alpha }\in C,$with arbitrary small $\alpha ,$%
+contradicting with bdd property of $C.$By rescaling $p\left( \frac{x}{%
+\left\Vert x\right\Vert }\right) >m_{2}^{\prime }.$Thus we can take $%
+c_{1}=m_{2}^{\prime },$and $c_{1}\left\Vert x\right\Vert \leq p\left(
+x\right) $ follows. In conclusion the norm defined by $p\left( \cdot \right) 
+$ and $\left\Vert \cdot \right\Vert $ are equivalent.
+
+$\left( b\right) $for $u_{1},u_{2}\in C,\int_{0}^{1}\left\vert u_{i}\left(
+t\right) \right\vert ^{2}dt<1,i=1,2,\forall s\in \left( 0,1\right) ,$
+
+$\int_{0}^{1}\left\vert su_{1}\left( t\right) +\left( 1-s\right) u_{2}\left(
+t\right) \right\vert ^{2}dt=s^{2}\int_{0}^{1}\left\vert u_{1}\left( t\right)
+\right\vert ^{2}dt+\left( 1-s\right) ^{2}\int_{0}^{1}\left\vert u_{2}\left(
+t\right) \right\vert ^{2}dt+s\left( 1-s\right) \left(
+\int_{0}^{1}u_{1}\left( t\right) u_{2}^{\ast }\left( t\right) +u_{2}\left(
+t\right) u_{1}^{\ast }\left( t\right) dt\right) $
+
+$\leq s^{2}\int_{0}^{1}\left\vert u_{1}\left( t\right) \right\vert
+^{2}dt+\left( 1-s\right) ^{2}\int_{0}^{1}\left\vert u_{2}\left( t\right)
+\right\vert ^{2}dt+s\left( 1-s\right) \left( \int_{0}^{1}u_{1}\left(
+t\right) u_{2}^{\ast }\left( t\right) +u_{2}\left( t\right) u_{1}^{\ast
+}\left( t\right) dt\right) \qquad \left( \text{Cauchy Inequality}\right) $
+
+$\leq s^{2}\int_{0}^{1}\left\vert u_{1}\left( t\right) \right\vert
+^{2}dt+\left( 1-s\right) ^{2}\int_{0}^{1}\left\vert u_{2}\left( t\right)
+\right\vert ^{2}dt+2s\left( 1-s\right) \int_{0}^{1}\left\vert u_{1}\left(
+t\right) \right\vert ^{2}dt\int_{0}^{1}\left\vert u_{2}\left( t\right)
+\right\vert ^{2}dt$
+
+$\leq s^{2}+\left( 1-s\right) ^{2}+2s\left( 1-s\allowbreak \right)
+=\allowbreak 1$
+
+$\implies su_{1}+\left( 1-s\right) u_{2}\in C$ and $C$ is convex.
+
+$C$ is obviously symmetric and $0\in C$
+
+$C$ is unbouded.
+
+$p\left( u\right) =\inf \left\{ \alpha >0,\alpha \in \NEG{R},\frac{u}{\alpha 
+}\in C\right\} $
+
+$\frac{u}{\alpha }\in C\iff \sqrt{\int_{0}^{1}\left\vert u\left( t\right)
+\right\vert ^{2}dt}\leq \alpha \implies p\left( u\right) =\sqrt{%
+\int_{0}^{1}\left\vert u\left( t\right) \right\vert ^{2}dt},.$
+
+$p\left( \cdot \right) $ defines the $L_{2}$-norm on $E$.
+
+$p\left( \cdot \right) $ is not equivalent to $\left\Vert \cdot \right\Vert
+, $since we can find a function sequence $\left\{ v_{n}\right\} $ with
+constant $p$-norm but its
+
+$\left\Vert \cdot \right\Vert $-norm is unbounded$\implies c_{1}\left\Vert
+v_{n}\right\Vert \leq p\left( v_{n}\right) $ with positive $c_{1}$ holds for
+every n is impossible.
+
+Problem 1.10
+
+$\bigskip \left( a\right) \left( A\right) \implies \left( B\right) :$
+
+If there exists some $f\in E^{\ast },s.t.\left\langle f,x_{i}\right\rangle
+=\alpha _{i},\forall i\in I.\left\vert \underset{i\in J}{\sum }\beta
+_{i}\alpha _{i}\right\vert =\left\vert \underset{i\in J}{\sum }\beta
+_{i}\left\langle f,x_{i}\right\rangle \right\vert =\left\vert \left\langle f,%
+\underset{i\in J}{\sum }\beta _{i}x_{i}\right\rangle \right\vert $
+
+$\leq \left\Vert f\right\Vert \left\Vert \underset{i\in J}{\sum }\beta
+_{i}x_{i}\right\Vert .$
+
+$\left( B\right) \implies \left( A\right) :$First we define a functional on
+the subspace $S$ of $E$ spanned by $\left\{ x_{i},i\in I\right\} .$
+
+$g\left( x\right) =\underset{i\in J}{\sum }\beta _{i}\alpha _{i},$provided $%
+x=\underset{i\in J}{\sum }\beta _{i}x_{i}$ for some finite subset $J$ of $I.$
+
+Such definition is well-defined. Indeed for every $x\in S,$ $x$ can be
+expressed by finite elements from $\left\{ x_{i},i\in I\right\} .$ Secondly,
+if $x=\underset{i\in J_{1}}{\sum }\beta _{i}^{\left( 1\right) }x_{i}^{\left(
+1\right) }=\underset{i\in J_{2}}{\sum }\beta _{i}^{\left( 2\right)
+}x_{i}^{\left( 2\right) },$and $g_{1}\left( x\right) =\underset{i\in J}{\sum 
+}\beta _{i}^{\left( 1\right) }\alpha _{i}^{\left( 1\right) },g_{2}\left(
+x\right) =\underset{i\in J}{\sum }\beta _{i}^{\left( 2\right) }\alpha
+_{i}^{\left( 2\right) }$ as a result, we only need to show that $g_{1}\left(
+x\right) =g_{2}\left( x\right) ,$which is guaranteed by $\left( B\right) ,$%
+since we have
+
+$\left\vert g_{1}\left( x\right) -g_{2}\left( x\right) \right\vert
+=\left\vert \underset{i\in J_{1}}{\sum }\beta _{i}^{\left( 1\right) }\alpha
+_{i}^{\left( 1\right) }-\underset{i\in J_{2}}{\sum }\beta _{i}^{\left(
+2\right) }\alpha _{i}^{\left( 2\right) }\right\vert =\left\vert \underset{%
+i\in J_{1}\cup J_{2}}{\sum }\beta _{i}\alpha _{i}\right\vert \leq
+M\left\vert \underset{i\in J_{1}\cup J_{2}}{\sum }\beta _{i}x_{i}\right\vert
+=\left\vert \underset{i\in J_{1}}{\sum }\beta _{i}^{\left( 1\right)
+}x_{i}^{\left( 1\right) }-\underset{i\in J_{2}}{\sum }\beta _{i}^{\left(
+2\right) }x_{i}^{\left( 2\right) }\right\vert $
+
+$=0,$that is $g_{1}\left( x\right) =g_{2}\left( x\right) .$
+
+$g$ is obviously linear and by $\left( B\right) $ $\left\vert g\left(
+x\right) \right\vert \leq M\left\Vert x\right\Vert ,g$ is bounded$\implies g$
+is a linear functional on $S.$
+
+Then using Corallary of Hahn-Banach Thm, we can extend $g$ to the whole
+space and get a linear functional $f$ on E and $f_{|S}=g,$thus $f$ satisfies 
+$\left( A\right) .$
+
+Problem $1.11$
+
+$\left( A\right) \implies \left( B\right) :\left\vert \underset{i=1}{\overset%
+{n}{\sum }}\beta _{i}\alpha _{i}\right\vert \leq \left\vert \underset{i=1}{%
+\overset{n}{\sum }}\beta _{i}\left\langle f_{i},x_{\epsilon }\right\rangle
+\right\vert \leq \left\vert \left\langle \underset{i=1}{\overset{n}{\sum }}%
+\beta _{i}f_{i},x_{\epsilon }\right\rangle \right\vert \leq \left\Vert 
+\underset{i=1}{\overset{n}{\sum }}\beta _{i}f_{i}\right\Vert \left\Vert
+x_{\epsilon }\right\Vert \leq \left\Vert \underset{i=1}{\overset{n}{\sum }}%
+\beta _{i}f_{i}\right\Vert \left( M+\epsilon \right) .$
+
+Let $\epsilon ->0\implies \left\vert \underset{i=1}{\overset{n}{\sum }}\beta
+_{i}\alpha _{i}\right\vert \leq M\left\Vert \underset{i=1}{\overset{n}{\sum }%
+}\beta _{i}f_{i}\right\Vert .$
+
+$\left( B\right) \implies \left( A\right) :$
+
+\bigskip Define $\varphi \left( x\right) :=\left( f_{1}\left( x\right)
+,...,f_{n}\left( x\right) \right) ,x\in E,\varphi \left( x\right) \in \NEG%
+{R}^{n},\vec{\gamma}=\left( \alpha _{1},...,\alpha _{n}\right) .$
+
+$\left( A\right) \iff \varphi ^{-1}\left( \vec{\gamma}\right) \cap \overline{%
+B\left( 0,M\right) }\neq \varnothing ,$now assume it is not true,that is $%
+\varphi ^{-1}\left( \gamma \right) \cap \overline{B\left( 0,M\right) }%
+=\varnothing \implies $
+
+$\left\{ \vec{\gamma}\right\} \cap \varphi \left( \overline{B\left(
+0,M\right) }\right) =\varnothing .$Since $\varphi $ is linear continuous
+mapping, it maps $\overline{B\left( 0,M\right) }$ onto a convex closed set
+
+in $\NEG{R}^{n},$by Convex Set Segregation Law, there exists a hyperplane in 
+$\NEG{R}^{n}$ strictly separating $\left\{ \vec{\gamma}\right\} $ and $%
+\varphi \left( \overline{B\left( 0,M\right) }\right) .$That means there
+exists $\left( \beta _{1},...\beta _{n}\right) =:\vec{\beta},s.t.\vec{\beta}%
+\cdot \varphi \left( x\right) <c<\vec{\beta}\cdot \vec{\gamma},\forall x\in 
+\overline{B\left( 0,M\right) }\implies $
+
+$M\underset{i=1}{\overset{n}{\sum }}\beta _{i}f_{i}\left( x\right) <c$%
+\TEXTsymbol{<}$\underset{i=1}{\overset{n}{\sum }}\beta _{i}\alpha
+_{i},\forall x\in \overline{B\left( 0,1\right) },$by the definition of $%
+\left\Vert \underset{i=1}{\overset{n}{\sum }}\beta _{i}f_{i}\right\Vert ,$%
+taking the upper bound on the lefthand of the inequality gives $M\left\Vert 
+\underset{i=1}{\overset{n}{\sum }}\beta _{i}f_{i}\right\Vert \leq c<\underset%
+{i=1}{\overset{n}{\sum }}\beta _{i}\alpha _{i},$a contradiction and the
+proof is complete.
+
+(The standard answer hints that we should first show the result for
+indepedent $\left\{ f_{i}\right\} $ and then take the maximal indepedent
+sets of $\left\{ f_{i}\right\} .$The Segregation Law used is based on finite
+dimensional space, established in Ex 1.9; But I wonder whether it is
+possible to conclude from the strict separation law of Second Geometric Form
+of Hahn Banach Thm. Is there any problem about claiming that $\varphi \left( 
+\overline{B\left( 0,M\right) }\right) $ is closed?)
+
+Problem 1.12
+
+$\left( A\right) \implies \left( B\right) :$ $\left\langle \underset{i=1}{%
+\overset{n}{\sum }}\beta _{i}f_{i},x\right\rangle =\underset{i=1}{\overset{n}%
+{\sum }}\beta _{i}\left\langle f_{i},x\right\rangle =\underset{i=1}{\overset{%
+n}{\sum }}\beta _{i}\alpha _{i}\implies \underset{i=1}{\overset{n}{\sum }}%
+\beta _{i}\alpha _{i}=0$
+
+$\left( B\right) \implies \left( A\right) :$Notice that in this problem
+there is no norm defined in E.
+
+The proof should rely on induction. for n=1,if f1 \U{4e0d}\U{6052}\U{4e3a}0,
+we can find $x,s.t.$
+
+$f_{1}\left( x\right) =\alpha _{1}.$ Suppose the conclusion is true for
+n=k-1, that is we have found $x,s.t.f_{i}\left( x\right) =\alpha
+_{i},i=1,..k-1.$If $\left( f_{1},..f_{k-1}\right) $ are linearly indepedent$,
+$
+
+If we assume $\left( \alpha _{1},..\alpha _{k}\right) \notin R\left( \varphi
+\right) ,$where $\varphi \left( x\right) =\left( f_{1}\left( x\right)
+,..f_{k}\left( x\right) \right) ,$using the conclusion from Ex 1.9, we can
+find $\beta _{1},..\beta _{k}$ \U{4e0d}\U{5168}\U{4e3a}\U{96f6},s.t. $\beta
+_{1}f_{1}+..+\beta _{k}f_{k}\left( x\right) $ $\leq \beta _{1}\alpha
+_{1}+..+\beta _{k}\alpha _{k},\forall x\in E\implies \beta
+_{1}f_{1}+..+\beta _{k}f_{k}=0.$
+
+\bigskip If $f_{k}$ is linear indepedent with $f_{1},..f_{k-1},$then $\beta
+_{k}=0\implies $ $\beta _{1}f_{1}+..+\beta _{k-1}f_{k-1}=0,$
+
+\U{5bf9}\U{4e0d}\U{5168}\U{4e3a}\U{96f6}\U{7684}$\left( \beta _{1},..\beta
+_{k-1}\right) $\U{6210}\U{7acb},\U{8fd9}\U{4e0e}$\left(
+f_{1},..f_{k-1}\right) $ are linearly indepedent\U{77db}\U{76fe}.
+
+Then $f_{k}$ is linear depedent with $f_{1},..f_{k-1},\implies \exists
+\left( \beta _{1},..\beta _{k-1}\right) \in R^{k-1},s.t.f_{k}=\beta
+_{1}f_{1}+..+\beta _{k-1}f_{k-1}$
+
+\U{7531}\U{6761}\U{4ef6}B,$\alpha _{k}=\beta _{1}\alpha _{1}+..+\beta
+_{k-1}\alpha _{k-1},$
+
+$f_{k}\left( x\right) =\beta _{1}f_{1}\left( x\right) +..+\beta
+_{k-1}f_{k-1}\left( x\right) =\beta _{1}\alpha _{1}+..+\beta _{k-1}\alpha
+_{k-1}=\alpha _{k}.$
+
+\U{56e0}\U{6b64}\U{5bf9}$\left( f_{1},..f_{k-1}\right) $ are linearly
+indepedent\U{7684}\U{60c5}\U{5f62}n=k\U{4e5f}\U{6210}\U{7acb}.
+
+\U{4e00}\U{822c}\U{7684},\U{53ef}\U{4ee5}\U{4ece}$\left(
+f_{1},..f_{k-1}\right) $\U{4e2d}\U{53d6}\U{51fa}\U{6781}\U{5927}\U{65e0}%
+\U{5173}\U{7ec4},\U{8fd9}\U{65f6}\U{6784}\U{9020}\U{7684}$\varphi $\U{7684}%
+\U{7ef4}\U{6570}\U{5c31}\U{8981}\U{76f8}\U{5e94}\U{5730}\U{964d}\U{4e3a}%
+\U{6781}\U{5927}\U{65e0}\U{5173}\U{7ec4}\U{7684}\U{7ef4}\U{6570}.\U{7531}%
+\U{5f52}\U{7eb3}\U{5047}\U{8bbe}\U{53ef}\U{77e5}\U{5bf9}\U{4efb}\U{610f}%
+\U{6b63}\U{6574}\U{6570}n$\left( B\right) \implies \left( A\right) $\U{6210}%
+\U{7acb}.
+
+\end{document}

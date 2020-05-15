@@ -1,0 +1,301 @@
+
+\documentclass{article}
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Saturday, November 14, 2015 20:50:38}
+%TCIDATA{LastRevised=Sunday, November 15, 2015 22:24:45}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+\bigskip \U{8d75}\U{4e30}\qquad 2013012178\qquad \U{6cdb}\U{51fd}\U{7b2c}9%
+\U{5468}\U{4f5c}\U{4e1a}
+
+2.13 Let E and F be two Banach spaces. Prove that the set
+
+$\Omega $ = \{T \U{2208} L(E, F); T admits a left inverse\}
+
+is open in L(E, F).
+
+\bigskip We first prove that $O=$ \{T \U{2208} L(E, F); T is bijective\} is
+open. $\forall T\in O,\left\Vert x\right\Vert =1,$
+
+$\left\Vert T\right\Vert =\underset{\left\Vert x\right\Vert =1}{inf}%
+\left\Vert T\left( x\right) \right\Vert _{F}=\delta >0,$take $\epsilon =\min
+\left\{ \frac{\delta }{2},\frac{1}{2}\left\Vert T^{-1}\right\Vert
+^{-1}\right\} ,$and we can show that $U\left( T,\delta \right) \subset O.$
+
+Indeed, $U\left( T,\delta \right) =$ \{T+g \TEXTsymbol{\vert}g \U{2208} L(E,
+F) and $\left\Vert g\right\Vert <\epsilon $\},
+
+$\left\Vert \left\langle T+g,x\right\rangle \right\Vert _{F}\geq \left\Vert
+Tx\right\Vert -\left\Vert gx\right\Vert \geq \delta -\frac{\delta }{2}%
+>0,\forall \left\Vert x\right\Vert =1$
+
+$\implies \left( T+g\right) ^{-1}\left( 0\right) =\left\{ 0\right\} $ and by
+linearily 
+
+$T+g$ is injective. $\forall y\in F,$by the surjectivity of $T,$ there
+exists $x\in E,s.t.$
+
+$T\left( x_{0}\right) =y\implies \left\Vert \left( T+g\right) \left(
+x_{0}\right) -y\right\Vert =\left\Vert g\left( x_{0}\right) \right\Vert
+<\epsilon ,$
+
+for $g\left( x_{0}\right) ,$ we can find $x_{1}\in E,s.t.T\left(
+x_{1}\right) =-g\left( x_{0}\right) ,$
+
+$\left\Vert g\left( x_{1}\right) \right\Vert \leq \left\Vert g\right\Vert
+\left\Vert x_{1}\right\Vert \leq \left\Vert g\right\Vert \left\Vert
+T^{-1}\right\Vert \left\Vert g\left( x_{0}\right) \right\Vert \leq \frac{1}{2%
+}\epsilon ,$
+
+$\left\Vert \left( T+g\right) \left( x_{0}+x_{1}\right) -y\right\Vert
+=\left\Vert g\left( x_{1}\right) \right\Vert ,$
+
+Similarly, we can use induction to proceed, and there exists $x_{n}\in E,$
+
+$s.t.T\left( x_{n}\right) =-g\left( x_{n-1}\right) ,\left\Vert g\left(
+x_{n}\right) \right\Vert \leq \left\Vert g\right\Vert \left\Vert
+T^{-1}\right\Vert \left\Vert g\left( x_{n-1}\right) \right\Vert \leq \frac{1%
+}{2^{n}}\epsilon .$
+
+\bigskip $\left\Vert \left( T+g\right) \left( \underset{i=0}{\overset{n}{%
+\sum }}x_{i}\right) -y\right\Vert =\left\Vert g\left( x_{n}\right)
+\right\Vert $
+
+And we also have $\left\Vert x_{n}\right\Vert \leq \left\Vert
+T^{-1}\right\Vert \left\Vert g\left( x_{n-1}\right) \right\Vert \leq \frac{1%
+}{2}\left\Vert x_{n-1}\right\Vert \implies \underset{n=0}{\overset{\infty }{%
+\sum }}x_{n}$ converges 
+
+in E since E is a Banach space, by the continuity of $\left( T+g\right) $
+
+$\left\Vert \left( T+g\right) \left( \underset{n=0}{\overset{\infty }{\sum }}%
+x_{n}\right) -y\right\Vert =\left\Vert \underset{n=0}{\overset{\infty }{\sum 
+}}\left( T+g\right) \left( x_{n}\right) -y\right\Vert $
+
+=$\underset{n\rightarrow \infty }{\lim }\left\Vert \underset{i=0}{\overset{n}%
+{\sum }}\left( T+g\right) \left( x_{i}\right) -y\right\Vert $=$\underset{%
+n\rightarrow \infty }{\lim }\left\Vert g\left( x_{n}\right) \right\Vert =0.$
+
+This equality holds since $x_{n}\rightarrow 0\implies g\left( x_{n}\right)
+\rightarrow 0.\implies y$ has preimage $\ \qquad \left( T+g\right) \left( 
+\underset{n=0}{\overset{\infty }{\sum }}x_{n}\right) .$ 
+
+$\implies O$ is open in L(E,F). 
+
+$\forall T\in \Omega ,$since T has left inverse, we can easily show that T
+is injective, then 
+
+by Thm 2.13 $F$ allows the decomposition $F=R\left( T\right) \oplus L,$and
+we can define a projection $P$ from F to $R\left( T\right) .$Then $P\circ T$
+is bijective from E to R$\left( T\right) .$And since
+
+$O^{\prime }=$ \{f \U{2208} L(E, R$\left( T\right) $); f is bijective\} is
+open, $\ \ \exists \epsilon >0,s.t.\forall g:E\rightarrow R\left( T\right)
+,\left\Vert g\right\Vert <\epsilon ,P\circ T+g$ is bijective.
+
+Then $\forall g:E\rightarrow F,\left\Vert g\right\Vert <\frac{\epsilon }{%
+\left\Vert P\right\Vert },$ $P\circ g$ satisfies $\left\Vert P\circ
+g\right\Vert <\left\Vert P\right\Vert \left\Vert g\right\Vert <\epsilon ,$
+
+and $P\circ g\in O^{\prime }\implies P\circ T+P\circ g$ is bijective
+
+$\implies \exists S_{g},s.t.S_{g}\circ \left( P\circ T+P\circ g\right)
+=I_{E}\implies S_{g}\circ P\circ \left( T+g\right) =I_{E}\implies $
+
+$T+g$ has left inverse $\forall g:E\rightarrow F,\left\Vert g\right\Vert <%
+\frac{\epsilon }{\left\Vert P\right\Vert }\implies \Omega $ is open.
+
+2.19 $\left( 1\right) $A* E-\TEXTsymbol{>}E*, defined by $\left\langle
+A^{\ast }v,u\right\rangle =\left\langle Au,v\right\rangle $ $\forall u\in
+D\left( A\right) ,$ 
+
+and we can extended $A^{\ast }v$ to E since D$\left( A\right) $ is dense in
+E. 
+
+$\forall u\in N\left( A\right) ,Au=0$ in E. then for any $v\in A,$by $\left(
+1\right) $ we have
+
+$\left\langle A\left( u+v\right) ,u+v\right\rangle \geq -C\left\Vert A\left(
+u+v\right) \right\Vert ^{2}\implies $
+
+$\left\langle Av,v\right\rangle +C\left\Vert Av\right\Vert ^{2}+\left\langle
+Av,u\right\rangle \geq 0.$ we can replace $v$ by $av$,where $a$ is arbitrary
+real number$\implies \left[ \left( Av,v\right) +C\left\Vert Av\right\Vert
+^{2}\right] a^{2}+\left\langle Av,u\right\rangle a\geq 0,\forall a\in R.$
+
+Since $\left( Av,v\right) +C\left\Vert Av\right\Vert ^{2}\geq 0,\implies
+\left\langle Av,u\right\rangle =0\forall v\in E.\implies \left\langle
+A^{\ast }u,v\right\rangle =0\forall v\in E$
+
+$\implies A^{\ast }u=0$ in E.
+
+$\left( 2\right) $Since G$\left( A\right) $ is closed, it is Banach space in
+E$\times E^{\ast }$ with the norm $\left\Vert \cdot \right\Vert
+_{E}+\left\Vert \cdot \right\Vert _{E^{\ast }}.$
+
+If we equip D$\left( A\right) $ with the norm $\left\Vert \cdot \right\Vert
+_{E}+\left\Vert \cdot \right\Vert _{E^{\ast }},$then D$\left( A\right) $ is
+a Banach space.
+
+By the condition, R$\left( A\right) $ is closed, therefore a Banach space
+with the norm $\left\Vert \cdot \right\Vert _{E^{\ast }}.$
+
+A is surjective from D$\left( A\right) $ to R$\left( A\right) ,$ then we can
+apply open mapping Thm 
+
+A$\left( B_{D\left( A\right) }\left( 0,1\right) \right) \supset B_{E^{\ast
+}}\left( 0,c\right) \implies $A$\left( B_{D\left( A\right) }\left(
+0,c^{\prime }\right) \right) \supset \overline{B_{E^{\ast }}\left(
+0,1\right) },$then $\forall u\in E,Au\in E^{\ast },$
+
+there exists $v\in E,\left\Vert v\right\Vert \leq c^{\prime },s.t.\frac{Au}{%
+\left\Vert Au\right\Vert }=Av.$Let $v^{\prime }=\left\Vert Au\right\Vert
+v\implies Au=Av^{\prime }$
+
+$u-v^{\prime }\in N\left( A\right) ,$since $N\left( A\right) \subset N\left(
+A^{\prime }\right) ,\implies u-v^{\prime }\in N\left( A^{\prime }\right) ,$%
+which gives 
+
+$\left\langle Av^{\prime },u-v^{\prime }\right\rangle =0\implies
+\left\langle Av^{\prime },u\right\rangle =\left\langle Av^{\prime
+},v^{\prime }\right\rangle \geq -\left\Vert Av^{\prime }\right\Vert
+\left\Vert Au\right\Vert c^{\prime }$
+
+Substituing $Av^{\prime }$ by $Au\implies \left\langle Au,u\right\rangle
+\geq -c^{\prime }\left\Vert Au\right\Vert ^{2}.$
+
+2.20 1.Suppose $u_{n}\in D\left( B\right) =D\left( A\right) $ and $%
+u_{n}\rightarrow u$ in E, 
+
+$Bu_{n}=\left( A+T\right) u_{n}\rightarrow v$ in $F.$ By the continuity of
+T, $Tu_{n}\rightarrow Tu$ in F
+
+$\implies Au_{n}\rightarrow v-Tu.$Since $A$ is closed, $u\in D\left(
+A\right) $ and $v-Tu=Au$
+
+$\implies v=\left( T+A\right) u=Bu,$and B is closed.
+
+2. $D\left( A^{\ast }\right) =\left\{ v\in F^{\ast }|\exists c,\left\langle
+v,Au\right\rangle \leq c\left\Vert u\right\Vert ,\forall u\in E\right\} $
+
+$D\left( B^{\ast }\right) =\left\{ v\in F^{\ast }|\exists c,\left\langle
+v,Au\right\rangle +\left\langle v,Tu\right\rangle \leq c\left\Vert
+u\right\Vert ,\forall u\in E\right\} $
+
+if $v\in D\left( A^{\ast }\right) ,\exists c,\left\langle v,Au\right\rangle
+\leq c\left\Vert u\right\Vert ,$since $\left\langle v,Tu\right\rangle \leq
+\left\Vert v\right\Vert \left\Vert T\right\Vert \left\Vert u\right\Vert ,$
+
+$\left\langle v,Au\right\rangle +\left\langle v,Tu\right\rangle \leq \left(
+c+\left\Vert v\right\Vert \left\Vert T\right\Vert \right) \left\Vert
+u\right\Vert \implies v\in D\left( B^{\ast }\right) .$
+
+On the other hand,
+
+\bigskip if $v\in D\left( B^{\ast }\right) ,\exists c,\left\langle
+v,Au\right\rangle +\left\langle v,Tu\right\rangle \leq c\left\Vert
+u\right\Vert ,$since $\left\langle v,Tu\right\rangle \geq -\left\Vert
+v\right\Vert \left\Vert T\right\Vert \left\Vert u\right\Vert ,$
+
+$\left\langle v,Au\right\rangle \leq \left( c+\left\Vert v\right\Vert
+\left\Vert T\right\Vert \right) \left\Vert u\right\Vert \implies v\in
+D\left( A^{\ast }\right) .$
+
+$\implies D\left( A^{\ast }\right) =D\left( B^{\ast }\right) .$
+
+$\forall v\in F^{\ast },u\in D\left( A\right) ,\left\langle B^{\ast
+}v,u\right\rangle =\left\langle v,Bu\right\rangle =\left\langle
+v,Tu\right\rangle +\left\langle v,Au\right\rangle $
+
+$=\left\langle T^{\ast }v,u\right\rangle +\left\langle A^{\ast
+}v,u\right\rangle =\left\langle \left( A^{\ast }+T^{\ast }\right)
+v,u\right\rangle \implies B^{\ast }=A^{\ast }+T^{\ast }.$
+
+2.24 1.$D\left( B^{\ast }\right) =\left\{ v\in G^{\ast }|\exists
+c,s.t.\left\langle v,Bu\right\rangle \leq c\left\Vert u\right\Vert ,\forall
+u\in D\left( A\right) \right\} $
+
+$\bigskip \left\langle v,Bu\right\rangle \leq c\left\Vert u\right\Vert \iff
+\left\langle T^{\ast }v,Au\right\rangle \leq c\left\Vert u\right\Vert
+\implies T^{\ast }\left( D\left( B^{\ast }\right) \right) \subset D\left(
+A^{\ast }\right) $
+
+$\forall v\in G^{\ast },u\in D\left( A\right) ,\left\langle B^{\ast
+}v,u\right\rangle =\left\langle v,Bu\right\rangle =\left\langle v,T\circ
+Au\right\rangle $
+
+$=\left\langle T^{\ast }v,Tu\right\rangle =\left\langle A^{\ast }\circ
+T^{\ast }v,u\right\rangle \implies B^{\ast }=A^{\ast }\circ T^{\ast }.$
+
+\bigskip 2.Choose D$\left( A\right) \neq E$,T=0.Suppose G$\left( A\right) $
+is closed, then $u_{n}\in D\left( A\right) $ and $u_{n}\rightarrow u$
+
+and $Bu_{n}=0\rightarrow 0.$However, $u\notin D\left( A\right) $ if $D\left(
+A\right) $ is not closed. 
+
+\bigskip 2.25 1. Both $\left( S\circ T\right) ^{\ast }$ and $T^{\ast }\circ
+S^{\ast }$ are defined on G$^{\ast }.$Further, 
+
+$\forall v\in G^{\ast },u\in E,\left\langle \left( S\circ T\right) ^{\ast
+},u\right\rangle =\left\langle v,\left( S\circ T\right) u\right\rangle
+=\left\langle S^{\ast }v,Tu\right\rangle $
+
+$=\left\langle T^{\ast }\circ S^{\ast }v,u\right\rangle \implies \left(
+S\circ T\right) ^{\ast }=T^{\ast }\circ S^{\ast }.$
+
+2 If $T^{\ast }v=0,$for some $v\in F^{\ast }\implies \left\langle
+v,Tu\right\rangle =0\forall u\in E,$since T is surjective
+
+$\implies \left\langle v,u^{\prime }\right\rangle =0\forall u^{\prime }\in
+F\implies v=0,$by linearity of T$\implies T^{\ast }$ is injective.
+
+$\forall v^{\prime }\in E^{\ast },v^{\prime }\circ T^{-1}\in F^{\ast }$ and $%
+\left\langle T^{\ast }\left( v^{\prime }\circ T^{-1}\right) ,u\right\rangle
+=\left\langle \left( v^{\prime }\circ T^{-1}\right) ,Tu\right\rangle
+=\left\langle v^{\prime },u\right\rangle $
+
+$\implies T^{\ast }\left( v^{\prime }\circ T^{-1}\right) =v^{\prime }.$
+
+By 1. $T^{\ast }\circ \left( T^{-1}\right) ^{\ast }=\left( T\circ
+T^{-1}\right) ^{\ast }=I_{F^{\ast }},$
+
+$\left( T^{-1}\right) ^{\ast }\circ T^{\ast }=\left( T^{-1}\circ T\right)
+^{\ast }=I_{E^{\ast }}.$
+
+$\implies \left( T^{\ast }\right) ^{-1}=\left( T^{-1}\right) ^{\ast }.$
+
+\end{document}

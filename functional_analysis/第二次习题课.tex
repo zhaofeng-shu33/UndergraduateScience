@@ -1,0 +1,346 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Friday, November 06, 2015 19:20:26}
+%TCIDATA{LastRevised=Wednesday, May 18, 2016 21:44:43}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+
+\begin{document}
+
+
+\begin{CJK}{GBK}{song}
+
+T is a closed operator$\iff $G$\left( T\right) $ is closed in $X\times Y\iff
+\forall \left\{ x_{n}\right\} \subset X,x\in X,y\in Y,$satisfying $\left(
+x_{n},Tx_{n}\right) \rightarrow \left( x,y\right) ,$then we have $x\in
+D\left( T\right) ,y=Tx,i.e.\left( x,y\right) \in G\left( T\right) .$
+
+\bigskip
+
+1. Let $X,Y$ be two n.l.s,T:X$\rightarrow Y$ is a closed linear operator,
+and $T^{-1}$ exists,show that $T^{-1}$ is closed.
+
+Pf: $\forall \left\{ y_{n}\right\} \subset R\left( T\right) ,y\in R\left(
+T\right) ,x\in x,$satisfying $y_{n}\rightarrow y,T^{-1}y_{n}\rightarrow x,$
+to prove that $y\in D\left( T^{-1}\right) ,T^{-1}y=x,$
+
+Since T is closed, T$\left( T^{-1}y_{n}\right) =y_{n}\rightarrow
+y,T^{-1}y_{n}\rightarrow x\implies y=Tx,i.e.T^{-1}y=x\boxtimes $
+
+2. $,$Let T: X$\rightarrow Y$ is a linear operator, dimX=dimY\TEXTsymbol{<}$%
+\infty ,$show that R$\left( T\right) =Y\iff T^{-1}$ exists(T is injective).
+
+Pf: $\left( \Longrightarrow \right) $ only need to show that T is injective.
+Tx=0$\Longrightarrow x=0.$Take a basis $\left\{ b_{1},..b_{n}\right\} $ of
+Y, $\exists \left\{ e_{1},..e_{n}\right\} ,s.t.b_{i}=Te_{i},$let $%
+k_{1}e_{1}+..+k_{n}e_{n}=0,T\left( \sum k_{i}e_{i}\right) =0\implies \Sigma
+k_{i}b_{i}=0\implies k_{i}=0.$
+
+$\implies \left\{ e_{1},..e_{n}\right\} $ is linearly indepedent and since
+dimX=n,
+
+they are indeed a basis of X.
+
+Let $x=\Sigma \alpha _{i}e_{i},T\left( x\right) =0\implies \alpha
+_{i}=0\implies x=0\implies T$ is injective $\implies T$ is bijective $%
+\implies T^{-1}$ exists.
+
+$\left( \Longleftarrow \right) $ T: X$\rightarrow Y$ first show that dimR$%
+\left( T\right) \leq \dim X.$Take a basis of X:$\left\{
+a_{1},..a_{n}\right\} ,R\left( T\right) =span\left\{ Ta_{1},..Ta_{n}\right\}
+\leq n=\dim X.$
+
+Similarly, apply the above conclusion to T$^{-1}\implies R\left( T\right)
+\rightarrow X,\implies \dim X\leq \dim R\left( T\right) \implies \dim X=\dim
+R\left( T\right) $
+
+$\implies R\left( T\right) =Y,$because they are both finite dimensional
+space with same dimension.
+
+3. X,Y are n.l.s T X$\rightarrow Y$ is a bounded linear operator. If $%
+\exists b>0,s.t.\forall x\in X,$ we have $\left\Vert Tx\right\Vert \geq
+b\left\Vert x\right\Vert $
+
+then $T^{-1}$ $\left( R\left( T\right) \rightarrow X\right) $exists and
+bounded.
+
+Pf: T is injective,that is Tx=0$\implies x=0,$
+
+\bigskip $\left\Vert Tx\right\Vert \geq b\left\Vert x\right\Vert \implies
+\left\Vert T^{-1}y\right\Vert \leq \frac{1}{b}\left\Vert y\right\Vert
+\implies T^{-1}$ is bounded.
+
+4.$\left( a\right) $ T R$^{2}\rightarrow R,\left( \xi _{1},\xi _{2}\right)
+\rightarrow \xi _{2},$show that T is an open mapping.
+
+Pf: $\forall $open set $U\subset R^{2},$then we show that T$\left( U\right) $
+is open in R.
+
+$\forall x\in T\left( U\right) ,\exists \left( x,y\right) \in U\implies
+B\left( \left( x,y\right) ,\delta \right) \subset U\implies \left( x-\delta
+,x+\delta \right) \subset T\left( U\right) $
+
+$\implies $T$\left( U\right) $ is open in R.
+
+$\left( b\right) $ S:$R^{2}\rightarrow R^{2},\left( \xi _{1},\xi _{2}\right)
+\rightarrow \left( \xi _{1},0\right) ,$ then show that S is not an open
+mapping.
+
+A two-dimensional open ball is mapped to a segment, which is not open in R$%
+^{2}.$
+
+$\left( c\right) $ Open mapping T does not necessary map a closed set onto a
+closed set.
+
+Solution:$\left( a\right) $ gives a definition of T, which maps a closed set 
+$\left\{ \left( x,y\right) |xy=1\right\} $ onto R\TEXTsymbol{\backslash}$%
+\left\{ 0\right\} ,$ which is open.
+
+5. X is a Banach space, L and M are two closed subspaces of X, and X=L$%
+\oplus M,$show that the point sequence $\left\{ x_{n}\right\} \rightarrow
+x\iff \exists x_{l}^{\left( n\right) }\rightarrow x_{l}$ and $x_{m}^{\left(
+n\right) }\rightarrow x_{m},s.t.x_{n}=x_{l}^{\left( n\right) }+x_{m}^{\left(
+n\right) },x=x_{l}+x_{m}.$
+
+$\left( \implies ,\text{refer to Thm 2.10 on page 37 of textbook}\right) $%
+Define a new norm $\left\Vert \cdot \right\Vert _{1}$ on X,:$\left\Vert
+x\right\Vert _{1}=\left\Vert l\right\Vert +\left\Vert m\right\Vert ,x=l+m$
+uniquely,then $\left\Vert x\right\Vert \leq \left\Vert x\right\Vert _{1}.$
+We define an identical mapping from $\left( X,\left\Vert {}\right\Vert
+\right) $ $\rightarrow \left( X,\left\Vert {}\right\Vert _{1}\right) ,$We
+should verify that $\left( X,\left\Vert {}\right\Vert _{1}\right) $ is a
+Banach space. Take $\left\{ x_{n}\right\} \subset \left( X,\left\Vert
+{}\right\Vert _{1}\right) $ is a Cauchy sequence, $\left\Vert
+x_{n}-x_{p}\right\Vert _{1}\rightarrow 0,\left( n,p\rightarrow \infty
+\right) .$
+
+$\implies \left\Vert x_{l}^{\left( n\right) }-x_{l}^{\left( p\right)
+}\right\Vert +\left\Vert x_{m}^{\left( n\right) }-x_{m}^{\left( p\right)
+}\right\Vert \rightarrow 0\implies \left\{ x_{m}^{\left( n\right) }\right\} $
+and $\left\{ x_{l}^{\left( n\right) }\right\} $ are both Cauchy sequence in
+L and M. $\implies \exists x_{m}\leftarrow x_{m}^{\left( n\right)
+},x_{l}\leftarrow x_{l}^{\left( n\right) },\implies x_{n}\rightarrow
+x_{m}+x_{l}$ in $\left\Vert \cdot \right\Vert _{1}.$
+
+\bigskip By inverse mapping Thm,$\exists c>0$ $s.t.\left\Vert x\right\Vert
+_{1}\leq c\left\Vert x\right\Vert .$
+
+$\left( \Longleftarrow \right) $Obviously.
+
+6. $X,X_{1},X_{2}$ are Banach spaces,$T_{1}:X\rightarrow
+X_{1},T_{2}:X\rightarrow X_{2}$ are closed l.op. and D$\left( T_{1}\right)
+\subset D\left( T_{2}\right) ,$show that
+
+there exists c\TEXTsymbol{>}0,s.t. $\left\Vert T_{2}x\right\Vert \leq
+c\left( \left\Vert T_{1}x\right\Vert +\left\Vert x\right\Vert \right)
+,\forall x\in X.$
+
+Pf: Define a new norm $\left\Vert \cdot \right\Vert _{1}$on X$:\left\Vert
+x\right\Vert _{1}=\left\Vert T_{1}x\right\Vert +\left\Vert x\right\Vert .$
+
+Clearly,we have $\left\Vert x\right\Vert _{1}\leq \left\Vert x\right\Vert .$
+
+Suppose $\left\Vert x_{n}-x_{p}\right\Vert _{1}\rightarrow 0,\left(
+n,p\rightarrow \infty \right) ,\implies \left\Vert x_{n}-x_{p}\right\Vert
+\rightarrow 0.$
+
+$X$ is a Banach space $\implies \exists x\in X,s.t.x_{n}\rightarrow x.$
+
+Also we have $\left\Vert T_{1}x_{n}-T_{1}x_{p}\right\Vert \rightarrow
+0,X_{1} $ is a Banach space$\implies T_{1}x_{n}\rightarrow y.$
+
+$T_{1}$ is closed $\implies y=T_{1}x\implies x_{n}\rightarrow x$ in $%
+\left\Vert \cdot \right\Vert _{1}.$
+
+$\implies \left( X,\left\Vert \cdot \right\Vert _{1}\right) $ is a Banach
+space. Similar to 5, we can show the equivalence of $\left\Vert \cdot
+\right\Vert $ and $\left\Vert \cdot \right\Vert _{1},$that is, $\exists
+c_{1}>0,s.t.\left\Vert x\right\Vert \leq c_{1}\left\Vert x\right\Vert _{1}$
+
+$T_{2}:X\rightarrow X_{2},$ by closed graph Thm
+
+$\implies T_{2}$ is continuous$\left\Vert T_{2}x\right\Vert \leq c^{\prime
+}\left\Vert x\right\Vert \leq c_{1}c^{\prime }\left\Vert x\right\Vert _{1}$
+
+$\implies \left\Vert T_{2}x\right\Vert \leq c\left\Vert T_{1}x\right\Vert
++\left\Vert x\right\Vert ,$where $c=c_{1}c^{\prime }.$
+
+(\U{4e0a}\U{9762}\U{662f}\U{6211}\U{7684}\U{505a}\U{6cd5},\U{52a9}\U{6559}%
+\U{89e3}\U{6cd5}\U{5927}\U{610f}\U{4e3a}\U{5728}X$\times X_{1}$\U{4e0a}%
+\U{5b9a}\U{4e49}norm $\left\Vert \left( x,x_{1}\right) \right\Vert
+=\left\Vert x\right\Vert +\left\Vert x_{1}\right\Vert $
+
+\U{7136}\U{540e}\U{8bc1}\U{660e}X$\times X_{1}$\U{7684}\U{5b50}\U{7a7a}%
+\U{95f4}G$\left( T_{1}\right) $ is a Banach space,\U{505a}\U{4e00}\U{4e2a}%
+\U{628a}G$\left( T_{1}\right) $\U{6620}\U{5230}X$_{2}$\U{7684}\U{6620}%
+\U{5c04}
+
+$\left( x,T_{1}x\right) \rightarrow T_{2}x,$\U{8bc1}\U{660e}\U{6b64}\U{6620}%
+\U{5c04} is closed,\U{518d}\U{7528}closed graph Thm\U{5373}\U{5f97}\U{8981}%
+\U{8bc1}\U{7684}\U{7ed3}\U{8bba})
+
+7. Let X be a Banach space, P: X$\rightarrow X$ is a linear operator and
+satisfies P$^{2}=P.$
+
+Show that P is bounded if both N$\left( P\right) $ and R$\left( P\right) $
+are closed.
+
+$\forall x_{n}\in X,x_{n}\rightarrow x,Px_{n}\rightarrow y,\implies
+Px_{n}-x_{n}\rightarrow y-x.$
+
+Notice that $P\left( Px_{n}-x_{n}\right) =P^{2}x_{n}-Px_{n}=0$
+
+N$\left( P\right) $ is closed$\implies y-x\in N\left( P\right) \implies
+P\left( y\right) =P\left( x\right) $
+
+Also R$\left( P\right) $ are closed and $Px_{n}\rightarrow y\implies \exists
+x_{1}\in X,s.t.P\left( x_{1}\right) =y$
+
+$\implies P^{2}x_{1}=Px\implies y=Px_{1}=P^{2}x_{1}=Px\implies P$ is closed.
+
+Also R$\left( P\right) $ is a Banach space,by closed graph Thm$\implies $P
+is bounded
+
+8.Let X,Y be normed vector space, T: D$\left( T\right) \subset X\rightarrow
+Y $ be a bounded linear operator.$\left( 1\right) $ if D$\left( T\right) $
+is closed,show that T is closed.
+
+$\left( 2\right) $ if T is closed, and Y is complete, show that D$\left(
+T\right) $ is closed.
+
+Solution$\left( 1\right) $Suppose X$_{n}\in D\left( T\right) \rightarrow
+x,Tx_{n}\rightarrow y.$
+
+D$\left( T\right) $ is closed$\implies x\in D\left( T\right) ,T$ is bounded $%
+\implies Tx_{n}\rightarrow Tx=y$
+
+$\implies $T is closed
+
+$\left( 2\right) $ Suppose x$_{n}\in D\left( T\right) \rightarrow
+x,\left\Vert Tx_{n}-Tx_{p}\right\Vert \leq c\left\Vert
+x_{n}-x_{p}\right\Vert \rightarrow 0\left( n,p\rightarrow \infty \right) $
+
+$\left\{ Tx_{n}\right\} $ is a Cauchy sequence in Y$\implies \exists y\in
+Y,s.t.Tx_{n}\rightarrow y$
+
+T is closed$\implies x\in D\left( T\right) \implies $D$\left( T\right) $ is
+closed.
+
+9 Let X,Y be two linear spaces, T: D$\left( T\right) \subset X\rightarrow Y$
+is a linear operator.
+
+Then T can be extended linearly to \~{T} s.t. G$\left( \tilde{T}\right) =%
+\overline{G\left( T\right) }$ iff there are no elements like
+
+$\left( 0,y\right) _{y\neq 0}$ in $\overline{G\left( T\right) }.$
+
+$\left( \implies \right) \left( 0,y\right) \in \overline{G\left( T\right) }%
+=G\left( \tilde{T}\right) ,\tilde{T}\left( 0\right) =y\implies y=0$
+
+$\left( \Longleftarrow \right) \forall \left( x,y\right) \in \overline{%
+G\left( T\right) },$we define $\tilde{T}\left( x\right) =y.$
+
+To verify such definition is reasonable, suppose we have $\left(
+x,y_{1}\right) ,\left( x,y_{2}\right) \in \overline{G\left( T\right) }$
+
+$\implies \exists \left\{ x_{n}^{\left( i\right) }\right\} \in D\left(
+T\right) ,s.t.x_{n}^{\left( i\right) }\rightarrow x,T\left( x_{n}^{\left(
+i\right) }\right) \rightarrow y_{i},i=1,2\implies x_{n}^{\left( 1\right)
+}-x_{n}^{\left( 2\right) }\rightarrow 0,$
+
+$T\left( x_{n}^{\left( 1\right) }-x_{n}^{\left( 2\right) }\right) =T\left(
+x_{n}^{\left( 1\right) }\right) -T\left( x_{n}^{\left( 2\right) }\right)
+\rightarrow y_{1}-y_{2},$and $x_{n}^{\left( 1\right) }-x_{n}^{\left(
+2\right) }\in D\left( T\right) $ $\implies \left( 0,y_{1}-y_{2}\right) \in 
+\overline{G\left( T\right) }\implies y_{1}=y_{2}$ by the condition.
+
+By the definition of \~{T},G$\left( \tilde{T}\right) =\overline{G\left(
+T\right) }.$
+
+And as $x\in D\left( T\right) ,\left( x,T\left( x\right) \right) \in 
+\overline{G\left( T\right) },$by the uniqueness of image$\implies \tilde{T}%
+\left( x\right) =T\left( x\right) $
+
+$\implies \tilde{T}$ is an extension of T.
+
+Suppose $\left( x_{i},\tilde{T}\left( x_{i}\right) \right) \in \overline{%
+G\left( T\right) },i=1,2;\exists \left\{ x_{n}^{\left( i\right) }\right\}
+\in D\left( T\right) ,s.t.x_{n}^{\left( i\right) }\rightarrow x_{i},T\left(
+x_{n}^{\left( i\right) }\right) \rightarrow \tilde{T}\left( x_{i}\right)
+,i=1,2$
+
+$\implies x_{n}^{\left( 1\right) }+x_{n}^{\left( 2\right) }\rightarrow
+x_{1}+x_{2},$
+
+$T\left( x_{n}^{\left( 1\right) }+x_{n}^{\left( 2\right) }\right) =T\left(
+x_{n}^{\left( 1\right) }\right) +T\left( x_{n}^{\left( 2\right) }\right)
+\rightarrow \tilde{T}\left( x_{1}\right) +\tilde{T}\left( x_{2}\right) ,$and 
+$x_{n}^{\left( 1\right) }+x_{n}^{\left( 2\right) }\in D\left( T\right) $
+
+$\implies \left( x_{1}+x_{2},\tilde{T}\left( x_{1}\right) +\tilde{T}\left(
+x_{2}\right) \right) \in \overline{G\left( T\right) }$
+
+$\implies \tilde{T}\left( x_{1}+x_{2}\right) =\tilde{T}\left( x_{1}\right) +%
+\tilde{T}\left( x_{2}\right) $
+
+$\implies \tilde{T}$ is an linear extension of T.
+
+10 Let $\left( X,\left\Vert \cdot \right\Vert _{1}\right) ,\left(
+X,\left\Vert \cdot \right\Vert _{2}\right) $ be two Banach spaces, $%
+\left\Vert x_{n}\right\Vert _{1}\rightarrow 0\implies \left\Vert
+x_{n}\right\Vert _{2}\rightarrow 0.$
+
+Show that $\left\Vert \cdot \right\Vert _{1}$ is equivalent to $\left\Vert
+\cdot \right\Vert _{2}.$
+
+The condition says that the identify mapping from $\left( X,\left\Vert \cdot
+\right\Vert _{1}\right) $ to $\left( X,\left\Vert \cdot \right\Vert
+_{2}\right) $ is continuous at 0. By linearity, it is continuous everywhere
+and it is also bounded:
+
+$\left\Vert x\right\Vert _{2}\leq c\left\Vert x\right\Vert _{1},\left(
+X,\left\Vert \cdot \right\Vert _{1}\right) ,\left( X,\left\Vert \cdot
+\right\Vert _{2}\right) $ be two Banach spaces,by Inverse Mapping Thm
+
+$\implies \left\Vert \cdot \right\Vert _{1}$ is equivalent to $\left\Vert
+\cdot \right\Vert _{2}.$
+\end{CJK}
+
+\end{document}

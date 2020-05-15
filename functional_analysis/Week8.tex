@@ -1,0 +1,400 @@
+
+\documentclass{article}
+\usepackage{amssymb}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Wednesday, November 04, 2015 08:47:01}
+%TCIDATA{LastRevised=Saturday, November 07, 2015 15:41:31}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+\bigskip \U{8d75}\U{4e30}\qquad 2013012178\qquad \U{6cdb}\U{51fd}\U{7b2c}8%
+\U{5468}\U{4f5c}\U{4e1a}
+
+2.8
+
+We first show that $T$ is a closed operator and it is equivalent to show
+that if $x_{n}\rightarrow x$ in $E,$
+
+$Tx_{n}\rightarrow y$ in $E^{\ast },$then $Tx=y.$ $\forall z\in E,$by the
+condition we have $\left\langle T(x_{n}-z),x_{n}-z\right\rangle \geq 0,$by
+
+the linearity of $T,\implies \left\langle Tx_{n},x_{n}\right\rangle
+-\left\langle Tx_{n},z\right\rangle -\left\langle Tz,x_{n}-z\right\rangle
+\geq 0$ $\left( \ast \right) .$
+
+$\left\langle Tx_{n},z\right\rangle \rightarrow \left\langle
+y,z\right\rangle ,$since $Tx_{n}\rightarrow y;$
+
+$\left\langle Tz,x_{n}-z\right\rangle \rightarrow \left\langle
+Tz,x-z\right\rangle ,$since$\qquad x_{n}\rightarrow x;$
+
+$\left\vert \left\langle Tx_{n},x_{n}\right\rangle -\left\langle
+y,x\right\rangle \right\vert \leq \left\vert \left\langle
+Tx_{n},x_{n}\right\rangle -\left\langle y,x_{n}\right\rangle \right\vert
++\left\vert \left\langle y,x_{n}\right\rangle -\left\langle y,x\right\rangle
+\right\vert \rightarrow 0;\implies \left\langle Tx_{n},x_{n}\right\rangle
+\rightarrow \left\langle y,x\right\rangle .$
+
+Taking the limit $n\rightarrow \infty $ in $\left( \ast \right) \implies
+\left\langle y,x-z\right\rangle $ $\geq \left\langle Tz,x-z\right\rangle
+\forall z\in E.$Let $z^{\prime }=z-x,$
+
+$\implies \left\langle y,z^{\prime }\right\rangle \geq \left\langle T\left(
+x-z^{\prime }\right) ,z^{\prime }\right\rangle \implies \left\langle
+Tx-y,z^{\prime }\right\rangle \leq \left\langle Tz^{\prime },z^{\prime
+}\right\rangle ,$Substituting $tz^{\prime }$ for $z^{\prime }$ gives$\left(
+t\in R\right) $:
+
+$\left\langle Tx-y,z^{\prime }\right\rangle t\leq \left\langle Tz^{\prime
+},z^{\prime }\right\rangle t^{2},$holds $\forall t\in R.\implies
+\left\langle Tx-y,z^{\prime }\right\rangle =0\forall z^{\prime }\in E.$
+
+Therefore $T$ is a closed operator. Since E is a Banach space and E* is
+also. Then we can
+
+apply the closed graph Thm to conclude that T is linear bounded operator
+from E to E*.
+
+2.9
+
+Like 2.8,we first show that $T$ is a closed operator. If $x_{n}\rightarrow x$
+in $E,$
+
+$Tx_{n}\rightarrow z$ in $E^{\ast },$And $\forall y\in E,$by the condition
+we have $\left\langle Tx_{n},y-x\right\rangle =\left\langle T\left(
+y-x\right) ,x_{n}\right\rangle .$
+
+Taking the limit $n\rightarrow \infty $ gives $\left\langle
+z,y-x\right\rangle =\left\langle T\left( y-x\right) ,x\right\rangle $
+
+On the other hand $\left\langle T\left( y-x\right) ,x\right\rangle
+=\left\langle Ty,x\right\rangle -\left\langle Tx,x\right\rangle
+=\left\langle Tx,y\right\rangle -\left\langle Tx,x\right\rangle
+=\left\langle Tx,y-x\right\rangle $
+
+$\implies \left\langle z,y-x\right\rangle =\left\langle Tx,y-x\right\rangle
+,\forall y\in E\implies z=Tx$
+
+\bigskip Like 2.8,from the closed graph Thm, the conclusion follows.
+
+2.10 $\left( a\right) $Suppose $T\left( M\right) $ is closed, for each
+sequence $e_{k}+g_{k}\in M+N\left( T\right) ,$which converges to $e,$below
+we show that $e\in M+N\left( T\right) .$ Applying $T$ to this sequece gives
+a sequence $T\left( e_{k}\right) $ in $T\left( M\right) ,$which converges to 
+$T\left( e\right) $ by the continuity of $T$. Since $T\left( M\right) $ is
+closed, $T\left( e\right) \in T\left( M\right) .$Then we can find $\tilde{e}%
+\in M,s.t.T\left( \tilde{e}\right) =T\left( e\right) ,$since $T$ is
+surjective. It follows that $T\left( e-\tilde{e}\right) =0\implies e-\tilde{e%
+}\in N\left( T\right) \implies e\in M+N\left( T\right) .$
+
+Conversely, we show that $T\left( \left( M+N\left( T\right) \right)
+^{c}\right) =\left( T\left( M+N\left( T\right) \right) \right) ^{c}.$
+
+$\forall y\in T\left( \left( M+N\left( T\right) \right) ^{c}\right) ,$there
+exists $x\in E/\left( M+N\left( T\right) \right) ,s.t.T\left( x\right) =y.$
+If $T\left( x\right) \in T\left( M+N\left( T\right) \right) ,$then
+
+$T\left( x\right) =T\left( x^{\prime }\right) ,x^{\prime }\in M+N\left(
+T\right) ,x-x^{\prime }\in N\left( T\right) \implies x\in M+N\left( T\right)
+.$A contradiction.
+
+$\implies y=T\left( x\right) \notin T\left( M+N\left( T\right) \right)
+\implies y\in \left( T\left( M+N\left( T\right) \right) \right) ^{c}\implies
+T\left( \left( M+N\left( T\right) \right) ^{c}\right) \subset \left( T\left(
+M+N\left( T\right) \right) \right) ^{c}.$
+
+And for any subset of E, $T\left( A^{c}\right) \supset \left( T\left(
+A\right) \right) ^{c}$. Indeed, $\forall y\in \left( T\left( A\right)
+\right) ^{c},$
+
+there exists $x\in E,s.t.T\left( x\right) =y\notin T\left( A\right)
+.\implies x\notin A\implies x\in A^{c}\implies y\in T\left( A^{c}\right)
+\implies T\left( A^{c}\right) \supset \left( T\left( A\right) \right) ^{c}.$
+
+As a result, $T\left( \left( M+N\left( T\right) \right) ^{c}\right) =\left(
+T\left( M+N\left( T\right) \right) \right) ^{c}$ is shown.
+
+Since $T$ is surjective from $E$ to $F$, where both spaces are Banach
+space,by open mapping Thm,
+
+$T$ maps every open set onto open set. If $M+N\left( T\right) $ is closed
+,then its complement $\left( M+N\left( T\right) \right) ^{c}$ is open$%
+\implies $
+
+$\left( T\left( M+N\left( T\right) \right) \right) ^{c}$ is open$\implies $ $%
+T\left( M+N\left( T\right) \right) =T\left( M\right) $ is closed.
+
+In conclusion $T\left( M\right) $ is closed$\iff M+N\left( T\right) $ is
+closed.
+
+$\left( b\right) $ $N\left( T\right) $ is a linear subspace of $E$. $N\left(
+T\right) $ is also closed since its dimension is finite. Then by Proposition
+11.4 on page 350 of textbook we can show that
+
+their sum-space $M+N\left( T\right) $ is also closed. Then by the conclusion
+in $\left( a\right) $ it follows that $T\left( M\right) $ is closed.
+
+2.12
+
+Since dimN$\left( T\right) $\TEXTsymbol{<}$\infty ,$ it has a complement L
+in E, that is ,$\forall x\in E,x$ has unique decomposition $x=x^{\prime
+}+x_{e},s.t.T\left( x\right) =T\left( x_{e}\right) .$If we restrict T on L,
+Then T is injective from L to F. Indeed, suppose that $T\left( x_{1}\right)
+=T\left( x_{2}\right) ,$then $x_{1}-x_{2}\in N\left( T\right) ,$we choose $%
+x_{1},x_{2}\in L\implies x_{1}-x_{2}\in L\cap N\left( T\right) =\left\{
+0\right\} \implies x_{1}=x_{2}.$
+
+L is a closed subspace of E, also a Banach space. Then we get a bijective
+mapping from L to T$\left( L\right) =T\left( R\right) ,$ which by the
+condition is closed, also a Banach space$.$Then by the inverse operator Thm,
+
+there exists a constant $c,s.t.\forall x\in L,y\in R\left( T\right) $ we
+have:
+
+$\left\Vert x\right\Vert \leq c\left\Vert Tx\right\Vert .$
+
+We define a new norm on E as $\left\Vert x\right\Vert _{1}=\left\Vert
+Tx\right\Vert _{F}+\left\vert x\right\vert ,$to show the new norm is
+equivalent to the original norm. We should show that $\left( E,\left\Vert
+{}\right\Vert _{1}\right) $ is a Banach space.Suppose $\left\Vert
+x_{n}-x_{m}\right\Vert _{1}\rightarrow 0\implies \left\Vert
+Tx_{n}-Tx_{m}\right\Vert _{F}\rightarrow 0$
+
+Since F is Banach space,there exists $y\in F,s.t.\left\Vert
+Tx_{n}-y\right\Vert _{F}\rightarrow 0.$
+
+$y\in R\left( T\right) ,$ since $R\left( T\right) $ is closed$\implies $%
+there exists $x\in E,s.t.T\left( x\right) =y.$To show $\left\Vert
+x_{n}-x\right\Vert _{1}\rightarrow 0,$we only need to show $\left\vert
+x_{n}-x\right\vert \rightarrow 0.$Decomposing $x_{n}=x_{n}^{\prime
+}+x_{e}^{\left( n\right) },x=x^{\prime }+x_{e},$where $x_{n}^{\prime },x\in
+N\left( T\right) ,x_{e}^{\left( n\right) },x_{e}\in L.$ Since $\left\Vert
+x_{e}^{\left( n\right) }-x_{e}\right\Vert \leq c\left\Vert Tx_{e}^{\left(
+n\right) }-Tx_{e}\right\Vert =\left\Vert Tx_{n}-y\right\Vert \rightarrow
+0\implies x_{e}^{\left( n\right) }\rightarrow x_{e}.$ Further we have  $%
+\left\vert x_{n}-x_{m}\right\vert \rightarrow 0$
+
+Seperating $x_{n}^{\prime },x^{\prime }$ out gives $\left\vert x_{n}^{\prime
+}-x_{m}^{\prime }\right\vert \leq \allowbreak \left\vert
+x_{n}-x_{m}\right\vert +\left\vert x_{e}^{\left( n\right) }-x_{e}^{\left(
+m\right) }\right\vert \rightarrow 0.$Notice that dimN$\left( T\right)
+<\infty ,\implies N\left( T\right) $ is complete$\implies $there exists $%
+x^{\ast }\in N\left( T\right) ,s.t.\left\vert x_{n}^{\prime }-x^{\ast
+}\right\vert \rightarrow 0\implies x_{n}\rightarrow x^{\ast }+x_{e}$ in $%
+\left\vert {}\right\vert .$But we know $x_{n}\rightarrow x^{\prime }+x_{e}$
+in
+
+$\left\vert {}\right\vert \implies x^{\ast }+x_{e}=x^{\prime }+x_{e}\implies
+x^{\prime }=x^{\ast }.$That is $x_{n}\rightarrow x+x_{e}$ =x in $\left\vert
+{}\right\vert .$As a result, $\left( E,\left\Vert {}\right\Vert _{1}\right) $
+is a Banach space. $\left\Vert x\right\Vert _{1}\leq \left\Vert T\right\Vert
+\left\Vert x\right\Vert _{E}+M\left\Vert x\right\Vert _{E}=\left( \left\Vert
+T\right\Vert +M\right) \left\Vert x\right\Vert _{E},$by Cor2.8$\implies $%
+there exists a constant c,s.t.
+
+$\left\Vert x\right\Vert _{E}\leq c\left\Vert x\right\Vert _{1}=c\left(
+\left\Vert Tx\right\Vert _{F}+\left\vert x\right\vert \right) ,\forall x\in
+E.$
+
+2.11
+
+\bigskip In $F=\ell ^{1}$ we can find a basis $\left\{
+f_{1},f_{2},..\right\} $ with $\left\Vert f_{i}\right\Vert =1$
+
+Since T is surjective, by open mapping thm, for some constant c, we can find 
+$e_{i}$ s.t. $T\left( e_{i}\right) =f_{i},$ and $\left\Vert e_{i}\right\Vert
+\leq c\forall i.$ 
+
+S=Span$\left\{ e_{1},..e_{n}..\right\} $ is a subspace of E. And for any z$%
+\in E,T\left( z\right) $ can be represented uniquely as 
+
+T$\left( z\right) =\underset{i=1}{\overset{\infty }{\sum }}z_{i}f_{i}.$
+
+Now $\forall x=\underset{i=1}{\overset{\infty }{\sum }}x_{i}f_{i}\in
+F,\left\Vert x\right\Vert =\underset{i=1}{\overset{\infty }{\sum }}%
+\left\vert x_{i}\right\vert <\infty ,$
+
+\bigskip Consider s$_{n}=\underset{i=1}{\overset{n}{\sum }}x_{i}e_{i}\in
+E,\left\Vert s_{n+p}-\NEG{s}_{n}\right\Vert =\left\Vert \underset{i=n+1}{%
+\overset{n+p}{\sum }}x_{i}e_{i}\right\Vert \leq c\underset{i=n+1}{\overset{%
+n+p}{\sum }}\left\vert x_{i}\right\vert ,$
+
+since $\underset{i=1}{\overset{\infty }{\sum }}\left\vert x_{i}\right\vert
+<\infty ,$by Cauchy's Criterion for real number, follows $\underset{i=n+1}{%
+\overset{n+p}{\sum }}\left\vert x_{i}\right\vert \rightarrow 0\implies
+\left\Vert s_{n+p}-\NEG{s}_{n}\right\Vert \rightarrow 0,$
+
+since E is a Banach space$\implies \left\{ s_{n}\right\} $ converges in E,
+and the limit is denoted as $\underset{i=1}{\overset{\infty }{\sum }}%
+x_{i}e_{i}.$
+
+We then define $Sx=\underset{i=1}{\overset{\infty }{\sum }}x_{i}e_{i}\in E,$%
+such definition is well-defined as shown above,
+
+and S is also a linear mapping from F to E. 
+
+\bigskip To show T$\left( \underset{i=1}{\overset{\infty }{\sum }}%
+x_{i}e_{i}\right) =\left( \underset{i=1}{\overset{\infty }{\sum }}%
+x_{i}f_{i}\right) ,$
+
+in the equality, T$\left( \underset{i=1}{\overset{n}{\sum }}%
+x_{i}e_{i}\right) =\left( \underset{i=1}{\overset{n}{\sum }}%
+x_{i}f_{i}\right) ,$we let n$\rightarrow \infty ,$by the continuity of T
+follows 
+
+T$\left( \underset{i=1}{\overset{\infty }{\sum }}x_{i}e_{i}\right) =\left( 
+\underset{i=1}{\overset{\infty }{\sum }}x_{i}f_{i}\right) $
+
+Therefore S satisfies $T\circ S=I_{F}.$ To show the continuity of $S,$%
+suppose $\underset{i=1}{\overset{\infty }{\sum }}\left\vert x_{i}\right\vert
+\leq 1,\left\Vert Sx\right\Vert \leq \underset{i=1}{\overset{\infty }{\sum }}%
+\left\vert x_{i}\right\vert \left\Vert e_{i}\right\Vert \leq c$
+
+\bigskip $\left\Vert S\right\Vert \leq c$ and the proof is complete$%
+\boxtimes .$
+
+2.16 Define a mapping T from E/G$\cap L$ to E/L by T$\left( x+G\cap L\right)
+=x+L.$ 
+
+\bigskip if x-y$\in G\cap L,x-y\in L$ therefore this mapping is
+well-defined. It is obvious that T is surjective and linear.
+
+By the discussion on P368 of the textbook, we can show that $dist\left(
+\cdot ,L\right) $ is a norm on E/L and
+
+$dist\left( \cdot ,G\cap L\right) $ is a norm on E/G$\cap $L. Since $%
+\left\Vert T\left( x\right) \right\Vert _{E/L}=dist\left( x,L\right) \leq
+dist\left( x,G\cap L\right) =\left\Vert x\right\Vert _{E/G\cap L},\implies $%
+T is bdd.
+
+The condition says that $\left\Vert x\right\Vert _{E/G\cap L}\leq
+C\left\Vert T\left( x\right) \right\Vert _{E/L}\implies T$ is injective.
+Therefore T$^{-1}$ exists and is a linear bdd
+
+operator. If we restrict T on G/G$\cap L,G$ is a closed subspace of E, also
+a Banach space, then we get
+
+a mapping from G/G$\cap L$ to $\left( G+L\right) /L,$ which is bijective and
+linear bdd. $\implies G+L/L$ is closed in E/L.
+
+Consider $\pi :E\rightarrow E/L$ which takes the equivalent class. By the
+discussion on P368,$\pi $ is a linear bdd surjective operator.$\implies
+G+L=\pi ^{-1}\left( \left( G+L\right) /L\right) $ is closed. We can also
+show this directly. Suppose $\left\{ x_{n}\right\} \in G+L\rightarrow x,$%
+then $dist\left( x_{n}-x,L\right) \leq \left\Vert x_{n}-x\right\Vert
+\rightarrow 0,\implies x_{n}+L\rightarrow x+L$ in E/L.
+
+Since G+L/L is closed and $x_{n}+L\in \left( G+L\right) /L$, $x+L\in \left(
+G+L\right) /L,\implies x\in G+L.$ And G+L is closed.        
+
+2.17 $\left( a\right) $ $\overline{D\left( A\right) }=E$ means that every
+continuous function can be approximated by differential function,which is
+guaranteed by Weistrass' approximation Thm, since every continuous function
+can be approximated by polynomials.
+
+$\left( b\right) $ Suppose $f_{n}\in C^{1}\left( \left[ 0,1\right] \right)
+\rightarrow f,f_{n}^{\prime }\in C\left( \left[ 0,1\right] \right)
+\rightarrow g,$ then by the definition of max norm on C$\left( \left[ 0,1%
+\right] \right) $
+
+$f_{n}^{\prime }\rightarrow g$ uniformly,  $f_{n}\left( x\right)
+=f_{n}\left( 0\right) +\int_{0}^{x}f_{n}^{\prime }\left( t\right) dt\implies
+\left\vert f_{n}\left( x\right) -f\left( 0\right) -\int_{0}^{x}g\left(
+t\right) dt\right\vert \leq \left\vert f_{n}\left( 0\right) -f\left(
+0\right) \right\vert +\int_{0}^{x}\left\vert f_{n}^{\prime }\left( t\right)
+-g\left( t\right) \right\vert dt$
+
+$\leq \left\vert f_{n}\left( 0\right) -f\left( 0\right) \right\vert
++\left\Vert f_{n}^{\prime }-g\right\Vert \rightarrow 0\implies \left\Vert
+f_{n}-f\left( 0\right) -\int_{0}^{x}g\left( t\right) dt\right\Vert
+\rightarrow 0,f_{n}\rightarrow f\left( 0\right) +\int_{0}^{x}g\left(
+t\right) dt\in C^{1}\left( \left[ 0,1\right] \right) .$
+
+By the uniqueness of the limit, $f=f\left( 0\right) +\int_{0}^{x}g\left(
+t\right) dt$ and $f^{\prime }=g\implies $the operator A is closed.
+
+$\left( c\right) $Suppose $f_{n}\in C^{2}\left( \left[ 0,1\right] \right)
+\rightarrow f,f_{n}^{\prime }\in C^{1}\left( \left[ 0,1\right] \right)
+\rightarrow g.$Similar to $\left( b\right) $ we can show that $f^{\prime
+}=g,g$ does 
+
+not necessarily belong to $C^{1}\left( \left[ 0,1\right] \right) \implies f$
+does not necessarily belong to $C^{2}\left( \left[ 0,1\right] \right) .$
+
+The counter example: $f_{n}^{\prime }\left( x\right) =\sqrt{\left( x-\frac{1%
+}{2}\right) ^{2}+\frac{1}{n}}\rightarrow g=\left\vert x-\frac{1}{2}%
+\right\vert \notin C^{1}\left( \left[ 0,1\right] \right) ,$We can get $f_{n}$
+by direct integral, and $f_{n}\in C^{2}\left( \left[ 0,1\right] \right) $ $%
+\rightarrow \int \left\vert x-\frac{1}{2}\right\vert dx\notin C^{2}\left( %
+\left[ 0,1\right] \right) .$
+
+2.27 F=R$\left( T\right) \oplus X,$Let G=$\left( E,X\right) ,$equipped with
+the norm $\left\Vert \left( x,y\right) \right\Vert =\left\Vert x\right\Vert
+_{E}+\left\Vert y\right\Vert _{F}.$
+
+For$\left( x_{n},y_{n}\right) \in G,$satisfying $\left\Vert \left(
+x_{n+p},y_{n+p}\right) -\left( x_{n},y_{n}\right) \right\Vert \rightarrow 0$,%
+$\left\Vert x_{n+p}-x_{n}\right\Vert _{E}\rightarrow 0,\left\Vert
+y_{n+p}-y_{n}\right\Vert _{E}\rightarrow 0;$
+
+Since E is a Banach space, there exists $x\in E,s.t.\left\Vert
+x_{n}-x\right\Vert _{E}\rightarrow 0;$
+
+Since X is a finite subspace of F and F is a Banach space, X is complete and
+there exists $y\in X,s.t.$
+
+$\left\Vert y_{n}-y\right\Vert _{F}\rightarrow 0\implies \left\Vert \left(
+x_{n},y_{n}\right) -\left( x,y\right) \right\Vert \rightarrow 0$, and $%
+\left( x,y\right) \in G.\implies G$ is a Banach space.
+
+Define a mapping from G to F as $T\left( x,y\right) =Tx+y,$ Since F=R$\left(
+T\right) \oplus X,$ T is bijective.
+
+$\left\Vert T\left( x,y\right) \right\Vert =\left\Vert Tx+y\right\Vert
+_{F}\leq \left\Vert y\right\Vert +\left\Vert Tx\right\Vert \leq \left\Vert
+y\right\Vert +\left\Vert T\right\Vert \left\Vert x\right\Vert _{E}\leq \max
+\left\{ 1,\left\Vert T\right\Vert \right\} \left\Vert \left( x,y\right)
+\right\Vert \implies $
+
+T is bdd. By Inverse mapping Thm, T$^{-1}$ is bdd. Then T maps the closed
+set $\left( E,\left\{ 0\right\} \right) $ to a closed set
+
+in E, and the closed set is $R\left( T\right) .$
+
+
+\end{document}

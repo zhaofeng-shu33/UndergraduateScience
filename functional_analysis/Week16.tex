@@ -1,0 +1,222 @@
+
+\documentclass{article}
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Tuesday, December 29, 2015 19:04:50}
+%TCIDATA{LastRevised=Tuesday, December 29, 2015 22:03:22}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+6.8 1 Consider $T:E\rightarrow R\left( T\right) ,$where $E$ and $R\left(
+T\right) $ are both Banach spaces since $R\left( T\right) $ is a closed
+subspace of Banach space $F.$
+
+By open mapping theorem, there exists a constant $c>0,s.t$
+
+$B\left( 0,c\right) \subset T\left( B_{E}\right) \implies \overline{B\left(
+0,c\right) }\subset \overline{T\left( B_{E}\right) }.$
+
+Since $T$ is a compact operator, $\overline{T\left( B_{E}\right) }$ is
+compact, the same is true for its closed subset.$\implies \overline{B\left(
+0,c\right) }$ is compact$\implies \overline{B_{R\left( T\right) }\text{ }}$
+is compact$\implies R\left( T\right) $ is finite dimensional by Riesz
+Theorem. 
+
+$T$ is a finite rank operator.
+
+2 Consider $\tilde{T}:E\backslash N\left( T\right) \rightarrow R\left(
+T\right) ,E\backslash N\left( T\right) $ is the quotient space$\left( \func{%
+mod}N\left( T\right) \right) .$
+
+$\pi :E\rightarrow E\backslash N\left( T\right) $ is the canonical map,
+which is surjective. It is known that 
+
+$E\backslash N\left( T\right) $ is a Banach space, then by open mapping
+theorem
+
+$B_{E\backslash N\left( T\right) }\left( 0,c\right) \subset B_{E},$ by
+definition $\tilde{T}B_{E\backslash N\left( T\right) }\left( 0,c\right)
+\subset TB_{E}\implies \overline{\tilde{T}B_{E\backslash N\left( T\right)
+}\left( 0,c\right) }$
+
+is compact$\implies \tilde{T}$ is compact. $\tilde{T}$ is injective.$%
+\implies \tilde{T}$ \ is bijective.
+
+$\implies $Then $\tilde{T}$ allows the inverse operator $\tilde{T}$ $^{-1}$%
+,which is bounded.
+
+Then $I_{E\backslash N\left( T\right) }=\tilde{T}$ $^{-1}\circ \tilde{T}$ is
+a compact operator by the composite property of compact operator.$\implies 
+\overline{B_{E\backslash N\left( T\right) }}$ is compact$\implies
+E\backslash N\left( T\right) $ is finite dimensional.
+
+$\implies \dim E=\dim N\left( T\right) \times \dim E\backslash N\left(
+T\right) <\infty .$
+
+We can also prove this proposition by decomposing $E=N\left( T\right) +L,s.t.
+$
+
+$N\left( T\right) \cap L=\left\{ 0\right\} .$This is possible since $N\left(
+T\right) $ is of finite dimension.
+
+Then we restrict $T$ onto $L:T_{|L}:L\rightarrow R\left( T\right) ,$by the
+definition of $N\left( T\right) .$
+
+This is a bijective mapping. Similar to above deduction, we can show $\dim
+L<\infty \implies \dim E<\infty $
+
+6.9$\left( 1\right) \implies \left( 2\right) :E$ can be decomposed as $%
+E=N\left( T\right) +L,N\left( T\right) \cap L=\left\{ 0\right\} $
+
+then we define $P:E\rightarrow N\left( T\right) ,$as $P\left( x\right) =y,$%
+where $x=y+z,y\in N\left( T\right) $ and 
+
+$z\in L.P$ is bounded from former chapters. $\dim R\left( P\right) =\dim
+N\left( T\right) <\infty $
+
+$\implies P$ is a finite rank projection operator. 
+
+Below we can assume $F$ is closed, otherwise we can replace $F$ with $%
+R\left( T\right) .$
+
+To deduce the conclusion, we argue by contradiction$\implies $
+
+$\exists u_{n}\in T,\left\Vert u_{n}\right\Vert =1,s.t.\left\Vert
+Tu_{n}\right\Vert _{F}+\left\Vert Pu_{n}\right\Vert _{E}<\frac{1}{n}.$
+
+By the open mapping Thm $cB_{F}\subset TB_{E},\implies \exists v_{n}\in
+B_{E}\left( 0,\frac{1}{nc}\right) ,s.t.$
+
+$Tv_{n}=Tu_{n}\implies v_{n}-u_{n}\in N\left( T\right) ,$and $\underset{%
+n\rightarrow \infty }{\lim }\left\Vert v_{n}-u_{n}\right\Vert =1.$
+
+On the other hand $\left\Vert v_{n}-u_{n}\right\Vert =\left\Vert
+Pv_{n}-Pu_{n}\right\Vert \leq \frac{1}{n}+\left\Vert Pv_{n}\right\Vert $
+
+$\leq \frac{1}{n}+C\left\Vert v_{n}\right\Vert \leq \frac{1}{n}+\frac{C}{nc}%
+\rightarrow 0.$A contradiction$\implies \exists C,s.t.$
+
+$\left\Vert u\right\Vert _{E}\leq C\left( \left\Vert Tu\right\Vert
+_{F}+\left\Vert Pu\right\Vert _{E}\right) ,\forall u\in E.$
+
+$\left( 2\right) \implies \left( 3\right) $ Since $P$ is a finite rank
+projection operator, define $G:=P\left( E\right) ,$which is finite
+dimensional therefore a Banach space,
+
+and let $Q=P.$Then the conclusion follows.
+
+$\left( 3\right) \implies \left( 1\right) \left\Vert u\right\Vert _{E}\leq
+C\left\Vert Qu\right\Vert _{G},\forall u\in N\left( T\right) .$
+
+$\left\Vert Qu\right\Vert _{G}\geq \frac{\left\Vert u\right\Vert _{E}}{C}%
+\implies \frac{\overline{B_{N\left( T\right) }}}{C}\subset \overline{B}_{Q},$%
+since $Q\in K\left( E,G\right) $
+
+$\implies \overline{B_{N\left( T\right) }}$ is compact therefore $N\left(
+T\right) $ is finite dimensional.
+
+Below we assume $T$ is injective, otherwise consider $E=N\left( T\right)
+\oplus L,$
+
+and restrict $T$ on $L$ and try to show $L$ is closed.
+
+\bigskip $\left\Vert u\right\Vert _{E}\leq C\left( \left\Vert Tu\right\Vert
+_{F}+\left\Vert Qu\right\Vert _{G}\right) ,$Suppose $T\left( x_{n}\right)
+\rightarrow y$
+
+\left\Vert x_{n}\right\Vert _{E}$\leq C\left( \left\Vert Tx_{n}\right\Vert
+_{F}+\left\Vert Qx_{n}\right\Vert _{G}\right) ,Q\frac{x_{n}}{\left\Vert
+x_{n}\right\Vert }$allows a convergent subsequence 
+
+$\implies Q\frac{x_{n}}{\left\Vert x_{n}\right\Vert }$is a Cauchy sequence
+
+Suppose $\left\Vert x_{n}\right\Vert $ is unbounded, further assuming $%
+\left\Vert x_{n}\right\Vert \rightarrow \infty ,$without loss of generality.
+
+$\left\Vert \frac{x_{n}}{\left\Vert x_{n}\right\Vert }-\frac{y_{n}}{%
+\left\Vert y_{n}\right\Vert }\right\Vert $ $\leq C\left( \frac{\left\Vert
+Tx_{n}\right\Vert _{F}}{\left\Vert x_{n}\right\Vert }+\frac{\left\Vert
+Tx_{m}\right\Vert _{F}}{\left\Vert x_{m}\right\Vert }+\left\Vert Q\left( 
+\frac{x_{n}}{\left\Vert x_{n}\right\Vert }\right) -Q\left( \frac{x_{m}}{%
+\left\Vert x_{m}\right\Vert }\right) \right\Vert \right) $
+
+$\rightarrow 0,as$ $n,m\rightarrow \infty \U{ff0c} $since $Tx_{n}$ is
+bounded.
+
+$\implies \frac{x_{n}}{\left\Vert x_{n}\right\Vert }$ is a Cauchy sequence. 
+
+$\frac{x_{n}}{\left\Vert x_{n}\right\Vert }\rightarrow z,T\frac{x_{n}}{%
+\left\Vert x_{n}\right\Vert }\rightarrow Tz\implies Tz=0,\implies z=0,$%
+contradict with $\left\Vert z\right\Vert =1.$
+
+$\implies \left\Vert x_{n}\right\Vert $ is bounded. Therefore we can extract
+a subsequence s.t.
+
+$\bigskip x_{n_{k}}\rightarrow x\in E\implies Tx=y\in R\left( T\right) $
+
+$\implies R\left( T\right) $ is closed.
+
+$\left( 2\right) $As above, without loss of generality, we can assume $T$ is
+bijective.
+
+Then $T$ allows the inverse operator $T^{-1},$
+
+To show $\overline{B_{N\left( T+S\right) }}$ is compact, take a sequence $%
+\left\{ x_{n}\right\} $ from it
+
+Then $\left\Vert x_{n}\right\Vert \leq 1$ and $\left( T+S\right) \left(
+x_{n}\right) =0,x_{n}=-T^{-1}\circ Sx_{n},$
+
+next to show $\left\{ x_{n}\right\} $ allows a convergent subsequence. Since 
+$S$ is a compact operator, $\left\{ Sx_{n}\right\} $ is bounded$\implies $
+
+$\left\{ Sx_{n}\right\} $ allows a convergent subsequence $\left\{
+Sx_{n_{k}}\right\} ,$
+
+\bigskip $\implies x_{n_{k}}$ is convergent from $x_{n}=-T^{-1}\circ Sx_{n}.$
+
+$\implies \overline{B_{N\left( T+S\right) }}$ is compact, and therefore $%
+N\left( T+S\right) $ is finite dimensional.
+
+$\left( T+S\right) x_{n}\rightarrow z,$
+
+Since $R\left( T\right) $ is closed, 
+
+\end{document}

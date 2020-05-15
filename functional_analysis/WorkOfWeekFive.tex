@@ -1,0 +1,140 @@
+
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Sunday, October 18, 2015 12:30:35}
+%TCIDATA{LastRevised=Sunday, October 18, 2015 20:56:46}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+$\bigskip $\U{6cdb}\U{51fd}\U{7b2c}\U{4e94}\U{5468}\U{4f5c}\U{4e1a} \U{8d75}%
+\U{4e30}2013012178
+
+$\bigskip 1.$Since $f$ maps $x_{1}\NEG{R}$ to the whole real number set, for
+each $x\in E$ we can find an $\alpha $ s.t. $f\left( x\right) =\alpha
+f\left( x_{1}\right) =f\left( \alpha x_{1}\right) ,$ then $f\left( x-\alpha
+x_{1}\right) =0\implies x-\alpha x_{1}\in N_{f}\implies \forall x\in E,$we
+can decompose $x$ as $x=\alpha x_{1}+y,$where $y\in N_{f}$ and $\alpha \in 
+\NEG{R}.$
+
+We can show the uniqueness of the decomposition.
+
+Consider $x=\alpha _{1}x_{1}+y_{1}=\alpha _{2}x_{1}+y_{2}$
+
+Acting $f$ on both sides yields $\alpha _{1}f\left( x_{1}\right) =\alpha
+_{2}f\left( x_{1}\right) .$
+
+Since $f\left( x_{1}\right) \neq 0,\alpha _{1}=\alpha _{2},$and $y_{1}=y_{2}$
+follows. 
+
+2. we construct a linear functional on $x_{0}\NEG{R},$ a subspace of $E$
+
+$g\left( tx_{0}\right) =t\alpha _{0}\left\Vert x_{0}\right\Vert ,$ and it is
+easy to verify that $\left\Vert g\right\Vert =\alpha _{0}.$
+
+For a sub-linear $p\left( x\right) =\alpha _{0}\left\Vert x\right\Vert $
+defined on $E,g\left( tx_{0}\right) \leq p\left( tx_{0}\right) $ and by
+Hahn-Banach Thm, we can extend $g$
+
+to the whole space $E.$We denote the extended function as $f,$ then $f\left(
+x\right) \leq p\left( x\right) \implies $
+
+$\left\vert f\left( x\right) \right\vert \leq \alpha _{0}\left\Vert
+x\right\Vert \implies \left\Vert f\right\Vert \leq \alpha _{0},$but as an
+extention $\left\Vert f\right\Vert \geq \left\Vert g\right\Vert =\alpha
+_{0}\implies $
+
+$\left\Vert f\right\Vert =\alpha _{0}.$And $\left\langle
+f,x_{0}\right\rangle =\left\langle f,x_{0}\right\rangle =\alpha
+_{0}\left\Vert x_{0}\right\Vert =\left\Vert f\right\Vert \left\Vert
+x_{0}\right\Vert $
+
+Textbook P21 Problem 7
+
+$\left( 1\right) \forall x,y\in \bar{C}$ ,there exists two sequnce $\left\{
+x_{n}\right\} ,\left\{ y_{n}\right\} \subset C$ $s.t.x_{n}\rightarrow
+x,y_{n}\rightarrow y.$
+
+Then $tx+\left( 1-t\right) y=\underset{n\rightarrow \infty }{\lim }%
+tx_{n}+\left( 1-t\right) y_{n},\forall 0<t<1.$
+
+Since C is convex, $tx_{n}+\left( 1-t\right) y_{n}\in C,$then by the closed
+property of $\bar{C},tx+\left( 1-t\right) y\in \bar{C}.$
+
+$\therefore \bar{C}$ is convex.
+
+$\forall x,y\in IntC,$We can find a $r>0,s.t.B\left( x,r\right) \cup B\left(
+y,r\right) \subset C.$
+
+Then by the convex property of C, $t\left( x+h\right) +\left( 1-t\right)
+\left( y+h\right) \in C,\forall 0<t<1$ and $h\in B\left( 0,r\right) .$
+
+Then $\forall z=tx+\left( 1-t\right) y,$ $B\left( z,r\right) \subset C,$%
+since $z+h=t\left( x+h\right) +\left( 1-t\right) \left( y+h\right) \in
+C,\forall h\in B\left( 0,r\right) .$
+
+$\implies z\in IntC$ and $IntC$ is convex.
+
+$\left( 2\right) $Since $y\in IntC,$there exists $r>0,s.t.B\left( y,r\right)
+\subset C.$Then $\forall 0<t<1$ and $h\in B\left( 0,r\right) ,$
+
+$tx+\left( 1-t\right) \left( y+h\right) \in C$
+
+For each $z=tx+\left( 1-t\right) y,B\left( z,r\left( 1-t\right) \right)
+\subset C,$
+
+since $z+\left( 1-t\right) h=tx+\left( 1-t\right) \left( y+h\right) \in
+C,\forall h\in B\left( 0,r\right) .$
+
+$\implies z\in IntC.$
+
+$\left( 3\right) $We only need to show that $\bar{C}\subset $ $\overline{IntC%
+}$
+
+Since  $\overline{IntC}$ is not empty, there exists $x_{0}\in $ $\overline{%
+IntC},$ and $\forall x\in C,$ by$\left( 2\right) $ $tx+\left( 1-t\right)
+x_{0}\in $ $IntC.$
+
+Let $t\rightarrow 1\implies x\in $ $\overline{IntC}.\implies C\subset $ $%
+\overline{IntC}.$Taking the closure on both sides yield $\bar{C}\subset $ $%
+\overline{IntC}\boxtimes $ 
+
+\end{document}

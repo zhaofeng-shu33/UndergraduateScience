@@ -1,0 +1,134 @@
+
+\documentclass{article}
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Saturday, November 07, 2015 13:15:13}
+%TCIDATA{LastRevised=Saturday, November 07, 2015 13:16:04}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+When encoutered with something like $dist\left( x,L\right) ,$we can consider
+the quotient space. Using this method, we can give an interpretation of
+Cor2.11, $dist\left( x,G\cap L\right) $ is a norm on E/G$\cap L,$ where x
+and y are regarded as same iff x-y$\in G\cap L,$ and $E/G\cap L$ equipped
+with this norm is a Banach space guaranteed by Pro11.8 on P368 of Textbook.
+Further,We can show 
+
+$dist\left( x,G\right) +dist\left( x,L\right) $ is also a norm on E/G$\cap L,
+$ indeed, if  $dist\left( x,G\right) +dist\left( x,L\right) =0\implies $%
+\qquad $dist\left( x,G\right) =0$ and $dist\left( x,L\right) =0,$ similar to
+the instruction on P368. From the close property of G follows x$\in G,$ and
+from the close property of L follows x$\in L\implies x\in G\cap L\implies x$
+is zero element in  E/G$\cap L.$ The other requirement for norm is trival to
+verify.
+
+Next we show E/G$\cap L$ about this new norm is a complete space. 
+
+\bigskip First we prove the Thm for $\left\{ a_{n}|a_{n}\in \left(
+G+L\right) \right\} $.Since G+L is closed, it is also a complete subspace.
+
+Suppose $\left\{ a_{n}+G\cap L\right\} $ is a Cauchy sequence in E/G$\cap L$
+, also $\left( G+L\right) /$G$\cap L$ about this new norm$\implies \left\{
+a_{n}+G\cap L\right\} $ is a Cauchy sequence in both $\left( G+L\right) $/G
+and $\left( G+L\right) $/L about corresponding quotient norm. By Pro11.8,
+there exists $l\in L,s.t.a_{n}+G\cap L\rightarrow l+G$ in $\left( G+L\right) 
+$/G i.e.$dist\left( a_{n}-l,G\right) \rightarrow 0.$
+
+Since 
+
+and  there exists $g\in G,s.t.a_{n}+G\cap L\rightarrow g+L$ in $\left(
+G+L\right) $/L i.e.$dist\left( a_{n}-g,L\right) \rightarrow 0$
+
+Now $\left\Vert a_{n}-\left( g+l\right) \right\Vert _{new}=$ $dist\left(
+a_{n}-g-l,G\right) +dist\left( a_{n}-g-l,L\right) ,$since G and L are linear
+
+$\left\Vert a_{n}-\left( g+l\right) \right\Vert _{new}=dist\left(
+a_{n}-l,G\right) +dist\left( a_{n}-g,L\right) $
+
+$\implies \left\Vert a_{n}-\left( g+l\right) \right\Vert _{new}\rightarrow 0.
+$
+
+For general case, we can make a decomposition $a_{n}^{\prime }=a_{n}+z_{n},$%
+where $z_{n}\in \left( G+L\right) ^{c}.$
+
+We can repeat the process above. But the adjustment is that $a_{n}^{\prime
+}+G\cap L\rightarrow l+z+G,$ and $a_{n}^{\prime }+G\cap L\rightarrow
+g+z^{\prime }+L$ where $z,z^{\prime }\in \left( G+L\right) ^{c}.$Since $%
+dist\left( z_{n}-z,G\right) \rightarrow 0,dist\left( z_{n}-z^{\prime
+},L\right) \rightarrow 0$
+
+$\implies dist\left( z_{n}-z,G\cap L\right) \rightarrow 0,dist\left(
+z_{n}-z^{\prime },G\cap L\right) \rightarrow 0.$ 
+
+[If A is a linear space then $\left\Vert x-a\right\Vert +\left\Vert
+y-a^{\prime }\right\Vert \geq \left\Vert x+y-\left( a+a^{\prime }\right)
+\right\Vert \geq dist\left( x+y,A\right) $
+
+$\implies dist\left( x,A\right) +dist\left( x,A\right) \geq dist\left(
+x+y,A\right) ]$
+
+$\implies dist\left( z-z^{\prime },G\cap L\right) \leq dist\left(
+z_{n}-z,G\cap L\right) +dist\left( z_{n}-z^{\prime },G\cap L\right)
+\rightarrow 0.$
+
+$\implies z=z^{\prime }$ in E/G$\cap L$ by the close property of G$\cap L.$
+
+$\left\Vert a_{n}^{\prime }-\left( g+l+z\right) \right\Vert _{new}=$ $%
+dist\left( a_{n}+z_{n}-\left( l+z\right) ,G\right) +dist\left(
+a_{n}+z_{n}-\left( g+z\right) ,L\right) $
+
+$=dist\left( a_{n}+z_{n}-\left( l+z\right) ,G\right) +dist\left(
+a_{n}+z_{n}-\left( g+z^{\prime }\right) ,L\right) $
+
+$\implies \left\Vert a_{n}-\left( g+l+z\right) \right\Vert _{new}\rightarrow
+0.$
+
+As a result,E/G$\cap L$ about this new norm is a complete space.
+
+Further we have \bigskip dist(x,G)$\leq dist\left( x,G\cap L\right) ,$%
+dist(x,L)$\leq dist\left( x,G\cap L\right) \implies $dist(x,G)+dist(x,L)$%
+\leq 2dist\left( x,G\cap L\right) $
+
+By Cor2.8, we then claim that there exists a constant c,s.t. $dist\left(
+x,G\cap L\right) \leq c\left( dist(x,G)+dist(x,L)\right) .$
+
+\bigskip 
+
+\end{document}

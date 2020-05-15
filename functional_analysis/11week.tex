@@ -1,0 +1,230 @@
+
+\documentclass{article}
+\usepackage{amssymb}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Friday, November 27, 2015 16:29:57}
+%TCIDATA{LastRevised=Saturday, November 28, 2015 11:31:31}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+\bigskip \bigskip \U{8d75}\U{4e30}\qquad 2013012178\qquad \qquad Functional
+Analysis 11\U{5468} Coursework
+
+3.1$\forall f\in E^{\prime },f\left( A\right) $ is compact since $A$ is
+compact. Indeed, for an open covering $\left\{ S_{i}\right\} $ of $f\left(
+A\right) .\left\{ f^{-1}\left( S_{i}\right) \right\} $ is an open covering
+of $A,$ since $f$ is continuous and $f^{-1}\left( S_{i}\right) $ is $\sigma
+-open.$By the compactness of $A,A$ allows a finite covering$A\subset $ $%
+\underset{i=1}{\overset{m}{\cup }}f^{-1}\left( S_{i}\right) $
+
+$\implies f\left( A\right) \subset $ $\underset{i=1}{\overset{m}{\cup }}%
+S_{i}.$
+
+Every compact set in R is bounded. Then we can invoke the corallory of UBT
+
+$\implies A$ is bounded in $E.$
+
+3.2 $\sigma _{n}\rightharpoonup x\iff f\left( \sigma _{n}\right) \rightarrow
+f\left( x\right) ,\forall f\in E^{\prime }\iff \frac{f\left( x_{1}\right)
++..+f\left( x_{n}\right) }{n}\rightarrow f\left( x\right) \forall f\in
+E^{\prime }$
+
+By the Stolz's formula in R,$\Longleftarrow f\left( x_{n}\right) \rightarrow
+f\left( x\right) \forall f\in E^{\prime }\iff x_{n}\rightharpoonup x.$
+
+The direct approach: suppose $x_{n}\rightharpoonup x,$that is, for any basis
+of nbhd $U=\left\{ y|\left\vert f_{i}\left( y-x\right) \right\vert <\epsilon
+,for\text{ }i\in I,finite\right\} $ of $x,$there exists N, s.t.$x_{n}\in
+U.for$ $n\geq N,\implies \left\vert f_{i}\left( x_{n}-x\right) \right\vert <%
+\frac{\epsilon }{2}\left( \text{we change the nbhd to }<\frac{\epsilon }{2}%
+\right) ,$now $\sigma _{n}=\frac{x_{1}+..+x_{N}}{n}+\frac{x_{N+1}+..x_{n}}{n}%
+,$
+
+$\left\vert f_{i}\left( \sigma _{n}-x\right) \right\vert \leq $ $\left\vert
+f_{i}\left( \frac{x_{1}+..+x_{N}}{n}\right) \right\vert +\frac{1}{n}\underset%
+{j=N+1}{\overset{n}{\sum }}\left\vert f_{i}\left( x_{j}-x\right) \right\vert
+\leq $ $\left\vert f_{i}\left( \frac{x_{1}+..+x_{N}}{n}\right) \right\vert +%
+\frac{\epsilon }{2}\frac{n-N}{n},$
+
+By the continuity of $f_{i},$fix N, we can find $N^{\prime },s.t.\left\vert
+f_{i}\left( \frac{x_{1}+..+x_{N}}{n}\right) \right\vert <\frac{\epsilon }{2}%
+, $
+
+$for$ $i\in I,finite\implies \left\vert f_{i}\left( \sigma _{n}-x\right)
+\right\vert <\frac{\epsilon }{2}+\frac{\epsilon }{2}\frac{n-N}{n}<\epsilon
+,\implies \sigma _{n}\in U,for$ $n>N^{\prime }$
+
+$\implies \sigma _{n}\rightharpoonup x.$
+
+3.6 For any basis of nbhd $U_{\epsilon }\left( x\right) $ of E, $%
+u^{-1}\left( U_{\epsilon }\left( x\right) \right) ,v^{-1}\left( U_{\epsilon
+}\left( x\right) \right) $ are open since $u$ and $v$ are continuous. If $O$
+is an open set of $E,$ to prove $\left( u+v\right) ^{-1}\left( O\right) $ is
+open, we can select $x_{0}\in $ $\left( u+v\right) ^{-1}\left( O\right) ,$%
+then we have $u\left( x_{0}\right) +v\left( x_{0}\right) \in O,$then we can
+find a basis of neighborhood $U_{\epsilon }\left( u\left( x_{0}\right)
++v\left( x_{0}\right) \right) \subset O.$
+
+We can write $U$ explicitly:$U=\left\{ y|\left\vert f_{i}\left( y-u\left(
+x_{0}\right) -v\left( x_{0}\right) \right) \right\vert <\epsilon ,for\text{ }%
+i\in I,finite\right\} ,$
+
+To show $\left( u+v\right) ^{-1}\left( U\right) =\left\{ y|\left\vert
+f_{i}\left( \left( u+v\right) \left( x\right) -u\left( x_{0}\right) -v\left(
+x_{0}\right) \right) \right\vert <\epsilon \right\} \ \left( u+v\right)
+^{-1}\left( O\right) $is an open nbhd of $x_{0},$
+
+Notice that $u^{-1}\left( U_{\epsilon /2}\left( x_{0}\right) \right)
+=\left\{ x|\left\vert f_{i}\left( u\left( x\right) -u\left( x_{0}\right)
+\right) \right\vert <\frac{\epsilon }{2}\right\} $ is open,that is, $x_{0}$
+is an interior point of $u^{-1}\left( U_{\epsilon /2}\left( x_{0}\right)
+\right) $
+
+$\exists $nbhd$X_{1}\left( x_{0}\right) \subset u^{-1}\left( U_{\epsilon
+/2}\left( x_{0}\right) \right) .$Similarly, $\exists $nbhd$X_{1}\left(
+x_{0}\right) \subset v^{-1}\left( U_{\epsilon /2}\left( x_{0}\right) \right) 
+$
+
+$X_{1}\left( x_{0}\right) \cap X_{1}\left( x_{0}\right) \subset u^{-1}\left(
+U_{\epsilon /2}\left( x_{0}\right) \right) \cap v^{-1}\left( U_{\epsilon
+/2}\left( x_{0}\right) \right) \subset \left( u+v\right) ^{-1}\left(
+U\right) .$
+
+By the definition of open set in $X,X_{1}\left( x_{0}\right) \cap
+X_{1}\left( x_{0}\right) $ is open in $X$ hence an open nbhd of $x_{0}.$%
+Therefore for any $x\in \left( u+v\right) ^{-1}\left( O\right) $ in $X,$we
+find an open set $U^{\prime }\left( x\right) $ s.t.
+
+$x\subset U^{\prime }\left( x\right) \subset \left( u+v\right) ^{-1}\left(
+O\right) \implies \left( u+v\right) ^{-1}\left( O\right) $ is open and $%
+x\longmapsto u\left( x\right) +v\left( x\right) $ is
+
+continuous from X into E equipped with $\sigma \left( E,E^{\ast }\right) .$
+
+3.3 $\overline{A}$ is closed and convex. By Thm 3.7, it is closed in the
+weak topology. $\overline{A}^{\sigma \left( E,E^{\ast }\right) }$ is closed
+in the weak topology, to show it is convex. suppose $x,y\in \overline{A}%
+^{\sigma \left( E,E^{\ast }\right) },\exists x_{n}\rightharpoonup
+x,y_{n}\rightharpoonup y,\implies f\left( x_{n}\right) \rightarrow f\left(
+x\right) ,f\left( y_{n}\right) \rightarrow f\left( y\right) ,\forall f\in
+E^{\prime }\implies $
+
+$f\left( tx_{n}+\left( 1-t\right) y_{n}\right) \rightarrow f\left( tx+\left(
+1-t\right) y\right) $ by the continuity of $f$
+
+$\implies tx_{n}+\left( 1-t\right) y_{n}\rightharpoonup tx+\left( 1-t\right)
+y\implies tx+\left( 1-t\right) y\in \overline{A}^{\sigma \left( E,E^{\ast
+}\right) }.$
+
+By Thm 3.7, it is closed in the strong topology. Then from $A\subset 
+\overline{A}^{\sigma \left( E,E^{\ast }\right) },$ we take the closure in
+the strong sense $\implies \overline{A}\subset \overline{A}^{\sigma \left(
+E,E^{\ast }\right) };$from $A\subset \overline{A},$ we take the closure in
+the weak sense $\implies \overline{A}^{\sigma \left( E,E^{\ast }\right)
+}\subset \overline{A}.\implies A=\overline{A}^{\sigma \left( E,E^{\ast
+}\right) }$
+
+3.4$\left( 1\right) $
+
+\bigskip $x_{n}\rightharpoonup x\implies x\in \overline{conv\left( \underset{%
+i=n}{\overset{\infty }{\cup }}\left\{ x_{i}\right\} \right) }^{\sigma \left(
+E,E^{\ast }\right) }\forall n,$from 3.3 we know that $\overline{conv\left( 
+\underset{i=n}{\overset{\infty }{\cup }}\left\{ x_{i}\right\} \right) }%
+^{\sigma \left( E,E^{\ast }\right) }=\overline{conv\left( \underset{i=n}{%
+\overset{\infty }{\cup }}\left\{ x_{i}\right\} \right) },$therefore we can
+find $y_{n}\in conv\left( \underset{i=n}{\overset{\infty }{\cup }}\left\{
+x_{i}\right\} \right) ,s.t.\left\Vert y_{n}-x\right\Vert \leq \frac{1}{n}.$
+
+$\implies y_{n}\rightarrow x$ strongly.
+
+$\left( 2\right) $ First we can show that $\underset{n=1}{\overset{\infty }{%
+\cup }}conv\left( \underset{i=1}{\overset{n}{\cup }}\left\{ x_{i}\right\}
+\right) =conv\left( \underset{i=1}{\overset{\infty }{\cup }}\left\{
+x_{i}\right\} \right) .$
+
+Then we take the weak closure $\overline{\underset{n=1}{\overset{\infty }{%
+\cup }}conv\left( \underset{i=1}{\overset{n}{\cup }}\left\{ x_{i}\right\}
+\right) }^{\sigma \left( E,E^{\ast }\right) }=\overline{conv\left( \underset{%
+i=n}{\overset{\infty }{\cup }}\left\{ x_{i}\right\} \right) }^{\sigma \left(
+E,E^{\ast }\right) }$
+
+$\implies x\in $ $\overline{conv\left( \underset{i=n}{\overset{\infty }{\cup 
+}}\left\{ x_{i}\right\} \right) }=$ $\overline{\underset{n=1}{\overset{%
+\infty }{\cup }}conv\left( \underset{i=1}{\overset{n}{\cup }}\left\{
+x_{i}\right\} \right) },$therefore we can find $z_{n_{k}}\in conv\left( 
+\underset{i=1}{\overset{n_{k}}{\cup }}\left\{ x_{i}\right\} \right)
+,s.t.n_{k+1}>n_{k},$and $\left\Vert x-z_{n_{k}}\right\Vert \leq \frac{1}{k}%
+\implies z_{n_{k}}\rightarrow x$ strongly.
+
+Then we let $z_{i}=z_{n_{k}}\in conv\left( \underset{i=1}{\overset{i}{\cup }}%
+\left\{ x_{i}\right\} \right) ,for$ $n_{k}\leq i<n_{k+1},$ $%
+z_{1},..z_{n_{1}-1}$ can be chosen arbitrarily$\implies z_{n}\rightarrow x$
+strongly.
+
+3.5 Assume $x_{n}\nrightarrow x$ strongly.Then we can find $x_{n_{k}}\in
+K,s.t.\left\Vert x_{n_{k}}-x\right\Vert >\epsilon _{0},$
+
+By H-B Thm, $\forall x\notin \overline{B\left( x,\epsilon _{0}\right) }$
+there exists $\varphi _{x}\in E^{\prime },s.t.\varphi _{x}\left( y\right)
+<\alpha _{x}<\varphi _{x}\left( x\right) ,\forall y\in \overline{B\left(
+x,\epsilon _{0}\right) }.$
+
+$\underset{x\in K,x\notin \overline{B\left( x,\epsilon _{0}\right) }}{\cup }%
+\left\{ y|\alpha _{x}<\varphi _{x}\left( y\right) \right\} \cup \overline{%
+B\left( x,\epsilon _{0}\right) }$ is an open covering of K$\implies $
+
+there exists a finite sub-covering $\underset{i=1}{\overset{m}{\cup }}%
+\left\{ y|\alpha _{x_{\left( i\right) }}<\varphi _{x_{\left( i\right)
+}}\left( y\right) \right\} \cup \overline{B\left( x,\epsilon _{0}\right) }%
+\supset K.$
+
+$\left\{ x_{n_{k}}\right\} \subset \underset{i=1}{\overset{m}{\cup }}\left\{
+y|\alpha _{x_{\left( i\right) }}<\varphi _{x_{\left( i\right) }}\left(
+y\right) \right\} ,$therefore there is an infinite term in at least one set.
+
+Suppose $\left\{ x_{n_{k_{j}}}\right\} \subset \left\{ y|\alpha _{x_{\left(
+1\right) }}<\varphi _{x_{\left( 1\right) }}\left( y\right) \right\} ,\varphi
+_{x_{\left( 1\right) }}\left( x_{n_{k_{j}}}\right) $ $\rightarrow \varphi
+_{x_{\left( 1\right) }}\left( x\right) ,$since $x_{n}\rightarrow x$ weakly.
+
+$\implies \alpha _{x_{\left( 1\right) }}\leq \varphi _{x_{\left( 1\right)
+}}\left( x\right) ,$which is a contradiction with $\varphi _{x_{\left(
+1\right) }}\left( y\right) <\alpha _{x_{\left( 1\right) }}\forall y\in 
+\overline{B\left( x,\epsilon _{0}\right) }.$
+
+\end{document}

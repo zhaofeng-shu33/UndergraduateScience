@@ -1,0 +1,115 @@
+
+\documentclass{article}
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Sunday, November 15, 2015 11:57:49}
+%TCIDATA{LastRevised=Sunday, November 15, 2015 11:58:12}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+\bigskip Thm2.12 The topological complement of G$\subset E,$is unique. That
+is, if it has a complement F,s.t. G$\oplus F=E,$then F is unique.
+
+(i) T admits a left inverse.
+
+(ii) R(T ) = T (E) is closed and admits a complement in F.
+
+$\left( i\right) \implies \left( ii\right) $ Suppose there exists $S\in
+L\left( F,E\right) ,s.t.S\circ T=I_{E}.$
+
+$\bigskip \forall x_{n}\in R\left( T\right) $ and $x_{n}\rightarrow x,$there
+exists $y_{n}\in E,s.t.T\left( y_{n}\right) =x_{n}\implies S\circ T\left(
+y_{n}\right) =y_{n}$
+
+$\implies S\left( x_{n}\right) =y_{n},$by the continuity of $S\implies
+y_{n}=S\left( x_{n}\right) \rightarrow S\left( x\right) $
+
+by the continuity of $T\implies x_{n}=T\left( y_{n}\right) \rightarrow
+T\circ S\left( x\right) \in R\left( T\right) .$
+
+We also show that $x=T\circ S\left( x\right) $ for $x\in R\left( T\right) .$
+
+By the continuity of $S,N\left( S\right) $ is closed. Next we show that
+
+$F=N\left( S\right) \oplus R\left( T\right) .$
+
+If $x\in N\left( S\right) \cap R\left( T\right) ,x=T\left( y\right) $ and $%
+S\circ T\left( y\right) =S\left( x\right) =0\implies y=0\implies x=0$
+
+$\implies N\left( S\right) \cap R\left( T\right) =\emptyset .$
+
+$\forall x\in F,T\circ S\left( x\right) \in R\left( T\right) $ and $x-T\circ
+S\left( x\right) \in N\left( S\right) $ and $F=N\left( S\right) \oplus
+R\left( T\right) $ is proved.
+
+$\left( ii\right) \implies \left( i\right) $ Suppose $F$ admits the
+decomposition $F=R\left( T\right) \oplus L.$We can define a projection from
+F to its subspace R$\left( T\right) $
+
+$\forall x\in F,Px\in R\left( T\right) ,$since $T$ is injective, there
+exists unique $y\in E,$
+
+$s.t.T\left( y\right) =Px,$then we define $S\left( x\right) =y,$and this
+definition is well-defined.
+
+Further, $\forall y\in E,S\left( T\left( y\right) \right) =y\implies S\circ
+T=I_{E}.$
+
+To complete the proof, we need to show that $S$ is linear continuous. 
+
+The linearity is trival. $\forall x\in F,x=x^{\prime }+l^{\prime },$and $%
+Sx=Sx^{\prime }$ by definition of $S.$
+
+$\implies \forall $ $x\in F,\left\Vert Sx\right\Vert _{E}\leq \underset{%
+x=x^{\prime }+l^{\prime },x^{\prime }\in R\left( T\right) }{\sup }\left\Vert
+Sx^{\prime }\right\Vert \leq \underset{x^{\prime }\in R\left( T\right) }{%
+\sup }\left\Vert Sx^{\prime }\right\Vert $
+
+$=\allowbreak \underset{x^{\prime }=T\left( y\right) ,y\in T}{\sup }%
+\left\Vert S\circ T\left( y\right) \right\Vert \leq \underset{x^{\prime
+}=T\left( y\right) ,y\in T}{\sup }\left\Vert y\right\Vert ,$we know that $T$
+is bijective from $T$ to $R\left( T\right) $ and $T^{-1}$ is continuous in
+this sense $\implies \left\Vert Sx\right\Vert _{E}\leq \left\Vert
+T^{-1}\right\Vert \left\Vert x^{\prime }\right\Vert \leq \left\Vert
+T^{-1}\right\Vert \left\Vert x\right\Vert _{F}$
+
+$\implies S$ is continuous. 
+
+\end{document}

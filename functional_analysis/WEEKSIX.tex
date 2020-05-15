@@ -1,0 +1,215 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Friday, October 23, 2015 18:55:44}
+%TCIDATA{LastRevised=Sunday, November 22, 2015 22:19:59}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+\U{8d75}\U{4e30}\qquad 2013012178\qquad \U{6cdb}\U{51fd}\U{7b2c}\U{516d}%
+\U{5468}\U{4f5c}\U{4e1a}
+
+1.14 $\left( a\right) $ The linearity and closed property of $X$ and $Y$ are
+easy to check. To show $\overline{X+Y}=E=\ell ^{1}$, note that for every
+sequence $x$=$\left\{ x_{\left( n\right) }\right\} \in E$, we can construct $%
+y^{\left( n\right) }=\left(
+2x_{2},x_{2},4x_{4},x_{4},...2^{n}x_{2n},x_{2n},0,0...\right) \in Y$
+
+$t^{\left( n\right) }=\left(
+x_{1}-2x_{2},0,x_{3}-4x_{4},...x_{2n-1}-2^{n}x_{2n},0,0...\right) \in
+X,\forall n\in N.$Further $y^{\left( n\right) }+t^{\left( n\right) }=\left(
+x_{1},x_{2},...x_{2n},0,0\right) $
+
+-\TEXTsymbol{>}$x$ as $n->\infty .\implies $ $\overline{X+Y}=E.$
+
+2 Otherwise we have $c=x+y,$where $x\in X,y\in Y\implies y=\left( 1,\frac{1}{%
+2},1,\frac{1}{4},1,\frac{1}{8},...\right) ,y\notin \ell ^{1}.$Contradiction!
+
+3. by 2, $Y\cap Z=\emptyset .$If there exists a linear bdd functional s.t. $%
+f\left( z\right) \leq \alpha \leq f\left( y\right) ,\forall z\in Z,y\in Y.$
+
+Then from $z=x-c$ follows $f\left( x-y\right) \leq f\left( c\right) ,$by $1,$
+$f\left( e\right) \leq f\left( c\right) \forall e\in E\implies f$ vanishes
+identically on E.
+
+Therefore it is impossible to seperate $Z$ and Y by a closed hyperplane.
+
+4. The above conclusion holds for $E=\ell ^{p},1<p<\infty $ and for $%
+E=c_{0}=\left\{ x=\left\{ x_{n}\right\} |x_{n}->0\right\} .$
+
+1.15
+
+1. By the continuity of $f\in E,C^{\ast \ast }$ is closed.
+
+For each $x\in C$ and $f\in C^{\ast },\left\langle f,x\right\rangle \leq
+1\implies x\in C^{\ast \ast }\implies C\subset C^{\ast \ast }\implies \bar{C}%
+\subset C^{\ast \ast }.$
+
+Suppose $x\in C^{\ast \ast },$and $x\notin \bar{C},$then by convex set
+separation Thm,there exists $g\in E^{\ast },s.t.g\left( c\right) <1,\forall
+c\in \bar{C},$but $g\left( x\right) >1,$since we can scale $g.$
+
+$\implies g\in C^{\ast }\implies \left\langle g,x\right\rangle \leq 1,$a
+contradiction.
+
+2. If $C$ is a linear space, then $f\in C^{\ast }\implies \left\langle
+f,x\right\rangle \equiv 0$ on C, otherwise $\left\langle
+f,tx_{0}\right\rangle ->+\infty ,$as $\left\vert t\right\vert ->\infty ,$for 
+$tx_{0}\in C\implies f\in C^{\bot }.$ Obviously,$C^{\bot }\implies C^{\ast
+}. $
+
+$\implies C^{\ast }=C^{\bot }.$
+
+1.16
+
+\bigskip for $x\in N^{\bot },x=\left\{ x_{n}\right\} $ with $\underset{n=1}{%
+\overset{\infty }{\sum }}\left\vert x_{n}\right\vert <\infty ,\underset{n=1}{%
+\overset{\infty }{\sum }}x_{n}y_{n}=0,$for any $\left\{ y_{n}\right\} \in
+c_{0},$ that is $\underset{n->\infty }{\lim }y_{n}=0.$
+
+We choose $y_{n}=\frac{x_{n}}{2^{n}}\implies x_{n}=0,$hence $N^{\bot
+}=\left\{ 0\right\} .$
+
+$N^{\bot \bot }=E^{\ast }\neq N$
+
+1.17 $\left( 1\right) $ $M^{\bot }$ is the kernel of $I_{M^{\bot }},$where $%
+I_{K}$ is the indicator function of K.
+
+$\left( 2\right) $By Ex 3, $dist\left( x,M\right) =\underset{\underset{%
+\left\Vert g\right\Vert \leq 1}{g\in M^{\bot }}}{\max }<g,x>=\underset{g\in
+M^{\bot }}{\max }\frac{<g,x>}{\left\Vert g\right\Vert }.$Suppose $%
+\left\langle f,x\right\rangle >0,$and $\left\Vert f\right\Vert =1,$then for
+any $g\in M^{\bot }$\bigskip ,
+
+$\left\Vert g\right\Vert =1,\left\langle f-g,x\right\rangle \neq 0,$since $%
+f-g\in M^{\bot }$ and $x\notin M.$ If $\left\langle f-g,x\right\rangle <0,$%
+since $M^{\bot }$ is convex, we can
+
+find 0\TEXTsymbol{<}t\TEXTsymbol{<}1,s.t. \TEXTsymbol{<}$tf+\left(
+1-t\right) \left( f-g\right) ,x>=0,$A contradiction! $\therefore
+\left\langle f-g,x\right\rangle >0$ and $\left\langle f,x\right\rangle
+>\left\langle g,x\right\rangle \implies $
+
+$dist\left( x,M\right) =\underset{\underset{\left\Vert g\right\Vert \leq 1}{%
+g\in M^{\bot }}}{\max }<g,x>=\frac{\left\vert <f,x>\right\vert }{\left\Vert
+f\right\Vert }.$
+
+A direct method: we may as well assume that $\left\Vert f\right\Vert =1,$to
+show that $\left\vert <f,x>\right\vert =dist\left( x,M\right) ,\forall
+x\notin M.$
+
+For one $x_{0}\notin M,$ we restrict $f$ on S=span$\left\{ x_{0},M\right\} .$%
+For each $y\in S,y=tx_{0}+m,$with $m\in M.$
+
+$f\left( y\right) =tf\left( x_{0}\right) ,0\neq \left\vert \left\langle
+f,x_{0}\right\rangle \right\vert =\left\vert \left\langle
+f,x_{0}-m\right\rangle \right\vert \leq \left\Vert f\right\Vert \left\vert
+x_{0}-m\right\vert \leq dist\left( x_{0},M\right) .$
+
+On the other hand, 1=$\left\Vert f\right\Vert =\underset{n\rightarrow \infty 
+}{\lim }\frac{\left\langle f,x_{0}-m_{n}\right\rangle }{\left\Vert
+x_{0}-m_{n}\right\Vert }=\underset{n\rightarrow \infty }{\lim }\frac{%
+\left\langle f,x_{0}\right\rangle }{\left\Vert x_{0}-m_{n}\right\Vert }\leq 
+\frac{\left\langle f,x_{0}\right\rangle }{dist\left( x_{0},M\right) }%
+\implies dist\left( x_{0},M\right) \leq \left\langle f,x_{0}\right\rangle $
+
+Then by the conclusion in the first problem of Coursework 4,\FRAME{ftbpF}{%
+4.5in}{0.9in}{0in}{}{}{Figure}{\special{language "Scientific Word";type
+"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
+4.5in;height 0.9in;depth 0in;original-width 9.5432in;original-height
+1.8057in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'NWRPJ306.wmf';tempfile-properties "XPR";}}
+
+S=E, and $\left\vert <f,x>\right\vert =dist\left( x,M\right) $ is proved
+directly.
+
+the norm on $E$ is defined as $\left\Vert u\right\Vert =\underset{0\leq
+t\leq 1}{\max }\left\vert u\left( t\right) \right\vert ,$ $\left\vert
+\left\langle f,u\right\rangle \right\vert \leq \left\Vert u\right\Vert
+\implies \left\Vert f\right\Vert \leq 1.$
+
+for $u_{n}=\QATOPD\{ . {nx,0\leq x\leq \frac{1}{n}}{1,\frac{1}{n}<x\leq
+1},\left\Vert u_{n}\right\Vert =1,\left\langle f,u_{n}\right\rangle =1-\frac{%
+1}{2n}->1\implies \left\Vert f\right\Vert =\underset{n\dot{-}\infty }{\lim }%
+\left\langle f,u_{n}\right\rangle =1.$
+
+Then by 2. dist$\left( u,M\right) =\left\vert \int_{0}^{1}u\left( t\right)
+dt\right\vert .$
+
+If there exists $v\in M,$that is $\int_{0}^{1}v\left( t\right)
+dt=0,s.t.\left\Vert u-v\right\Vert =\left\vert \int_{0}^{1}u\left( t\right)
+dt\right\vert \neq 0\iff \underset{0\leq t\leq 1}{\max }\left\vert u\left(
+t\right) -v\left( t\right) \right\vert =\left\vert \int_{0}^{1}u\left(
+t\right) dt\right\vert ,$
+
+then $\left\vert u\left( t\right) -v\left( t\right) \right\vert \leq
+\left\vert \int_{0}^{1}u\left( t\right) dt\right\vert $
+
+$u\left( t\right) -v\left( t\right) \leq \left\vert \int_{0}^{1}u\left(
+t\right) dt\right\vert $ and $v\left( t\right) -u\left( t\right) \leq
+\left\vert \int_{0}^{1}u\left( t\right) dt\right\vert .$
+
+Integrating the above two inequalities from 0 to 1 gives
+
+$\int_{0}^{1}v\left( t\right) dt\geq \left\vert \int_{0}^{1}u\left( t\right)
+dt\right\vert -\int_{0}^{1}u\left( t\right) dt$ and $\int_{0}^{1}v\left(
+t\right) dt\leq \left\vert \int_{0}^{1}u\left( t\right) dt\right\vert
++\int_{0}^{1}u\left( t\right) dt.$
+
+If $\int_{0}^{1}u\left( t\right) dt>0,\int_{0}^{1}v\left( t\right) dt\geq 0,$
+and the equality holds only if $u\left( t\right) -v\left( t\right)
+=\int_{0}^{1}u\left( s\right) ds,$then we let t=0,
+
+$\int_{0}^{1}u\left( t\right) dt=0,$a contradiction. Similar result follows
+from $\int_{0}^{1}u\left( t\right) dt<0.$
+
+In conclusion, $\underset{v\in M}{\inf }\left\Vert u-v\right\Vert $ is never
+achieved for any $u\in E\backslash M.$
+
+\bigskip
+
+\bigskip
+
+\bigskip
+
+\end{document}

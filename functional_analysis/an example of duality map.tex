@@ -1,0 +1,237 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Tuesday, September 15, 2015 17:15:15}
+%TCIDATA{LastRevised=Saturday, October 03, 2015 21:18:11}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank with Theorem Tags">}
+%TCIDATA{CSTFile=Math.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+\FRAME{ftbpF}{4.4996in}{1.4555in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";display "USEDEF";valid_file "T";width
+4.4996in;height 1.4555in;depth 0pt;original-width 7.766in;original-height
+3.2923in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'NUQ6MM0E.wmf';tempfile-properties "XPR";}}
+
+\bigskip Proof: Denote $F^{\prime }\left( x\right) =\left\{ f\in E^{\ast
+};||f||\leq ||x||\text{ and }<f,x>=||x||^{2}\right\} .$ If $f\in F^{\prime
+}\left( x\right) ,$then $||f||\geq |f\left( \frac{x}{||x||}\right) |=\frac{%
+|f\left( x\right) |}{||x||}=\frac{<f,x>}{||x||}=||x||,$therefore $%
+||f||=||x|| $ and $F^{\prime }(x)=F(x).$
+
+From the corollary of Hahn-Banach Theorem, $F(x)$ is nonempty. If $\left\{
+f_{n}\right\} \subset F(x)$ and $\left\{ f_{n}\right\} $ converges,
+
+to $f,$from $||f_{n}||=||x||,$ it follows $||f||=||x||,$ since $%
+|||f||-||f_{n}|||\leq ||f-f_{n}||\rightarrow 0$ . Therefore $F(x)$ is closed.
+
+For $f_{1}$, $f_{2}$ $\in F(x),$it follows $||tf_{1}+(1-t)f_{2}||\leq
+t||f_{1}||+(1-t)||f_{2}||\leq t||x||+(1-t)||x||=||x||$ for $0<t<1$ and
+
+\TEXTsymbol{<}$%
+tf_{1}+(1-t)f_{2},x>=t<f_{1},x>+(1-t)<f_{2},x>=t||x||^{2}+(1-t)||x||^{2}=||x||^{2}, 
+$ it follows that
+
+$tf_{1}+(1-t)f_{2}\in F(x).$ and $F(x)$ is convex.
+
+\begin{problem}
+\begin{proof}
+\begin{problem}
+2 prove that if E$^{\ast }$ is strictly convex, then F(x) contains a single
+point.
+
+\begin{proof}
+For $f_{1}$, $f_{2}$ $\in F(x)$ and $f_{1}\neq f_{2},$ $%
+||tf_{1}+(1-t)f_{2}||<||x||,$contradicting $tf_{1}+(1-t)f_{2}\in F(x).$ It
+follows that F(x) contains a single point.
+\end{proof}
+\end{problem}
+\end{proof}
+
+\FRAME{ftbpF}{4.4996in}{0.6642in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";display "USEDEF";valid_file "T";width
+4.4996in;height 0.6642in;depth 0pt;original-width 7.9321in;original-height
+1.3612in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'NUQSW60F.wmf';tempfile-properties "XPR";}}
+
+\begin{proof}
+Denote $F^{\prime }(x)=\left\{ f\in E^{\ast };\frac{1}{2}||y||^{2}-\frac{1}{2%
+}||x||^{2}\geq <f,y-x>\text{ }\forall y\in E\right\} $ For any $f\in
+F(x),y\in E,$
+
+\TEXTsymbol{\vert}\TEXTsymbol{<}f,$\frac{y}{||y||}>|\leq ||x||\qquad
+\rightarrow <f,y>\leq ||x||||y||\leq \frac{1}{2}(||x||^{2}+||y||^{2})%
+\rightarrow \frac{1}{2}||y||^{2}-\frac{1}{2}||x||^{2}\geq <f,y>-||x||^{2}=$
+\end{proof}
+\end{problem}
+
+\QTP{Body Math}
+$\qquad \qquad \qquad \qquad \qquad <f,y>-<f,x>=<f,y-x>.$ That is, $f\in
+F^{\prime }(x).$
+
+\QTP{Body Math}
+$\qquad \qquad \qquad \qquad \qquad Conversely,$For any $f\in F^{\prime
+}(x), $take $||u||=1,$and $y=tu,$where $u\in E$ (such u exists,e.g.$\frac{x}{%
+||x||} $)$,$ and t
+
+\begin{proof}
+is arbitary real number. Then we get: $\frac{1}{2}t^{2}-<f,u>t+<f,x>-\frac{1%
+}{2}||x||^{2}\geq 0,$ for such inequality to hold, the determinant is
+nonpositive,i.e. $<f,u>^{2}-2(<f,x>-\frac{1}{2}||x||^{2})\leq 0.$
+
+Let $u=\frac{x}{||x||},$we can get $(<f,x>-||x||^{2})^{2}\leq 0,$ therefore $%
+<f,x>=||x||^{2}.$
+
+Futhermore, since $<f,u>^{2}\leq 2(<f,x>-\frac{1}{2}||x||^{2})$ for any 
+\TEXTsymbol{\vert}\TEXTsymbol{\vert}u\TEXTsymbol{\vert}\TEXTsymbol{\vert}=1.
+By the definition of $||f||$ and the property of linearity of $f,||f||=%
+\underset{\underset{u\in E}{||u||=1}}{\sup }|<f,E>|\leq
+2<f,x>-||x||^{2}=||x||^{2}.$ By the conclusion in problem (1), it follows
+that $f\in F(x).$ Hence $F(x)=F^{\prime }(x),$the proof it complete.$%
+\boxtimes $
+\end{proof}
+
+\FRAME{ftbpF}{5.3705in}{2.124in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "T";width 5.3705in;height 2.124in;depth
+0pt;original-width 9.2656in;original-height 3.64in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'NUPPAB04.wmf';tempfile-properties "XPR";}}
+
+(a) $||f||_{E^{\ast }}=\underset{\underset{x\in E}{||x||\leq 1}}{\sup }%
+|f(x)|=\underset{\underset{x\in E}{||x||\leq 1}}{\sup }|\underset{i=1}{%
+\overset{n}{\sum }}x_{i}<f,e_{i}>|=\underset{\underset{x\in E}{\underset{i=1}%
+{\overset{n}{\sum |}}x_{i}|\leq 1}}{\sup }|\underset{i=1}{\overset{n}{\sum }}%
+x_{i}f_{i}|=\underset{1\leq i\leq n}{\max }|f_{i}|,$
+
+(b) By definition \FRAME{ftbpF}{4.0447in}{0.5379in}{0pt}{}{}{Figure}{\special%
+{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+TRUE;display "USEDEF";valid_file "T";width 4.0447in;height 0.5379in;depth
+0pt;original-width 6.7654in;original-height 0.8752in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'NUPPAB05.wmf';tempfile-properties "XPR";}}
+
+For abitrary $x\in E,$ we get two equations of $F(x)$ (denoted as $f$ below)
+
+$\underset{1\leq i\leq n}{\max }|<f,e_{i}>|=\underset{i=1}{\overset{n}{\sum }%
+}|x_{i}|\qquad \qquad \qquad \qquad \qquad \qquad \qquad (1)$
+
+$\underset{i=1}{\overset{n}{\sum }}x_{i}<f,e_{i}>=(\underset{i=1}{\overset{n}%
+{\sum }}|x_{i}|)^{2}\qquad \qquad \qquad \qquad \qquad \ (2)$
+
+from (1) and (2) we get:
+
+$\underset{i=1}{\overset{n}{\sum }}\frac{x_{i}}{\underset{i=1}{\overset{n}{%
+\sum }}|x_{i}|}<f,e_{i}>=\underset{1\leq i\leq n}{\max }|<f,e_{i}>|$, which
+is possible only if all $<f,e_{i}>$ equal $<f,e_{1}>$ for example.
+
+Thus the above equation reduces to
+
+$\underset{i=1}{\overset{n}{\sum }}x_{i}<f,e_{1}>=<f,e_{1}>^{2},$since $%
+<f,e_{1}>$ is nonzero for all nonzero $\underset{i=1}{\overset{n}{\sum }}%
+|x_{i}|,$ it follows that
+
+$<f,e_{i}>=\underset{i=1}{\overset{n}{\sum }}x_{i},$ and F maps x to a
+function f on E, such that $f(y)=\underset{i=1}{\overset{n}{\sum }}x_{i}%
+\underset{i=1}{\overset{n}{\sum }}y_{i},$where $y=\underset{i=1}{\overset{n}{%
+\sum }}y_{i}e_{i}$
+
+\FRAME{ftbpF}{4.4996in}{0.9003in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "T";width 4.4996in;height 0.9003in;depth
+0pt;original-width 6.6547in;original-height 1.1528in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'NUQ19K0C.wmf';tempfile-properties "XPR";}}
+
+(a)$||f||_{E^{\ast }}=\underset{i=1}{\overset{n}{\sum }}|f_{i}|,$
+
+(b)F maps x to a function f on E, such that $f(y)=\frac{\underset{i=1}{%
+\overset{n}{\sum }}x_{i}}{n^{2}}\underset{i=1}{\overset{n}{\sum }}y_{i},$%
+where $y=\underset{i=1}{\overset{n}{\sum }}y_{i}e_{i}$
+
+\FRAME{ftbpF}{4.4996in}{1.4832in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";display "USEDEF";valid_file "T";width
+4.4996in;height 1.4832in;depth 0pt;original-width 7.4322in;original-height
+3.3062in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'NUQ2ZI0D.wmf';tempfile-properties "XPR";}}
+
+Using H\"{o}lder's Inequality we can show (a) $||f||_{E^{\ast }}=\left( 
+\underset{i=1}{\overset{n}{\sum }}|f_{i}|^{q}\right) ^{\frac{1}{q}},$ where
+q satisfies $\frac{1}{p}+\frac{1}{q}=1.$
+
+(b)F maps x to a function f on E, such that $f(y)=\overset{n}{\sum }%
+sgn(x_{i})|x_{i}|^{p-1}y_{i},$where $y=\underset{i=1}{\overset{n}{\sum }}%
+y_{i}e_{i}$
+
+\FRAME{ftbpF}{4.5in}{0.9in}{0in}{}{}{Figure}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"T";width 4.5in;height 0.9in;depth 0in;original-width
+8.0436in;original-height 2.3756in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'NVN9AU00.wmf';tempfile-properties "XPR";}}
+
+\FRAME{ftbpF}{4.5in}{0.9in}{0in}{}{}{Figure}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"T";width 4.5in;height 0.9in;depth 0in;original-width
+8.4881in;original-height 1.9311in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'NVN9BB01.wmf';tempfile-properties "XPR";}}
+
+1 $\left( a\right) $ $f$ is linear and $\left\Vert f\right\Vert =\underset{%
+\left\Vert u\right\Vert \leq 1}{\sup }\left\vert f\left( u\right)
+\right\vert =\underset{\left\Vert u\right\Vert \leq 1}{\sup }\left\vert
+\int_{0}^{1}u\left( t\right) dt\right\vert \leq 1.$f is bounded$\implies f$
+is continous linear functional on $E,$thus belonging to $E^{\ast }.$
+
+$\left\Vert f\right\Vert _{E^{\ast }}=1.$
+
+$\left( b\right) \int_{0}^{1}u\left( t\right) dt=1$ for $\underset{t\in
+\lbrack 0,1]}{\max }\left\vert u\left( t\right) \right\vert =1,u\left(
+0\right) =0.$
+
+Since $u\left( t\right) $ is continuous at 0, there exists $\delta \in
+\left( 0,1\right) ,s.t.\left\vert u\left( t\right) \right\vert <\frac{1}{2},$%
+in $\left( 0,\delta \right) .$
+
+Then $\int_{0}^{1}u\left( t\right) dt=\int_{0}^{\delta }u\left( t\right)
+dt+\int_{\delta }^{1}u\left( t\right) dt\leq \frac{1}{2}\delta +\left(
+1-\delta \right) <1.$A contradiction!
+
+\end{document}

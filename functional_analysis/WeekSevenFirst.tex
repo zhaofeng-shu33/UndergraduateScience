@@ -1,0 +1,275 @@
+
+\documentclass{article}
+\usepackage{amssymb}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Tuesday, October 27, 2015 23:06:56}
+%TCIDATA{LastRevised=Sunday, November 01, 2015 20:02:02}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+\bigskip \bigskip \U{8d75}\U{4e30}\qquad 2013012178\qquad \qquad Functional
+Analysis Seventh Week
+
+2.2$\left( a\right) $ $p\left( 0\right) =p\left( 0+0\right) \leq p\left(
+0\right) +p\left( 0\right) $ by $\left( i\right) \implies p\left( 0\right)
+\geq 0$
+
+On the other hand,$p\left( 0\right) =p\left( x+\left( -x\right) \right) \leq
+p\left( x\right) +p\left( -x\right) ,$where $x\in E\implies p\left( 0\right)
+=\underset{x\in E}{\min }p\left( x\right) .$
+
+If $p\left( 0\right) >0,$ it is impossible to find a sequence$\left\{
+x_{n}\right\} $ in E, s.t.p$\left( x_{n}\right) ->0,$since p$\left(
+x_{n}\right) \geq p\left( 0\right) >0\implies $
+
+p$\left( 0\right) =0.$
+
+Following the hint, $\forall \epsilon >0,$we consider $F_{n}=\left\{ \lambda
+\in R;\left\vert p\left( \lambda x_{k}\right) \right\vert \leq \epsilon
+,\forall k\geq n\right\} ;$
+
+From $\left( iii\right) $ we have $\underset{n=1}{\overset{\infty }{\cup }}%
+F_{n}=R.$Then by Baire Category Thm, there exists at least one $F_{n}$ for
+some n$,$which has interior points.
+
+\bigskip Now we argue by contradiction that $p\left( \alpha _{n}x_{n}\right)
+\nrightarrow 0,$then there exists $\epsilon _{0}$ s.t. $p\left( \alpha
+_{n}x_{n}\right) \geq \epsilon _{0}$ holds for a subsequence of $\left\{
+\alpha _{n}x_{n}\right\} .$ We can further choose a subsequence s.t. $\alpha
+_{n}\rightarrow \alpha ,$since $\left\{ \alpha _{n}\right\} $ is a bounded
+sequence in $R.$To simplify the notation we still use the subscript n to
+denote this subsequence.
+
+For $\frac{1}{2}\epsilon _{0},$ from the above deduction we can find a 
+
+$F_{n_{0}}$ =$\left\{ \lambda \in R;\left\vert p\left( \lambda x_{k}\right)
+\right\vert \leq \frac{\epsilon _{0}}{2},\forall k\geq n_{0}\right\} $which
+has interior points.
+
+Suppose $\lambda _{0}$ is an interior point of $F_{n_{0}},$ 
+
+we can find $N_{1},s.t.\left( \lambda _{0}+\alpha _{n}-\alpha \right) \in
+F_{n_{0}},$for $n>N_{1},$since  $\alpha _{n}\rightarrow \alpha $
+
+Also from $\left( ii\right) ,$ there exists $N_{2},s.t.$ $p\left( \alpha
+x_{n}\right) <\frac{\epsilon _{0}}{2},$for $n>N_{2}.\implies $
+
+$p\left( \alpha _{n}x_{n}\right) \leq p\left( \left( \lambda _{0}+\alpha
+_{n}-\alpha \right) x_{n}\right) +p\left( \left( \alpha -\lambda _{0}\right)
+x_{n}\right) <\frac{\epsilon _{0}}{2}+\frac{\epsilon _{0}}{2}=\epsilon
+_{0},\forall n>\max \left\{ N_{1},N_{2},n_{0}\right\} .$A contradiction with 
+$p\left( \alpha _{n}x_{n}\right) \geq \epsilon _{0},\forall n\in N.$
+
+\bigskip And if $\left\{ x_{n}\right\} $ is a sequence in E s.t. $p\left(
+x_{n}-x\right) \rightarrow 0,$for some $x\in E,$ and $\left\{ \alpha
+_{n}\right\} \subset R,\alpha _{n}\rightarrow \alpha .$
+
+Then $p\left( \alpha _{n}x_{n}\right) \leq p\left( \alpha _{n}\left(
+x_{n}-x\right) \right) +p\left( \alpha _{n}x\right) ,$ from the above
+deduction we know that  $p\left( \alpha _{n}\left( x_{n}-x\right) \right)
+\rightarrow 0.$
+
+$p\left( \alpha _{n}x\right) \leq p\left( \left( \alpha _{n}-\alpha \right)
+x\right) +p\left( \alpha x\right) ,$since $p\left( \lambda x\right) $ is
+continuous about $\lambda $ and $p\left( 0x\right) =0\implies p\left( \left(
+\alpha _{n}-\alpha \right) x\right) \rightarrow 0$
+
+$\implies \underset{n->\infty }{\lim }\sup p\left( \alpha _{n}x_{n}\right)
+\leq p\left( \alpha x\right) .$
+
+$p\left( \alpha x\right) \leq p\left( \alpha _{n}x\right) +p\left( \left(
+\alpha _{n}-\alpha \right) x\right) \leq p\left( \alpha _{n}x_{n}\right)
++p\left( \alpha _{n}\left( x-x_{n}\right) \right) +p\left( \left( \alpha
+_{n}-\alpha \right) x\right) ,\implies p\left( \alpha x\right) \leq \underset%
+{n->\infty }{\lim }\inf p\left( \alpha _{n}x\right) $
+
+$\implies \underset{n->\infty }{\lim }p\left( \alpha _{n}x_{n}\right)
+=p\left( \alpha x\right) $
+
+2.3 By Cor2.3,$\left\Vert T_{n}\right\Vert \leq c,\forall n\in N,$ and $T\in
+L\left( E,F\right) .$
+
+If $x_{n}\rightarrow x,\left\vert T_{n}x_{n}-Tx\right\vert =\left\vert
+T_{n}x_{n}-T_{n}x+T_{n}x-Tx\right\vert \leq \left\vert
+T_{n}x_{n}-T_{n}x\right\vert +\left\vert T_{n}x-Tx\right\vert .$
+
+By condition we know $\left\vert T_{n}x-Tx\right\vert \rightarrow 0,$ and $%
+\left\vert T_{n}x_{n}-T_{n}x\right\vert \leq \left\Vert T_{n}\right\Vert
+\left\vert x_{n}-x\right\vert \leq c\left\vert x_{n}-x\right\vert
+\rightarrow 0$
+
+$\implies \left\vert T_{n}x_{n}-Tx\right\vert \rightarrow 0,$that is $%
+T_{n}x_{n}\rightarrow 0.$
+
+\bigskip 2.4 For each fixed $x\in E$ and $\left\Vert x\right\Vert \leq 1,$%
+from $\left( i\right) $ follows $f_{x}=a\left( x,\cdot \right) $ is linear
+functional on $F\implies \left( f_{x}\right) _{x\in E}$ is a family of
+continuous linear functional from $E$ to $R.$From $\left( ii\right) $
+follows $\underset{x\in E,\left\Vert x\right\Vert \leq 1}{\sup }\left\vert
+f_{x}\left( y\right) \right\vert =$ $\underset{x\in E,\left\Vert
+x\right\Vert \leq 1}{\sup }\left\vert a\left( x,y\right) \right\vert \leq
+\left\Vert a\left( \cdot ,y\right) \right\Vert .$ Then by UBT, there exists
+a constant $c,s.t.\left\Vert f_{x}\right\Vert \leq c,$for any $\left\Vert
+x\right\Vert \leq 1$
+
+$\implies \left\vert a\left( x,y\right) \right\vert =\left\vert f_{x}\left(
+y\right) \right\vert \leq \left\Vert f_{x}\right\Vert \leq c,$for $%
+\left\Vert y\right\Vert \leq 1.$
+
+Now for arbitrary $x\in E,y\in F,$ substituting respectively$\frac{x}{%
+\left\Vert x\right\Vert },\frac{y}{\left\Vert y\right\Vert }$ for $x,y$ gives
+
+$\left\vert a\left( \frac{x}{\left\Vert x\right\Vert },\frac{y}{\left\Vert
+y\right\Vert }\right) \right\vert \leq c.$By the linearily of the bilinear
+functional a$\implies $
+
+$\left\vert a\left( x,y\right) \right\vert \leq c\left\Vert x\right\Vert
+\left\Vert y\right\Vert \boxtimes $
+
+2.5 Following the hint ,we introduce $g_{n}\left( x\right) =\frac{%
+f_{n}\left( x\right) }{1+\epsilon _{n}\left\Vert f_{n}\right\Vert },$then $%
+\left\langle g_{n},x\right\rangle =\frac{\left\langle f_{n},x\right\rangle }{%
+1+\epsilon _{n}\left\Vert f_{n}\right\Vert }\leq \frac{\epsilon
+_{n}\left\Vert f_{n}\right\Vert }{1+\epsilon _{n}\left\Vert f_{n}\right\Vert 
+}+\frac{C\left( x\right) }{1+\epsilon _{n}\left\Vert f_{n}\right\Vert }$
+
+$\leq 1+C\left( x\right) ,\implies g_{n}$ is bounded pointwise for $%
+\left\Vert x\right\Vert <r,$ and by the linearily of $g_{n}\implies g_{n}$
+is bounded $\forall x\in E.$By UBT, there exists a constant $c$,s.t.$%
+\left\vert \left\langle g_{n},x\right\rangle \right\vert \leq c\left\vert
+x\right\vert ,\forall x\in E\forall n\in N.$
+
+$\implies \left\vert \left\langle f_{n},x\right\rangle \right\vert \leq
+c\left\vert x\right\vert \left( 1+\epsilon _{n}\left\Vert f_{n}\right\Vert
+\right) \implies \left\Vert f_{n}\right\Vert \leq c\left( 1+\epsilon
+_{n}\left\Vert f_{n}\right\Vert \right) \implies \left\Vert f_{n}\right\Vert
+\leq \frac{c}{1-c\epsilon _{n}},\implies \underset{n->\infty }{\lim }%
+\left\Vert f_{n}\right\Vert \leq c,$since $\underset{n->\infty }{\lim }%
+\epsilon _{n}=0.\implies \left\{ \left\Vert f_{n}\right\Vert \right\} $ is
+bounded in $R\implies \left( f_{n}\right) $ is bounded.
+
+Three added problem:
+
+1.$\varphi \in C\left[ 0,1\right] \U{ff0c} T\varphi \left( t\right)
+=\int_{0}^{t}\varphi \left( \xi \right) d\xi ,T\varphi \left( 0\right)
+=0,T\varphi ^{\prime }\left( t\right) =\varphi \left( t\right) \in C\left[
+0,1\right] \implies T:C\left[ 0,1\right] \implies C^{1,0}\left[ 0,1\right] $
+
+$T$ is obviously linear and $\left\vert T\varphi \right\vert \leq
+\int_{0}^{t}\left\vert \varphi \left( \xi \right) \right\vert d\xi \leq 
+\underset{0\leq \xi \leq 1}{\max }\left\vert \varphi \left( \xi \right)
+\right\vert =\left\Vert \varphi \right\Vert \implies T$ is bounded and $%
+\left\Vert T\right\Vert \leq 1.$
+
+For each $C^{1,0}$ function $\phi $ on $\left[ 0,1\right] ,$we can find a
+continuous function $\phi ^{\prime }$ on $\left[ 0,1\right] $  $T\phi
+^{\prime }=\phi \implies T$ is surjective. If $\int_{0}^{t}\varphi
+_{1}\left( \xi \right) d\xi =\int_{0}^{t}\varphi _{2}\left( \xi \right) d\xi
+,$taking the derivative gives $\varphi _{1}\left( t\right) =\varphi
+_{2}\left( t\right) ,\forall t\in \left[ 0,1\right] \implies $
+
+$T$ is injective. Hence $T^{-1}$ exists. And $T^{-1}\phi =\phi ^{\prime }.$%
+Let $\phi _{n}=\sin nx,\left( n=2,3...\right) \left\Vert \phi
+_{n}\right\Vert =1$ but $T^{-1}\phi _{n}=n\cos nx\implies \left\Vert
+T^{-1}\phi _{n}\right\Vert =n\rightarrow \infty \implies T^{-1}$ is
+unbounded.
+
+2. $T$ is an linear continuous bijective functional from $X$ to $Y.$ By open
+mapping Thm, there exists $\delta >0,$
+
+$s.t.T\left( B\left( 0,1\right) \right) \supset B\left( 0,\delta \right) ,$
+by linearily $T\left( B\left( 0,a\right) \right) =aT\left( B\left(
+0,1\right) \right) \supset aB\left( 0,\delta \right) =B\left( 0,a\delta
+\right) ,\forall a>0.$
+
+3. It is easy to verify $T$ is linear, and $\left\Vert Tx\right\Vert
+=\left\vert \underset{n=1}{\overset{\infty }{\sum }}a_{n}\xi _{n}\right\vert
+\leq \underset{n\in N}{\sup }\left\vert a_{n}\right\vert \underset{n=1}{%
+\overset{\infty }{\sum }}\left\vert \xi _{n}\right\vert =\left\Vert
+x\right\Vert \underset{n\in N}{\sup }\left\vert a_{n}\right\vert $
+
+$\implies T$ is bounded. $T$ is obviously injective.If $\underset{n\in N}{%
+\inf }\left\vert a_{n}\right\vert >0\qquad $for $\left\{ \eta _{n}\right\}
+\in E,T\left\{ \frac{\eta _{n}}{a_{n}}\right\} =\left\{ \eta _{n}\right\} ,$
+
+where $\underset{n=1}{\overset{\infty }{\sum }}\left\vert \frac{\eta _{n}}{%
+a_{n}}\right\vert \leq \frac{1}{\underset{n\in N}{\inf }\left\vert
+a_{n}\right\vert }$ $\underset{n=1}{\overset{\infty }{\sum }}\left\vert \eta
+_{n}\right\vert <\infty ,$that is $\left\{ \frac{\eta _{n}}{a_{n}}\right\}
+\in E$ and $T$ is surjective.
+
+Conversely, if $T$ is surjective, then $\left\{ \frac{\eta _{n}}{a_{n}}%
+\right\} \in E$ for any $\left\{ \eta _{n}\right\} \in E.$We define a linear
+functional from $E$ to R as $f_{\alpha }\left( \left\{ \eta _{n}\right\}
+\right) =$ $\underset{n=1}{\overset{\infty }{\sum }}\epsilon _{n}\frac{\eta
+_{n}}{a_{n}},$where the index set $I=\left\{ \alpha |\alpha =\left( \epsilon
+_{1},\epsilon _{2},..\epsilon _{n},..\right) ,\epsilon _{i}=1\text{ or }%
+-1\right\} $
+
+We can verify that the functional family is bounded pointwisely$\overset{UBT}%
+{\rightarrow }$ there exists a constant $c>0$,$s.t.$
+
+$\left\vert f_{I}\left( \left\{ \eta _{n}\right\} \right) \right\vert \leq
+c\left\Vert \left\{ \eta _{n}\right\} \right\Vert ,\forall \left\{ \eta
+_{n}\right\} \in E,\alpha \in I\implies \left\vert \underset{n=1}{\overset{%
+\infty }{\sum }}\epsilon _{n}\frac{\eta _{n}}{a_{n}}\right\vert \leq c$ $%
+\underset{n=1}{\overset{\infty }{\sum }}\left\vert \eta _{n}\right\vert ,$%
+take $\epsilon _{n}=\left( 0,0,..\underset{nth}{\underbrace{1}},0,0..\right) 
+$
+
+gives $\left\vert \frac{\eta _{n}}{a_{n}}\right\vert \leq c$ $\underset{k=1}{%
+\overset{\infty }{\sum }}\left\vert \eta _{k}\right\vert ,$ if we choose $%
+\left\{ \eta _{n}\right\} s.t.\eta _{n}\neq 0\forall n\in N\implies
+\left\vert a_{n}\right\vert \geq \frac{c\underset{k=1}{\overset{\infty }{%
+\sum }}\left\vert \eta _{k}\right\vert }{\left\vert \eta _{n}\right\vert }%
+\geq c\implies $
+
+$\underset{n\in N}{\inf }\left\vert a_{n}\right\vert \geq c>0.$As a result,$T
+$ is surjective$\iff $ $\underset{n\in N}{\inf }\left\vert a_{n}\right\vert
+>0.$By OMT and the condition that $T$ is injective, it follows that 
+
+$T$ is surjective$\iff T^{-1}$ exists and bounded. Therefore $T$ is
+surjective$\iff $ $\underset{n\in N}{\inf }\left\vert a_{n}\right\vert
+>0\boxtimes $
+
+\end{document}

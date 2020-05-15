@@ -1,0 +1,547 @@
+
+\documentclass{article}
+\usepackage{amssymb}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Friday, December 04, 2015 21:50:22}
+%TCIDATA{LastRevised=Sunday, December 06, 2015 21:59:23}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+\bigskip 3.13 $\left( 1\right) $ We know $conv\left( \underset{i=n}{\overset{%
+\infty }{\cup }}\left\{ x_{i}\right\} \right) $ is a convex set,from Ex3.3
+we know that
+
+$\overline{conv\left( \underset{i=n}{\overset{\infty }{\cup }}\left\{
+x_{i}\right\} \right) }=\overline{conv\left( \underset{i=n}{\overset{\infty }%
+{\cup }}\left\{ x_{i}\right\} \right) }^{\sigma }\implies x\in \overline{%
+conv\left( \underset{i=n}{\overset{\infty }{\cup }}\left\{ x_{i}\right\}
+\right) }^{\sigma }=K_{n},as\qquad x_{n}\rightarrow x.$
+
+$\bigskip \implies x\in \underset{n=1}{\overset{\infty }{\cap }}K_{n}.$ On
+the other hand, suppose $y\in \underset{n=1}{\overset{\infty }{\cap }}K_{n},$
+then there is one $x_{k_{1}}\in $ $conv\left( \underset{i=1}{\overset{\infty 
+}{\cup }}\left\{ x_{i}\right\} \right) ,s.t.\left\vert
+x_{k_{1}}-y\right\vert <1.$ From $y\in \overline{conv\left( \underset{%
+i=k_{1}+1}{\overset{\infty }{\cup }}\left\{ x_{i}\right\} \right) }^{\sigma }
+$
+
+$\bigskip $we can further find $x_{k_{2}}\in conv\left( \underset{i=k_{1}+1}{%
+\overset{\infty }{\cup }}\left\{ x_{i}\right\} \right) ,s.t.\left\vert
+x_{k_{1}}-y\right\vert <\frac{1}{2}.$ Continuing this process, if we have $%
+\left\{ x_{k_{1},..}x_{k_{n-1}}\right\} ,$ we can find $x_{k_{n}}\in
+conv\left( \ \underset{i=k_{n-1}+1}{\overset{\infty }{\cup }}\left\{ \
+x_{i}\right\} \ \right) ,s.t.\left\vert x_{k_{n}}-y\right\vert <\frac{1}{n}$
+
+we obtain a sequence $\left\{ x_{k_{n}}\right\} ,x_{k_{n}}\rightarrow y,$%
+strongly$,$also weakly.
+
+Further, $\forall \sigma -nbhd$ $N^{\prime }\qquad $of $x,x_{n}\in N^{\prime
+},\forall k_{n}\geq n>N,.$
+
+Since each element of $\left\{ x_{k_{t}}\right\} _{t=n}^{\infty }$ comes
+from finite convex combination of $\left\{ x_{t}\right\} _{t=n}^{\infty },$
+it follows that $x_{k_{t}}\in N^{\prime },\forall t\geq n\implies
+x_{k_{n}}\rightarrow x,$weakly. By the uniqueness of limit in the weak
+topology it follows that $x=y\implies \underset{n=1}{\overset{\infty }{\cap }%
+}K_{n}\subset \left\{ x\right\} \implies \left\{ x\right\} =\underset{n=1}{%
+\overset{\infty }{\cap }}K_{n}.$
+
+$\left( 2\right) \qquad $Suppose $x_{n}\nrightarrow x,$ then we can find a $%
+\sigma -$nbhd $N$ of $x,$ and a subsequence 
+
+$\left\{ x_{n_{k}}\right\} ,s.t.x_{n_{k}}\in N^{c}.$
+
+Since E is reflexive and $\left\{ x_{n_{k}}\right\} $ is bounded,we can
+further find a subsequence $\left\{ x_{n_{k_{i}}}\right\} ,$
+
+s.t. $x_{n_{k_{i}}}\rightarrow y$ weakly for some $y\in E$. By $\left(
+1\right) $ we can show that $x=y.$
+
+$\implies x\in N^{c},$since $N^{c}$ is closed. A contradiction.
+
+$\left( 3\right) $ Since $\sigma -$topology is equivalent to the strong one,
+we consider the strong one in this case. E is reflexive since E is bounded.
+If $\left\{ x_{n}\right\} $ is bounded, then by $\left( 2\right) $
+
+$x_{n_{k_{i}}}\rightarrow x$ weakly,also strongly. Therefore, we only need
+to consider $\left\{ x_{n}\right\} $ is unbounded.We first further show that 
+$\underset{n=1}{\overset{\infty }{\cap }}K_{n}=\underset{n=1}{\overset{%
+\infty }{\cap }}K_{k_{n}},$
+
+for any subsequence $\left\{ k_{n}\right\} \subset N.$
+
+Indeed, since $k_{n}\geq n,K_{k_{n}}\subset K_{n}\implies $ $\underset{n=1}{%
+\overset{\infty }{\cap }}K_{k_{n}}\subset \underset{n=1}{\overset{\infty }{%
+\cap }}K_{n}.$
+
+On the other hand, $\forall z\in $ $\underset{n=1}{\overset{\infty }{\cap }}%
+K_{n},z\in K_{n},\forall n,$ for each $k_{n},$we can find sufficient
+
+large $n^{\prime },s.t.n^{\prime }\geq k_{n}$ $\implies K_{n^{\prime
+}}\subset K_{k_{n}}\implies z\in K_{k_{n}},\forall k_{n}\implies z\in 
+\underset{n=1}{\overset{\infty }{\cap }}K_{k_{n}}$
+
+$\implies $ $\underset{n=1}{\overset{\infty }{\cap }}K_{n}\subset \underset{%
+n=1}{\overset{\infty }{\cap }}K_{k_{n}}.\implies \underset{n=1}{\overset{%
+\infty }{\cap }}K_{_{n}}=\underset{n=1}{\overset{\infty }{\cap }}%
+K_{k_{n}}=\left\{ x\right\} $
+
+\bigskip By the above discussion, to simplify the notation, we can further
+assume $\left\Vert x_{n}\right\Vert \rightarrow \infty .$ For each $K_{n},$
+we can construct its recession cone$,$ that is all direction vectors along
+which the ray starting from each point of $K_{n}$ is contained wholy in $%
+K_{n}:$
+
+$C_{n}=\left\{ y\in E|x+ry\in K_{n},\forall x\in K_{n},\forall r\geq
+0\right\} .$Since $K_{n}$ is closed convex, 
+
+we can show that $C_{n}=\underset{t>0}{\cap }t\left( K_{n}-\left\{ x\right\}
+\right) .$ 
+
+$K_{n}-\left\{ x\right\} =\overline{conv\left( \underset{i=n}{\overset{%
+\infty }{\cup }}\left\{ x_{i}-x\right\} \right) },$therefore without loss of
+generality, we can further assume $x=0.C_{n}=\underset{t>0}{\cap }t\left(
+K_{n}\right) \implies C_{n}\subset K_{n},\underset{n=1}{\overset{\infty }{%
+\cap }}C_{n}\subset \underset{n=1}{\overset{\infty }{\cap }}K_{n}=\left\{
+0\right\} .$ By the original 
+
+definition of $C_{n},\left\{ 0\right\} \subset C_{n}\forall n\implies 
+\underset{n=1}{\overset{\infty }{\cap }}C_{n}=\left\{ 0\right\} .$
+
+We can choose closed sphere $S_{E}=\left\{ x\in E|\left\Vert x\right\Vert
+=1\right\} ,s.t.$
+
+$\implies \underset{n=1}{\overset{\infty }{\cap }}\left( C_{n}\cap
+S_{E}\right) =\left( \underset{n=1}{\overset{\infty }{\cap }}C_{n}\right)
+\cap S_{E}=\emptyset .$ Then since $\left( C_{n}\cap S_{E}\right) $ is
+compact,by the nest closed set Thm, there must be an empty set in this
+nested set sequence.
+
+Suppose $C_{n_{0}}\cap S_{E}=\emptyset ,$ by the definition of $C_{n_{0}},$
+we deduce that $C_{n_{0}}=\left\{ 0\right\} $
+
+since it can not cross $\left\Vert x\right\Vert =1.\implies K_{n_{0}}$ is
+bounded because $K_{n_{0}}$ is closed. 
+
+Indeed, we assume $K_{n_{0}}$ is unbounded, that is there exists $\left\{
+z_{n}\right\} \subset K_{n_{0}},s.t.$
+
+$\left\Vert z_{n}\right\Vert \rightarrow \infty ,$ We then consider $\left\{ 
+\frac{z_{n}}{\left\Vert z_{n}\right\Vert }\right\} \subset K_{n_{0}}\implies 
+$there exists a subsequence $\left\{ z_{n_{k}}^{\prime }\right\} $
+
+that converges to $z\in K_{n_{0}}.$ We can show that $z\in
+C_{n_{0}},\left\Vert z\right\Vert =1,$this follows from
+
+$tz_{n_{k}}^{\prime }\rightarrow tz,$ and for sufficient large $k,\left\Vert
+tz_{n_{k}}^{\prime }\right\Vert =t\leq \left\Vert z_{n_{k}}\right\Vert
+,tz_{n_{k}}^{\prime }\in K_{n_{0}}.$
+
+A contradiction. Therefore, it is impossible for $\left\{ z_{n_{k}}\right\} $
+to be unbounded and the proof is complete.
+
+$\left( 4\right) $ Let $x=0,x_{i}=\left( 0,..i,0,..\right) ,$ the $i-$th
+position is $i$.
+
+It can be shown that $\left\{ x_{i}\right\} $ is unbounded but $\left\{
+0\right\} =\underset{n=1}{\overset{\infty }{\cap }}K_{n}.$
+
+3.14 Since E is reflexive, $A\iff A^{\prime }$There exists some $x^{\prime
+\prime }\in E^{\prime \prime },s.t.\left\Vert x^{\prime \prime }\right\Vert
+\leq M,s.t.$
+
+$\left\langle x^{\prime \prime },f_{i}\right\rangle =\alpha _{i},$for every $%
+i\in I.\qquad $Then we can use the conclusion of Ex1.10 to show
+
+$A^{\prime }\iff B.$
+
+3.22$\left( 1\right) $ If $E^{\ast }$ is seperable, $E^{\ast }=\overline{%
+\left\{ f_{n}\right\} }.$ Consider $S_{E}=\left\{ x\in E|\left\Vert
+x\right\Vert =1\right\} .$ Since
+
+$E$ is infinite-dimensional, $\overline{S_{E}}^{\sigma }=B_{E}=\left\{ x\in
+E|\left\Vert x\right\Vert \leq 1\right\} $
+
+$\implies 0\in \overline{S_{E}}^{\sigma }.$ From Thm 3.29 the weak topology
+on $B_{E}$ can be induced by a metric since $E^{\ast }$ is seperable.$%
+\implies $ Then $\overline{S_{E}}^{\sigma }$ is the closure of $S_{E}$ about
+this induced metric$\implies $ we can select a sequence $\left\{
+x_{n}\right\} $ from $S_{E},s.t.x_{n}\rightarrow x,$ w.r.t this metric, also
+with respect to the weak topology.
+
+$\left( 2\right) $ Since E is infinite dimensional, we can find a subspace $%
+E_{0}$, for example $\overline{\left\{ x_{n}^{\prime }\right\} },$ that is
+closed and seperable and infinite dimensional. Indeed, if $\left\{
+x_{1,}..x_{n}\right\} $ are linearly independent, choose $x_{n+1}\notin
+span\left\{ x_{1},..x_{n}\right\} .$
+
+$E_{0}$ is reflexive since it is a closed subspace of reflexive space E.
+
+By Cor3.27$\implies E_{0}^{\ast }$ is seperable. Then applying $\left(
+1\right) $ the conlcusion follows.
+
+\bigskip 3.29 \ $\left( 1\right) $
+
+\section{ \ Step One}
+
+\QTP{Body Math}
+Without loss of generality, we can assume M=1. Indeed, if the conclusion
+holds for M=1, then for every M, We apply the conclusion for $\frac{x}{M},%
+\frac{y}{M},$with $\frac{\epsilon }{M}>0\implies \exists \delta ^{\prime
+},s.t.\left\Vert \frac{x+y}{2M}\right\Vert ^{2}\leq \frac{1}{2}\left\Vert 
+\frac{x}{M}\right\Vert ^{2}+\frac{1}{2}\left\Vert \frac{y}{M}\right\Vert
+^{2}-\delta ^{\prime }\implies \delta =M^{2}\delta ^{\prime },$
+
+$\left\Vert \frac{x+y}{2}\right\Vert ^{2}\leq \frac{1}{2}\left\Vert
+x\right\Vert ^{2}+\frac{1}{2}\left\Vert y\right\Vert ^{2}-\delta ^{\prime
+}M^{2},$for $\left\Vert x\right\Vert \leq M,\left\Vert y\right\Vert \leq M,$%
+and
+
+$\left\Vert x-y\right\Vert >\epsilon .$
+
+\subsection{  Step Two}
+
+\bigskip Next we show the conclusion is equivalent if we replace the
+condition with a weaker one $\left\Vert x\right\Vert =1,\left\Vert
+y\right\Vert =1.$Indeed, if $\left\Vert x\right\Vert \leq 1,\left\Vert
+y\right\Vert \leq 1,\left\Vert x-y\right\Vert >\epsilon ,$
+
+Consider $\frac{x}{\left\Vert x\right\Vert }-\frac{y}{\left\Vert
+y\right\Vert }$
+
+$=\frac{\left( x-y\right) \left\Vert y\right\Vert +y\left( \left\Vert
+y\right\Vert -\left\Vert x\right\Vert \right) }{\left\Vert x\right\Vert
+\left\Vert y\right\Vert }\implies $ $\left\Vert \frac{x}{\left\Vert
+x\right\Vert }-\frac{y}{\left\Vert y\right\Vert }\right\Vert \geq \frac{%
+\left\Vert y-x\right\Vert -\left( \left\vert \left\Vert y\right\Vert
+-\left\Vert x\right\Vert \right\vert \right) }{\left\Vert x\right\Vert },$by
+triangular inequality of the norm. If $\left\vert \left\Vert y\right\Vert
+-\left\Vert x\right\Vert \right\vert <\frac{\epsilon }{2},$then $\left\Vert 
+\frac{x}{\left\Vert x\right\Vert }-\frac{y}{\left\Vert y\right\Vert }%
+\right\Vert \geq \frac{\epsilon }{2},$ by the known conclusion for $%
+\left\Vert \frac{x}{\left\Vert x\right\Vert }\right\Vert =1,\left\Vert \frac{%
+y}{\left\Vert y\right\Vert }\right\Vert =1\implies $
+
+$\left\Vert \frac{x}{\left\Vert x\right\Vert }+\frac{y}{\left\Vert
+y\right\Vert }\right\Vert ^{2}\leq 4-\delta _{\epsilon }^{\prime },$ 
+
+$\left\Vert \frac{x}{\left\Vert x\right\Vert }+\frac{y}{\left\Vert
+y\right\Vert }\right\Vert \geq \left\Vert \frac{\left( x+y\right) \left\Vert
+y\right\Vert +y\left\Vert x\right\Vert -y\left\Vert y\right\Vert }{%
+\left\Vert x\right\Vert \left\Vert y\right\Vert }\right\Vert \geq \frac{%
+\left\Vert x+y\right\Vert \left\Vert y\right\Vert -\left\Vert y\right\Vert
+\left\vert \left\Vert x\right\Vert -\left\Vert y\right\Vert \right\vert }{%
+\left\Vert x\right\Vert \left\Vert y\right\Vert }$
+
+$=\frac{\left\Vert x+y\right\Vert -\left\vert \left\Vert x\right\Vert
+-\left\Vert y\right\Vert \right\vert }{\left\Vert x\right\Vert },$we know $%
+\left\Vert x+y\right\Vert -\left\vert \left\Vert x\right\Vert -\left\Vert
+y\right\Vert \right\vert \leq 4,\implies \left\Vert x\right\Vert ^{2}\geq
+\left( \frac{4}{4-\delta _{\epsilon }^{\prime }}\right) ^{2}.$
+
+$\implies \left( \left\Vert x+y\right\Vert -\left\vert \left\Vert
+x\right\Vert -\left\Vert y\right\Vert \right\vert \right) ^{2}$
+
+$\leq 4\left\Vert x\right\Vert ^{2}-\left\Vert x\right\Vert ^{2}\delta
+_{\epsilon }^{\prime }\leq 2\left\Vert x\right\Vert ^{2}+2\left( \left\Vert
+y\right\Vert +\left\vert \left\Vert x\right\Vert -\left\Vert y\right\Vert
+\right\vert \right) ^{2}-\left\Vert x\right\Vert ^{2}\delta _{\epsilon
+}^{\prime }$
+
+$=2\left\Vert x\right\Vert ^{2}+2\left\Vert y\right\Vert ^{2}+2\left\vert
+\left\Vert x\right\Vert -\left\Vert y\right\Vert \right\vert \left(
+2\left\Vert y\right\Vert +\left\vert \left\Vert x\right\Vert -\left\Vert
+y\right\Vert \right\vert \right) -\left\Vert x\right\Vert ^{2}\delta
+_{\epsilon }^{\prime }$
+
+Also $\left( \left\Vert x+y\right\Vert -\left\vert \left\Vert x\right\Vert
+-\left\Vert y\right\Vert \right\vert \right) ^{2}=\left\Vert x+y\right\Vert
+^{2}-\left\vert \left\Vert x\right\Vert -\left\Vert y\right\Vert \right\vert
+\left( 2\left\Vert x+y\right\Vert -\left\vert \left\Vert x\right\Vert
+-\left\Vert y\right\Vert \right\vert \right) .$
+
+\bigskip $\implies \left\Vert x+y\right\Vert ^{2}\leq 2\left\Vert
+x\right\Vert ^{2}+2\left\Vert y\right\Vert ^{2}+\left\vert \left\Vert
+x\right\Vert -\left\Vert y\right\Vert \right\vert \left( 2\left\Vert
+x+y\right\Vert -\left\vert \left\Vert x\right\Vert -\left\Vert y\right\Vert
+\right\vert \right) $
+
+$+2\left\vert \left\Vert x\right\Vert -\left\Vert y\right\Vert \right\vert
+\left( 2\left\Vert y\right\Vert +\left\vert \left\Vert x\right\Vert
+-\left\Vert y\right\Vert \right\vert \right) -\left\Vert x\right\Vert
+^{2}\delta _{\epsilon }^{\prime }$
+
+$\leq 2\left\Vert x\right\Vert ^{2}+2\left\Vert y\right\Vert
+^{2}+12\left\vert \left\Vert x\right\Vert -\left\Vert y\right\Vert
+\right\vert -\left( \frac{4}{4-\delta _{\epsilon }^{\prime }}\right)
+^{2}\delta _{\epsilon }^{\prime }$
+
+Further we choose $\left\vert \left\Vert x\right\Vert -\left\Vert
+y\right\Vert \right\vert <\min \left\{ \frac{1}{24}\left( \frac{4}{4-\delta
+_{\epsilon }^{\prime }}\right) ^{2}\delta _{\epsilon }^{\prime },\frac{%
+\epsilon }{2}\right\} .$
+
+$\implies \left\Vert x+y\right\Vert ^{2}\leq 2\left\Vert x\right\Vert
+^{2}+2\left\Vert y\right\Vert ^{2}-\left( \frac{4}{4-\delta _{\epsilon
+}^{\prime }}\right) ^{2}\frac{\delta _{\epsilon }^{\prime }}{2},$
+
+if  $\left\vert \left\Vert x\right\Vert -\left\Vert y\right\Vert \right\vert
+<\min \left\{ \frac{1}{24}\left( \frac{4}{4-\delta _{\epsilon }^{\prime }}%
+\right) ^{2}\delta _{\epsilon }^{\prime },\frac{\epsilon }{2}\right\} .$
+
+Now Suppose $\left\vert \left\Vert x\right\Vert -\left\Vert y\right\Vert
+\right\vert \geq \min \left\{ \frac{1}{24}\left( \frac{4}{4-\delta
+_{\epsilon }^{\prime }}\right) ^{2}\delta _{\epsilon }^{\prime },\frac{%
+\epsilon }{2}\right\} ,$we can find $\delta <2\left( \left\Vert x\right\Vert
+^{2}+\left\Vert y\right\Vert ^{2}\right) -\left\Vert x+y\right\Vert
+^{2},\forall x,y\in \overline{B\left( 0,1\right) }.$Indeed 
+
+$2\left( \left\Vert x\right\Vert ^{2}+\left\Vert y\right\Vert ^{2}\right)
+-\left\Vert x+y\right\Vert ^{2}\geq 2\left( \left\Vert x\right\Vert
+^{2}+\left\Vert y\right\Vert ^{2}\right) -\left( \left\Vert x\right\Vert
++\left\Vert y\right\Vert \right) ^{2}$
+
+$\geq \left( \left\Vert x\right\Vert -\left\Vert y\right\Vert \right)
+^{2}\geq \min \left\{ \frac{1}{24}\left( \frac{4}{4-\delta _{\epsilon
+}^{\prime }}\right) ^{2}\delta _{\epsilon }^{\prime },\frac{\epsilon }{2}%
+\right\} ^{2}.$We can choose $\delta _{\epsilon }^{\prime \prime }<\min
+\left\{ \frac{1}{24}\left( \frac{4}{4-\delta _{\epsilon }^{\prime }}\right)
+^{2}\delta _{\epsilon }^{\prime },\frac{\epsilon }{2}\right\} ^{2}$
+
+$\implies \left\Vert x+y\right\Vert ^{2}\leq 2\left( \left\Vert x\right\Vert
+^{2}+\left\Vert y\right\Vert ^{2}\right) -\delta _{\epsilon }^{\prime \prime
+},$ 
+
+as $\left\vert \left\Vert x\right\Vert -\left\Vert y\right\Vert \right\vert
+\geq \min \left\{ \frac{1}{24}\left( \frac{4}{4-\delta _{\epsilon }^{\prime }%
+}\right) ^{2}\delta _{\epsilon }^{\prime },\frac{\epsilon }{2}\right\} .$
+
+Combining the two cases together, we can choose $\delta =\min \left\{ \delta
+_{\epsilon }^{\prime \prime },\left( \frac{4}{4-\delta _{\epsilon }^{\prime }%
+}\right) ^{2}\frac{\delta _{\epsilon }^{\prime }}{2}\right\} $
+
+$\implies \left\Vert x+y\right\Vert ^{2}\leq 2\left( \left\Vert x\right\Vert
+^{2}+\left\Vert y\right\Vert ^{2}\right) -\delta .$
+
+\subsection{Step Three}
+
+At the last step, we show that the conclusion holds for the weaker one.
+
+Indeed, we can find $\delta ^{\prime },s.t.\left\Vert \frac{x+y}{2}%
+\right\Vert \leq 1-\delta ^{\prime }$ by the definition of uniformly convex
+space. $\implies \left\Vert \frac{x+y}{2}\right\Vert ^{2}\leq \left(
+1-\delta ^{\prime }\right) ^{2}=1-\delta ^{\prime }\left( 2-\delta ^{\prime
+}\right) ,$let $\delta =\delta ^{\prime }\left( 2-\delta ^{\prime }\right) >0
+$ and the proof is complete.
+
+$\left( 2\right) $ Following the hint, We argue by contradiction. Below we
+assume M=1 without loss of generality.
+
+Suppose there exists $\epsilon _{0},\left\Vert x_{n}\right\Vert \leq
+1,\left\Vert y_{n}\right\Vert \leq 1,$ and $\left\Vert
+x_{n}-y_{n}\right\Vert \geq \epsilon _{0}$
+
+$\implies \left\Vert \frac{x_{n}+y_{n}}{2}\right\Vert ^{p}\geq \frac{1}{2}%
+\left\Vert x_{n}\right\Vert ^{p}+\frac{1}{2}\left\Vert y_{n}\right\Vert ^{p}-%
+\frac{1}{n}\forall n\in N.$
+
+We can find subsequences from $\left\{ x_{n}\right\} ,\left\{ y_{n}\right\} $
+$,s.t.\left\Vert x_{k_{n}}\right\Vert \rightarrow a,\left\Vert
+y_{_{k_{n}}}\right\Vert \rightarrow b.$
+
+To simplify the notation, we still denote the two subsequence as $\left\{
+x_{n}\right\} ,\left\{ y_{n}\right\} .$
+
+$\left\Vert \frac{x_{n}+y_{n}}{2}\right\Vert \leq \frac{\left\Vert
+x_{n}\right\Vert +\left\Vert y_{n}\right\Vert }{2},$the power function $x^{p}
+$ is strict convex for $p>1\implies $
+
+$\frac{1}{2}\left\Vert x_{n}\right\Vert ^{p}+\frac{1}{2}\left\Vert
+y_{n}\right\Vert ^{p}\geq \left( \frac{\left\Vert x_{n}\right\Vert
++\left\Vert y_{n}\right\Vert }{2}\right) ^{p}\geq \frac{1}{2}\left\Vert
+x_{n}\right\Vert ^{p}+\frac{1}{2}\left\Vert y_{n}\right\Vert ^{p}-\frac{1}{n}
+$
+
+Taking the limit $n\rightarrow \infty $ gives $\frac{1}{2}a^{p}+\frac{1}{2}%
+b^{p}=\left( \frac{a+b}{2}\right) ^{p}\implies a=b.$
+
+Next we consider $\frac{x_{n}}{\left\Vert x_{n}\right\Vert }$ and $\frac{%
+y_{n}}{\left\Vert y_{n}\right\Vert },$as $\left( 1\right) $ shows,  If $%
+\left\vert \left\Vert y_{n}\right\Vert -\left\Vert x_{n}\right\Vert
+\right\vert <\frac{\epsilon }{2},$then $\left\Vert \frac{x_{n}}{\left\Vert
+x_{n}\right\Vert }-\frac{y_{n}}{\left\Vert y_{n}\right\Vert }\right\Vert
+\geq \frac{\epsilon }{2}.$From $a=b$ we know  $\left\vert \left\Vert
+y_{n}\right\Vert -\left\Vert x_{n}\right\Vert \right\vert <\frac{\epsilon }{2%
+}$ holds for sufficient large $n.$ 
+
+by the definition of uniformly convex space,there exists $\delta ^{\prime }>0
+$
+
+$\left\Vert \frac{x_{n}}{\left\Vert x_{n}\right\Vert }+\frac{y_{n}}{%
+\left\Vert y_{n}\right\Vert }\right\Vert \leq 2$\bigskip $-\delta ^{\prime }$
+
+$\left\Vert x_{n}+y_{n}\right\Vert \leq \left\Vert x_{n}-\frac{b}{\left\Vert
+x_{n}\right\Vert }x_{n}\right\Vert +\left\Vert y_{n}-\frac{b}{\left\Vert
+y_{n}\right\Vert }y_{n}\right\Vert +\left\Vert \frac{b}{\left\Vert
+x_{n}\right\Vert }x_{n}+\frac{b}{\left\Vert y_{n}\right\Vert }%
+y_{n}\right\Vert $
+
+$\underset{n-\,>\infty }{\lim \sup }\left\Vert x_{n}+y_{n}\right\Vert \leq
+b\left( 2\bigskip -\delta ^{\prime }\right) $
+
+On the other hand,from $\left\Vert \frac{x_{n}+y_{n}}{2}\right\Vert ^{p}\geq 
+\frac{1}{2}\left\Vert x_{n}\right\Vert ^{p}+\frac{1}{2}\left\Vert
+y_{n}\right\Vert ^{p}-\frac{1}{n}$follows
+
+$\underset{n-\,>\infty }{\lim \inf }\left\Vert x_{n}+y_{n}\right\Vert \geq
+2b>\underset{n-\,>\infty }{\lim \sup }\left\Vert x_{n}+y_{n}\right\Vert ,$%
+impossible!
+
+Therefore the orginal proposition holds.
+
+3.30
+
+Following the hint, we set $|||x|||^{2}=\left\Vert x\right\Vert ^{2}+\alpha
+|x|^{2}.$Since $\left\vert \cdot \right\vert $ and $\left\Vert \cdot
+\right\Vert $ are two equivalent norm,there exists c\TEXTsymbol{>}0,s.t.$%
+\left\vert x\right\vert \leq c\left\Vert x\right\Vert .$ $\left\Vert
+x\right\Vert \leq |||x|||\leq k\left\Vert x\right\Vert ,$provided that $%
+1+c^{2}\alpha \leq k^{2}.$
+
+This condition can be satisfied since $k>1.$
+
+\bigskip 
+
+To verify $|||\cdot |||$ is a norm, we only need to show $|||\cdot |||$
+satisfies the triangular inequality.
+
+$|||x+y|||^{2}=\left\Vert x+y\right\Vert ^{2}+\alpha \left\vert
+x+y\right\vert ^{2}\leq \left( \left\Vert x\right\Vert +\left\Vert
+y\right\Vert \right) ^{2}+\alpha \left( \left\vert x\right\vert +\left\vert
+y\right\vert \right) ^{2}$
+
+$=\left\Vert x\right\Vert ^{2}+\alpha \left\vert x\right\vert
+^{2}+\left\Vert y\right\Vert ^{2}+\alpha \left\vert y\right\vert
+^{2}+2\left( \left\Vert x\right\Vert \left\Vert y\right\Vert +\sqrt{\alpha }%
+\left\vert x\right\vert \sqrt{\alpha }\left\vert y\right\vert \right) $
+
+$\bigskip $By Cauchy's inequalty for real number:
+
+$\leq |||x|||^{2}+|||y|||^{2}+2\sqrt{\left\Vert x\right\Vert ^{2}+\alpha
+\left\vert x\right\vert ^{2}}\sqrt{\left\Vert y\right\Vert ^{2}+\alpha
+\left\vert y\right\vert ^{2}}=|||x|||^{2}+|||y|||^{2}+2|||x|||$ $|||y|||$
+
+$=\left( |||x|||+|||y|||\right) ^{2}\implies |||x+y|||\leq |||x|||+|||y|||.$
+
+\bigskip 
+
+$\bigskip \forall M>0,\epsilon >0,x,y\in E,with$ $\left\Vert x\right\Vert
+\leq M,\left\Vert y\right\Vert \leq M,$ and $\left\Vert x-y\right\Vert
+>\epsilon ,$
+
+$|||\frac{x+y}{2}|||^{2}=\left\Vert \frac{x+y}{2}\right\Vert ^{2}+\alpha |%
+\frac{x+y}{2}|^{2},$ since $\left\vert \cdot \right\vert $ is uniformly
+convex, by 3.29,
+
+there exists $\delta >0,s.t.$
+
+$|||\frac{x+y}{2}|||^{2}\leq \left( \frac{\left\Vert x\right\Vert
++\left\Vert y\right\Vert }{2}\right) ^{2}+\alpha \left[ \frac{1}{2}%
+\left\vert x\right\vert ^{2}+\frac{1}{2}\left\vert y\right\vert ^{2}-\delta %
+\right] $
+
+$\leq \frac{\left\Vert x\right\Vert ^{2}+\left\Vert y\right\Vert ^{2}}{2}%
++\alpha \left[ \frac{1}{2}\left\vert x\right\vert ^{2}+\frac{1}{2}\left\vert
+y\right\vert ^{2}-\delta \right] $
+
+$=\frac{1}{2}|||x|||^{2}+\frac{1}{2}|||y|||^{2}-\alpha \delta $
+
+$\implies |||\cdot |||$ is a uniformly convex norm on E.
+
+3.31 $\forall ,\alpha \in \left( 0,\frac{1}{2}\right) ,\epsilon >0,x,y\in
+E,with$ $\left\Vert x\right\Vert \leq 1,\left\Vert y\right\Vert \leq 1,$ and 
+$\left\Vert x-y\right\Vert >\epsilon ,$
+
+By the definition of uniformly convex space, $\left\Vert x-y\right\Vert
+>2\alpha \epsilon \implies $there exists $\delta >0,s.t.\left\Vert \frac{1}{2%
+}x^{\prime }+\frac{1}{2}y^{\prime }\right\Vert \leq 1-\delta ,\forall
+\left\Vert x^{\prime }\right\Vert \leq 1,\left\Vert y^{\prime }\right\Vert
+\leq 1.$
+
+This is the case for $t=\frac{1}{2}.$
+
+Following the hint, if $\alpha \leq t\leq \frac{1}{2},$ we write $tx+\left(
+1-t\right) y=\frac{1}{2}\left( y+z\right) ,$
+
+where $z=2tx+2\left( 1-t\right) y-y,\implies \left\Vert z-y\right\Vert
+=2t\left\Vert x-y\right\Vert \geq 2\alpha \epsilon $
+
+Further, $\left\Vert z\right\Vert =\left\Vert 2tx+\left( 1-2t\right)
+y\right\Vert \leq 2t\left\Vert x\right\Vert +\left( 1-2t\right) \left\Vert
+y\right\Vert \leq 1$
+
+$\implies \left\Vert \frac{1}{2}z+\frac{1}{2}y\right\Vert \leq 1-\delta ,$%
+that is $\left\Vert tx+\left( 1-t\right) y\right\Vert <1-\delta ,\forall
+t\in \lbrack \alpha ,\frac{1}{2}].$
+
+Similarly, we can show $\left\Vert tx+\left( 1-t\right) y\right\Vert
+<1-\delta ,\forall t\in \lbrack \frac{1}{2},1-\alpha ].$
+
+The proof is complete.
+
+$\left( 2\right) .$in $\left( 1\right) $,$\alpha $ is arbitrary. $\implies
+\left\Vert tx+\left( 1-t\right) y\right\Vert <1,\forall \left\Vert
+x\right\Vert \leq 1,\left\Vert y\right\Vert \leq 1,x\neq y.$
+
+Suppose E is not strictly convex, then there exists $x,y,x\neq y,$
+
+$\left\Vert x+y\right\Vert =\left\Vert x\right\Vert +\left\Vert y\right\Vert 
+$ and $x\neq \beta y,\forall $ $\beta >0\implies \frac{x}{\left\Vert
+x\right\Vert }\neq \frac{y}{\left\Vert y\right\Vert },$
+
+let $t=\frac{\left\Vert x\right\Vert }{\left\Vert x\right\Vert +\left\Vert
+y\right\Vert },1-t=\frac{\left\Vert y\right\Vert }{\left\Vert x\right\Vert
++\left\Vert y\right\Vert }\implies \left\Vert t\frac{x}{\left\Vert
+x\right\Vert }+\left( 1-t\right) \frac{y}{\left\Vert y\right\Vert }%
+\right\Vert <1$
+
+$\implies \left\Vert \frac{x+y}{\left\Vert x\right\Vert +\left\Vert
+y\right\Vert }\right\Vert <1,$A contradiction. Therefore, uniformly convex
+Banach space is strictly convex.
+
+\end{document}

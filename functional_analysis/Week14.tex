@@ -1,0 +1,226 @@
+
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Friday, December 18, 2015 18:24:56}
+%TCIDATA{LastRevised=Friday, December 18, 2015 23:54:37}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+\bigskip \bigskip \bigskip \U{8d75}\U{4e30}\qquad 2013012178\qquad \qquad
+Functional Analysis 14\U{5468} Coursework
+
+5.22 1 Since $C$ is closed convex in the strong topology, also in the weak
+topology$\implies u\in C$ and $Tu\in C$ by the definition of operator $T.$
+
+$\left\Vert Tu-Tu_{n}\right\Vert \leq \left\Vert u-u_{n}\right\Vert ,$ since 
+$u_{n}\overset{w}{\rightarrow }u,Tu_{n}\overset{w}{\rightarrow }Tu$ by the
+definition of weak topology. $\implies u_{n}-Tu_{n}\overset{w}{\rightarrow }%
+u-Tu.$ We also have $u_{n}-Tu_{n}\overset{s}{\rightarrow }f.$ also weakly.
+Then by the uniqueness of limit under weak topology follows $u-Tu=f.$
+
+2. We define $T_{1/n}\left( u\right) =\left( 1-\epsilon \right) Tu+a\epsilon
+,$ where $a\in C.$ The existence of $a$ is to gurantee that $T_{1/n}$ is
+from $C$ to $C.$ since $C$ is convex. then for any $v_{1},v_{2}.$
+
+we have $\left\Vert T_{1/n}\left( v_{1}\right) -T_{1/n}\left( v_{2}\right)
+\right\Vert \leq \left( 1-\epsilon \right) \left\Vert v_{1}-v_{2}\right\Vert
+.$Then by Banach fixed point theorem we can find $u_{n},s.t.T_{1/n}\left(
+u_{n}\right) =u_{n}.$ Notice that $C$ is bounded. As a result, the sequence $%
+\left\{ u_{n}\right\} $ is bounded. Then we can find a subsequence
+
+$\left\{ u_{n_{k}}\right\} $ $s.t.u_{n_{k}}\overset{w}{\rightarrow }u\in C.$ 
+$u_{n_{k}}-Tu_{n_{k}}=-\epsilon Tu_{k}+a\epsilon \rightarrow 0$ strongly.
+Then by 1,
+
+we have $Tu=u.$That is,$T$ has a fixed point.
+
+5.23
+
+$\left\vert T\sigma -\underset{i=1}{\overset{n}{\sum }}\alpha
+_{i}Tu_{i}\right\vert ^{2}=\left\vert \underset{i=1}{\overset{n}{\sum }}%
+\alpha _{i}\left( T\sigma -Tu_{i}\right) \right\vert ^{2}=\underset{i,j=1}{%
+\overset{n}{\sum }}\alpha _{i}\alpha _{j}\left\langle T\sigma
+-Tu_{i},T\sigma -Tu_{j}\right\rangle $
+
+$=\frac{1}{2}\underset{i,j=1}{\overset{n}{\sum }}\alpha _{i}\alpha
+_{j}[\left\Vert T\sigma -Tu_{i}\right\Vert ^{2}+\left\Vert T\sigma
+-Tu_{j}\right\Vert ^{2}-\left\Vert Tu_{i}-Tu_{j}\right\Vert ^{2}]$ by cosine
+Thm and $\alpha _{i}\geq 0.$
+
+Thus we only need to show that 
+
+$\underset{i,j=1}{\overset{n}{\sum }}\alpha _{i}\alpha _{j}\left( \left\Vert
+T\sigma -Tu_{i}\right\Vert ^{2}+\left\Vert T\sigma -Tu_{j}\right\Vert
+^{2}\right) \leq \underset{i,j=1}{\overset{n}{\sum }}\alpha _{i}\alpha
+_{j}\left\Vert u_{i}-u_{j}\right\Vert ^{2}$
+
+$\bigskip $Since $T$ is a contraction,
+
+$\underset{i,j=1}{\overset{n}{\sum }}\alpha _{i}\alpha _{j}\left( \left\Vert
+T\sigma -Tu_{i}\right\Vert ^{2}+\left\Vert T\sigma -Tu_{j}\right\Vert
+^{2}\right) \leq \underset{i,j=1}{\overset{n}{\sum }}\alpha _{i}\alpha
+_{j}\left( \left\Vert \sigma -u_{i}\right\Vert ^{2}+\left\Vert \sigma
+-u_{j}\right\Vert ^{2}\right) $
+
+$=\underset{i,j=1}{\overset{n}{\sum }}\alpha _{i}\alpha _{j}\left(
+2\left\Vert \sigma \right\Vert ^{2}+\left\Vert u_{i}\right\Vert
+^{2}+\left\Vert u_{j}\right\Vert ^{2}-2\left\langle \sigma
+,u_{i}\right\rangle -2\left\langle \sigma ,u_{j}\right\rangle \right) $
+
+$=-2\left\Vert \sigma \right\Vert ^{2}+\underset{i,j=1}{\overset{n}{\sum }}%
+\alpha _{i}\alpha _{j}\left( \left\Vert u_{i}\right\Vert ^{2}+\left\Vert
+u_{i}\right\Vert ^{2}\right) $
+
+$=\underset{i,j=1}{\overset{n}{\sum }}\alpha _{i}\alpha _{j}\left(
+\left\Vert u_{i}\right\Vert ^{2}+\left\Vert u_{i}\right\Vert
+^{2}-2\left\langle u_{1},u_{2}\right\rangle \right) ,$since the term is zero
+if $i=j$
+
+$\underset{i,j=1}{\overset{n}{\sum }}\alpha _{i}\alpha _{j}\left\Vert
+u_{i}-u_{j}\right\Vert ^{2}.\boxtimes $
+
+The equality is reached when T is an isometry.
+
+5.25 1. For each $u_{n},$there exists $v_{n}\in K,s.t.dist\left(
+u_{n},K\right) =\left\Vert u_{n}-v_{n}\right\Vert ,$ since $K$ is close
+convex. Then $dist\left( u_{1},K\right) \leq \left\Vert
+u_{1}-v_{2}\right\Vert \leq \left\Vert u_{2}-v_{2}\right\Vert =dist\left(
+u_{2},K\right) $
+
+$\leq \left\Vert u_{2}-v_{3}\right\Vert \leq \left\Vert
+u_{3}-v_{3}\right\Vert =\left\Vert u_{2}-v_{2}\right\Vert ..$
+
+Thus the sequence $dist\left( u_{n},K\right) $ is nonincreasing.
+
+2. From 1 $v_{n}=P_{K}u_{n},$ From Ex5.4
+
+$\bigskip \left\Vert v_{m}-v_{n}\right\Vert \leq \left\Vert
+u_{n}-v_{m}\right\Vert -\left\Vert u_{n}-v_{n}\right\Vert ,$if $m\leq n$
+
+$\leq \left\Vert u_{m}-v_{m}\right\Vert -\left\Vert u_{n}-v_{n}\right\Vert ,$
+if $m>n$ we can rewrite 
+
+$\left\Vert v_{m}-v_{n}\right\Vert \leq \left\Vert u_{m}-v_{n}\right\Vert
+-\left\Vert u_{m}-v_{m}\right\Vert \leq \left\Vert u_{n}-v_{n}\right\Vert
+-\left\Vert u_{m}-v_{m}\right\Vert $
+
+$\implies \left\Vert v_{m}-v_{n}\right\Vert \leq \left\vert dist\left(
+u_{m},K\right) -dist\left( u_{n},K\right) \right\vert .$From 1, $dist\left(
+u_{m},K\right) $ converges.
+
+$\implies \left\{ v_{n}\right\} $ is a Cauchy sequence and therefore $%
+\exists v,s.t.v_{n}\rightarrow v\in K,$since $K$ is closed.
+
+3. It is obvious that $\left\{ u_{n}\right\} $ is bounded and therefore
+admits a weakly convergent subsequence $\left\{ u_{n_{k}}\right\} $. By the
+property of projection and $\bar{u}\in K,$
+
+$\left\langle \bar{u}-v_{n_{k}},u_{n_{k}}-v_{n_{k}}\right\rangle \leq 0.$
+Taking the limit $k\rightarrow \infty ,$we get
+
+$\left\langle \bar{u}-l,\bar{u}-l\right\rangle \leq 0\implies \bar{u}=l$
+
+If $u_{n}\overset{w}{\nrightarrow }l,$then we can find $f\in H$ and a
+subsequence $\left\{ u_{n_{t}}\right\} ,s.t$
+
+$\left\vert \left\langle f,u_{n_{t}}-l\right\rangle \right\vert >\epsilon
+_{0}\forall t,$for $\bigskip \left\{ u_{n_{t}}\right\} ,\left( P\right) $
+holds and it admits a subsequence which converges weakly to $l.$But this
+contradicts with $\left\vert \left\langle f,u_{n_{t}}-l\right\rangle
+\right\vert >\epsilon _{0}.$
+
+4. Since $\underset{n\rightarrow \infty }{\lim }\left\Vert
+u_{n}-v\right\Vert $ exists $\forall v\in K,\left\langle
+u_{n},w-v\right\rangle =\frac{\left\Vert u_{n}+w\right\Vert ^{2}-\left\Vert
+u_{n}+v\right\Vert ^{2}-\left\Vert w\right\Vert ^{2}-\left\Vert v\right\Vert
+^{2}}{2}$ 
+
+converges as $n\rightarrow \infty .$ Thus the function $\varphi \left(
+x\right) :H=\cup _{\lambda >0}\left( K-K\right) \rightarrow R$
+
+definded by $\varphi \left( x\right) =\underset{n\rightarrow \infty }{\lim }%
+\left\langle u_{n},x\right\rangle $ exists. since $x=\lambda ^{\prime
+}\left( w-v\right) ,$
+
+for some $w,v\in K.$ $\varphi $ is linear and bounded, since $\left\{
+u_{n}\right\} $ is bounded. $\implies \varphi \in H^{\prime }.$Then by Riesz
+Representation Thm, $\exists u\in H,s.t.\varphi \left( x\right)
+=\left\langle u,x\right\rangle $
+
+$\implies u_{n}\overset{w}{\rightarrow }u.$From $\left\langle
+v-v_{n},u_{n}-v_{n}\right\rangle \leq 0\forall v\in K\implies $
+
+$\left\langle v-l,u_{n}-v_{n}\right\rangle +\left\langle
+l-v_{n},u_{n}-v_{n}\right\rangle \rightarrow \left\langle
+v-l,u-l\right\rangle ,$ since $v_{n}\overset{s}{\rightarrow }v$
+
+$\implies $\bigskip $\left\langle v-l,u-l\right\rangle \leq 0.$By the
+uniqueness of the projection follows that $l=P_{K}u.$
+
+5. By translation and dilation we can assume that $K$ contains a closed unit
+sphere $B_{H}.$ Since $0\in B_{H}\subset K\implies \left\Vert
+u_{n}\right\Vert $ decreases $\implies \exists \alpha ,s.t.$
+
+$\left\Vert u_{n}\right\Vert \rightarrow \alpha .$ If $\alpha <1.$ Then for
+sufficient large n, $u_{n}\in K\implies v_{n}=u_{n}$
+
+from 2 we have shown that $u_{n}$ converges strongly to some limit.
+
+If $\alpha \geq 1,$ Then we can show $P_{K}u_{n}=\frac{u_{n}}{\left\Vert
+u_{n}\right\Vert }\in K.$ Indeed,
+
+$\left\langle v-\frac{u_{n}}{\left\Vert u_{n}\right\Vert },u_{n}-\frac{u_{n}%
+}{\left\Vert u_{n}\right\Vert }\right\rangle =\left( 1-\frac{1}{\left\Vert
+u_{n}\right\Vert }\right) \left( \left\langle v,u_{n}\right\rangle
+-\left\Vert u_{n}\right\Vert \right) ,$ $\left\Vert u_{n}\right\Vert \geq
+\left\vert \left\langle v,u_{n}\right\rangle \right\vert \implies $
+
+$\left\langle v-\frac{u_{n}}{\left\Vert u_{n}\right\Vert },u_{n}-\frac{u_{n}%
+}{\left\Vert u_{n}\right\Vert }\right\rangle \leq 0\forall v\in K.$
+
+Then $\frac{u_{n}}{\left\Vert u_{n}\right\Vert }$ converges strongly.
+Combined with the convergence of $\left\Vert u_{n}\right\Vert $ follows the
+strong convergence of $u_{n}.$
+
+$\rightarrow $
+
+\end{document}

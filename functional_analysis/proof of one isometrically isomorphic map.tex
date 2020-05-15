@@ -1,0 +1,130 @@
+
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Monday, September 28, 2015 11:28:18}
+%TCIDATA{LastRevised=Monday, September 28, 2015 13:30:19}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+Show that $\left( l^{1}\right) ^{\prime }\overset{is-is}{=}l^{\infty }.$
+
+Proof: $\forall t\in l^{\infty },$define $F_{t}\left( s\right) =\underset{i=1%
+}{\overset{\infty }{\sum }}t_{i}s_{i},$for $s=\left\{ s_{i}\right\}
+_{i=1}^{\infty }\in l^{1}.$
+
+Since $t=\left\{ t_{i}\right\} _{i=1}^{\infty }$ is bounded, the definition
+is proper and obviously $F_{t}$ is linear.
+
+Furthermore, $\left\vert F_{t}\left( s\right) \right\vert \leq \left\vert
+t\right\vert _{\infty }\left\vert s\right\vert _{1}\rightarrow \left\Vert
+F_{t}\right\Vert \leq \left\vert t\right\vert _{\infty }.$
+
+On the other hand, let $s_{n}=\underset{i=1}{\overset{n}{\sum }}a_{i}e_{i},$%
+where $e_{i}=\{\delta _{ij}\}_{j=1}^{\infty }.$
+
+$\left\vert F_{t}\left( s_{n}\right) \right\vert \leq \left\Vert
+F_{t}\right\Vert \left\vert s_{n}\right\vert _{1}\rightarrow \left\vert 
+\underset{i=1}{\overset{n}{\sum }}a_{i}F\left( e_{i}\right) \right\vert \leq
+\left\Vert F_{t}\right\Vert \underset{i=1}{\overset{n}{\sum }}\left\vert
+a_{i}\right\vert ,$
+
+Let $a_{i}=\left\{ 
+\begin{array}{c}
+1,\text{if }\left\vert t_{i}\right\vert =\underset{1\leq k\leq n}{\max }%
+\left\vert t_{k}\right\vert  \\ 
+0,\text{otherwise}%
+\end{array}%
+\right. $ for $i=1,2...n.$Combined with $F\left( e_{i}\right) =\underset{j=1}%
+{\overset{\infty }{\sum }}t_{j}\delta _{ij}=t_{i},$
+
+it follows that $\underset{1\leq k\leq n}{\max }\left\vert t_{k}\right\vert
+\leq \left\Vert F_{t}\right\Vert .$
+
+Let $n\rightarrow \infty ,\implies \left\vert t\right\vert _{\infty }\leq
+\left\Vert F_{t}\right\Vert .\implies \left\Vert F_{t}\right\Vert
+=\left\vert t\right\vert _{\infty },F_{t}$ is linear bounded operator on $%
+l^{1}\implies F_{t}\in \left( l^{1}\right) ^{\prime }$ .
+
+Then we can define a functional $U$ from $l^{\infty }$ to $\left(
+l^{1}\right) ^{\prime },s.t.U\left( t\right) =F_{t}.$
+
+To show the functional is onto, we take an arbitrary function $F$ from $%
+\left( l^{1}\right) ^{\prime }.$
+
+For each $s=\left\{ s_{i}\right\} _{i=1}^{\infty }\in l^{1},$first we show
+that 
+
+$s=\underset{n->\infty }{\lim }\underset{j=1}{\overset{n}{\sum }}%
+s_{j}e_{j}.\left\vert s-\underset{j=1}{\overset{n}{\sum }}%
+s_{j}e_{j}\right\vert _{1}=\underset{j=n+1}{\overset{\infty }{\sum }}%
+\left\vert s_{j}\right\vert \rightarrow 0,$as $n\rightarrow \infty ,$since $%
+\underset{j=1}{\overset{\infty }{\sum }}\left\vert s_{j}\right\vert
+=\left\vert s\right\vert _{1}$ converges.
+
+then $F\left( s\right) =F\left( \underset{n->\infty }{\lim }\underset{j=1}{%
+\overset{n}{\sum }}s_{j}e_{j}\right) =\underset{n->\infty }{\lim }F\left( 
+\underset{j=1}{\overset{n}{\sum }}s_{j}e_{j}\right) $, since $F$ is
+continuous.
+
+the above equality can be further rearranged to $\underset{n->\infty }{\lim }%
+\underset{j=1}{\overset{n}{\sum }}s_{j}F\left( e_{j}\right) =\underset{j=1}{%
+\overset{\infty }{\sum }}s_{j}F\left( e_{j}\right) $
+
+Denote $t=\left\{ t_{i}\right\} _{i=1}^{\infty }=\left\{ F\left(
+e_{j}\right) \right\} _{j=1}^{\infty },$ we get $F\left( s\right) =\underset{%
+j=1}{\overset{\infty }{\sum }}s_{j}t_{j},$which has the same form as $F_{t}$
+provided that
+
+$\left\{ F\left( e_{j}\right) \right\} _{j=1}^{\infty }\in l^{\infty }.$
+
+The condition follows from the bounded property of $F.$
+
+In the equality $F\left( s\right) =\underset{j=1}{\overset{\infty }{\sum }}%
+s_{j}t_{j},$we repeat the same manipulation as above$\left( \text{take
+special }s\right) ,$we can get
+
+$\underset{1\leq k\leq n}{\max }\left\vert t_{k}\right\vert \leq \left\Vert
+F\right\Vert .$Let $n\rightarrow \infty ,$ $t=$ $\underset{k\geq 1}{\sup }%
+\left\vert t_{k}\right\vert $ is indeed bounded.
+
+Thus $U\left( t\right) =F,$and the functional is onto.
+
+$\left( l^{1}\right) ^{\prime }\overset{is-is}{=}l^{\infty }.$
+
+The proof is complete.$\boxtimes $
+
+\end{document}

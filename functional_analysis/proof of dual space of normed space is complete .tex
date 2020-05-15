@@ -1,0 +1,87 @@
+
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Tuesday, September 15, 2015 15:55:04}
+%TCIDATA{LastRevised=Tuesday, September 15, 2015 16:39:24}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank with Theorem Tags">}
+%TCIDATA{CSTFile=Math.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+\begin{problem}
+Let E be a n.v.s. and E$^{\ast }$ be its dual space, that is E$^{\ast
+}=\{f:E->\NEG{R}$ and f is linear and continuous\} with the norm \TEXTsymbol{%
+\vert}\TEXTsymbol{\vert}f\TEXTsymbol{\vert}\TEXTsymbol{\vert}$_{E^{\ast }}=%
+\underset{\underset{x\in E}{||x||\leq 1}}{\sup }|f(x)|.$Show that E$^{\ast }$
+is a Banach space.
+
+\begin{proof}
+For a Cauchy sequence \{f$_{n}\}$ of E$^{\ast }$ and for every $\epsilon ,$
+there exists N$_{\epsilon }$ such that for every i, j\TEXTsymbol{>}N$%
+\epsilon ,||f_{i}-f_{j}||<\epsilon .$It follows that \TEXTsymbol{\vert}f$%
+_{i}(x)-f_{j}(x)|<\epsilon $ for each \TEXTsymbol{\vert}\TEXTsymbol{\vert}x%
+\TEXTsymbol{\vert}\TEXTsymbol{\vert}$\leq 1$ and x$\in E.\qquad \qquad
+\qquad \qquad \qquad \qquad (1)$
+
+For all such x, by Cauthy Criterion for real number, \{f$_{n}(x)\}$
+converges in R. Denote this limit as f(x), which is defined on all x$\in E$
+and \TEXTsymbol{\vert}\TEXTsymbol{\vert}x\TEXTsymbol{\vert}\TEXTsymbol{\vert}%
+$\leq 1.$ And for each x'$\in E,$define f(x')=\TEXTsymbol{\vert}\TEXTsymbol{%
+\vert}x'\TEXTsymbol{\vert}\TEXTsymbol{\vert}$f(\frac{x^{\prime }}{%
+||x^{\prime }||})$,thus we get a limit function on the whole E.
+\end{proof}
+\end{problem}
+
+\ \ Firstly, we will show f lies in E$^{\ast },$which means that f is a
+linear continuous function. By definition of f, it is sufficient to show
+such property for all \TEXTsymbol{\vert}\TEXTsymbol{\vert}x\TEXTsymbol{\vert}%
+\TEXTsymbol{\vert}$\leq 1.$Since f(x)=$\underset{n->\infty }{\lim }f_{n}(x),$
+the linearlity of f is obtained from the corresponding property of limit
+operation. To show the continuity of f, the uniform convergent of f$_{n}$ is
+needed, which is guranteed by the convergence of \TEXTsymbol{\vert}$%
+\left\vert f_{i}-f_{j}\right\vert |$ (the Cauthy Criterion for uniform
+convergence). Then from the continuity of f$_{n}$ it follows that f is
+continuous. 
+
+\ \ Secondly, we show that $||f_{n}-f||$ converges to zero, which is trivial
+from the Cauthy Criterion for uniform convergence. Therefore $\{f_{n}\}$ has
+limits in E$^{\ast }$ and the proof is complete.$\boxtimes $
+
+\end{document}

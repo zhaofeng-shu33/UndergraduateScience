@@ -1,0 +1,179 @@
+
+\documentclass{article}
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Sunday, December 13, 2015 21:42:54}
+%TCIDATA{LastRevised=Monday, December 14, 2015 00:13:50}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+$\bigskip $
+
+$\bigskip 5.11$
+
+$F^{\prime }\left( a\right) $ should be defined as an element of $%
+H,s.t.F\left( a+h\right) =F\left( a\right) +\left( F^{\prime }\left(
+a\right) ,h\right) +o\left( \left\Vert h\right\Vert \right) .$
+
+$\bigskip $And we further assume that $u\in K.$
+
+Then $\left( 1-t\right) u+tv\in K,\forall 0<t<1,$since $K$ is convex
+
+$\implies F\left( \left( 1-t\right) u+tv\right) \geq F\left( u\right) $
+
+$\implies F\left( u+t\left( v-u\right) \right) \geq F\left( u\right) $
+
+$\implies F\left( u\right) +t(F^{\prime }\left( u\right) ,v-u)+\left\Vert
+v-u\right\Vert o\left( t\right) \geq F\left( u\right) $
+
+$\left( F^{\prime }\left( u\right) ,v-u\right) +\left\Vert v-u\right\Vert
+o\left( 1\right) \geq 0$
+
+Let $t\rightarrow 0,\left( ii\right) $ follows.
+
+$\left( ii\right) \implies \left( i\right) F\left( u+t\left( v-u\right)
+\right) =F\left( tv+\left( 1-t\right) u\right) ,\forall 0<t<1$
+
+Since $F$ is convex$\qquad F\left( u+t\left( v-u\right) \right) \leq
+tF\left( v\right) +\left( 1-t\right) F\left( u\right) $
+
+$\implies F\left( u+t\left( v-u\right) \right) -F\left( u\right) \leq
+t\left( F\left( v\right) -F\left( u\right) \right) $
+
+from $\left( 1\right) \frac{F\left( u+t\left( v-u\right) \right) -F\left(
+u\right) }{t}>0,$as $t\rightarrow 0\implies F\left( v\right) \geq F\left(
+u\right) ,\forall v\in K.$
+
+5.12
+
+We can choose $\left\{ u_{n}\right\} \subset M,\left\Vert u_{n}\right\Vert
+=1,s.t.\left( f,u_{n}\right) \rightarrow m.$
+
+Since $M$ is closed and $\left\{ u_{n}\right\} $ is bounded, we can find a
+subsequence $\left\{ u_{n_{k}}\right\} $ of $\left\{ u_{n}\right\} ,s.t.$
+
+$u_{n_{k}}$ converges to some $u\in M,$ also $\left\Vert
+u_{n_{k}}\right\Vert \rightarrow \left\Vert u\right\Vert \implies \left\Vert
+u\right\Vert =1$
+
+$\implies m=\underset{k\rightarrow \infty }{\lim }\left( f,u_{n_{k}}\right)
+=\left( f,u\right) .$ $m$ can be achieved by some $u$ satisfying $\left\Vert
+u\right\Vert =1$ and $u\in M.$
+
+$\bigskip $
+
+$\forall v\in M,\left\Vert f-v\right\Vert ^{2}=\left\Vert f\right\Vert
+^{2}-2\left( f,\frac{v}{\left\Vert v\right\Vert }\right) \left\Vert
+v\right\Vert +\left\Vert v\right\Vert ^{2},$
+
+Suppose the direction $\frac{v}{\left\Vert v\right\Vert }$ is fixed and the
+length $\left\Vert v\right\Vert $ is changable.
+
+To minimize $\left\Vert f-v\right\Vert ^{2}$ requires $\left\Vert
+v\right\Vert =\left( f,\frac{v}{\left\Vert v\right\Vert }\right) ,$ and 
+
+$\left\Vert f-v\right\Vert ^{2}=\left\Vert f\right\Vert ^{2}-\left( f,\frac{v%
+}{\left\Vert v\right\Vert }\right) ^{2}$ in such case.
+
+(We know that $\left\vert m\right\vert \geq \left\vert \left( f,\frac{v}{%
+\left\Vert v\right\Vert }\right) \right\vert $ by definition Notice that we
+can change the size of $u$ in $\inf \left( f,u\right) ,$ which implies that  
+$\left\vert m\right\vert =\underset{\underset{\left\Vert u\right\Vert =1}{%
+u\in M}}{\sup }\left( f,u\right) .)$
+
+$\implies \left\Vert f-mu\right\Vert ^{2}=\left\Vert f\right\Vert
+^{2}-m^{2}\leq \left\Vert f\right\Vert ^{2}-\left( f,\frac{v}{\left\Vert
+v\right\Vert }\right) ^{2}$
+
+$\implies mu=d\left( f,M\right) .$ By Thm5.2 $mu$ is unique, and the length
+of projection vector is fixed as $m$. Therefore, $m$ is also uniquely
+determined.
+
+2. $\left( 1\right) M=E=span\left\{ \varphi _{1},\varphi _{2},\varphi
+_{3}\right\} .$ Using Gram-Schmit Orthogonal Method we can assume that $%
+\left( \varphi _{i},\varphi _{j}\right) =\delta _{ij}$
+
+If $\left\Vert \mu _{1}\varphi _{1}+\mu _{2}\varphi _{2}+\mu _{3}\varphi
+_{3}\right\Vert =1$
+
+$\implies \mu _{1}^{2}+\mu _{2}^{2}+\mu _{3}^{2}=1\implies $
+
+$\left( f,\mu _{1}\varphi _{1}+\mu _{2}\varphi _{2}+\mu _{3}\varphi
+_{3}\right) =\mu _{1}\left( f,\varphi _{1}\right) +\mu _{2}\left( f,\varphi
+_{2}\right) +\mu _{3}\left( f,\varphi _{3}\right) \geq -\underset{1\leq
+i\leq 3}{\max }\left\{ \left\vert \left( f,\varphi _{i}\right) \right\vert
+\right\} $
+
+$\bigskip $And the equality can be taken. $\implies m=-\underset{1\leq i\leq
+3}{\max }\left\{ \left\vert \left( f,\varphi _{i}\right) \right\vert
+\right\} .$
+
+$\bigskip \left( 2\right) M=E^{\bot }.$We still assume that $\left( \varphi
+_{i},\varphi _{j}\right) =\delta _{ij},$
+
+$f^{\prime }=f-\left( f,\varphi _{1}\right) \varphi _{1}-\left( f,\varphi
+_{2}\right) \varphi _{2}-\left( f,\varphi _{3}\right) \varphi _{3}\in M,$
+
+Also $\left\vert \left( f,u\right) \right\vert =\left\vert \left( f^{\prime
+},u\right) \right\vert \leq \left\Vert f^{\prime }\right\Vert $ and the
+equality can be taken at
+
+$u=\frac{-f^{\prime }}{\left\Vert f^{\prime }\right\Vert }\implies \left(
+f,u\right) =\left( f^{\prime },u\right) \geq -\left\Vert f^{\prime
+}\right\Vert .\implies $
+
+$m=-\left\Vert f-\left( f,\varphi _{1}\right) \varphi _{1}-\left( f,\varphi
+_{2}\right) \varphi _{2}-\left( f,\varphi _{3}\right) \varphi
+_{3}\right\Vert $
+
+$\left( 3\right) $ We only need to get an orthogonal basis from $\left\{
+\varphi _{i},i=1,2,3\right\} $
+
+The norm of $L^{2}\left( 0,1\right) $ is defined by $\left( g,h\right)
+=\int_{0}^{1}g\left( t\right) h\left( t\right) dt\implies $
+
+$\phi _{1}\left( t\right) =t,\phi _{2}\left( t\right) =t-\frac{4}{3}%
+t^{2},\phi _{3}\left( t\right) =t^{3}+\frac{2}{5}t-\frac{4}{3}%
+t^{2},s.t.\left( \phi _{i},\phi _{j}\right) =0,as$ $i\neq j$
+
+After normalization we can apply the conclusion in $\left( 2\right) $ to
+find $m.$
+
+\end{document}

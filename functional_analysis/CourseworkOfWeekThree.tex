@@ -1,0 +1,394 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Saturday, October 03, 2015 21:18:14}
+%TCIDATA{LastRevised=Wednesday, October 07, 2015 21:33:08}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+\bigskip \U{8d75}\U{4e30}\qquad 2013012178\qquad \qquad Functional Analysis
+Second Coursework
+
+\FRAME{ftbpF}{4.5in}{0.9in}{0pt}{}{}{Figure}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"T";width 4.5in;height 0.9in;depth 0pt;original-width
+9.6548in;original-height 2.0557in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'NVNF0K03.wmf';tempfile-properties "XPR";}}
+
+1. The equality should be understood in the meaning of isomorphism.
+
+For each $f\in X^{\prime }\times Y^{\prime },f=\left( f_{1},f_{2}\right) ,$
+where $f_{1}\in X^{\prime }$ and $f_{2}\in Y^{\prime }.$
+
+We define a mapping $F:X^{\prime }\times Y^{\prime }$ to $\left( X\times
+Y\right) ^{\prime }$: $U\left( f\right) \left( x,y\right) =f_{1}\left(
+x\right) +f_{2}\left( y\right) .$
+
+\bigskip Then We can verify that $U\left( f\right) $ is a continuous linear
+functional on $X\times Y.$
+
+Indeed, $\left\Vert U\left( f\right) \right\Vert =$ $\underset{\left\Vert
+\left( x,y\right) \right\Vert \leq 1}{\sup }\left\vert U\left( f\right)
+\left( x,y\right) \right\vert =\underset{\left\Vert x\right\Vert +\left\Vert
+y\right\Vert \leq 1}{\sup }\left\vert f_{1}\left( x\right) +f_{2}\left(
+y\right) \right\vert \leq \left\Vert f_{1}\right\Vert +\left\Vert
+f_{2}\right\Vert <\infty $
+
+$U\left( f\right) \in \left( X\times Y\right) ^{\prime }$ and the mapping $F$
+is well-defined.
+
+To show $F$ is an isometry, we need show that $\underset{\left\Vert
+x\right\Vert +\left\Vert y\right\Vert \leq 1}{\sup }\left\vert f_{1}\left(
+x\right) +f_{2}\left( y\right) \right\vert $ =$\left\Vert \left(
+f_{1},f_{2}\right) \right\Vert $
+
+By the definition of norm on $X^{\prime }\times Y^{\prime }$, it is
+equivalent to show$\underset{\left\Vert x\right\Vert +\left\Vert
+y\right\Vert \leq 1}{\sup }\left\vert f_{1}\left( x\right) +f_{2}\left(
+y\right) \right\vert =\max \left\{ \left\Vert f_{1}\right\Vert ,\left\Vert
+f_{2}\right\Vert \right\} .$
+
+$\underset{\left\Vert x\right\Vert +\left\Vert y\right\Vert \leq 1}{\sup }%
+\left\vert f_{1}\left( x\right) +f_{2}\left( y\right) \right\vert \geq 
+\underset{\left\Vert x\right\Vert \leq 1}{\sup }\left\vert f_{1}\left(
+x\right) +f_{2}\left( 0\right) \right\vert =\left\Vert f_{1}\right\Vert ,$
+
+Similarly,$\underset{\left\Vert x\right\Vert +\left\Vert y\right\Vert \leq 1}%
+{\sup }\left\vert f_{1}\left( x\right) +f_{2}\left( y\right) \right\vert
+\geq \left\Vert f_{2}\right\Vert .$
+
+$\implies \underset{\left\Vert x\right\Vert +\left\Vert y\right\Vert \leq 1}{%
+\sup }\left\vert f_{1}\left( x\right) +f_{2}\left( y\right) \right\vert \geq
+\max \left\{ \left\Vert f_{1}\right\Vert ,\left\Vert f_{2}\right\Vert
+\right\} .$
+
+Assume $\underset{\left\Vert x\right\Vert +\left\Vert y\right\Vert \leq 1}{%
+\sup }\left\vert f_{1}\left( x\right) +f_{2}\left( y\right) \right\vert
+>\max \left\{ \left\Vert f_{1}\right\Vert ,\left\Vert f_{2}\right\Vert
+\right\} $
+
+Then we can find $x_{0}$ and $y_{0}$ satisfying $\left\Vert x_{0}\right\Vert
++\left\Vert y_{0}\right\Vert \leq 1,$ s.t. $\left\vert f_{1}\left(
+x_{0}\right) +f_{2}\left( y_{0}\right) \right\vert >\max \left\{ \left\Vert
+f_{1}\right\Vert ,\left\Vert f_{2}\right\Vert \right\} $
+
+$\left\vert f_{1}\left( x_{0}\right) +f_{2}\left( y_{0}\right) \right\vert
+\leq \left\vert f_{1}\left( x_{0}\right) \right\vert +\left\vert f_{2}\left(
+y_{0}\right) \right\vert =\left\Vert x_{0}\right\Vert \left\vert f_{1}\left( 
+\frac{x_{0}}{\left\Vert x_{0}\right\Vert }\right) \right\vert +\left\Vert
+y_{0}\right\Vert \left\vert f_{2}\left( \frac{y_{0}}{\left\Vert
+y_{0}\right\Vert }\right) \right\vert \leq \left\Vert x_{0}\right\Vert
+\left\Vert f_{1}\right\Vert +\left\Vert y_{0}\right\Vert \left\Vert
+f_{2}\right\Vert $
+
+$\leq \left\Vert x_{0}\right\Vert \max \left\{ \left\Vert f_{1}\right\Vert
+,\left\Vert f_{2}\right\Vert \right\} +\left\Vert y_{0}\right\Vert \max
+\left\{ \left\Vert f_{1}\right\Vert ,\left\Vert f_{2}\right\Vert \right\}
+\leq \left( \left\Vert x_{0}\right\Vert +\left\Vert y_{0}\right\Vert \right)
+\max \left\{ \left\Vert f_{1}\right\Vert ,\left\Vert f_{2}\right\Vert
+\right\} \leq \max \left\{ \left\Vert f_{1}\right\Vert ,\left\Vert
+f_{2}\right\Vert \right\} $
+
+$\implies \max \left\{ \left\Vert f_{1}\right\Vert ,\left\Vert
+f_{2}\right\Vert \right\} <\max \left\{ \left\Vert f_{1}\right\Vert
+,\left\Vert f_{2}\right\Vert \right\} ,$A contradiction!
+
+Then the equality $\underset{\left\Vert x\right\Vert +\left\Vert
+y\right\Vert \leq 1}{\sup }\left\vert f_{1}\left( x\right) +f_{2}\left(
+y\right) \right\vert =\max \left\{ \left\Vert f_{1}\right\Vert ,\left\Vert
+f_{2}\right\Vert \right\} $ holds and $F$ is an isometry.
+
+Next we show $F$ is onto.
+
+If $g\in \left( X\times Y\right) ^{\prime },$then $g$ is a continuous linear
+functional on $X\times Y.$
+
+$f_{1}\left( x\right) :=g(x,0),$then $f_{1}\in X^{\prime };$
+
+$f_{2}\left( y\right) :=g(0,y),$then $f_{2}\in Y^{\prime };$
+
+Let $f=\left( f_{1},f_{2}\right) .$
+
+$Uf\left( x,y\right) =f_{1}\left( x\right) +f_{2}\left( y\right) =g\left(
+x,0\right) +g\left( 0,y\right) =g(x,y).$
+
+$\implies Uf=g.$
+
+As a result,$F$ is an isometrically isomorphic map. And $X^{\prime }\times
+Y^{\prime }\overset{is-is}{=}\left( X\times Y\right) ^{\prime }.$
+
+\bigskip \FRAME{ftbpF}{4.4996in}{1.9977in}{0pt}{}{}{Figure}{\special%
+{language "Scientific Word";type "GRAPHIC";display "USEDEF";valid_file
+"T";width 4.4996in;height 1.9977in;depth 0pt;original-width
+7.8214in;original-height 4.4313in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'NVO3UV00.wmf';tempfile-properties "XPR";}}
+
+\bigskip Problem 2: We define a mapping $F$ from $\left( \Pi
+_{n}X_{n}^{\prime }\right) _{q}$ to $\left( \left( \Pi _{n}X_{n}\right)
+_{p}\right) ^{\prime }$
+
+$\forall f\in \left( \Pi _{n}X_{n}^{\prime }\right) _{q},f=\left(
+f_{n}\right) ,f_{n}\in X_{n}^{\prime }$ and $\left\Vert f\right\Vert
+_{q}=\left( \overset{\infty }{\underset{n=1}{\sum }}\left\Vert
+f_{n}\right\Vert ^{q}\right) ^{1/q}<\infty $
+
+$\left\langle F\left( f\right) ,x\right\rangle =\overset{\infty }{\underset{%
+n=1}{\sum }}\left\langle f_{n},x_{n}\right\rangle \U{ff0c} $where $x=\left(
+x_{n}\right) ,x_{n}\in X_{n},\left\Vert x\right\Vert _{p}=\left( \overset{%
+\infty }{\underset{n=1}{\sum }}\left\Vert x_{n}\right\Vert ^{p}\right)
+^{1/p}<\infty .$
+
+By H\"{o}lder's inequality, $\overset{\infty }{\underset{n=1}{\sum }}%
+\left\vert \left\langle f_{n},x_{n}\right\rangle \right\vert \leq $ $\overset%
+{\infty }{\underset{n=1}{\sum }}\left\Vert f_{n}\right\Vert \left\Vert
+x_{n}\right\Vert \leq \left\Vert f\right\Vert _{q}\left\Vert x\right\Vert
+_{p}<\infty .$
+
+And obviously $F\left( f\right) $ is a linear functional on $\left( \Pi
+_{n}X_{n}\right) _{p}.$
+
+To show that $F\left( f\right) $ is bounded, $\left\vert \left\langle
+F\left( f\right) ,x\right\rangle \right\vert \leq $ $\overset{\infty }{%
+\underset{n=1}{\sum }}\left\vert \left\langle f_{n},x_{n}\right\rangle
+\right\vert \leq \left\Vert f\right\Vert _{q}\left\Vert x\right\Vert
+_{p}=\left\Vert f\right\Vert _{q},$for any $\left\Vert x\right\Vert _{p}=1.$
+
+$\implies \left\Vert F\left( f\right) \right\Vert \leq \left\Vert
+f\right\Vert _{q}$ and $F\left( f\right) $ is a continuous linear functional
+on $\left( \Pi _{n}X_{n}\right) _{p}.$
+
+$\implies F\left( f\right) \in \left( \left( \Pi _{n}X_{n}\right)
+_{p}\right) ^{\prime }$ and the mapping is well defined.
+
+Next we show that $F\left( f\right) $ preserves the norm and we only need to
+show $\left\Vert F\left( f\right) \right\Vert \geq \left\Vert f\right\Vert
+_{q}.$
+
+\bigskip For given n and any $\epsilon >0,$we can find $x_{i}\in X_{i}$ $%
+s.t.\left\Vert x_{i}\right\Vert =1$ and $\left\vert \left\langle
+f_{i},x_{i}\right\rangle \right\vert >\left( 1-\epsilon \right) \left\Vert
+f_{i}\right\Vert ,$
+
+Let $x=\left( sgn\left( \left\langle f_{1},x_{1}\right\rangle \right)
+\left\Vert f_{1}\right\Vert ^{q-1}x_{1},...,sgn\left( \left\langle
+f_{n},x_{n}\right\rangle \right) \left\Vert f_{n}\right\Vert
+^{q-1}x_{n},0,0...\right) .$
+
+$\left\vert \left\langle F\left( f\right) ,x\right\rangle \right\vert \leq
+\left\Vert F\left( f\right) \right\Vert \left\Vert x\right\Vert _{p}\implies 
+$
+
+$\overset{n}{\underset{i=1}{\sum }}\left\vert \left\langle
+f_{i},x_{i}\right\rangle \right\vert \left\Vert f_{i}\right\Vert ^{q-1}\leq
+\left\Vert F\left( f\right) \right\Vert \left( \overset{n}{\underset{i=1}{%
+\sum }}\left\Vert f_{i}\right\Vert ^{p\left( q-1\right) }\right)
+^{1/p}\implies $
+
+\bigskip $\overset{n}{\underset{i=1}{\sum }}\left( 1-\epsilon \right)
+\left\Vert f_{i}\right\Vert ^{q}\leq \left\Vert F\left( f\right) \right\Vert
+\left( \overset{n}{\underset{i=1}{\sum }}\left\Vert f_{i}\right\Vert
+^{p\left( q-1\right) }\right) ^{1/p}\implies $
+
+$\overset{n}{\underset{i=1}{\sum }}\left( 1-\epsilon \right) \left\Vert
+f_{i}\right\Vert ^{q}\leq \left\Vert F\left( f\right) \right\Vert \left( 
+\overset{n}{\underset{i=1}{\sum }}\left\Vert f_{i}\right\Vert ^{q}\right)
+^{1/p}\implies $
+
+$\left( 1-\epsilon \right) \left( \overset{n}{\underset{i=1}{\sum }}%
+\left\Vert f_{i}\right\Vert ^{q}\right) ^{1-\frac{1}{p}}\leq \left\Vert
+F\left( f\right) \right\Vert \implies $
+
+$\left( 1-\epsilon \right) \left( \overset{n}{\underset{i=1}{\sum }}%
+\left\Vert f_{i}\right\Vert ^{q}\right) ^{1/q}\leq \left\Vert F\left(
+f\right) \right\Vert $ holdes for $\forall \epsilon >0$ and n$\in \NEG%
+{N}\implies $
+
+$\left( \overset{\infty }{\underset{i=1}{\sum }}\left\Vert f_{i}\right\Vert
+^{q}\right) ^{1/q}\leq \left\Vert F\left( f\right) \right\Vert ,$that is $%
+\left\Vert F\left( f\right) \right\Vert \geq \left\Vert f\right\Vert _{q}.$
+
+Next we show that $F$ is onto.
+
+For each $g\in \left( \left( \Pi _{n}X_{n}\right) _{p}\right) ^{\prime },$%
+First we show that $g\left( x\right) =\underset{n->\infty }{\lim }\overset{n}%
+{\underset{i=1}{\sum }}g\left( x_{i}\right) ,$where $x=\left( x_{i}\right)
+,\left\Vert x\right\Vert _{p}\leq \infty .$
+
+This is due to the fact that $x=\underset{n->\infty }{\lim }\overset{n}{%
+\underset{i=1}{\sum }}x_{i}$ and the continuity and linearity of $g.$
+
+Define $\left\langle f_{i},x_{i}\right\rangle =g\left( x_{i}\right) ,$ and $%
+f_{i}$ is obviously a continuous linear functional on $X_{i}.$
+
+Then define $f=\left( f_{i}\right) ,$ $\left\langle F\left( f\right)
+,x\right\rangle =\overset{\infty }{\underset{i=1}{\sum }}\left\langle
+f_{i},x_{i}\right\rangle =g\left( x\right) ,$and $F\left( f\right) =g.$
+
+Then we only need to verify $\left\Vert f\right\Vert _{q}<\infty .$ By the
+same process in the proof of $\left\Vert F\left( f\right) \right\Vert \geq
+\left\Vert f\right\Vert _{q},$
+
+this inequality also holds for such case. Then $\left\Vert f\right\Vert
+_{q}\leq \left\Vert F\left( f\right) \right\Vert =\left\Vert g\right\Vert
+<\infty .$
+
+\bigskip Then $f$ is indeed the pre-image of $g.$
+
+$\implies F$ is an isometrically isomorphic map. And $\left( \Pi
+_{n}X_{n}^{\prime }\right) _{q}$ $\overset{is-is}{=}\left( \left( \Pi
+_{n}X_{n}\right) _{p}\right) ^{\prime }.$
+
+The proof is complete.$\boxtimes $
+
+H.Brezis \U{6559}\U{6750}\U{ff0c} 22\U{9875}\U{ff0c} \U{505a}1.9\U{9898}%
+\U{3002}
+
+\FRAME{ftbpF}{4.8404in}{2.0877in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";display "USEDEF";valid_file "T";width
+4.8404in;height 2.0877in;depth 0pt;original-width 10.933in;original-height
+5.0298in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'NVOK8000.wmf';tempfile-properties "XPR";}}
+
+\bigskip 1. Since the dimension is finite, the normed space is complete.
+
+To show $C_{n}$ is compact, we construct a mapping from a simplex of $\NEG%
+{R}_{n}$ to $C_{n}:$
+
+$S_{n}=\{\left( t_{1},t_{2},...,t_{n}\right) \in \NEG{R}^{n}|\overset{n}{%
+\underset{i=1}{\sum }}t_{i}=1\}->C_{n}$
+
+$f\left( t_{1},t_{2},...,t_{n}\right) =$ $\overset{n}{\underset{i=1}{\sum }}%
+t_{i}x_{i}$ onto $C_{n}.$
+
+Then $f$ is a linear continuous mapping.
+
+Since $S_{n}$ is compact, it follows that $C_{n}$ is compact,too. 
+
+$\left\{ x_{n}\right\} \subset \underset{i=1}{\overset{\infty }{\cup }}%
+C_{i}\subset C$ since the convex set $\underset{i=1}{\overset{\infty }{\cup }%
+}C_{i}$ is a subset of the convex set $C.$
+
+Since $\left\{ x_{n}\right\} $ is dense in $C,$ it follows that $\underset{%
+i=1}{\overset{\infty }{\cup }}C_{i}$ is dense in C.
+
+$\FRAME{itbpF}{4.5in}{0.9in}{0in}{}{}{Figure}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"T";width 4.5in;height 0.9in;depth 0in;original-width
+7.9321in;original-height 1.2496in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'NVOLAN01.wmf';tempfile-properties "XPR";}}$
+
+$\left( 2\right) $Since $0\notin C$ and $C_{n}$ is a subset of C, 0$\notin
+C_{n}.$
+
+Using the geometric form of Hahn-Banach Thm, we can find a $f\in E^{\ast }$
+that seperates $C_{n}$ and $\left\{ 0\right\} .$
+
+We can adjust the function $f$ by dividing some constant(i.e. -1) s.t. $%
+\left\langle f,x\right\rangle \geq \left\langle f,0\right\rangle =0$ for
+every $x\in C_{n}$ and $\left\Vert f\right\Vert =1\left( \text{dividing the
+norm itself}\right) .$Therefore $f$ is the required $f_{n}.$
+
+$\left( 3\right) $From $\left( 2\right) $, for each n, we can find a
+correspondign $f_{n},s.t.$
+
+$\left\Vert f_{n}\right\Vert =1$ and $\left\langle f_{n},x\right\rangle \geq
+0\qquad \forall x\in C_{n}\qquad \left( \ast \right) $
+
+Notice that $C_{n}$ is an increasing set sequence,the property of $f_{n}$
+holds for any $x\in C_{i},i=1,2,...n$. 
+
+Thus we can revise $\left( \ast \right) $ as
+
+$\left\Vert f_{n}\right\Vert =1$ and $\left\langle f_{n},x\right\rangle \geq
+0\qquad \forall x\in C_{i},i\leq n\qquad \left( \ast 2\right) $
+
+Since $E^{\ast \text{ }}$is complete, from the bounded set $\left\{
+f_{n}\right\} \left( \text{where }f_{n}\text{ satisfies 2.}\right) $ we can
+find a convergent subset $\left\{ f_{n_{k}}\right\} $ s.t. 
+
+$f_{n_{k}}->f\in E^{\ast }$ as $k->\infty .$
+
+We can first fix the set $C_{i}$ and let $n_{k}->\infty $ in $\left( \ast
+2\right) ,$
+
+by continuity we conclude that 
+
+$\left\Vert f\right\Vert =1$ and $\left\langle f,x\right\rangle \geq 0$ $%
+\forall x\in C_{i}.$
+
+And we conclude from the arbitrary choice of i that:
+
+$\left\Vert f\right\Vert =1$ and $\left\langle f,x\right\rangle \geq 0$ $%
+\forall x\in \underset{i=1}{\overset{\infty }{\cup }}C_{i}.$
+
+Since $\underset{i=1}{\overset{\infty }{\cup }}C_{i}$ is dense in C, also
+from the continuity of f$\implies $
+
+$\left\langle f,x\right\rangle \geq 0$ $\forall x\in C.$
+
+$\bigskip \left( 4\right) $ from $\left( 3\right) $ it is shown that if one
+of the convex set reduces to a point $\left( e.g.\left\{ 0\right\} \right) ,$
+then the conclusion holds. We can follow the example in the proof of
+geometric form of Hahn-Banach Thm and form a Mikowiski subtraction of two
+sets:
+
+Define $D:=A-B.$
+
+Since $A\cap B=\varnothing ,0\notin D.$Then we can find a function $\in
+E^{\ast },s.t.$
+
+$f\left( z\right) \geq 0$ for any $z\in D.$Then
+
+$f\left( x-y\right) \geq 0$ holds for any $x\in A$ and $y\in B.$
+
+Let $\alpha =\underset{y\in B}{\inf }f\left( y\right) .$Since $f$ is linear, 
+$f\left( x\right) \leq f\left( y\right) $ for any $x\in A$ and $y\in
+B\implies $
+
+$f\left( x\right) \leq \alpha \leq f\left( y\right) $ for any $x\in A$ and $%
+y\in B$.
+
+Then $H=\left\{ x\in E;f\left( x\right) =\alpha \right\} $ is required
+hyperplane that seperates A and B.
+
+\end{document}

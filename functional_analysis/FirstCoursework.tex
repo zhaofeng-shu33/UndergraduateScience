@@ -1,0 +1,289 @@
+
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Tuesday, September 22, 2015 07:33:08}
+%TCIDATA{LastRevised=Tuesday, September 22, 2015 17:29:24}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+\FRAME{ftbpF}{4.5in}{0.9in}{0in}{}{}{Figure}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"T";width 4.5in;height 0.9in;depth 0in;original-width
+5.3748in;original-height 1.708in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'NV2G3I01.wmf';tempfile-properties "XPR";}}
+
+$\left( 1\right) $for every $x_{1},x_{2}\in L^{2}\left[ a,b\right] $ and $%
+s\in \left[ a,b\right] ,\mu \in R.$
+
+$T\left( x_{1}+\mu x_{2}\right) \left( s\right) =\int_{a}^{b}K\left(
+s,t\right) \left( x_{1}\left( t\right) +\mu x_{2}\left( t\right) \right)
+dt=\int_{a}^{b}K\left( s,t\right) x_{1}\left( t\right) dt+\mu
+\int_{a}^{b}K\left( s,t\right) x_{2}\left( t\right) dt=T\left( x_{1}\right)
+\left( s\right) +\mu T\left( x_{2}\right) \left( s\right) $
+
+$\rightarrow T\left( x_{1}+x_{2}\right) =T\left( x_{1}\right) +\mu T\left(
+x_{2}\right) .\rightarrow T$ is linear.
+
+The norm in $L^{2}\left[ a,b\right] $ is defined as $\left\Vert x\right\Vert
+=\sqrt{\int_{a}^{b}x^{2}\left( t\right) dt}.$
+
+By Cauchy-Inequality,
+
+$\left\vert T\left( x\right) \left( s\right) \right\vert =\left\vert
+\int_{a}^{b}K\left( s,t\right) x\left( t\right) dt\right\vert \leq \sqrt{%
+\int_{a}^{b}\int_{a}^{b}K^{2}\left( s,t\right) dtds}\left\Vert x\right\Vert $
+
+$\rightarrow \left\Vert T\left( x\right) \right\Vert \leq \sqrt{%
+\int_{a}^{b}\int_{a}^{b}K^{2}\left( s,t\right) dtds}\left\Vert x\right\Vert ,
+$
+
+$\rightarrow T$ is bounded.
+
+$\left( 2\right) $ By the definition of the norm of functional, $\left\Vert
+T\right\Vert =\underset{\underset{\left\Vert x\right\Vert \neq 0}{x\in L^{2}%
+\left[ a,b\right] }}{\sup }\frac{\left\Vert T\left( x\right) \right\Vert }{%
+\left\Vert x\right\Vert }\leq \sqrt{\int_{a}^{b}\int_{a}^{b}K^{2}\left(
+s,t\right) dtds}.$
+
+\FRAME{ftbpF}{4.5in}{0.9in}{0pt}{}{}{Figure}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"T";width 4.5in;height 0.9in;depth 0pt;original-width
+4.8853in;original-height 1.3024in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'NV2G4802.wmf';tempfile-properties "XPR";}}
+
+Solution:$\left\Vert T\right\Vert =\underset{x\in R^{n}}{\underset{%
+\left\Vert x\right\Vert _{\ell ^{1}}=1}{\sup }}\left\Vert T\left( x\right)
+\right\Vert _{\ell ^{1}}=\underset{x_{i}\in R}{\underset{\underset{i=1}{%
+\overset{n}{\sum }}\left\vert x_{i}\right\vert =1}{\sup }}\left\vert 
+\underset{i=1}{\overset{n}{\sum }}x_{i}T\left( e_{i}\right) \right\vert ,$%
+where $e_{i}=\left( 0,...\underset{ith\text{ pos}}{\underbrace{1}}%
+,...,0\right) .$
+
+$\rightarrow \left\Vert T\right\Vert =\underset{1\leq i\leq n}{\max }%
+\left\vert T\left( e_{i}\right) \right\vert .$
+
+\FRAME{ftbpF}{4.5in}{0.9in}{0in}{}{}{Figure}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"T";width 4.5in;height 0.9in;depth 0in;original-width
+5.2918in;original-height 1.177in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'NV2GL903.wmf';tempfile-properties "XPR";}}
+
+Proof: Let $x=\left( x_{1},...,x_{n},...\right) ,y=\left(
+y_{1},...,y_{n},...\right) ,\mu \in R.\qquad $
+
+$\qquad \qquad \qquad P_{n}\left( x+\mu y\right) =\left( x_{1}+\mu
+y_{1},...,x_{n}+\mu y_{n},0,0,...\right) $
+
+$=\left( x_{1},...,x_{n},0,0,...\right) +\mu \left(
+y_{1},...,y_{n},0,0,...\right) =P_{n}\left( x\right) +\mu P_{n}\left(
+y\right) .$
+
+For $\left\Vert x\right\Vert _{\ell ^{2}}=1,$that is $\underset{i=1}{\overset%
+{\infty }{\sum }}x_{i}^{2}=1,\left\Vert P_{n}\left( x\right) \right\Vert
+_{\ell ^{2}}=\sqrt{\underset{i=1}{\overset{n}{\sum }}x_{i}^{2}}\leq 1,$
+
+$\rightarrow P_{n}$ is linear bounded operator.
+
+$\left\Vert P_{n}\right\Vert =\underset{\underset{i=1}{\overset{\infty }{%
+\sum }}x_{i}^{2}=1}{\sup }\sqrt{\underset{i=1}{\overset{n}{\sum }}x_{i}^{2}}%
+=1,$
+
+Below we prove that $P_{n}$ is not convergent by norm.
+
+By negation, $P_{n}\rightarrow P$ by norm then $\left\Vert P\left( x\right)
+-P_{n}\left( x\right) \right\Vert _{\ell ^{2}}\rightarrow 0$ for any given $%
+x\in \ell ^{2}.$
+
+We can show that $P\left( x\right) =x,$otherwise assuming $P\left( x\right)
+_{k}\neq x_{k},\left\Vert P\left( x\right) -P_{n}\left( x\right) \right\Vert
+_{\ell ^{2}}\geq $ $\left\vert P\left( x\right) _{k}-x_{k}\right\vert
+\nrightarrow 0.$
+
+However,$\left\Vert P-P_{n}\right\Vert =\underset{\underset{i=1}{\overset{%
+\infty }{\sum }}x_{i}^{2}=1}{\sup }\sqrt{\underset{i=n}{\overset{\infty }{%
+\sum }}x_{i}^{2}}=1.$A contradiction with $\left\Vert P-P_{n}\right\Vert
+\rightarrow 0.$
+
+\FRAME{ftbpF}{4.5in}{0.9in}{0in}{}{}{Figure}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"T";width 4.5in;height 0.9in;depth 0in;original-width
+5.1664in;original-height 1.1978in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'NV2J5Q04.wmf';tempfile-properties "XPR";}}
+
+Proof: $\left\Vert A_{n}B_{n}-AB\right\Vert \leq \left\Vert A_{n}\right\Vert
+\left\Vert B_{n}-B\right\Vert +\left\Vert B\right\Vert \left\Vert
+A_{n}-A\right\Vert ,$
+
+It follows from $\left\Vert A_{n}-A\right\Vert \rightarrow 0$ that there
+exists $M$ such that $\left\Vert A_{n}\right\Vert \leq M.$
+
+Hence $\left\Vert A_{n}B_{n}-AB\right\Vert \rightarrow 0.$
+
+\FRAME{ftbpF}{4.4996in}{0.5457in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";display "USEDEF";valid_file "T";width
+4.4996in;height 0.5457in;depth 0pt;original-width 5.9793in;original-height
+0.6564in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'NV2JEH05.wmf';tempfile-properties "XPR";}}
+
+$N\left( f\right) =\left\{ x\in X:f\left( x\right) =0\right\} $ is a closed
+set in $\left( X,\left\Vert \cdot \right\Vert \right) \iff N^{c}\left(
+f\right) =\left\{ x\in X:f\left( x\right) \neq 0\right\} $ is an open set in 
+$\left( X,\left\Vert \cdot \right\Vert \right) \iff \forall x\in N^{c}\left(
+f\right) ,$ there exists a $\delta >0,s.t.y\in N^{c}\left( f\right) $
+provided that $\left\Vert y-x\right\Vert \leq \delta .$
+
+Proof: Necessity, assume f is continuous and $x\in N^{c}\left( f\right) .$%
+Assume $f\left( x\right) >0$ without loss of generality.
+
+Since f is continuous, there exists a $\delta >0,s.t.\left\vert f\left(
+x\right) -f\left( y\right) \right\vert <f\left( x\right) $ provided that $%
+\left\Vert y-x\right\Vert \leq \delta .$
+
+$\rightarrow f\left( y\right) >0\rightarrow y\in N^{c}\left( f\right) $ $%
+\rightarrow N\left( f\right) $ is closed from the above equivalence.
+
+Sufficiency: we only need to show f is continuous at zero element of $X.$
+Since $N\left( f\right) $ is closed,
+
+$N_{z}\left( f\right) =\left\{ x\in X:f\left( x\right) =z\right\} $ is also
+closed (either null set or the translated result of  $N\left( f\right) $
+from the linearity of $f$). From the above proof we can deduce that both $%
+\left\{ x\in X:f\left( x\right) >z\right\} $ and $\left\{ x\in X:f\left(
+x\right) <z\right\} $ are open. Below is the brief proof of this
+sub-conclusion based on the linear property of f. Assume $f\left( x\right)
+>z,$then $x\in $ $N_{z}^{c}\left( f\right) ,$ and there exists a $\delta
+>0,s.t.y\in N_{z}^{c}\left( f\right) $ provided that $\left\Vert
+y-x\right\Vert \leq \delta .$If there exist $y_{1}$ and $y_{2},$both
+belonging to $N_{z}^{c}\left( f\right) $ but $f\left( y_{1}\right) >z$ and $%
+f\left( y_{2}\right) <z,$then
+
+there exists a real number $t=\frac{z-f\left( y_{2}\right) }{f\left(
+y_{1}\right) -f\left( y_{2}\right) }\in \left( 0,1\right) ,$such that $%
+f\left( ty_{1}+\left( 1-t\right) y_{2}\right) =z.$
+
+But $\left\Vert ty_{1}+\left( 1-t\right) y_{2}-x\right\Vert \leq t\left\Vert
+y_{1}-x\right\Vert +\left( 1-t\right) \left\Vert y_{2}-x\right\Vert \leq
+\delta ,$which means that $ty_{1}+\left( 1-t\right) y_{2}\in $ $%
+N_{z}^{c}\left( f\right) ,$
+
+A contradiction. Since  $f\left( x\right) >z,$ it follows that $f\left(
+y\right) >z$ provided that $\left\Vert y-x\right\Vert \leq \delta .$ That
+is, $\left\{ x\in X:f\left( x\right) >z\right\} $ is open. 
+
+Then $\forall \epsilon >0,$ $\left\{ x\in X:-\epsilon <f\left( x\right)
+<\epsilon \right\} $ is open and zero element of $X$ belongs to this set, it
+follows that  f is continuous at zero element of $X.$ 
+
+\FRAME{ftbpF}{4.4996in}{1.5039in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";display "USEDEF";valid_file "T";width
+4.4996in;height 1.5039in;depth 0pt;original-width 5.4483in;original-height
+2.802in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'NV2LF307.wmf';tempfile-properties "XPR";}}
+
+$\left( 1\right) \left\Vert x\right\Vert _{X}\geq 0$ and $\left\Vert
+x\right\Vert _{X}=0\iff \left\vert x\left( t\right) \right\vert \equiv 0$
+from the continuity of x.
+
+$\left\Vert \mu x\right\Vert _{X}=\underset{a\leq t\leq b}{\max }\left\vert
+\mu x\left( t\right) \right\vert +\underset{a\leq t\leq b}{\max }\left\vert
+\mu x^{\prime }\left( t\right) \right\vert =\left\vert \mu \right\vert
+\left( \underset{a\leq t\leq b}{\max }\left\vert x\left( t\right)
+\right\vert +\underset{a\leq t\leq b}{\max }\left\vert x^{\prime }\left(
+t\right) \right\vert \right) =\left\vert \mu \right\vert \left\Vert
+x\right\Vert _{X}.$
+
+$\left\Vert x+y\right\Vert _{X}\leq \underset{a\leq t\leq b}{\max }%
+\left\vert x\left( t\right) +y\left( t\right) \right\vert +\underset{a\leq
+t\leq b}{\max }\left\vert x^{\prime }\left( t\right) +y^{\prime }\left(
+t\right) \right\vert \leq \underset{a\leq t\leq b}{\max }\left\vert x\left(
+t\right) \right\vert +\underset{a\leq t\leq b}{\max }\left\vert y\left(
+t\right) \right\vert +\underset{a\leq t\leq b}{\max }\left\vert x^{\prime
+}\left( t\right) \right\vert +\underset{a\leq t\leq b}{\max }\left\vert
+y^{\prime }\left( t\right) \right\vert $
+
+=$\left\Vert x\right\Vert _{X}+\left\Vert y\right\Vert _{X}.$ As a result, $%
+\left\Vert \cdot \right\Vert _{X}$ is well defined norm on $C^{1}\left[ a,b%
+\right] .$
+
+$\left( 2\right) f\left( x+\mu y\right) =\left( x+\mu y\right) ^{\prime
+}\left( t_{0}\right) =x^{\prime }\left( t_{0}\right) +\mu y^{\prime }\left(
+t_{0}\right) =f\left( x\right) +\mu f\left( y\right) .$
+
+$\forall \left\Vert x\right\Vert _{X}=1,\underset{a\leq t\leq b}{\max }%
+\left\vert x^{\prime }\left( t\right) \right\vert \leq 1\rightarrow
+\left\vert f\left( x\right) \right\vert \leq 1\rightarrow f$ is continuous
+since $f$ is bounded.
+
+$\left( 3\right) $Redefine the norm on  $C\left[ a,b\right] $ as $\left\Vert
+x\right\Vert =\underset{a\leq t\leq b}{\max }\left\vert x\left( t\right)
+\right\vert .\left\{ \left\vert f\left( x\right) \right\vert ,\left\Vert
+x\right\Vert =1\right\} $ is not bounded, for example,
+
+$\frac{d}{dx}\sin \left( n\frac{x-\frac{a+b}{2}}{\left( b-a\right) /2}%
+\right) _{|x=\frac{a+b}{2}}=\frac{2n}{b-a}\rightarrow \infty ,$while $%
+\left\vert \sin \left( n\frac{x-\frac{a+b}{2}}{\left( b-a\right) /2}\right)
+\right\vert \leq 1.$As a result, $f$ is not continuous.
+
+\FRAME{ftbpF}{4.5in}{0.9in}{0in}{}{}{Figure}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"T";width 4.5in;height 0.9in;depth 0in;original-width
+4.3958in;original-height 1.4062in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'NV2MY208.wmf';tempfile-properties "XPR";}}
+
+$f_{1}$ is not linear. Without loss of generality, assume $\left[ a,b\right]
+=\left[ 0,2\pi \right] ,f_{1}\left( \sin x\right) =1,$
+
+$f_{1}\left( \sqrt{3}\cos x\right) =\sqrt{3},f_{1}\left( \sin x+\sqrt{3}\cos
+x\right) =2\neq f_{1}\left( \sin x\right) +f_{1}\left( \sqrt{3}\cos x\right)
+.$
+
+Assume $x_{i}\rightarrow x,$ that is $\underset{a\leq t\leq b}{\max }%
+\left\vert x_{i}\left( t\right) -x\left( t\right) \right\vert \rightarrow 0.$%
+Then $\left\vert f\left( x_{i}\right) -f\left( x\right) \right\vert $
+
+$=\left\vert \underset{a\leq t\leq b}{\max }\left( x_{i}\left( t\right)
+-x\left( t\right) \right) \right\vert \leq $ $\underset{a\leq t\leq b}{\max }%
+\left\vert x_{i}\left( t\right) -x\left( t\right) \right\vert \rightarrow 0.$
+
+Therefore, $f_{1}$ is a continuous functional.
+
+\end{document}
