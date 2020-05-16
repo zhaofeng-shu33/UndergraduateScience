@@ -1,0 +1,180 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5424,        171]
+NotebookOptionsPosition[      4745,        143]
+NotebookOutlinePosition[      5121,        159]
+CellTagsIndexPosition[      5078,        156]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"Mathematical", " ", 
+     RowBox[{"Model", ":", " ", 
+      RowBox[{"for", " ", "n", " ", "balls"}]}]}], ",", " ", 
+    RowBox[{
+    "let", " ", "one", " ", "falls", " ", "and", " ", "assume", " ", "it", 
+     " ", "chooses", " ", "the", " ", "path", " ", "randomly", " ", "at", " ",
+      "the", " ", "Y", " ", 
+     RowBox[{"cross", ".", " ", "Then"}], " ", "for", " ", "one", " ", 
+     "side"}], ",", " ", 
+    RowBox[{
+     RowBox[{
+     "the", " ", "number", " ", "of", " ", "balls", " ", "conforms", " ", 
+      "to", " ", "binomial", " ", 
+      RowBox[{"distribution", ".", " ", "with"}], " ", "E"}], "=", 
+     FractionBox["n", "2"]}], ",", 
+    RowBox[{"D", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        FractionBox["n", "4"], ".", " ", "n"}], " ", "is", " ", "an", " ", 
+       "even", " ", 
+       RowBox[{"number", ".", " ", "Then"}], " ", "the", " ", "probability", 
+       " ", "of", " ", "experiment", " ", "value", " ", "falling", " ", 
+       "between", " ", "n"}], "-", 
+      RowBox[{"8", " ", "and", " ", "n"}], "+", "8"}]}], ",", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"i", ".", "e", ".", " ", "n"}], "-", "8"}], "\[LessEqual]", 
+      "X", "\[LessEqual]", 
+      RowBox[{"n", "+", 
+       RowBox[{"8", " ", "is", " ", "P"}]}]}], "=", 
+     RowBox[{
+      RowBox[{
+       TemplateBox[{"\[CapitalSigma]",RowBox[{"i", "=", 
+           RowBox[{"n", "-", "8"}]}],RowBox[{"n", "+", "8"}]},
+        "Subsuperscript"], 
+       FormBox[
+        TemplateBox[{"n","i"},
+         "Binomial"],
+        TraditionalForm], 
+       RowBox[{
+        FractionBox["1", 
+         SuperscriptBox["2", "n"]], ".", "For"}], " ", "n"}], "=", "70"}]}], 
+    ",", " ", 
+    RowBox[{"the", " ", "value", " ", "is", " ", 
+     RowBox[{"0.959", ".", "i", ".", "e", "."}]}], ",", " ", 
+    RowBox[{
+    "if", " ", "the", " ", "random", " ", "assumption", " ", "is", " ", 
+     "true"}], ",", " ", 
+    RowBox[{
+    "then", " ", "it", " ", "has", " ", "the", " ", "probality", " ", "0.959",
+      " ", "that", " ", "n", " ", "falls", " ", "into", " ", 
+     RowBox[{
+      RowBox[{"interval", " ", "[", 
+       RowBox[{"27", ",", "43"}], "]"}], "."}]}]}], "*)"}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.66581603699109*^9, 3.6658162222102146`*^9}, {
+  3.665816271303501*^9, 3.6658163653896666`*^9}, {3.665816411628148*^9, 
+  3.6658165364515667`*^9}, {3.6658165786964407`*^9, 3.6658166072132907`*^9}, {
+  3.6658166453085575`*^9, 3.6658166775538144`*^9}, {3.665816796457223*^9, 
+  3.6658169205398407`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Subsuperscript", "[", 
+  RowBox[{"a", ",", "x", ",", "y"}], "]"}]], "Input",
+ CellChangeTimes->{{3.665816564781216*^9, 3.6658165740788326`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{"a","x","y"},
+  "Subsuperscript"]], "Output",
+ CellChangeTimes->{3.6658165744376335`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Binomial", "[", 
+   RowBox[{"n", ",", "a"}], "]"}], "//", "TraditionalForm"}]], "Input",
+ CellChangeTimes->{{3.6658166149977045`*^9, 3.6658166256369233`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  TemplateBox[{"n","a"},
+   "Binomial"], TraditionalForm]], "Output",
+ CellChangeTimes->{3.6658166262141237`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Sum", "[", 
+    RowBox[{
+     RowBox[{"Binomial", "[", 
+      RowBox[{"70", ",", "i"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "27", ",", "43"}], "}"}]}], "]"}], "/", 
+   RowBox[{"2", "^", "70"}]}], "//", "N"}]], "Input",
+ CellChangeTimes->{{3.6658166862898293`*^9, 3.665816818640462*^9}}],
+
+Cell[BoxData["0.9586085713260846`"], "Output",
+ CellChangeTimes->{{3.6658167323723106`*^9, 3.6658168211364665`*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", "i", "]"}]], "Input",
+ CellChangeTimes->{{3.6658167477227373`*^9, 3.6658167494543405`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"23", "/", "47"}], "\[IndentingNewLine]", 
+ RowBox[{"21", "/", "49"}]}], "Input",
+ CellChangeTimes->{{3.6658173265773544`*^9, 3.665817336093371*^9}, {
+  3.6658178790065246`*^9, 3.6658178815181293`*^9}}]
+},
+WindowSize->{767, 608},
+WindowMargins->{{Automatic, 164}, {29, Automatic}},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"10.0 for Microsoft Windows (32-bit) (December 4, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 2619, 65, 458, "Input"],
+Cell[CellGroupData[{
+Cell[3202, 89, 168, 3, 45, "Input"],
+Cell[3373, 94, 117, 3, 44, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3527, 102, 193, 4, 45, "Input"],
+Cell[3723, 108, 137, 4, 87, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3897, 117, 353, 10, 45, "Input"],
+Cell[4253, 129, 116, 1, 44, "Output"]
+}, Open  ]],
+Cell[4384, 133, 128, 2, 45, "Input"],
+Cell[4515, 137, 226, 4, 75, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
