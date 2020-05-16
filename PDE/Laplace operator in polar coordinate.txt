@@ -1,0 +1,1 @@
+使用复合函数求导可推导出Laplace u（x,y)在polar coordinate下的表达式，要注意推导过程中partial(u,theta)中含有theta,故在求二阶导时不要忘了直接对theta求导。 

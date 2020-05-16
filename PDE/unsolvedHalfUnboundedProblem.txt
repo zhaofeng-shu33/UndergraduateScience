@@ -1,0 +1,8 @@
+关于半无界问题的一个例子：
+考虑u(x,t),partial(u,t)+partial(u,x)+u=x
+u(x,0)=x,u(0,t)=t 在x>0,t>0的解。
+先做变换v(x,t)=u(x,t)-t将边值条件齐次化。
+同时将f(x,t)=x，u(x,0)=x关于x=0做奇延拓，就是它们本身
+v(x,t)满足方程partial(v,t)+partial(v,x)+v=-t-1+x
+初值为v(x,0)=x。->v(x,t)=(x-t-1)*(1-e^(-t))+(x-t)*e^(-t)
+->u(x,t)=(x-t-1)*(1-e^(-t))+(x-t)*e^(-t)+t
