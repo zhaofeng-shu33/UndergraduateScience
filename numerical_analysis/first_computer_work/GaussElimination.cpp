@@ -59,52 +59,55 @@ class Linear_Equation: public Matrix{
     bool ERROR;
 };  
 int main(){
-  int numT;
-  cin>>numT;
-  for(int i1=0;i1<3;i1++){
-   char ch1;
-   cin>>ch1;
+    char ch1;
+    cout << "input the type (R or S)\n";
+    cin >> ch1;
+    if (ch1 != 'S' && ch1 != 'R') {
+        cout << "invalid type \n";
+        exit(0); 
+    }
     int n;
-    cin>>n;
-    double* p=new double[n*n];
-     
-   if(ch1=='R'){
+    cout << "input the dimension\n";
+    cin >> n;
+    double* p = new double[n*n];
+    cout << "input the matrix \n";
+    if(ch1=='R'){
         for(int i=0;i<n;i++)
           for(int j=0;j<n;j++)
               cin>>p[i*n+j];
-   }
-   if(ch1=='S'){
-     int K;
-     cin>>K;
-     for(int i=0;i<n;i++)
+    }
+    if(ch1=='S'){
+        int K;
+        cin>>K;
+        for(int i=0;i<n;i++)
           for(int j=0;j<n;j++)
               p[i*n+j]=0;
 
-     for(int r=0;r<K;r++){
+        for(int r=0;r<K;r++){
          int i2,j2,data;
          cin>>i2>>j2>>data;
          p[(i2-1)*n+j2-1]=data; 
-       }  
+        }  
    
-   }
+    }
+    cout << "input the b vector \n";
       double* q=new double[n];
         for(int i=0;i<n;i++)
               cin>>q[i];   
      
-     Linear_Equation my_linear_equation(n); //construct an equation with n variables
-     my_linear_equation.Set_Matrix(p);
-     my_linear_equation.Set_Linear_Equation(q); 
+    Linear_Equation my_linear_equation(n); //construct an equation with n variables
+    my_linear_equation.Set_Matrix(p);
+    my_linear_equation.Set_Linear_Equation(q); 
  
      //my_linear_equation.Print_Linear_Equation();
-     my_linear_equation.Solve();
-     my_linear_equation.show_solution();
-  delete [] p;
-  delete [] q;
+    my_linear_equation.Solve();
+    
+    cout << "solution vector is \n";
+    my_linear_equation.show_solution();
+    delete [] p;
+    delete [] q;
      
-  }  
-  char ch;
-  cin>>ch;
-  return 0;
+    return 0;
 }    
 void Linear_Equation::Solve(){
    Matrix Left(order);double Permu[order]; 
