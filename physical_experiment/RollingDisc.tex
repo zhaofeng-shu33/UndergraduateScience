@@ -1,0 +1,215 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Sunday, December 27, 2015 15:48:17}
+%TCIDATA{LastRevised=Tuesday, December 29, 2015 19:04:46}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+\bigskip Consider such a sphere moves on a turntable, 
+
+$\frac{d\vec{L}_{c}}{dt}=a\vec{k}\times \vec{R},\vec{L}_{c},a,\vec{R}$
+
+Then for every point of the sphere we use $\vec{r}_{i}$ to represent the
+position vector from P, the angular momentum for this mass element is $%
+\left( \vec{r}+\vec{r}_{i}\right) \times \left( \vec{v}_{P}+\overset{\cdot }{%
+\vec{r}}_{i}\right) dm$
+
+And the total angular momentum of the sphere with respect to $P$ is
+
+$\vec{L}=\int \left( \vec{r}+\vec{r}_{i}\right) \times \left( \overset{\cdot 
+}{\vec{r}}+\overset{\cdot }{\vec{r}}_{i}\right) dm$
+
+$=\int \left( \vec{r}\times \overset{\cdot }{\vec{r}}\right) dm+\left( \int 
+\vec{r}_{i}dm\right) \times \overset{\cdot }{\vec{r}}+\vec{r}\times \left(
+\int \overset{\cdot }{\vec{r}}_{i}dm\right) +\int \vec{r}_{i}\times \overset{%
+\cdot }{\vec{r}}_{i}dm$
+
+By the symmetry of the sphere $\int \vec{r}_{i}dm=ma\vec{k},$where $a$
+represents the radius of the sphere. We use $\vec{r}_{i}^{\prime }$ to
+represent the position vector of a mass element from $G.$
+
+Then $\vec{r}_{i}=\vec{r}_{i}^{\prime }+a\vec{k},\int \overset{\cdot }{\vec{r%
+}}_{i}dm=\int \overset{\cdot }{\vec{r}^{\prime }}_{i}dm=m\vec{v}_{c}$
+
+$\int \vec{r}_{i}\times \overset{\cdot }{\vec{r}}_{i}dm=$ $\int \left( \vec{r%
+}_{i}^{\prime }+a\vec{k}\right) \times \overset{\cdot }{\vec{r}_{i}^{\prime }%
+}dm$
+
+$=$ $\int \vec{r}_{i}^{\prime }\times \overset{\cdot }{\vec{r}_{i}^{\prime }}%
+dm+am\vec{k}\times \vec{v}_{G},$by the definition of velocity of $CM.$
+
+By the definition of angular velocity in $3D,\overset{\cdot }{\vec{r}%
+_{i}^{\prime }}=\vec{\omega}\times \vec{r}_{i}^{\prime }$
+
+$\implies \vec{r}_{i}^{\prime }\times \overset{\cdot }{\vec{r}_{i}^{\prime }}%
+=\vec{r}_{i}^{\prime }\times \left( \vec{\omega}\times \vec{r}_{i}^{\prime
+}\right) =\left( \vec{r}_{i}^{\prime }\cdot \vec{r}_{i}^{\prime }\right) 
+\vec{\omega}-\left( \vec{r}_{i}^{\prime }\cdot \vec{\omega}\right) \vec{r}%
+_{i}^{\prime }$
+
+In $3D-Cartesian$ coordiate: $\vec{r}_{i}^{\prime }\times \overset{\cdot }{%
+\vec{r}_{i}^{\prime }}=\left( \left( y^{2}+z^{2}\right) \omega _{x}-xy\omega
+_{y}-xz\omega _{z}\right) \vec{i}$
+
+$+\left( -xy\omega _{x}+\left( x^{2}+z^{2}\right) \omega _{y}-yz\omega
+_{z}\right) \vec{j}+\left( -xz\omega _{x}-yz\omega _{y}+\left(
+x^{2}+y^{2}\right) \omega _{z}\right) \vec{k}.$
+
+(To simplify the notation, $x,y,z$ are equivalent to $x_{i}^{\prime
+},y_{i}^{\prime },z_{i}^{\prime }$ in the above equation)
+
+\bigskip If we define $I_{i}=%
+\begin{pmatrix}
+y_{i}^{\prime 2}+z_{i}^{\prime 2} & -x_{i}^{\prime }y_{i}^{\prime } & 
+-x_{i}^{\prime }z_{i}^{\prime } \\ 
+-x_{i}^{\prime }y_{i}^{\prime } & x_{i}^{\prime 2}+z_{i}^{\prime 2} & 
+-y_{i}^{\prime }z_{i}^{\prime } \\ 
+-x_{i}^{\prime }z_{i}^{\prime } & -y_{i}^{\prime }z_{i}^{\prime } & 
+x_{i}^{\prime 2}+y_{i}^{\prime 2}%
+\end{pmatrix}%
+,$ which is a $3\times 3$ matrix
+
+We can write this in matrix form $\vec{r}_{i}^{\prime }\times \overset{\cdot 
+}{\vec{r}_{i}^{\prime }}=I_{i}\vec{\omega}$
+
+$\implies \int \vec{r}_{i}^{\prime }\times \overset{\cdot }{\vec{r}%
+_{i}^{\prime }}dm=\left( \int I_{i}dm\right) \vec{\omega}.$
+
+$\int I_{i}dm$ is the moment of inertia tensor, for the symmetric sphere, it
+is equal to
+
+$\frac{2}{5}ma^{2}I_{3},$where $I_{3}$ is the unit matrix.$\vec{L}_{c}=J\vec{%
+\omega}$
+
+$\implies \vec{L}=$ $\int \left( \vec{r}+\vec{r}_{i}\right) \times \left( 
+\overset{\cdot }{\vec{r}}+\overset{\cdot }{\vec{r}}_{i}\right) dm$
+
+$=m\vec{r}\times \overset{\cdot }{\vec{r}}+ma\vec{k}\times \overset{\cdot }{%
+\vec{r}}+\vec{r}\times m\vec{v}_{c}+\frac{2}{5}ma^{2}\vec{\omega},$
+
+\bigskip The total momentum of the sphere is $\vec{p}=\int \left( \overset{%
+\cdot }{\vec{r}}+\overset{\cdot }{\vec{r}}_{i}\right) dm$
+
+$\bigskip J\vec{\omega}=a\vec{k}\times m\overset{\cdot \cdot }{\vec{r}}$
+
+$m\overset{\cdot \cdot }{\vec{r}}=\vec{R}-mg\vec{k}$
+
+$=m\overset{\cdot }{\vec{r}}+\int \overset{\cdot }{\vec{r}^{\prime }}_{i}dm=m%
+\overset{\cdot }{\vec{r}}+m\overset{\cdot }{\vec{r}}.$
+
+$\vec{F}=\frac{d\vec{p}}{dt}\implies \vec{F}=m\overset{\cdot \cdot }{\vec{r}}%
++m\overset{\cdot }{\vec{v}}_{c}$
+
+By Angular Momentum Thm$,$
+
+$\frac{d\vec{L}}{dt}=\vec{r}\times \vec{F}\implies $
+
+$ma\vec{k}\times \overset{\cdot \cdot }{\vec{r}}+\frac{2}{5}ma^{2}\overset{%
+\cdot }{\vec{\omega}}=0\left( \ast \right) .$
+
+Remark, this equation can be deduced directly from the angular momentum in $%
+CM-reference$ system, in which $\frac{dL_{c}}{dt}=M_{c}\left( 1\right) .$
+
+$\bigskip M_{c}=\left( -a\vec{k}\right) \times \vec{R}\left( 2\right) ,\vec{R%
+}$ represents the restraint force.
+
+Also by $CM-motion$ theorem, $\vec{R}-mg\vec{k}=m\overset{\cdot \cdot }{\vec{%
+r}}\left( 3\right) $
+
+Combining $\left( 1,2,3\right) $ we get $\left( \ast \right) $
+
+The velocity of the touching point $\vec{v}_{P}=\Omega \vec{k}\times \vec{r},
+$
+
+where $\Omega $ is the constant angular speed of the turntable. 
+
+This is the definition of the linear velocity on a rotating 
+
+turntable and the velocity of P with respect to the sphere 
+
+is equal to this because there is no slip. 
+
+This is the restraint condition, which gives
+
+$\Omega \vec{k}\times $
+
+$\vec{r}$
+
+$=$
+
+$\overset{\cdot }{\vec{r}}+\vec{\omega}\times \left( -a\right) \vec{k}$
+
+$\bigskip J\vec{\omega}=a\vec{k}\times m\overset{\cdot \cdot }{\vec{r}}$
+
+$J=\frac{2}{5}ma^{2}$
+
+$\vec{k}\times \overset{\cdot \cdot }{\vec{r}}+\frac{2}{5}a\overset{\cdot }{%
+\vec{\omega}}=0\left( \ast \right) .$
+
+Taking the derivative of $\left( \ast \ast \right) $ and substituting $\vec{%
+\omega}$ of $\left( \ast \right) $ into $\left( \ast \ast \right) $ gives:
+
+$\frac{7}{2}\overset{\cdot \cdot }{\vec{r}}=\Omega \vec{k}\times \overset{%
+\cdot }{\vec{r}}.$
+
+Integrating this equation gives:
+
+$\frac{7}{2}\overset{\cdot }{\vec{r}}=\Omega \vec{k}\times \left( \vec{r}-%
+\vec{r}_{0}\right) ,$ where $\vec{r}_{0}$ is the integration constant.
+
+In $2D-Cartesian$ coordinate, $\frac{7}{2}\left( \dot{x}\vec{i}+\dot{y}\vec{j%
+}\right) =\Omega \left( \left( x-x_{0}\right) \vec{j}-\left( y-y_{0}\right) 
+\vec{i}\right) $
+
+In Matrix form, $\overset{\cdot }{\vec{r}}=\frac{2}{7}\Omega 
+\begin{pmatrix}
+0 & -1 \\ 
+1 & 0%
+\end{pmatrix}%
+\left( \vec{r}-\vec{r}_{0}\right) ,$ which allows solution like the form
+
+$\qquad \vec{r}-\vec{r}_{0}=A\binom{\cos \frac{2}{7}\Omega t}{\sin \frac{2}{7%
+}\Omega t}+B\binom{-\sin \frac{2}{7}\Omega t}{\cos \frac{2}{7}\Omega t},$%
+where $\vec{r}_{0},$
+
+$A$ and $B$ are constant determined by initial condition, 
+
+$\implies \left\vert \vec{r}-\vec{r}_{0}\right\vert =\sqrt{A^{2}+B^{2}},$the
+trajectory of the sphere is a circle.
+
+\end{document}

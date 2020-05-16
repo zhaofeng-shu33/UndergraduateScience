@@ -1,0 +1,202 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Sunday, December 20, 2015 01:20:28}
+%TCIDATA{LastRevised=Wednesday, December 23, 2015 07:53:31}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+$R_{AB,CD}:=\frac{U_{CD}}{I_{AB}},U_{SR}=\frac{I}{\pi d\sigma }\ln \frac{%
+\left( a+b\right) \left( b+c\right) }{b\left( a+b+c\right) },\int \vec{j}%
+\cdot d\vec{S}=I$
+
+$e^{-\pi R_{AB,CD}d\sigma }+e^{-\pi R_{BC,DA}d\sigma }=1$
+
+where $\vec{j}$ represents the current density emitting from $P.$
+
+From Ohm law: $\vec{E}=\frac{\vec{j}}{\sigma }$ and the symmetric property
+
+follows $E_{P}=\frac{I}{\sigma S}=\frac{I}{\pi \sigma d}\frac{1}{r},$where $%
+r $ represents the
+
+distance of the position from $P.$
+
+Integrating $Edr$ from $S$ to $R$ alongs the boundary of
+
+the sample gives $U_{SR}=\int \left( E_{Q}-E_{P}\right) dr.$ Choosing $P$ as
+
+coordinate origin further gives: $U_{SR}=\int_{a+b}^{a+b+c}\left(
+E_{Q}-E_{P}\right) dr$
+
+Similarly, $E_{Q}=\frac{I}{\pi \sigma d}\frac{1}{r-a}$
+
+$\implies U_{SR}=\frac{I}{\pi \sigma d}\int_{a+b}^{a+b+c}\left( \frac{1}{r-a}%
+-\frac{1}{r}\right) dr=\frac{I}{\pi d\sigma }\ln \frac{\left( a+b\right)
+\left( b+c\right) }{b\left( a+b+c\right) }$
+
+In the same way, if the current enters from $P$ and leaves
+
+at $S,$ we can show that under the (Cauchy PV) integral
+
+$U_{QR}=$ $\frac{I}{\pi d\sigma }\ln \frac{\left( a+b\right) \left(
+b+c\right) }{ac}.$
+
+In general, if we choose from the remaining$\binom{4}{2}-1=5$
+
+kinds of combination, the potential difference is the same.
+
+In the last step, substituting $R_{SR,PQ}$ and $R_{QR,SP}$ into the left
+
+hand of the formula gives $1.$
+
+\bigskip
+
+First we can treat the semi-infinite plane as $\left\{ z|\func{Re}z\geq
+0\right\} $
+
+in a complex plane.Let $u\left( x,y\right) $ represents the potential field
+
+in the sample, By the theory of electrostatics we can show
+
+$u\left( x,y\right) $ is harmonic real function and allows a conjugate
+
+harmonic function $v\left( x,y\right) ,s.t.f\left( z\right) =u+iv$ is an
+analytic
+
+function.
+
+\bigskip
+
+$\nabla u\left( x,y\right) =E_{Q}-E_{P}$
+
+$E_{P}=c\left( \frac{x}{\sqrt{x^{2}+y^{2}}},\frac{y}{\sqrt{x^{2}+y^{2}}}%
+\right) $
+
+$\bigskip \frac{\partial }{\partial y}\frac{x}{\sqrt{x^{2}+y^{2}}}=\frac{%
+\partial }{\partial x}\frac{y}{\sqrt{x^{2}+y^{2}}}$
+
+$\bigskip $By Green's formula:
+
+$\doint E_{P}dr=0$
+
+With translation we can assume $P$ at origin
+
+of the complex plane, with $Q=a.$
+
+Considering the direction of current at $P$ and $Q,$
+
+Omiting the constant $u\left( z\right) =\log \left\vert z\right\vert -\log
+\left\vert z-a\right\vert ,$
+
+$\implies f\left( z\right) =\log z-\log \left( z-a\right) $
+
+$\implies v\left( z\right) =\arg z-\arg \left( z-a\right) $
+
+Travelling along the boundary of the upper half
+
+plane from left to right. $v\left( z\right) $ remains constant
+
+except for $z=0$ and $a.$
+
+At $z=0,f\left( z\right) $ is not definied here, 
+
+therefore the path should be bent 
+
+as a half circle.
+
+Passing along the half circle at $z=0$ decrease $v\left( z\right) $ by $\pi $
+
+by the definition of $\arg z.$Similarly, $v\left( z\right) $ increases $\pi $
+at $z=a.$
+
+Now for the simple-connected region 
+
+as the surface of an arbitrary sample, 
+
+by Riemman-Conformal Mapping Thm,
+
+there exists a conformal mapping $t\left( z\right) $ which maps the upper
+
+half plane to $t-plane.$Let $A,B,C,D$ be the image of the 
+
+points $P,Q,R,S.$The potential field $f\left( z\right) $ is mapped to $%
+f\left( z\left( t\right) \right) =l+im.$
+
+Similarly, $m$ remains constant when travelling in counter-clockwise
+
+direction along the boundary of the sample, expect for $A$ and $B.$
+
+At $A,m$ decreases $\pi $ and at $B$ $m$ increases $\pi .$
+
+The physical meaning of the jump of $v$ is that there is external current
+
+passing through $A$ and $B.$This follows from the continuous equation of 
+
+steady current.
+
+Because the upper-half plane is imaginary, we can set all its intensive 
+
+quantities equal to those of the finite sample(like thickiness, input current
+
+and resistivity). Then $m$ and $v$ shares the same change as they circle the 
+
+boundary of each region counter-clockwisely. By harmonic function theory,
+
+such information implies $m$ is the potential field of the sample.(At this
+point
+
+it needs further varification from \U{552f}\U{4e00}\U{6027}\U{5b9a}\U{7406})
+
+$V_{CD}=\int \frac{\partial m}{\partial t_{x}}dt_{x}+\frac{\partial m}{%
+\partial t_{y}}dt_{y},$ by Cauchy-Riemann Equation
+
+$\implies V_{CD}=\int \frac{\partial m}{\partial t_{x}}dt_{x}-\frac{\partial
+l}{\partial t_{x}}dt_{y}=\func{Re}\int \left( \frac{\partial m}{\partial
+t_{x}}+\frac{\partial l}{\partial t_{x}}i\right) \left(
+dt_{x}+idt_{y}\right) $
+
+$=\func{Re}\int \frac{df\left( z\left( t\right) \right) }{dt}dt,$ Making
+Transformation gives
+
+$=\func{Re}\int f^{\prime }\left( z\right) dz=..=\int \frac{\partial u}{%
+\partial x}dx+\frac{\partial u}{\partial y}dy=V_{RS}.$
+
+Other potential equality can be proved similarly.
+
+Therefore, the formula form is unchanged if finite sample is considered.
+
+\end{document}

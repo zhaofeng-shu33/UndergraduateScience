@@ -1,0 +1,207 @@
+
+\documentclass{article}
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Monday, December 28, 2015 19:40:24}
+%TCIDATA{LastRevised=Monday, December 28, 2015 19:40:37}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+Consider such a sphere moves on a turntable, 
+
+Then for every point of the sphere we use $\vec{r}_{i}$ 
+
+to represent the position vector from the center 
+
+of the turntable, by K\"{o}nig's Theorem, 
+
+The total kinetic energy of the sphere
+
+$T=\frac{1}{2}\int \overset{\cdot }{\vec{r}_{i}^{^{\prime }2}}dm+\frac{1}{2}m%
+\overset{\cdot }{\vec{r}^{2}},$
+
+the first term is the kinetic energy in CM-reference
+
+system and the second term is the translational energy
+
+of the CM. 
+
+By the definition of angular velocity in $3D,\overset{\cdot }{\vec{r}%
+_{i}^{\prime }}=\vec{\omega}\times \vec{r}_{i}^{\prime }$
+
+$\implies \overset{\cdot }{\vec{r}_{i}^{^{\prime }2}}=\left( \vec{\omega}%
+\times \vec{r}_{i}^{\prime }\right) \cdot \left( \vec{\omega}\times \vec{r}%
+_{i}^{\prime }\right) =\left( \left( \vec{\omega}\times \vec{r}_{i}^{\prime
+}\right) \times \vec{\omega}\right) \cdot \vec{r}_{i}^{\prime }$
+
+By the formula:$A\times \left( B\times C\right) =\left( A\cdot C\right)
+B-\left( A\cdot B\right) C$
+
+$\implies \overset{\cdot }{\vec{r}_{i}^{^{\prime }2}}=\left( \vec{\omega}^{2}%
+\vec{r}_{i}^{\prime }-\left( \vec{\omega}\cdot \vec{r}_{i}^{\prime }\right) 
+\vec{\omega}\right) \cdot \vec{r}_{i}^{\prime }=\vec{\omega}^{2}\vec{r}%
+_{i}^{\prime 2}-\left( \vec{\omega}\cdot \vec{r}_{i}^{\prime }\right) ^{2}$
+
+$\int \overset{\cdot }{\vec{r}_{i}^{^{\prime }2}}=\vec{\omega}^{2}\int
+\left( x_{i}^{\prime 2}+y_{i}^{\prime 2}+z_{i}^{\prime 2}\right) dm-\int
+\left( \omega _{x}x_{i}^{\prime }+\omega _{y}y_{i}^{\prime }+\omega
+_{z}z_{i}^{\prime }\right) ^{2}dm,$
+
+By the symmetric property of the sphere, 
+
+$=\vec{\omega}^{2}\int \left( x_{i}^{\prime 2}+y_{i}^{\prime
+2}+z_{i}^{\prime 2}\right) dm-\int \left( \omega _{x}^{2}x_{i}^{\prime
+2}+\omega _{y}^{2}y_{i}^{\prime 2}+\omega _{z}^{2}z_{i}^{\prime 2}\right) dm$
+
+$=\int \left( y_{i}^{\prime 2}+z_{i}^{\prime 2}\right) \omega
+_{x}^{2}dm+\int \left( x_{i}^{\prime 2}+z_{i}^{\prime 2}\right) \omega
+_{y}^{2}dm+\int \left( x_{i}^{\prime 2}+y_{i}^{\prime 2}\right) \omega
+_{z}^{2}dm$
+
+By the definition of moment of inertia $J$ for the sphere 
+
+$\implies \int \overset{\cdot }{\vec{r}_{i}^{^{\prime }2}}=J\vec{\omega}%
+^{2}\implies T=\frac{1}{2}J\vec{\omega}^{2}+\frac{1}{2}m\overset{\cdot }{%
+\vec{r}^{2}}$
+
+We use $\vec{u}$ to represent the velocity on the bottom point of the ball 
+
+The restraint condition is $\vec{u}=\overset{\cdot }{\vec{r}}+\vec{\omega}%
+\times \left( -a\right) \vec{k}.$ where $\vec{\omega}\times \left( -a\right) 
+\vec{k}$ is the velocity 
+
+of $\vec{u}$ with respect to CM. $\vec{u}$ can be determined by other
+conditions, now we 
+
+solve from this equation $\vec{\omega}^{\prime }=\vec{\omega}-\omega _{z}%
+\vec{k}:$
+
+$\vec{u}=\overset{\cdot }{\vec{r}}+\vec{\omega}^{\prime }\times \left(
+-a\right) \vec{k},$Multiplying both sides by $\vec{k}$ gives $\frac{1}{a^{2}}%
+\left( \vec{u}-\overset{\cdot }{\vec{r}}\right) ^{2}=\vec{\omega}^{\prime 2},
+$
+
+since $\vec{\omega}^{\prime }\cdot \vec{k}=0$
+
+We then substitute $\vec{\omega}^{2}=\vec{\omega}^{\prime 2}$+$\omega
+_{z}^{2}$ into
+
+$T=\frac{1}{2}J\vec{\omega}^{2}+\frac{1}{2}m\overset{\cdot }{\vec{r}^{2}}%
+\implies $
+
+$\frac{2T}{m}=\overset{\cdot }{\vec{r}}\overset{2}{}+\frac{J}{ma^{2}}\left( 
+\vec{u}-\overset{\cdot }{\vec{r}}\right) ^{2}+C\omega _{z}^{2},$
+
+We choose the sphere as our system,$M=%
+\begin{pmatrix}
+\cos \Omega t & -\sin \Omega t \\ 
+\sin \Omega t & \cos \Omega t%
+\end{pmatrix}%
+$
+
+$\vec{r}^{\prime }=M\vec{r},\overset{\cdot }{\vec{r}^{\prime }}=\Omega \vec{r%
+}^{\prime }+M\overset{\cdot }{\vec{r}}.$
+
+We can replace $\overset{\cdot }{\vec{r}}$ by $\vec{r}^{\prime },\overset{%
+\cdot }{\vec{r}^{2}}=\left( \overset{\cdot }{\vec{r}^{\prime }}-\Omega \vec{r%
+}^{\prime }\right) ^{2},$
+
+$\frac{2T}{m}=\left( 1+\frac{J}{ma^{2}}\right) \overset{\cdot }{\vec{r}}%
+\overset{2}{}+\frac{J}{ma^{2}}\left( \vec{u}^{2}-2\vec{u}\cdot \overset{%
+\cdot }{\vec{r}}\right) +C\omega _{z}^{2}$
+
+$=\left( 1+\frac{J}{ma^{2}}\right) \left( \overset{\cdot }{\vec{r}^{\prime }}%
+-\Omega \vec{r}^{\prime }\right) ^{2}+\frac{J}{ma^{2}}\left( \vec{u}^{2}-2%
+\vec{u}\cdot M^{-1}\left( \overset{\cdot }{\vec{r}^{\prime }}-\Omega \vec{r}%
+^{\prime }\right) \right) +C\omega _{z}^{2}$
+
+$\left( 1+\frac{J}{ma^{2}}\right) \overset{\cdot \cdot }{\vec{r}^{\prime }}%
+-2\left( 1+\frac{J}{ma^{2}}\right) \Omega \vec{r}^{\prime }+\frac{J}{ma^{2}}%
+-2\vec{u}\cdot M^{-1}$
+
+$\left( 1+\frac{J}{ma^{2}}\right) \overset{\cdot \cdot }{\vec{r}}-\frac{J}{%
+ma^{2}}\overset{\cdot }{\vec{u}}=\frac{J}{ma^{2}}\frac{\partial \vec{u}}{%
+\partial \vec{r}}\left( \vec{u}-\overset{\cdot }{\vec{r}}\right) =\frac{J}{%
+ma^{2}}\frac{\partial \vec{u}}{\partial \vec{r}}\left( \vec{\omega}\times
+\left( -a\right) \vec{k}\right) $
+
+$=\frac{J}{ma^{2}}\frac{\partial \vec{\omega}}{\partial \vec{r}}\times
+\left( -a\right) \vec{k}\left( \vec{\omega}\times \left( -a\right) \vec{k}%
+\right) =\frac{1}{m}\frac{\partial }{\partial \vec{r}}\frac{1}{2}J\left( 
+\vec{\omega}\times \vec{k}\right) ^{2}$
+
+$,\frac{\partial \vec{u}}{\partial \vec{r}}$ is a matrix 
+
+$\vec{u}=\Omega \vec{k}\times \vec{r},\Omega \left( \overset{\cdot }{\vec{r}}%
+-\vec{u}\right) $
+
+$\implies \left( 1+\frac{J}{ma^{2}}\right) \overset{\cdot \cdot }{\vec{r}}-%
+\frac{J}{ma^{2}}\overset{\cdot }{\vec{u}}=0$
+
+$\implies \overset{\cdot \cdot }{\vec{r}}=\frac{1}{1+\frac{ma^{2}}{J}}%
+\overset{\cdot }{\vec{u}}$
+
+$\frac{J}{ma^{2}}\frac{\partial \vec{u}}{\partial \vec{r}}\vec{u}-\frac{J}{%
+ma^{2}}\frac{\partial \vec{u}}{\partial \vec{r}}\cdot \overset{\cdot }{\vec{r%
+}}$
+
+$\vec{u}=\Omega \vec{k}\times \vec{r}$
+
+\QTP{Body Math}
+$V=mga-\frac{1}{2}m\Omega ^{2}\left( x^{2}+y^{2}\right) $
+
+\QTP{Body Math}
+$7\ddot{x}+4\Omega \dot{y}=7\Omega ^{2}x$
+
+\QTP{Body Math}
+$7\ddot{y}+4\Omega \dot{x}=7\Omega ^{2}y$
+
+\QTP{Body Math}
+$\dot{\omega}_{z}=0$
+
+\QTP{Body Math}
+$,\frac{d}{dt}\left( \frac{\partial L}{\partial \dot{q}}\right) -\frac{%
+\partial L}{\partial q}=$
+
+$T=m\left[ \frac{7}{10}\left( \dot{x}^{2}+\dot{y}^{2}\right) +\frac{1}{5}%
+\Omega ^{2}\left( x^{2}+y^{2}\right) +\frac{2}{5}\Omega \left( -x\dot{y}+%
+\dot{x}y\right) \right] $
+
+\end{document}
