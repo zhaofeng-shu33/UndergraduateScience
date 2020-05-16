@@ -1,13 +1,15 @@
+// mkdir -p build && g++ -std=c++11 main.cpp -lGL -lGLU -lglut -o build/main
 #include<iostream>
 #include<fstream>
 #include<vector>
+#include<chrono>
+#include<thread>
 #include<GL/gl.h>
 #include<GL/glu.h>
 #include<GL/glut.h>
 #include<stdio.h>
 #include<stdlib.h>
 #include<cmath>
-#include<windows.h>
 const double Pi=3.1415926;
 using namespace std;
 int ww=100,wh=400;
@@ -196,7 +198,8 @@ void display1(void){
 }
 
 void idle(){
-  Sleep(100); 
+  std::chrono::milliseconds timespan(100);
+  std::this_thread::sleep_for(timespan);
   if(timeOfCollision<=3&&enabled){ 
   glutPostRedisplay();
   }  
