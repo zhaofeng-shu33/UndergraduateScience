@@ -1,0 +1,8 @@
+u=1,10,100,1000
+relativeError=0.01,0.0001
+
+非线性方程stiffness ratio 计算方法为将f(t,y)在t=t0处求导得到Jacobi matrix,stiffness ratio约为
+abs(lambda(max)/lambda(min))
+
+u=1000 t=0.1,0.2,0.5,1 estimate stiffness ratio
+8053,5.13*10^7,后面会更大。
