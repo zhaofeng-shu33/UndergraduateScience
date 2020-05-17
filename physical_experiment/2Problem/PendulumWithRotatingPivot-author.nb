@@ -1,0 +1,1760 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     78738,       1750]
+NotebookOptionsPosition[     74788,       1628]
+NotebookOutlinePosition[     76456,       1680]
+CellTagsIndexPosition[     76128,       1668]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Pendulum with Rotating Pivot", "DemoTitle",
+ CellChangeTimes->{
+  3.35696210375764*^9, 3.471848381328125*^9, {3.472839259827124*^9, 
+   3.4728392620303445`*^9}, {3.472919353348461*^9, 3.4729193777697897`*^9}}],
+
+Cell["", "InitializationSection"],
+
+Cell[CellGroupData[{
+
+Cell["", "ManipulateSection"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"L", "=", "1"}], " ", 
+    RowBox[{"(*", " ", 
+     RowBox[{"we", " ", "keep", " ", "L", " ", "constant"}], " ", "*)"}], ";",
+     "\[IndentingNewLine]", 
+    RowBox[{"\[Theta]0", "=", 
+     RowBox[{"15", "\[Degree]"}]}], " ", 
+    RowBox[{"(*", " ", 
+     RowBox[{"bob", " ", "start", " ", "position"}], " ", "*)"}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"pivot", "=", 
+     RowBox[{
+      RowBox[{"pivotPos", "[", 
+       RowBox[{"#", ",", "R", ",", "\[CapitalOmega]"}], "]"}], "&"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"bob", "=", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"bobPos", "[", 
+        RowBox[{"#", ",", "rMax", ",", 
+         RowBox[{"{", 
+          RowBox[{"R", ",", "\[CapitalOmega]"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"m", ",", "L", ",", "\[Mu]"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"\[Theta]00", ",", "\[Theta]0"}], "}"}]}], "]"}], "+", 
+       RowBox[{"pivot", "[", "#", "]"}]}], "&"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"ParametricPlot", "[", 
+     RowBox[{
+      RowBox[{"Evaluate", "@", 
+       RowBox[{"bob", "[", "t", "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"t", ",", "0", ",", "time"}], "}"}], ",", 
+      RowBox[{"PlotPoints", "\[Rule]", "500"}], ",", 
+      RowBox[{"PlotRange", "\[Rule]", 
+       RowBox[{"1.07", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "L"}], "-", "R"}], ",", 
+          RowBox[{"L", "+", "R"}]}], "}"}]}]}], ",", 
+      RowBox[{"PlotStyle", "\[Rule]", "Gray"}], ",", 
+      RowBox[{"Axes", "\[Rule]", "True"}], ",", 
+      RowBox[{"AxesStyle", "\[Rule]", "Dashed"}], ",", 
+      RowBox[{"Ticks", "\[Rule]", "None"}], ",", 
+      RowBox[{"ImageSize", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"400", ",", "400"}], "}"}]}], ",", "\[IndentingNewLine]", 
+      RowBox[{"Epilog", "\[Rule]", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"DotDashed", ",", 
+           RowBox[{"Circle", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0", ",", "0"}], "}"}], ",", "R"}], "]"}]}], "}"}], ",", 
+         RowBox[{"(*", " ", 
+          RowBox[{
+          "path", " ", "of", " ", "the", " ", "pendulum", " ", "pivot"}], " ",
+           "*)"}], "\[IndentingNewLine]", 
+         RowBox[{"{", 
+          RowBox[{"Thick", ",", 
+           RowBox[{"Line", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"0", ",", "0"}], "}"}], ",", 
+              RowBox[{"pivot", "[", "time", "]"}]}], "}"}], "]"}], ",", 
+           RowBox[{"PointSize", "[", ".02", "]"}], ",", 
+           RowBox[{"Point", "[", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", "0"}], "}"}], "]"}]}], "}"}], ",", 
+         RowBox[{"(*", " ", "crank", " ", "*)"}], "\[IndentingNewLine]", 
+         RowBox[{"{", 
+          RowBox[{"Dotted", ",", "Red", ",", 
+           RowBox[{"Circle", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0", ",", "0"}], "}"}], ",", 
+             RowBox[{"R", "+", "L"}]}], "]"}], ",", 
+           RowBox[{"Circle", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0", ",", "0"}], "}"}], ",", 
+             RowBox[{"Abs", "[", 
+              RowBox[{"R", "-", "L"}], "]"}]}], "]"}]}], "}"}], ",", 
+         RowBox[{"(*", " ", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"bob", " ", "inner"}], " ", "&"}], " ", "outer", " ", 
+           "boundary"}], " ", "*)"}], "\[IndentingNewLine]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"PointSize", "[", ".02", "]"}], ",", "Red", ",", 
+           RowBox[{"Point", "[", 
+            RowBox[{"pivot", "[", "time", "]"}], "]"}], ",", 
+           RowBox[{"PointSize", "[", 
+            RowBox[{".04", " ", 
+             RowBox[{"m", "^", 
+              RowBox[{"(", 
+               RowBox[{"1", "/", "3"}], ")"}]}]}], "]"}], ",", 
+           RowBox[{"Point", "[", 
+            RowBox[{"bob", "[", "time", "]"}], "]"}], ",", 
+           RowBox[{"Line", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"pivot", "[", "time", "]"}], ",", 
+              RowBox[{"bob", "[", "time", "]"}]}], "}"}], "]"}]}], "}"}]}], 
+        " ", 
+        RowBox[{"(*", " ", "pendulum", " ", "*)"}], "}"}]}]}], "]"}]}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"time", ",", ".0001", ",", "\"\<start/reset\>\""}], "}"}], ",", 
+     ".0001", ",", 
+     RowBox[{"2", "\[Pi]", " ", 
+      RowBox[{"rMax", "/", "\[CapitalOmega]"}]}], ",", ".01", ",", "Trigger", 
+     ",", 
+     RowBox[{"AnimationRate", "\[Rule]", ".25"}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Large"}], ",", 
+     RowBox[{"AppearanceElements", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<PlayPauseButton\>\"", ",", "\"\<ResetButton\>\""}], 
+       "}"}]}]}], "}"}], ",", "Delimiter", ",", "\[IndentingNewLine]", 
+   "\"\<mass of bob m\>\"", ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"m", ",", "1", ",", "\"\<\>\""}], "}"}], ",", "0.1", ",", "5", 
+     ",", ".01", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   "\"\<bob start speed \!\(\*SubsuperscriptBox[\(\[Theta]\), \(0\), \
+\(''\)]\)\>\"", ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\[Theta]00", ",", 
+       RowBox[{"25", " ", "\[Degree]"}], ",", "\"\<\>\""}], "}"}], ",", 
+     RowBox[{"0", " ", "\[Degree]"}], ",", 
+     RowBox[{"180", " ", "\[Degree]"}], ",", ".01", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", "\"\<damping coefficient \[Mu]\>\"", ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\[Mu]", ",", "0.1", ",", "\"\<\>\""}], "}"}], ",", "0", ",", 
+     "1", ",", ".01", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", "\"\<crank radius R\>\"", ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"R", ",", "0.25", ",", "\"\<\>\""}], "}"}], ",", "0", ",", "2", 
+     ",", ".01", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", "\"\<crank speed \[CapitalOmega]\>\"", ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\[CapitalOmega]", ",", "10", ",", "\"\<\>\""}], "}"}], ",", 
+     "1", ",", "15", ",", ".01", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Button", "[", 
+    RowBox[{"\"\<randomize parameters\>\"", ",", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+       "m", ",", "\[Theta]00", ",", "\[Mu]", ",", "R", ",", 
+        "\[CapitalOmega]"}], "}"}], "=", 
+      RowBox[{"RandomReal", "/@", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{".1", ",", "5"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "\[Pi]"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "1"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "2"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "15"}], "}"}]}], "}"}]}]}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "125"}]}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"rMax", ",", "12"}], "}"}], ",", 
+     RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "maximum", " ", "number", " ", "of", " ", "crank", " ", "revolutions"}], 
+    " ", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"FrameMargins", "\[Rule]", "0"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"AutorunSequencing", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "5"}], "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"TrackedSymbols", "\[RuleDelayed]", 
+    RowBox[{"{", 
+     RowBox[{
+     "time", ",", "m", ",", "\[Theta]00", ",", "\[Mu]", ",", "R", ",", 
+      "\[CapitalOmega]"}], "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"Initialization", "\[RuleDelayed]", 
+    RowBox[{"(", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"pivotPos", "[", 
+        RowBox[{"t_", ",", "R_", ",", "\[CapitalOmega]_"}], "]"}], ":=", 
+       RowBox[{"R", 
+        RowBox[{"{", " ", 
+         RowBox[{
+          RowBox[{"Sin", "[", 
+           RowBox[{"\[CapitalOmega]", " ", "t"}], "]"}], ",", 
+          RowBox[{"-", 
+           RowBox[{"Cos", "[", 
+            RowBox[{"\[CapitalOmega]", " ", "t"}], "]"}]}]}], "}"}]}]}], ";", 
+      RowBox[{
+       RowBox[{"bobPos", "[", 
+        RowBox[{"tt_", ",", "rMax_", ",", 
+         RowBox[{"crankParameters", ":", 
+          RowBox[{"{", 
+           RowBox[{"R_", ",", "\[CapitalOmega]_"}], "}"}]}], ",", 
+         RowBox[{"pendulumParameters", ":", 
+          RowBox[{"{", 
+           RowBox[{"m_", ",", "L_", ",", "\[Mu]_"}], "}"}]}], ",", 
+         RowBox[{"initialConditions", ":", 
+          RowBox[{"{", 
+           RowBox[{"\[Theta]00_", ",", "\[Theta]0_"}], "}"}]}]}], "]"}], ":=",
+        "  ", 
+       RowBox[{"L", " ", 
+        RowBox[{"Flatten", "[", 
+         RowBox[{"Through", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"Sin", ",", 
+             RowBox[{
+              RowBox[{"-", 
+               RowBox[{"Cos", "[", "#1", "]"}]}], "&"}]}], "}"}], "[", " ", 
+           RowBox[{
+            RowBox[{"\[Theta]", "[", "tt", "]"}], "/.", "\[InvisibleSpace]", 
+            RowBox[{"NDSolve", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"L", " ", "m", " ", 
+                   RowBox[{
+                    SuperscriptBox["\[Theta]", "\[Prime]\[Prime]",
+                    MultilineFunction->None], "[", "t", "]"}]}], "+", 
+                  RowBox[{"9.81", " ", "m", " ", 
+                   RowBox[{"Sin", "[", 
+                    RowBox[{"\[Theta]", "[", "t", "]"}], "]"}]}], "+", 
+                  RowBox[{"L", " ", "\[Mu]", " ", 
+                   RowBox[{
+                    SuperscriptBox["\[Theta]", "\[Prime]",
+                    MultilineFunction->None], "[", "t", "]"}]}], "+", 
+                  RowBox[{"m", " ", "R", " ", 
+                   SuperscriptBox["\[CapitalOmega]", "2"], " ", 
+                   RowBox[{"Sin", "[", 
+                    RowBox[{
+                    RowBox[{"t", " ", "\[CapitalOmega]"}], "-", 
+                    RowBox[{"\[Theta]", "[", "t", "]"}]}], "]"}]}]}], 
+                 "\[Equal]", "0"}], ",", 
+                RowBox[{
+                 RowBox[{"\[Theta]", "[", "0", "]"}], "\[Equal]", 
+                 "\[Theta]0"}], ",", 
+                RowBox[{
+                 RowBox[{
+                  SuperscriptBox["\[Theta]", "\[Prime]",
+                   MultilineFunction->None], "[", "0", "]"}], "\[Equal]", 
+                 "\[Theta]00"}]}], "}"}], ",", "\[Theta]", ",", 
+              RowBox[{"{", 
+               RowBox[{"t", ",", "0", ",", 
+                RowBox[{"10", " ", "\[Pi]", " ", 
+                 RowBox[{"rMax", "/", "\[CapitalOmega]"}]}]}], "}"}], ",", 
+              RowBox[{"MaxSteps", "\[Rule]", "\[Infinity]"}], ",", 
+              RowBox[{"AccuracyGoal", "\[Rule]", "Automatic"}]}], "]"}]}], 
+           "]"}], "]"}], "]"}]}]}]}], ")"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.35696210375764*^9, 3.47184836634375*^9, {3.471848835046875*^9, 
+   3.471848875390625*^9}, 3.471848927671875*^9, {3.471858635265625*^9, 
+   3.47185864421875*^9}, {3.471858694484375*^9, 3.471858701828125*^9}, {
+   3.471858743671875*^9, 3.471858797671875*^9}, {3.47185937971875*^9, 
+   3.47185939796875*^9}, {3.47186094015625*^9, 3.4718609466875*^9}, 
+   3.47186098859375*^9, 3.471861398828125*^9, {3.471865018875*^9, 
+   3.471865019140625*^9}, {3.471865062328125*^9, 3.471865078390625*^9}, {
+   3.4718651399375*^9, 3.4718651604375*^9}, {3.47186520484375*^9, 
+   3.471865208140625*^9}, {3.471872232515625*^9, 3.4718722570625*^9}, 
+   3.47187234225*^9, {3.4718730189375*^9, 3.47187302809375*^9}, {
+   3.471884004015625*^9, 3.471884004328125*^9}, {3.471884121328125*^9, 
+   3.471884124609375*^9}, {3.4718841834375*^9, 3.471884184234375*^9}, {
+   3.471884235296875*^9, 3.471884310359375*^9}, {3.471884346578125*^9, 
+   3.47188434684375*^9}, {3.471884649265625*^9, 3.47188465390625*^9}, {
+   3.4718847718125*^9, 3.471884821234375*^9}, {3.4718848524375*^9, 
+   3.47188485696875*^9}, {3.4718849044375*^9, 3.47188491121875*^9}, {
+   3.471885109734375*^9, 3.47188512865625*^9}, {3.4718851623125*^9, 
+   3.4718851674375*^9}, {3.471885474765625*^9, 3.471885542*^9}, {
+   3.471885619796875*^9, 3.47188562075*^9}, {3.47188565084375*^9, 
+   3.471885700875*^9}, {3.47188573859375*^9, 3.471885771078125*^9}, {
+   3.471885829765625*^9, 3.471885833890625*^9}, {3.472013001140625*^9, 
+   3.472013063765625*^9}, {3.47201730159375*^9, 3.472017339203125*^9}, {
+   3.47201740346875*^9, 3.4720174186875*^9}, {3.472017479453125*^9, 
+   3.47201756246875*^9}, {3.47201761640625*^9, 3.4720176630625*^9}, {
+   3.47201904153125*^9, 3.472019069671875*^9}, {3.472019145609375*^9, 
+   3.472019164546875*^9}, {3.472019372671875*^9, 3.4720194245625*^9}, {
+   3.472019461203125*^9, 3.47201951303125*^9}, {3.472019551953125*^9, 
+   3.4720195656875*^9}, {3.472020709015625*^9, 3.472020713390625*^9}, {
+   3.472020772046875*^9, 3.47202077584375*^9}, {3.47202099146875*^9, 
+   3.47202101596875*^9}, {3.47202105478125*^9, 3.472021069671875*^9}, {
+   3.472021359625*^9, 3.472021362328125*^9}, {3.47203412728125*^9, 
+   3.472034148984375*^9}, {3.472034213515625*^9, 3.4720343475*^9}, 
+   3.472036400375*^9, {3.472036530265625*^9, 3.472036645828125*^9}, {
+   3.4720366769375*^9, 3.47203676846875*^9}, {3.472037131171875*^9, 
+   3.472037283015625*^9}, {3.47203732203125*^9, 3.472037325296875*^9}, {
+   3.472037356640625*^9, 3.47203735709375*^9}, {3.4720376806875*^9, 
+   3.472037787890625*^9}, {3.472037837515625*^9, 3.47203784190625*^9}, {
+   3.4720378720625*^9, 3.472037893703125*^9}, {3.47203792771875*^9, 
+   3.472038001953125*^9}, {3.472038046046875*^9, 3.472038127359375*^9}, {
+   3.472038173046875*^9, 3.472038183875*^9}, {3.472038225203125*^9, 
+   3.472038287515625*^9}, {3.472038364703125*^9, 3.47203838690625*^9}, {
+   3.472185743125*^9, 3.472185762078125*^9}, {3.472185809984375*^9, 
+   3.472185827546875*^9}, {3.47218588759375*^9, 3.472185888015625*^9}, 
+   3.47218594328125*^9, {3.472186169171875*^9, 3.472186238265625*^9}, 
+   3.472191286640625*^9, 3.472191363046875*^9, {3.472191786765625*^9, 
+   3.472191801453125*^9}, {3.47219183846875*^9, 3.472191880796875*^9}, {
+   3.47219195303125*^9, 3.4721919575625*^9}, {3.47219199734375*^9, 
+   3.47219200184375*^9}, {3.472209485796875*^9, 3.472209489203125*^9}, {
+   3.47220958340625*^9, 3.47220966825*^9}, {3.472209703625*^9, 
+   3.472209704796875*^9}, {3.472209741515625*^9, 3.472209788796875*^9}, {
+   3.472209828875*^9, 3.472209878421875*^9}, {3.472209910640625*^9, 
+   3.4722099431875*^9}, {3.47220997546875*^9, 3.47220999896875*^9}, {
+   3.472276396765625*^9, 3.472276397421875*^9}, 3.47227645584375*^9, {
+   3.4722873283125*^9, 3.472287338265625*^9}, {3.472287383546875*^9, 
+   3.47228738953125*^9}, {3.4724538736875*^9, 3.472453876625*^9}, {
+   3.472453914453125*^9, 3.472453914890625*^9}, {3.472454009953125*^9, 
+   3.472454012125*^9}, {3.472454193734375*^9, 3.472454198859375*^9}, {
+   3.472454249984375*^9, 3.472454278375*^9}, 3.47245441096875*^9, {
+   3.47245444875*^9, 3.47245444909375*^9}, 3.472454484140625*^9, 
+   3.47281213015625*^9, {3.472812744515625*^9, 3.47281275384375*^9}, 
+   3.472813109*^9, {3.472813338953125*^9, 3.4728133393125*^9}, {
+   3.472813821625*^9, 3.472813823234375*^9}, 3.4728138844375*^9, {
+   3.47281414684375*^9, 3.472814152421875*^9}, 3.472814402359375*^9, {
+   3.472821102484375*^9, 3.47282117775*^9}, {3.472821272046875*^9, 
+   3.47282127734375*^9}, {3.472839268995041*^9, 3.472839403043444*^9}, {
+   3.4728394536245017`*^9, 3.472839471975337*^9}, {3.472992330250298*^9, 
+   3.472992330347938*^9}, {3.4730309295781684`*^9, 3.473030929752186*^9}, {
+   3.4730947338289557`*^9, 3.473094812015774*^9}, {3.4742106920625*^9, 
+   3.474210695421875*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`m$$ = 1, $CellContext`R$$ = 
+    0.25, $CellContext`rMax$$ = 12, $CellContext`time$$ = 
+    0.0001, $CellContext`\[Theta]00$$ = 25 Degree, $CellContext`\[Mu]$$ = 
+    0.1, $CellContext`\[CapitalOmega]$$ = 10, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`time$$], 0.0001, "start/reset"}, 0.0001, 
+      Dynamic[2 Pi ($CellContext`rMax$$/$CellContext`\[CapitalOmega]$$)], 
+      0.01}, {
+      Hold["mass of bob m"], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`m$$], 1, ""}, 0.1, 5, 0.01}, {
+      Hold[
+      "bob start speed \!\(\*SubsuperscriptBox[\(\[Theta]\), \(0\), \
+\(''\)]\)"], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`\[Theta]00$$], 25 Degree, ""}, 0, 180 Degree, 0.01}, {
+      Hold["damping coefficient \[Mu]"], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`\[Mu]$$], 0.1, ""}, 0, 1, 0.01}, {
+      Hold["crank radius R"], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`R$$], 0.25, ""}, 0, 2, 0.01}, {
+      Hold["crank speed \[CapitalOmega]"], 
+      Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`\[CapitalOmega]$$], 10, ""}, 1, 15, 0.01}, {
+      Hold[
+       Button[
+       "randomize parameters", {$CellContext`m$$, $CellContext`\[Theta]00$$, \
+$CellContext`\[Mu]$$, $CellContext`R$$, $CellContext`\[CapitalOmega]$$} = 
+        Map[RandomReal, {{0.1, 5}, {0, Pi}, {0, 1}, {0, 2}, {1, 15}}], 
+        ImageSize -> 125]], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`rMax$$], 12}}}, Typeset`size$$ = {
+    600., {295., 305.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = False, $CellContext`time$2378$$ = 
+    0, $CellContext`m$2379$$ = 0, $CellContext`\[Theta]00$2380$$ = 
+    0, $CellContext`\[Mu]$2381$$ = 0, $CellContext`R$2382$$ = 
+    0, $CellContext`\[CapitalOmega]$2383$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`m$$ = 1, $CellContext`R$$ = 
+        0.25, $CellContext`rMax$$ = 12, $CellContext`time$$ = 
+        0.0001, $CellContext`\[Theta]00$$ = 25 Degree, $CellContext`\[Mu]$$ = 
+        0.1, $CellContext`\[CapitalOmega]$$ = 10}, "ControllerVariables" :> {
+        Hold[$CellContext`time$$, $CellContext`time$2378$$, 0], 
+        Hold[$CellContext`m$$, $CellContext`m$2379$$, 0], 
+        Hold[$CellContext`\[Theta]00$$, $CellContext`\[Theta]00$2380$$, 0], 
+        Hold[$CellContext`\[Mu]$$, $CellContext`\[Mu]$2381$$, 0], 
+        Hold[$CellContext`R$$, $CellContext`R$2382$$, 0], 
+        Hold[$CellContext`\[CapitalOmega]$$, \
+$CellContext`\[CapitalOmega]$2383$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> ($CellContext`L = 1; $CellContext`\[Theta]0 = 
+        15 Degree; $CellContext`pivot = $CellContext`pivotPos[#, \
+$CellContext`R$$, $CellContext`\[CapitalOmega]$$]& ; $CellContext`bob = \
+$CellContext`bobPos[#, $CellContext`rMax$$, {$CellContext`R$$, $CellContext`\
+\[CapitalOmega]$$}, {$CellContext`m$$, $CellContext`L, $CellContext`\[Mu]$$}, \
+{$CellContext`\[Theta]00$$, $CellContext`\[Theta]0}] + $CellContext`pivot[#]& \
+; ParametricPlot[
+         Evaluate[
+          $CellContext`bob[$CellContext`t]], {$CellContext`t, 
+          0, $CellContext`time$$}, PlotPoints -> 500, PlotRange -> 
+         1.07 {-$CellContext`L - $CellContext`R$$, $CellContext`L + \
+$CellContext`R$$}, PlotStyle -> Gray, Axes -> True, AxesStyle -> Dashed, 
+         Ticks -> None, ImageSize -> {400, 400}, Epilog -> {{DotDashed, 
+            Circle[{0, 0}, $CellContext`R$$]}, {Thick, 
+            Line[{{0, 0}, 
+              $CellContext`pivot[$CellContext`time$$]}], 
+            PointSize[0.02], 
+            Point[{0, 0}]}, {Dotted, Red, 
+            Circle[{0, 0}, $CellContext`R$$ + $CellContext`L], 
+            Circle[{0, 0}, 
+             Abs[$CellContext`R$$ - $CellContext`L]]}, {
+            PointSize[0.02], Red, 
+            Point[
+             $CellContext`pivot[$CellContext`time$$]], 
+            PointSize[0.04 $CellContext`m$$^(1/3)], 
+            Point[
+             $CellContext`bob[$CellContext`time$$]], 
+            Line[{
+              $CellContext`pivot[$CellContext`time$$], 
+              $CellContext`bob[$CellContext`time$$]}]}}]), 
+      "Specifications" :> {{{$CellContext`time$$, 0.0001, "start/reset"}, 
+         0.0001, 
+         Dynamic[2 Pi ($CellContext`rMax$$/$CellContext`\[CapitalOmega]$$)], 
+         0.01, ControlType -> Trigger, AnimationRate -> 0.25, ImageSize -> 
+         Large, AppearanceElements -> {"PlayPauseButton", "ResetButton"}}, 
+        Delimiter, 
+        "mass of bob m", {{$CellContext`m$$, 1, ""}, 0.1, 5, 0.01, Appearance -> 
+         "Labeled", ImageSize -> Tiny}, 
+        "bob start speed \!\(\*SubsuperscriptBox[\(\[Theta]\), \(0\), \(''\)]\
+\)", {{$CellContext`\[Theta]00$$, 25 Degree, ""}, 0, 180 Degree, 0.01, 
+         Appearance -> "Labeled", ImageSize -> Tiny}, 
+        "damping coefficient \[Mu]", {{$CellContext`\[Mu]$$, 0.1, ""}, 0, 1, 
+         0.01, Appearance -> "Labeled", ImageSize -> Tiny}, 
+        "crank radius R", {{$CellContext`R$$, 0.25, ""}, 0, 2, 0.01, 
+         Appearance -> "Labeled", ImageSize -> Tiny}, 
+        "crank speed \[CapitalOmega]", {{$CellContext`\[CapitalOmega]$$, 10, 
+          ""}, 1, 15, 0.01, Appearance -> "Labeled", ImageSize -> Tiny}, 
+        Button[
+        "randomize parameters", {$CellContext`m$$, $CellContext`\[Theta]00$$, \
+$CellContext`\[Mu]$$, $CellContext`R$$, $CellContext`\[CapitalOmega]$$} = 
+         Map[RandomReal, {{0.1, 5}, {0, Pi}, {0, 1}, {0, 2}, {1, 15}}], 
+         ImageSize -> 125], {{$CellContext`rMax$$, 12}, ControlType -> None}},
+       "Options" :> {
+       FrameMargins -> 0, AutorunSequencing -> {1, 5}, 
+        TrackedSymbols :> {$CellContext`time$$, $CellContext`m$$, \
+$CellContext`\[Theta]00$$, $CellContext`\[Mu]$$, $CellContext`R$$, \
+$CellContext`\[CapitalOmega]$$}}, 
+      "DefaultOptions" :> {ControllerLinking -> True}],
+     ImageSizeCache->{928., {323., 330.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>(($CellContext`pivotPos[
+         Pattern[$CellContext`t, 
+          Blank[]], 
+         Pattern[$CellContext`R, 
+          Blank[]], 
+         Pattern[$CellContext`\[CapitalOmega], 
+          Blank[]]] := $CellContext`R {
+          Sin[$CellContext`\[CapitalOmega] $CellContext`t], -
+          Cos[$CellContext`\[CapitalOmega] $CellContext`t]}; \
+$CellContext`bobPos[
+         Pattern[$CellContext`tt, 
+          Blank[]], 
+         Pattern[$CellContext`rMax, 
+          Blank[]], 
+         Pattern[$CellContext`crankParameters, {
+           Pattern[$CellContext`R, 
+            Blank[]], 
+           Pattern[$CellContext`\[CapitalOmega], 
+            Blank[]]}], 
+         Pattern[$CellContext`pendulumParameters, {
+           Pattern[$CellContext`m, 
+            Blank[]], 
+           Pattern[$CellContext`L, 
+            Blank[]], 
+           Pattern[$CellContext`\[Mu], 
+            Blank[]]}], 
+         Pattern[$CellContext`initialConditions, {
+           Pattern[$CellContext`\[Theta]00, 
+            Blank[]], 
+           Pattern[$CellContext`\[Theta]0, 
+            Blank[]]}]] := $CellContext`L Flatten[
+          Through[
+           {Sin, -Cos[#]& }[
+            ReplaceAll[
+             $CellContext`\[Theta][$CellContext`tt], 
+             
+             NDSolve[{$CellContext`L $CellContext`m 
+                 Derivative[2][$CellContext`\[Theta]][$CellContext`t] + 
+                9.81 $CellContext`m Sin[
+                   $CellContext`\[Theta][$CellContext`t]] + $CellContext`L \
+$CellContext`\[Mu] 
+                 Derivative[
+                  1][$CellContext`\[Theta]][$CellContext`t] + $CellContext`m \
+$CellContext`R $CellContext`\[CapitalOmega]^2 
+                 Sin[$CellContext`t $CellContext`\[CapitalOmega] - \
+$CellContext`\[Theta][$CellContext`t]] == 
+               0, $CellContext`\[Theta][0] == $CellContext`\[Theta]0, 
+               Derivative[1][$CellContext`\[Theta]][
+                0] == $CellContext`\[Theta]00}, $CellContext`\[Theta], \
+{$CellContext`t, 0, 10 Pi ($CellContext`rMax/$CellContext`\[CapitalOmega])}, 
+              MaxSteps -> Infinity, AccuracyGoal -> Automatic]]]]]); 
+     Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellID->477447196]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "ManipulateCaptionSection"],
+
+Cell[TextData[{
+ "This Demonstration shows a special case of the damped and driven double \
+pendulum. The suspension point (pivot) of a pendulum of length ",
+ Cell[BoxData[
+  FormBox["L", TraditionalForm]], "InlineMath"],
+ " and bob mass ",
+ Cell[BoxData[
+  FormBox["m", TraditionalForm]], "InlineMath"],
+ " is attached to a crank of length ",
+ Cell[BoxData[
+  FormBox["R", TraditionalForm]], "InlineMath"],
+ " rotating at a constant angular speed ",
+ Cell[BoxData[
+  FormBox["\[CapitalOmega]", TraditionalForm]], "InlineMath"],
+ ". The damping coefficient of the system is ",
+ Cell[BoxData[
+  FormBox["\[Mu]", TraditionalForm]], "InlineMath"],
+ ". To limit the number of parameters, we take ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"L", "=", "1"}], TraditionalForm]], "InlineMath"],
+ " and the starting position of the bob at ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[Theta]", "0"], "=", 
+    RowBox[{"15", " ", "\[Degree]"}]}], TraditionalForm]], "InlineMath"],
+ ". Then the equation of motion is ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"L", " ", "m", " ", 
+      RowBox[{"\[Theta]", "''"}], 
+      RowBox[{"(", "t", ")"}]}], "+", 
+     RowBox[{"L", " ", "\[Mu]", " ", 
+      RowBox[{"\[Theta]", "'"}], 
+      RowBox[{"(", "t", ")"}]}], "+", " ", 
+     RowBox[{"m", " ", "g", " ", 
+      RowBox[{"sin", "(", 
+       RowBox[{"\[Theta]", "(", "t", ")"}], ")"}]}], "+", 
+     RowBox[{"m", " ", "R", " ", 
+      SuperscriptBox["\[CapitalOmega]", "2"], 
+      RowBox[{"sin", "(", 
+       RowBox[{
+        RowBox[{"t", " ", "\[CapitalOmega]"}], " ", "-", 
+        RowBox[{"\[Theta]", "(", "t", ")"}]}], ")"}]}]}], "\[LongEqual]", 
+    "0"}], TraditionalForm]], "InlineMath"],
+ ". The animation traces the movement of the pendulum bob."
+}], "ManipulateCaption",
+ CellChangeTimes->{
+  3.35696210375764*^9, 3.4718484030625*^9, {3.4720129329375*^9, 
+   3.472012963375*^9}, {3.472184969171875*^9, 3.472184976046875*^9}, 
+   3.472288068125*^9, {3.47281315640625*^9, 3.4728131706875*^9}, 
+   3.472813366609375*^9, 3.47281416059375*^9, {3.472821521265625*^9, 
+   3.4728215549375*^9}, {3.47282159509375*^9, 3.472821629421875*^9}, {
+   3.4728218459375*^9, 3.472821941125*^9}, {3.472821975859375*^9, 
+   3.472822003578125*^9}, {3.472839443626502*^9, 3.472839444127552*^9}, {
+   3.4728395080819473`*^9, 3.472839559482086*^9}, 3.472917461369173*^9, {
+   3.4729174942439632`*^9, 3.472917508587621*^9}, {3.472919186642068*^9, 
+   3.4729192162554207`*^9}, 3.4729923396332893`*^9},
+ CellID->1263513]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "ThumbnailSection"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`m$$ = 1, $CellContext`R$$ = 
+    0.25, $CellContext`rMax$$ = 12, $CellContext`time$$ = 
+    9.42477796076938, $CellContext`\[Theta]00$$ = 25 
+    Degree, $CellContext`\[Mu]$$ = 0.1, $CellContext`\[CapitalOmega]$$ = 10, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`time$$], 9.42477796076938, "start/reset"}, 0.0001, 
+      Dynamic[2 Pi ($CellContext`rMax$$/$CellContext`\[CapitalOmega]$$)], 
+      0.01}, {
+      Hold["mass of bob m"], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`m$$], 1, ""}, 0.1, 5, 0.01}, {
+      Hold[
+      "bob start speed \!\(\*SubsuperscriptBox[\(\[Theta]\), \(0\), \
+\(''\)]\)"], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`\[Theta]00$$], 25 Degree, ""}, 0, 180 Degree, 0.01}, {
+      Hold["damping coefficient \[Mu]"], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`\[Mu]$$], 0.1, ""}, 0, 1, 0.01}, {
+      Hold["crank radius R"], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`R$$], 0.25, ""}, 0, 2, 0.01}, {
+      Hold["crank speed \[CapitalOmega]"], 
+      Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`\[CapitalOmega]$$], 10, ""}, 1, 15, 0.01}, {
+      Hold[
+       Button[
+       "randomize parameters", {$CellContext`m$$, $CellContext`\[Theta]00$$, \
+$CellContext`\[Mu]$$, $CellContext`R$$, $CellContext`\[CapitalOmega]$$} = 
+        Map[RandomReal, {{0.1, 5}, {0, Pi}, {0, 1}, {0, 2}, {1, 15}}], 
+        ImageSize -> 125]], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`rMax$$], 12}}}, Typeset`size$$ = {
+    600., {295., 305.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = False, $CellContext`time$2464$$ = 
+    0, $CellContext`m$2465$$ = 0, $CellContext`\[Theta]00$2466$$ = 
+    0, $CellContext`\[Mu]$2467$$ = 0, $CellContext`R$2468$$ = 
+    0, $CellContext`\[CapitalOmega]$2469$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`m$$ = 1, $CellContext`R$$ = 
+        0.25, $CellContext`rMax$$ = 12, $CellContext`time$$ = 
+        9.42477796076938, $CellContext`\[Theta]00$$ = 
+        25 Degree, $CellContext`\[Mu]$$ = 0.1, $CellContext`\[CapitalOmega]$$ = 
+        10}, "ControllerVariables" :> {
+        Hold[$CellContext`time$$, $CellContext`time$2464$$, 0], 
+        Hold[$CellContext`m$$, $CellContext`m$2465$$, 0], 
+        Hold[$CellContext`\[Theta]00$$, $CellContext`\[Theta]00$2466$$, 0], 
+        Hold[$CellContext`\[Mu]$$, $CellContext`\[Mu]$2467$$, 0], 
+        Hold[$CellContext`R$$, $CellContext`R$2468$$, 0], 
+        Hold[$CellContext`\[CapitalOmega]$$, \
+$CellContext`\[CapitalOmega]$2469$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> ($CellContext`L = 1; $CellContext`\[Theta]0 = 
+        15 Degree; $CellContext`pivot = $CellContext`pivotPos[#, \
+$CellContext`R$$, $CellContext`\[CapitalOmega]$$]& ; $CellContext`bob = \
+$CellContext`bobPos[#, $CellContext`rMax$$, {$CellContext`R$$, $CellContext`\
+\[CapitalOmega]$$}, {$CellContext`m$$, $CellContext`L, $CellContext`\[Mu]$$}, \
+{$CellContext`\[Theta]00$$, $CellContext`\[Theta]0}] + $CellContext`pivot[#]& \
+; ParametricPlot[
+         Evaluate[
+          $CellContext`bob[$CellContext`t]], {$CellContext`t, 
+          0, $CellContext`time$$}, PlotPoints -> 500, PlotRange -> 
+         1.07 {-$CellContext`L - $CellContext`R$$, $CellContext`L + \
+$CellContext`R$$}, PlotStyle -> Gray, Axes -> True, AxesStyle -> Dashed, 
+         Ticks -> None, ImageSize -> {400, 400}, Epilog -> {{DotDashed, 
+            Circle[{0, 0}, $CellContext`R$$]}, {Thick, 
+            Line[{{0, 0}, 
+              $CellContext`pivot[$CellContext`time$$]}], 
+            PointSize[0.02], 
+            Point[{0, 0}]}, {Dotted, Red, 
+            Circle[{0, 0}, $CellContext`R$$ + $CellContext`L], 
+            Circle[{0, 0}, 
+             Abs[$CellContext`R$$ - $CellContext`L]]}, {
+            PointSize[0.02], Red, 
+            Point[
+             $CellContext`pivot[$CellContext`time$$]], 
+            PointSize[0.04 $CellContext`m$$^(1/3)], 
+            Point[
+             $CellContext`bob[$CellContext`time$$]], 
+            Line[{
+              $CellContext`pivot[$CellContext`time$$], 
+              $CellContext`bob[$CellContext`time$$]}]}}]), 
+      "Specifications" :> {{{$CellContext`time$$, 9.42477796076938, 
+          "start/reset"}, 0.0001, 
+         Dynamic[2 Pi ($CellContext`rMax$$/$CellContext`\[CapitalOmega]$$)], 
+         0.01, ControlType -> Trigger, AnimationRate -> 0.25, ImageSize -> 
+         Large, AppearanceElements -> {"PlayPauseButton", "ResetButton"}}, 
+        Delimiter, 
+        "mass of bob m", {{$CellContext`m$$, 1, ""}, 0.1, 5, 0.01, Appearance -> 
+         "Labeled", ImageSize -> Tiny}, 
+        "bob start speed \!\(\*SubsuperscriptBox[\(\[Theta]\), \(0\), \(''\)]\
+\)", {{$CellContext`\[Theta]00$$, 25 Degree, ""}, 0, 180 Degree, 0.01, 
+         Appearance -> "Labeled", ImageSize -> Tiny}, 
+        "damping coefficient \[Mu]", {{$CellContext`\[Mu]$$, 0.1, ""}, 0, 1, 
+         0.01, Appearance -> "Labeled", ImageSize -> Tiny}, 
+        "crank radius R", {{$CellContext`R$$, 0.25, ""}, 0, 2, 0.01, 
+         Appearance -> "Labeled", ImageSize -> Tiny}, 
+        "crank speed \[CapitalOmega]", {{$CellContext`\[CapitalOmega]$$, 10, 
+          ""}, 1, 15, 0.01, Appearance -> "Labeled", ImageSize -> Tiny}, 
+        Button[
+        "randomize parameters", {$CellContext`m$$, $CellContext`\[Theta]00$$, \
+$CellContext`\[Mu]$$, $CellContext`R$$, $CellContext`\[CapitalOmega]$$} = 
+         Map[RandomReal, {{0.1, 5}, {0, Pi}, {0, 1}, {0, 2}, {1, 15}}], 
+         ImageSize -> 125], {{$CellContext`rMax$$, 12}, ControlType -> None}},
+       "Options" :> {
+       FrameMargins -> 0, AutorunSequencing -> {1, 5}, 
+        TrackedSymbols :> {$CellContext`time$$, $CellContext`m$$, \
+$CellContext`\[Theta]00$$, $CellContext`\[Mu]$$, $CellContext`R$$, \
+$CellContext`\[CapitalOmega]$$}}, 
+      "DefaultOptions" :> {ControllerLinking -> True}],
+     ImageSizeCache->{928., {323., 330.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>(($CellContext`pivotPos[
+         Pattern[$CellContext`t, 
+          Blank[]], 
+         Pattern[$CellContext`R, 
+          Blank[]], 
+         Pattern[$CellContext`\[CapitalOmega], 
+          Blank[]]] := $CellContext`R {
+          Sin[$CellContext`\[CapitalOmega] $CellContext`t], -
+          Cos[$CellContext`\[CapitalOmega] $CellContext`t]}; \
+$CellContext`bobPos[
+         Pattern[$CellContext`tt, 
+          Blank[]], 
+         Pattern[$CellContext`rMax, 
+          Blank[]], 
+         Pattern[$CellContext`crankParameters, {
+           Pattern[$CellContext`R, 
+            Blank[]], 
+           Pattern[$CellContext`\[CapitalOmega], 
+            Blank[]]}], 
+         Pattern[$CellContext`pendulumParameters, {
+           Pattern[$CellContext`m, 
+            Blank[]], 
+           Pattern[$CellContext`L, 
+            Blank[]], 
+           Pattern[$CellContext`\[Mu], 
+            Blank[]]}], 
+         Pattern[$CellContext`initialConditions, {
+           Pattern[$CellContext`\[Theta]00, 
+            Blank[]], 
+           Pattern[$CellContext`\[Theta]0, 
+            Blank[]]}]] := $CellContext`L Flatten[
+          Through[
+           {Sin, -Cos[#]& }[
+            ReplaceAll[
+             $CellContext`\[Theta][$CellContext`tt], 
+             
+             NDSolve[{$CellContext`L $CellContext`m 
+                 Derivative[2][$CellContext`\[Theta]][$CellContext`t] + 
+                9.81 $CellContext`m Sin[
+                   $CellContext`\[Theta][$CellContext`t]] + $CellContext`L \
+$CellContext`\[Mu] 
+                 Derivative[
+                  1][$CellContext`\[Theta]][$CellContext`t] + $CellContext`m \
+$CellContext`R $CellContext`\[CapitalOmega]^2 
+                 Sin[$CellContext`t $CellContext`\[CapitalOmega] - \
+$CellContext`\[Theta][$CellContext`t]] == 
+               0, $CellContext`\[Theta][0] == $CellContext`\[Theta]0, 
+               Derivative[1][$CellContext`\[Theta]][
+                0] == $CellContext`\[Theta]00}, $CellContext`\[Theta], \
+{$CellContext`t, 0, 10 Pi ($CellContext`rMax/$CellContext`\[CapitalOmega])}, 
+              MaxSteps -> Infinity, AccuracyGoal -> Automatic]]]]]); 
+     Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellID->36124523]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SnapshotsSection"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`m$$ = 3.492, $CellContext`R$$ = 
+    0.8600944139130589, $CellContext`rMax$$ = 12, $CellContext`time$$ = 
+    26.98554280423114, $CellContext`\[Theta]00$$ = 
+    0.15330972149518193`, $CellContext`\[Mu]$$ = 
+    1., $CellContext`\[CapitalOmega]$$ = 3.35, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`time$$], 26.98554280423114, "start/reset"}, 0.0001, 
+      Dynamic[2 Pi ($CellContext`rMax$$/$CellContext`\[CapitalOmega]$$)], 
+      0.01}, {
+      Hold["mass of bob m"], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`m$$], 3.492, ""}, 0.1, 5, 0.01}, {
+      Hold[
+      "bob start speed \!\(\*SubsuperscriptBox[\(\[Theta]\), \(0\), \
+\(''\)]\)"], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`\[Theta]00$$], 0.15330972149518193`, ""}, 0, 180 
+      Degree, 0.01}, {
+      Hold["damping coefficient \[Mu]"], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`\[Mu]$$], 1., ""}, 0, 1, 0.01}, {
+      Hold["crank radius R"], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`R$$], 0.8600944139130589, ""}, 0, 2, 0.01}, {
+      Hold["crank speed \[CapitalOmega]"], 
+      Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`\[CapitalOmega]$$], 3.35, ""}, 1, 15, 0.01}, {
+      Hold[
+       Button[
+       "randomize parameters", {$CellContext`m$$, $CellContext`\[Theta]00$$, \
+$CellContext`\[Mu]$$, $CellContext`R$$, $CellContext`\[CapitalOmega]$$} = 
+        Map[RandomReal, {{0.1, 5}, {0, Pi}, {0, 1}, {0, 2}, {1, 15}}], 
+        ImageSize -> 125]], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`rMax$$], 12}}}, Typeset`size$$ = {
+    600., {295., 305.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = False, $CellContext`time$2550$$ = 
+    0, $CellContext`m$2551$$ = 0, $CellContext`\[Theta]00$2552$$ = 
+    0, $CellContext`\[Mu]$2553$$ = 0, $CellContext`R$2554$$ = 
+    0, $CellContext`\[CapitalOmega]$2555$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`m$$ = 3.492, $CellContext`R$$ = 
+        0.8600944139130589, $CellContext`rMax$$ = 12, $CellContext`time$$ = 
+        26.98554280423114, $CellContext`\[Theta]00$$ = 
+        0.15330972149518193`, $CellContext`\[Mu]$$ = 
+        1., $CellContext`\[CapitalOmega]$$ = 3.35}, "ControllerVariables" :> {
+        Hold[$CellContext`time$$, $CellContext`time$2550$$, 0], 
+        Hold[$CellContext`m$$, $CellContext`m$2551$$, 0], 
+        Hold[$CellContext`\[Theta]00$$, $CellContext`\[Theta]00$2552$$, 0], 
+        Hold[$CellContext`\[Mu]$$, $CellContext`\[Mu]$2553$$, 0], 
+        Hold[$CellContext`R$$, $CellContext`R$2554$$, 0], 
+        Hold[$CellContext`\[CapitalOmega]$$, \
+$CellContext`\[CapitalOmega]$2555$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> ($CellContext`L = 1; $CellContext`\[Theta]0 = 
+        15 Degree; $CellContext`pivot = $CellContext`pivotPos[#, \
+$CellContext`R$$, $CellContext`\[CapitalOmega]$$]& ; $CellContext`bob = \
+$CellContext`bobPos[#, $CellContext`rMax$$, {$CellContext`R$$, $CellContext`\
+\[CapitalOmega]$$}, {$CellContext`m$$, $CellContext`L, $CellContext`\[Mu]$$}, \
+{$CellContext`\[Theta]00$$, $CellContext`\[Theta]0}] + $CellContext`pivot[#]& \
+; ParametricPlot[
+         Evaluate[
+          $CellContext`bob[$CellContext`t]], {$CellContext`t, 
+          0, $CellContext`time$$}, PlotPoints -> 500, PlotRange -> 
+         1.07 {-$CellContext`L - $CellContext`R$$, $CellContext`L + \
+$CellContext`R$$}, PlotStyle -> Gray, Axes -> True, AxesStyle -> Dashed, 
+         Ticks -> None, ImageSize -> {400, 400}, Epilog -> {{DotDashed, 
+            Circle[{0, 0}, $CellContext`R$$]}, {Thick, 
+            Line[{{0, 0}, 
+              $CellContext`pivot[$CellContext`time$$]}], 
+            PointSize[0.02], 
+            Point[{0, 0}]}, {Dotted, Red, 
+            Circle[{0, 0}, $CellContext`R$$ + $CellContext`L], 
+            Circle[{0, 0}, 
+             Abs[$CellContext`R$$ - $CellContext`L]]}, {
+            PointSize[0.02], Red, 
+            Point[
+             $CellContext`pivot[$CellContext`time$$]], 
+            PointSize[0.04 $CellContext`m$$^(1/3)], 
+            Point[
+             $CellContext`bob[$CellContext`time$$]], 
+            Line[{
+              $CellContext`pivot[$CellContext`time$$], 
+              $CellContext`bob[$CellContext`time$$]}]}}]), 
+      "Specifications" :> {{{$CellContext`time$$, 26.98554280423114, 
+          "start/reset"}, 0.0001, 
+         Dynamic[2 Pi ($CellContext`rMax$$/$CellContext`\[CapitalOmega]$$)], 
+         0.01, ControlType -> Trigger, AnimationRate -> 0.25, ImageSize -> 
+         Large, AppearanceElements -> {"PlayPauseButton", "ResetButton"}}, 
+        Delimiter, 
+        "mass of bob m", {{$CellContext`m$$, 3.492, ""}, 0.1, 5, 0.01, 
+         Appearance -> "Labeled", ImageSize -> Tiny}, 
+        "bob start speed \!\(\*SubsuperscriptBox[\(\[Theta]\), \(0\), \(''\)]\
+\)", {{$CellContext`\[Theta]00$$, 0.15330972149518193`, ""}, 0, 180 Degree, 
+         0.01, Appearance -> "Labeled", ImageSize -> Tiny}, 
+        "damping coefficient \[Mu]", {{$CellContext`\[Mu]$$, 1., ""}, 0, 1, 
+         0.01, Appearance -> "Labeled", ImageSize -> Tiny}, 
+        "crank radius R", {{$CellContext`R$$, 0.8600944139130589, ""}, 0, 2, 
+         0.01, Appearance -> "Labeled", ImageSize -> Tiny}, 
+        "crank speed \[CapitalOmega]", {{$CellContext`\[CapitalOmega]$$, 3.35,
+           ""}, 1, 15, 0.01, Appearance -> "Labeled", ImageSize -> Tiny}, 
+        Button[
+        "randomize parameters", {$CellContext`m$$, $CellContext`\[Theta]00$$, \
+$CellContext`\[Mu]$$, $CellContext`R$$, $CellContext`\[CapitalOmega]$$} = 
+         Map[RandomReal, {{0.1, 5}, {0, Pi}, {0, 1}, {0, 2}, {1, 15}}], 
+         ImageSize -> 125], {{$CellContext`rMax$$, 12}, ControlType -> None}},
+       "Options" :> {
+       FrameMargins -> 0, AutorunSequencing -> {1, 5}, 
+        TrackedSymbols :> {$CellContext`time$$, $CellContext`m$$, \
+$CellContext`\[Theta]00$$, $CellContext`\[Mu]$$, $CellContext`R$$, \
+$CellContext`\[CapitalOmega]$$}}, 
+      "DefaultOptions" :> {ControllerLinking -> True}],
+     ImageSizeCache->{928., {323., 330.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>(($CellContext`pivotPos[
+         Pattern[$CellContext`t, 
+          Blank[]], 
+         Pattern[$CellContext`R, 
+          Blank[]], 
+         Pattern[$CellContext`\[CapitalOmega], 
+          Blank[]]] := $CellContext`R {
+          Sin[$CellContext`\[CapitalOmega] $CellContext`t], -
+          Cos[$CellContext`\[CapitalOmega] $CellContext`t]}; \
+$CellContext`bobPos[
+         Pattern[$CellContext`tt, 
+          Blank[]], 
+         Pattern[$CellContext`rMax, 
+          Blank[]], 
+         Pattern[$CellContext`crankParameters, {
+           Pattern[$CellContext`R, 
+            Blank[]], 
+           Pattern[$CellContext`\[CapitalOmega], 
+            Blank[]]}], 
+         Pattern[$CellContext`pendulumParameters, {
+           Pattern[$CellContext`m, 
+            Blank[]], 
+           Pattern[$CellContext`L, 
+            Blank[]], 
+           Pattern[$CellContext`\[Mu], 
+            Blank[]]}], 
+         Pattern[$CellContext`initialConditions, {
+           Pattern[$CellContext`\[Theta]00, 
+            Blank[]], 
+           Pattern[$CellContext`\[Theta]0, 
+            Blank[]]}]] := $CellContext`L Flatten[
+          Through[
+           {Sin, -Cos[#]& }[
+            ReplaceAll[
+             $CellContext`\[Theta][$CellContext`tt], 
+             
+             NDSolve[{$CellContext`L $CellContext`m 
+                 Derivative[2][$CellContext`\[Theta]][$CellContext`t] + 
+                9.81 $CellContext`m Sin[
+                   $CellContext`\[Theta][$CellContext`t]] + $CellContext`L \
+$CellContext`\[Mu] 
+                 Derivative[
+                  1][$CellContext`\[Theta]][$CellContext`t] + $CellContext`m \
+$CellContext`R $CellContext`\[CapitalOmega]^2 
+                 Sin[$CellContext`t $CellContext`\[CapitalOmega] - \
+$CellContext`\[Theta][$CellContext`t]] == 
+               0, $CellContext`\[Theta][0] == $CellContext`\[Theta]0, 
+               Derivative[1][$CellContext`\[Theta]][
+                0] == $CellContext`\[Theta]00}, $CellContext`\[Theta], \
+{$CellContext`t, 0, 10 Pi ($CellContext`rMax/$CellContext`\[CapitalOmega])}, 
+              MaxSteps -> Infinity, AccuracyGoal -> Automatic]]]]]); 
+     Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellID->291898530],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`m$$ = 0.7563151898982322, $CellContext`R$$ =
+     1.9258398112086335`, $CellContext`rMax$$ = 12, $CellContext`time$$ = 
+    2.6329125, $CellContext`\[Theta]00$$ = 
+    1.1031543362785197`, $CellContext`\[Mu]$$ = 
+    0.1950396535337997, $CellContext`\[CapitalOmega]$$ = 10.24157230482615, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`time$$], 2.6329125, "start/reset"}, 0.0001, 
+      Dynamic[2 Pi ($CellContext`rMax$$/$CellContext`\[CapitalOmega]$$)], 
+      0.01}, {
+      Hold["mass of bob m"], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`m$$], 0.7563151898982322, ""}, 0.1, 5, 0.01}, {
+      Hold[
+      "bob start speed \!\(\*SubsuperscriptBox[\(\[Theta]\), \(0\), \
+\(''\)]\)"], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`\[Theta]00$$], 1.1031543362785197`, ""}, 0, 180 
+      Degree, 0.01}, {
+      Hold["damping coefficient \[Mu]"], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`\[Mu]$$], 0.1950396535337997, ""}, 0, 1, 0.01}, {
+      Hold["crank radius R"], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`R$$], 1.9258398112086335`, ""}, 0, 2, 0.01}, {
+      Hold["crank speed \[CapitalOmega]"], 
+      Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`\[CapitalOmega]$$], 10.24157230482615, ""}, 1, 15, 
+      0.01}, {
+      Hold[
+       Button[
+       "randomize parameters", {$CellContext`m$$, $CellContext`\[Theta]00$$, \
+$CellContext`\[Mu]$$, $CellContext`R$$, $CellContext`\[CapitalOmega]$$} = 
+        Map[RandomReal, {{0.1, 5}, {0, Pi}, {0, 1}, {0, 2}, {1, 15}}], 
+        ImageSize -> 125]], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`rMax$$], 12}}}, Typeset`size$$ = {
+    600., {295., 305.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = False, $CellContext`time$2636$$ = 
+    0, $CellContext`m$2637$$ = 0, $CellContext`\[Theta]00$2638$$ = 
+    0, $CellContext`\[Mu]$2639$$ = 0, $CellContext`R$2640$$ = 
+    0, $CellContext`\[CapitalOmega]$2641$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`m$$ = 0.7563151898982322, $CellContext`R$$ = 
+        1.9258398112086335`, $CellContext`rMax$$ = 12, $CellContext`time$$ = 
+        2.6329125, $CellContext`\[Theta]00$$ = 
+        1.1031543362785197`, $CellContext`\[Mu]$$ = 
+        0.1950396535337997, $CellContext`\[CapitalOmega]$$ = 
+        10.24157230482615}, "ControllerVariables" :> {
+        Hold[$CellContext`time$$, $CellContext`time$2636$$, 0], 
+        Hold[$CellContext`m$$, $CellContext`m$2637$$, 0], 
+        Hold[$CellContext`\[Theta]00$$, $CellContext`\[Theta]00$2638$$, 0], 
+        Hold[$CellContext`\[Mu]$$, $CellContext`\[Mu]$2639$$, 0], 
+        Hold[$CellContext`R$$, $CellContext`R$2640$$, 0], 
+        Hold[$CellContext`\[CapitalOmega]$$, \
+$CellContext`\[CapitalOmega]$2641$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> ($CellContext`L = 1; $CellContext`\[Theta]0 = 
+        15 Degree; $CellContext`pivot = $CellContext`pivotPos[#, \
+$CellContext`R$$, $CellContext`\[CapitalOmega]$$]& ; $CellContext`bob = \
+$CellContext`bobPos[#, $CellContext`rMax$$, {$CellContext`R$$, $CellContext`\
+\[CapitalOmega]$$}, {$CellContext`m$$, $CellContext`L, $CellContext`\[Mu]$$}, \
+{$CellContext`\[Theta]00$$, $CellContext`\[Theta]0}] + $CellContext`pivot[#]& \
+; ParametricPlot[
+         Evaluate[
+          $CellContext`bob[$CellContext`t]], {$CellContext`t, 
+          0, $CellContext`time$$}, PlotPoints -> 500, PlotRange -> 
+         1.07 {-$CellContext`L - $CellContext`R$$, $CellContext`L + \
+$CellContext`R$$}, PlotStyle -> Gray, Axes -> True, AxesStyle -> Dashed, 
+         Ticks -> None, ImageSize -> {400, 400}, Epilog -> {{DotDashed, 
+            Circle[{0, 0}, $CellContext`R$$]}, {Thick, 
+            Line[{{0, 0}, 
+              $CellContext`pivot[$CellContext`time$$]}], 
+            PointSize[0.02], 
+            Point[{0, 0}]}, {Dotted, Red, 
+            Circle[{0, 0}, $CellContext`R$$ + $CellContext`L], 
+            Circle[{0, 0}, 
+             Abs[$CellContext`R$$ - $CellContext`L]]}, {
+            PointSize[0.02], Red, 
+            Point[
+             $CellContext`pivot[$CellContext`time$$]], 
+            PointSize[0.04 $CellContext`m$$^(1/3)], 
+            Point[
+             $CellContext`bob[$CellContext`time$$]], 
+            Line[{
+              $CellContext`pivot[$CellContext`time$$], 
+              $CellContext`bob[$CellContext`time$$]}]}}]), 
+      "Specifications" :> {{{$CellContext`time$$, 2.6329125, "start/reset"}, 
+         0.0001, 
+         Dynamic[2 Pi ($CellContext`rMax$$/$CellContext`\[CapitalOmega]$$)], 
+         0.01, ControlType -> Trigger, AnimationRate -> 0.25, ImageSize -> 
+         Large, AppearanceElements -> {"PlayPauseButton", "ResetButton"}}, 
+        Delimiter, 
+        "mass of bob m", {{$CellContext`m$$, 0.7563151898982322, ""}, 0.1, 5, 
+         0.01, Appearance -> "Labeled", ImageSize -> Tiny}, 
+        "bob start speed \!\(\*SubsuperscriptBox[\(\[Theta]\), \(0\), \(''\)]\
+\)", {{$CellContext`\[Theta]00$$, 1.1031543362785197`, ""}, 0, 180 Degree, 
+         0.01, Appearance -> "Labeled", ImageSize -> Tiny}, 
+        "damping coefficient \[Mu]", {{$CellContext`\[Mu]$$, 
+          0.1950396535337997, ""}, 0, 1, 0.01, Appearance -> "Labeled", 
+         ImageSize -> Tiny}, 
+        "crank radius R", {{$CellContext`R$$, 1.9258398112086335`, ""}, 0, 2, 
+         0.01, Appearance -> "Labeled", ImageSize -> Tiny}, 
+        "crank speed \[CapitalOmega]", {{$CellContext`\[CapitalOmega]$$, 
+          10.24157230482615, ""}, 1, 15, 0.01, Appearance -> "Labeled", 
+         ImageSize -> Tiny}, 
+        Button[
+        "randomize parameters", {$CellContext`m$$, $CellContext`\[Theta]00$$, \
+$CellContext`\[Mu]$$, $CellContext`R$$, $CellContext`\[CapitalOmega]$$} = 
+         Map[RandomReal, {{0.1, 5}, {0, Pi}, {0, 1}, {0, 2}, {1, 15}}], 
+         ImageSize -> 125], {{$CellContext`rMax$$, 12}, ControlType -> None}},
+       "Options" :> {
+       FrameMargins -> 0, AutorunSequencing -> {1, 5}, 
+        TrackedSymbols :> {$CellContext`time$$, $CellContext`m$$, \
+$CellContext`\[Theta]00$$, $CellContext`\[Mu]$$, $CellContext`R$$, \
+$CellContext`\[CapitalOmega]$$}}, 
+      "DefaultOptions" :> {ControllerLinking -> True}],
+     ImageSizeCache->{928., {323., 330.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>(($CellContext`pivotPos[
+         Pattern[$CellContext`t, 
+          Blank[]], 
+         Pattern[$CellContext`R, 
+          Blank[]], 
+         Pattern[$CellContext`\[CapitalOmega], 
+          Blank[]]] := $CellContext`R {
+          Sin[$CellContext`\[CapitalOmega] $CellContext`t], -
+          Cos[$CellContext`\[CapitalOmega] $CellContext`t]}; \
+$CellContext`bobPos[
+         Pattern[$CellContext`tt, 
+          Blank[]], 
+         Pattern[$CellContext`rMax, 
+          Blank[]], 
+         Pattern[$CellContext`crankParameters, {
+           Pattern[$CellContext`R, 
+            Blank[]], 
+           Pattern[$CellContext`\[CapitalOmega], 
+            Blank[]]}], 
+         Pattern[$CellContext`pendulumParameters, {
+           Pattern[$CellContext`m, 
+            Blank[]], 
+           Pattern[$CellContext`L, 
+            Blank[]], 
+           Pattern[$CellContext`\[Mu], 
+            Blank[]]}], 
+         Pattern[$CellContext`initialConditions, {
+           Pattern[$CellContext`\[Theta]00, 
+            Blank[]], 
+           Pattern[$CellContext`\[Theta]0, 
+            Blank[]]}]] := $CellContext`L Flatten[
+          Through[
+           {Sin, -Cos[#]& }[
+            ReplaceAll[
+             $CellContext`\[Theta][$CellContext`tt], 
+             
+             NDSolve[{$CellContext`L $CellContext`m 
+                 Derivative[2][$CellContext`\[Theta]][$CellContext`t] + 
+                9.81 $CellContext`m Sin[
+                   $CellContext`\[Theta][$CellContext`t]] + $CellContext`L \
+$CellContext`\[Mu] 
+                 Derivative[
+                  1][$CellContext`\[Theta]][$CellContext`t] + $CellContext`m \
+$CellContext`R $CellContext`\[CapitalOmega]^2 
+                 Sin[$CellContext`t $CellContext`\[CapitalOmega] - \
+$CellContext`\[Theta][$CellContext`t]] == 
+               0, $CellContext`\[Theta][0] == $CellContext`\[Theta]0, 
+               Derivative[1][$CellContext`\[Theta]][
+                0] == $CellContext`\[Theta]00}, $CellContext`\[Theta], \
+{$CellContext`t, 0, 10 Pi ($CellContext`rMax/$CellContext`\[CapitalOmega])}, 
+              MaxSteps -> Infinity, AccuracyGoal -> Automatic]]]]]); 
+     Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellID->170010845],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`m$$ = 4.064992021337878, $CellContext`R$$ = 
+    0.501876670162597, $CellContext`rMax$$ = 12, $CellContext`time$$ = 
+    6.9574274861846455`, $CellContext`\[Theta]00$$ = 
+    1.0156520177867552`, $CellContext`\[Mu]$$ = 
+    0.17460385388263888`, $CellContext`\[CapitalOmega]$$ = 
+    13.546354567811376`, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`time$$], 6.9574274861846455`, "start/reset"}, 0.0001, 
+      Dynamic[2 Pi ($CellContext`rMax$$/$CellContext`\[CapitalOmega]$$)], 
+      0.01}, {
+      Hold["mass of bob m"], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`m$$], 4.064992021337878, ""}, 0.1, 5, 0.01}, {
+      Hold[
+      "bob start speed \!\(\*SubsuperscriptBox[\(\[Theta]\), \(0\), \
+\(''\)]\)"], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`\[Theta]00$$], 1.0156520177867552`, ""}, 0, 180 
+      Degree, 0.01}, {
+      Hold["damping coefficient \[Mu]"], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`\[Mu]$$], 0.17460385388263888`, ""}, 0, 1, 0.01}, {
+      Hold["crank radius R"], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`R$$], 0.501876670162597, ""}, 0, 2, 0.01}, {
+      Hold["crank speed \[CapitalOmega]"], 
+      Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`\[CapitalOmega]$$], 13.546354567811376`, ""}, 1, 15, 
+      0.01}, {
+      Hold[
+       Button[
+       "randomize parameters", {$CellContext`m$$, $CellContext`\[Theta]00$$, \
+$CellContext`\[Mu]$$, $CellContext`R$$, $CellContext`\[CapitalOmega]$$} = 
+        Map[RandomReal, {{0.1, 5}, {0, Pi}, {0, 1}, {0, 2}, {1, 15}}], 
+        ImageSize -> 125]], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`rMax$$], 12}}}, Typeset`size$$ = {
+    600., {295., 305.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = False, $CellContext`time$2722$$ = 
+    0, $CellContext`m$2723$$ = 0, $CellContext`\[Theta]00$2724$$ = 
+    0, $CellContext`\[Mu]$2725$$ = 0, $CellContext`R$2726$$ = 
+    0, $CellContext`\[CapitalOmega]$2727$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`m$$ = 4.064992021337878, $CellContext`R$$ = 
+        0.501876670162597, $CellContext`rMax$$ = 12, $CellContext`time$$ = 
+        6.9574274861846455`, $CellContext`\[Theta]00$$ = 
+        1.0156520177867552`, $CellContext`\[Mu]$$ = 
+        0.17460385388263888`, $CellContext`\[CapitalOmega]$$ = 
+        13.546354567811376`}, "ControllerVariables" :> {
+        Hold[$CellContext`time$$, $CellContext`time$2722$$, 0], 
+        Hold[$CellContext`m$$, $CellContext`m$2723$$, 0], 
+        Hold[$CellContext`\[Theta]00$$, $CellContext`\[Theta]00$2724$$, 0], 
+        Hold[$CellContext`\[Mu]$$, $CellContext`\[Mu]$2725$$, 0], 
+        Hold[$CellContext`R$$, $CellContext`R$2726$$, 0], 
+        Hold[$CellContext`\[CapitalOmega]$$, \
+$CellContext`\[CapitalOmega]$2727$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> ($CellContext`L = 1; $CellContext`\[Theta]0 = 
+        15 Degree; $CellContext`pivot = $CellContext`pivotPos[#, \
+$CellContext`R$$, $CellContext`\[CapitalOmega]$$]& ; $CellContext`bob = \
+$CellContext`bobPos[#, $CellContext`rMax$$, {$CellContext`R$$, $CellContext`\
+\[CapitalOmega]$$}, {$CellContext`m$$, $CellContext`L, $CellContext`\[Mu]$$}, \
+{$CellContext`\[Theta]00$$, $CellContext`\[Theta]0}] + $CellContext`pivot[#]& \
+; ParametricPlot[
+         Evaluate[
+          $CellContext`bob[$CellContext`t]], {$CellContext`t, 
+          0, $CellContext`time$$}, PlotPoints -> 500, PlotRange -> 
+         1.07 {-$CellContext`L - $CellContext`R$$, $CellContext`L + \
+$CellContext`R$$}, PlotStyle -> Gray, Axes -> True, AxesStyle -> Dashed, 
+         Ticks -> None, ImageSize -> {400, 400}, Epilog -> {{DotDashed, 
+            Circle[{0, 0}, $CellContext`R$$]}, {Thick, 
+            Line[{{0, 0}, 
+              $CellContext`pivot[$CellContext`time$$]}], 
+            PointSize[0.02], 
+            Point[{0, 0}]}, {Dotted, Red, 
+            Circle[{0, 0}, $CellContext`R$$ + $CellContext`L], 
+            Circle[{0, 0}, 
+             Abs[$CellContext`R$$ - $CellContext`L]]}, {
+            PointSize[0.02], Red, 
+            Point[
+             $CellContext`pivot[$CellContext`time$$]], 
+            PointSize[0.04 $CellContext`m$$^(1/3)], 
+            Point[
+             $CellContext`bob[$CellContext`time$$]], 
+            Line[{
+              $CellContext`pivot[$CellContext`time$$], 
+              $CellContext`bob[$CellContext`time$$]}]}}]), 
+      "Specifications" :> {{{$CellContext`time$$, 6.9574274861846455`, 
+          "start/reset"}, 0.0001, 
+         Dynamic[2 Pi ($CellContext`rMax$$/$CellContext`\[CapitalOmega]$$)], 
+         0.01, ControlType -> Trigger, AnimationRate -> 0.25, ImageSize -> 
+         Large, AppearanceElements -> {"PlayPauseButton", "ResetButton"}}, 
+        Delimiter, 
+        "mass of bob m", {{$CellContext`m$$, 4.064992021337878, ""}, 0.1, 5, 
+         0.01, Appearance -> "Labeled", ImageSize -> Tiny}, 
+        "bob start speed \!\(\*SubsuperscriptBox[\(\[Theta]\), \(0\), \(''\)]\
+\)", {{$CellContext`\[Theta]00$$, 1.0156520177867552`, ""}, 0, 180 Degree, 
+         0.01, Appearance -> "Labeled", ImageSize -> Tiny}, 
+        "damping coefficient \[Mu]", {{$CellContext`\[Mu]$$, 
+          0.17460385388263888`, ""}, 0, 1, 0.01, Appearance -> "Labeled", 
+         ImageSize -> Tiny}, 
+        "crank radius R", {{$CellContext`R$$, 0.501876670162597, ""}, 0, 2, 
+         0.01, Appearance -> "Labeled", ImageSize -> Tiny}, 
+        "crank speed \[CapitalOmega]", {{$CellContext`\[CapitalOmega]$$, 
+          13.546354567811376`, ""}, 1, 15, 0.01, Appearance -> "Labeled", 
+         ImageSize -> Tiny}, 
+        Button[
+        "randomize parameters", {$CellContext`m$$, $CellContext`\[Theta]00$$, \
+$CellContext`\[Mu]$$, $CellContext`R$$, $CellContext`\[CapitalOmega]$$} = 
+         Map[RandomReal, {{0.1, 5}, {0, Pi}, {0, 1}, {0, 2}, {1, 15}}], 
+         ImageSize -> 125], {{$CellContext`rMax$$, 12}, ControlType -> None}},
+       "Options" :> {
+       FrameMargins -> 0, AutorunSequencing -> {1, 5}, 
+        TrackedSymbols :> {$CellContext`time$$, $CellContext`m$$, \
+$CellContext`\[Theta]00$$, $CellContext`\[Mu]$$, $CellContext`R$$, \
+$CellContext`\[CapitalOmega]$$}}, 
+      "DefaultOptions" :> {ControllerLinking -> True}],
+     ImageSizeCache->{928., {323., 330.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>(($CellContext`pivotPos[
+         Pattern[$CellContext`t, 
+          Blank[]], 
+         Pattern[$CellContext`R, 
+          Blank[]], 
+         Pattern[$CellContext`\[CapitalOmega], 
+          Blank[]]] := $CellContext`R {
+          Sin[$CellContext`\[CapitalOmega] $CellContext`t], -
+          Cos[$CellContext`\[CapitalOmega] $CellContext`t]}; \
+$CellContext`bobPos[
+         Pattern[$CellContext`tt, 
+          Blank[]], 
+         Pattern[$CellContext`rMax, 
+          Blank[]], 
+         Pattern[$CellContext`crankParameters, {
+           Pattern[$CellContext`R, 
+            Blank[]], 
+           Pattern[$CellContext`\[CapitalOmega], 
+            Blank[]]}], 
+         Pattern[$CellContext`pendulumParameters, {
+           Pattern[$CellContext`m, 
+            Blank[]], 
+           Pattern[$CellContext`L, 
+            Blank[]], 
+           Pattern[$CellContext`\[Mu], 
+            Blank[]]}], 
+         Pattern[$CellContext`initialConditions, {
+           Pattern[$CellContext`\[Theta]00, 
+            Blank[]], 
+           Pattern[$CellContext`\[Theta]0, 
+            Blank[]]}]] := $CellContext`L Flatten[
+          Through[
+           {Sin, -Cos[#]& }[
+            ReplaceAll[
+             $CellContext`\[Theta][$CellContext`tt], 
+             
+             NDSolve[{$CellContext`L $CellContext`m 
+                 Derivative[2][$CellContext`\[Theta]][$CellContext`t] + 
+                9.81 $CellContext`m Sin[
+                   $CellContext`\[Theta][$CellContext`t]] + $CellContext`L \
+$CellContext`\[Mu] 
+                 Derivative[
+                  1][$CellContext`\[Theta]][$CellContext`t] + $CellContext`m \
+$CellContext`R $CellContext`\[CapitalOmega]^2 
+                 Sin[$CellContext`t $CellContext`\[CapitalOmega] - \
+$CellContext`\[Theta][$CellContext`t]] == 
+               0, $CellContext`\[Theta][0] == $CellContext`\[Theta]0, 
+               Derivative[1][$CellContext`\[Theta]][
+                0] == $CellContext`\[Theta]00}, $CellContext`\[Theta], \
+{$CellContext`t, 0, 10 Pi ($CellContext`rMax/$CellContext`\[CapitalOmega])}, 
+              MaxSteps -> Infinity, AccuracyGoal -> Automatic]]]]]); 
+     Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellID->299889956]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "DetailsSection"],
+
+Cell["\<\
+Choose a set of parameters with the sliders or the \"randomize parameters\" \
+button and start the animation. Or run the animation to the end and press the \
+\"randomize parameters\" button to discover a variety of bob trajectories.\
+\>", "DetailNotes",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.4721863635625*^9, 3.47218654521875*^9}, {
+   3.472186579359375*^9, 3.4721866044375*^9}, 3.472192056609375*^9, {
+   3.472192087140625*^9, 3.472192093421875*^9}},
+ CellID->221660380],
+
+Cell[TextData[{
+ "See: ",
+ ButtonBox["Equations of Motion of Damped and Driven Pendula",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://www.elmer.unibas.ch/pendulum/eqm2.htm"], None},
+  ButtonNote->"http://www.elmer.unibas.ch/pendulum/eqm2.htm"]
+}], "DetailNotes",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.471778279734375*^9, 3.471778324796875*^9}, {
+   3.471778378796875*^9, 3.471778379703125*^9}, {3.471779236734375*^9, 
+   3.47177924025*^9}, {3.47201929321875*^9, 3.472019293953125*^9}, {
+   3.472917583212144*^9, 3.4729175851340065`*^9}, 3.472917619508786*^9, {
+   3.4729923567202177`*^9, 3.4729923919880877`*^9}},
+ CellID->61865697]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "ControlSuggestionsSection"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[True], Cell[" Resize Images"]}],
+  "\"Click inside an image to reveal its orange resize frame.\\nDrag any of \
+the orange resize handles to resize the image.\"",
+  TooltipDelay->0.35]], "ControlSuggestions",
+ CellChangeTimes->{3.35696210375764*^9, 3.472839490831222*^9},
+ FontFamily->"Verdana",
+ CellTags->"ResizeImages"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[False], Cell[" Rotate and Zoom in 3D"]}],
+  RowBox[{
+   "\"Drag a 3D graphic to rotate it. Starting the drag near the center \
+tumbles\\nthe graphic; starting near a corner turns it parallel to the plane \
+of the screen.\\nHold down \"", 
+    FrameBox[
+    "Ctrl", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], "\" (or \"", 
+    FrameBox[
+    "Cmd", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], "\" on Mac) and drag up and down to zoom.\""}],
+  TooltipDelay->0.35]], "ControlSuggestions",
+ FontFamily->"Verdana",
+ CellTags->"RotateAndZoomIn3D"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[False], Cell[" Drag Locators"]}],
+  RowBox[{"\"Drag any locator (\"", 
+    GraphicsBox[
+     LocatorBox[
+      Scaled[{0.5, 0.5}]], ImageSize -> 20], 
+    "\", etc.) to move it around.\""}],
+  TooltipDelay->0.35]], "ControlSuggestions",
+ FontFamily->"Verdana",
+ CellTags->"DragLocators"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[False], Cell[" Create and Delete Locators"]}],
+  RowBox[{"\"Insert a new locator in the graphic by holding down the \"", 
+    FrameBox[
+    "Alt", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], 
+    "\" key\\nand clicking where you want it to be. Delete a locator by \
+clicking it\\nwhile holding down the \"", 
+    FrameBox[
+    "Alt", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], "\" key.\""}],
+  TooltipDelay->0.35]], "ControlSuggestions",
+ FontFamily->"Verdana",
+ CellTags->"CreateAndDeleteLocators"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[True], Cell[" Slider Zoom"]}],
+  RowBox[{"\"Hold down the \"", 
+    FrameBox[
+    "Alt", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], 
+    "\" key while moving a slider to make fine adjustments in the slider \
+value.\\nHold \"", 
+    FrameBox[
+    "Ctrl", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], "\" and/or \"", 
+    FrameBox[
+    "Shift", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], "\" at the same time as \"", 
+    FrameBox[
+    "Alt", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], "\" to make ever finer adjustments.\""}],
+  TooltipDelay->0.35]], "ControlSuggestions",
+ CellChangeTimes->{3.35696210375764*^9, 3.471848438390625*^9},
+ FontFamily->"Verdana",
+ CellTags->"SliderZoom"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[True], Cell[" Gamepad Controls"]}],
+  "\"Control this Demonstration with a gamepad or other\\nhuman interface \
+device connected to your computer.\"",
+  TooltipDelay->0.35]], "ControlSuggestions",
+ CellChangeTimes->{3.35696210375764*^9, 3.3895522232313623`*^9, 
+  3.472839493231462*^9},
+ FontFamily->"Verdana",
+ CellTags->"GamepadControls"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[True], Cell[" Automatic Animation"]}],
+  RowBox[{"\"Animate a slider in this Demonstration by clicking the\"", 
+    AdjustmentBox[
+     Cell[
+      GraphicsData[
+      "CompressedBitmap", 
+       "eJzzTSzJSM1NLMlMTlRwL0osyMhMLlZwyy8CCjEzMjAwcIKwAgOI/R/IhBKc\n\
+/4EAyGAG0f+nTZsGwgysIJIRKsWKLAXGIHFmEpUgLADxWUAkI24jZs+eTaEt\n\
+IG+wQKRmzJgBlYf5lhEA30OqWA=="], "Graphics", ImageSize -> {9, 9}, ImageMargins -> 
+      0, CellBaseline -> Baseline], BoxBaselineShift -> 0.1839080459770115, 
+     BoxMargins -> {{0., 0.}, {-0.1839080459770115, 0.1839080459770115}}], 
+    "\"button\\nnext to the slider, and then clicking the play button that \
+appears.\\nAnimate all controls by selecting \"", 
+    StyleBox["Autorun", FontWeight -> "Bold"], "\" from the\"", 
+    AdjustmentBox[
+     Cell[
+      GraphicsData[
+      "CompressedBitmap", 
+       "eJyNULENwyAQfEySIlMwTVJlCGRFsosokeNtqBmDBagoaZjAI1C8/8GUUUC6\n\
+57h7cQ8PvU7Pl17nUav7oj/TPH7V7b2QJAUAXBkKmCPRowxICy64bRvGGNF7\n\
+X8CctGoDSN4xhIDGGDhzFXwUh3/ClBKrDQPmnGXtI6u0OOd+tZBVUqy1xSaH\n\
+UqiK6pPe4XdEdAz6563tx/gejuORGMxJaz8mdpJn7hc="], "Graphics", 
+      ImageSize -> {10, 10}, ImageMargins -> 0, CellBaseline -> Baseline], 
+     BoxBaselineShift -> 0.1839080459770115, 
+     BoxMargins -> {{0., 0.}, {-0.1839080459770115, 0.1839080459770115}}], 
+    "\"menu.\""}],
+  TooltipDelay->0.35]], "ControlSuggestions",
+ CellChangeTimes->{3.35696210375764*^9, 3.471848436953125*^9},
+ FontFamily->"Verdana",
+ CellTags->"AutomaticAnimation"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[False], Cell[" Bookmark Animation"]}],
+  RowBox[{
+   "\"See a prepared animation of this Demonstration by selecting\\n\"", 
+    StyleBox["Animate Bookmarks", FontWeight -> "Bold"], "\" from the\"", 
+    AdjustmentBox[
+     Cell[
+      GraphicsData[
+      "CompressedBitmap", 
+       "eJyNULENwyAQfEySIlMwTVJlCGRFsosokeNtqBmDBagoaZjAI1C8/8GUUUC6\n\
+57h7cQ8PvU7Pl17nUav7oj/TPH7V7b2QJAUAXBkKmCPRowxICy64bRvGGNF7\n\
+X8CctGoDSN4xhIDGGDhzFXwUh3/ClBKrDQPmnGXtI6u0OOd+tZBVUqy1xSaH\n\
+UqiK6pPe4XdEdAz6563tx/gejuORGMxJaz8mdpJn7hc="], "Graphics", 
+      ImageSize -> {10, 10}, ImageMargins -> 0, CellBaseline -> Baseline], 
+     BoxBaselineShift -> 0.1839080459770115, 
+     BoxMargins -> {{0., 0.}, {-0.1839080459770115, 0.1839080459770115}}], 
+    "\"menu.\""}],
+  TooltipDelay->0.35]], "ControlSuggestions",
+ FontFamily->"Verdana",
+ CellTags->"BookmarkAnimation"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SearchTermsSection"],
+
+Cell["damped and driven pendulum", "SearchTerms",
+ CellChangeTimes->{3.35696210375764*^9, {3.47178051275*^9, 3.4717805225*^9}},
+ CellID->138719224],
+
+Cell["equations of motion", "SearchTerms",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.471780528296875*^9, 3.47178053515625*^9}},
+ CellID->328682116]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "RelatedLinksSection"],
+
+Cell[TextData[ButtonBox["Pendulum",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["http://scienceworld.wolfram.com/physics/Pendulum.html"], None},
+ ButtonNote->
+  "http://scienceworld.wolfram.com/physics/Pendulum.html"]], "RelatedLinks",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.471780398515625*^9, 3.471780420890625*^9}, {
+   3.471780463140625*^9, 3.47178048275*^9}, {3.4721921300625*^9, 
+   3.472192131078125*^9}, {3.4728394971138506`*^9, 3.472839498971036*^9}},
+ CellID->88015074]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "AuthorSection"],
+
+Cell[TextData[{
+ "Contributed by: ",
+ ButtonBox["Erik Mahieu",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/author.html?author=Erik+Mahieu"], 
+    None},
+  ButtonNote->
+   "http://demonstrations.wolfram.com/author.html?author=Erik+Mahieu"]
+}], "Author",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.471848442859375*^9, 3.471848446265625*^9}}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1343, 1031},
+WindowMargins->{{166, Automatic}, {Automatic, 5}},
+PrintingCopies->1,
+PrintingPageRange->{Automatic, Automatic},
+FrontEndVersion->"7.0 for Microsoft Windows (32-bit) (February 18, 2009)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Demonstration.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "ResizeImages"->{
+  Cell[67598, 1425, 374, 9, 35, "ControlSuggestions",
+   CellTags->"ResizeImages"]},
+ "RotateAndZoomIn3D"->{
+  Cell[67975, 1436, 678, 16, 35, "ControlSuggestions",
+   CellTags->"RotateAndZoomIn3D"]},
+ "DragLocators"->{
+  Cell[68656, 1454, 340, 11, 35, "ControlSuggestions",
+   CellTags->"DragLocators"]},
+ "CreateAndDeleteLocators"->{
+  Cell[68999, 1467, 637, 15, 35, "ControlSuggestions",
+   CellTags->"CreateAndDeleteLocators"]},
+ "SliderZoom"->{
+  Cell[69639, 1484, 906, 22, 35, "ControlSuggestions",
+   CellTags->"SliderZoom"]},
+ "GamepadControls"->{
+  Cell[70548, 1508, 393, 10, 35, "ControlSuggestions",
+   CellTags->"GamepadControls"]},
+ "AutomaticAnimation"->{
+  Cell[70944, 1520, 1526, 32, 35, "ControlSuggestions",
+   CellTags->"AutomaticAnimation"]},
+ "BookmarkAnimation"->{
+  Cell[72473, 1554, 908, 21, 35, "ControlSuggestions",
+   CellTags->"BookmarkAnimation"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"ResizeImages", 75228, 1641},
+ {"RotateAndZoomIn3D", 75337, 1644},
+ {"DragLocators", 75447, 1647},
+ {"CreateAndDeleteLocators", 75563, 1650},
+ {"SliderZoom", 75677, 1653},
+ {"GamepadControls", 75783, 1656},
+ {"AutomaticAnimation", 75897, 1659},
+ {"BookmarkAnimation", 76014, 1662}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 215, 3, 111, "DemoTitle"],
+Cell[785, 27, 33, 0, 399, "InitializationSection"],
+Cell[CellGroupData[{
+Cell[843, 31, 29, 0, 267, "ManipulateSection"],
+Cell[CellGroupData[{
+Cell[897, 35, 16780, 364, 1124, "Input"],
+Cell[17680, 401, 8976, 176, 670, "Output",
+ CellID->477447196]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26705, 583, 36, 0, 249, "ManipulateCaptionSection"],
+Cell[26744, 585, 2523, 61, 105, "ManipulateCaption",
+ CellID->1263513]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[29304, 651, 28, 0, 252, "ThumbnailSection"],
+Cell[29335, 653, 9025, 177, 670, "Output",
+ CellID->36124523]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[38397, 835, 28, 0, 207, "SnapshotsSection"],
+Cell[38428, 837, 9162, 179, 670, "Output",
+ CellID->291898530],
+Cell[47593, 1018, 9334, 183, 670, "Output",
+ CellID->170010845],
+Cell[56930, 1203, 9379, 183, 670, "Output",
+ CellID->299889956]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[66346, 1391, 26, 0, 498, "DetailsSection"],
+Cell[66375, 1393, 490, 9, 75, "DetailNotes",
+ CellID->221660380],
+Cell[66868, 1404, 653, 14, 32, "DetailNotes",
+ CellID->61865697]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[67558, 1423, 37, 0, 180, "ControlSuggestionsSection"],
+Cell[67598, 1425, 374, 9, 35, "ControlSuggestions",
+ CellTags->"ResizeImages"],
+Cell[67975, 1436, 678, 16, 35, "ControlSuggestions",
+ CellTags->"RotateAndZoomIn3D"],
+Cell[68656, 1454, 340, 11, 35, "ControlSuggestions",
+ CellTags->"DragLocators"],
+Cell[68999, 1467, 637, 15, 35, "ControlSuggestions",
+ CellTags->"CreateAndDeleteLocators"],
+Cell[69639, 1484, 906, 22, 35, "ControlSuggestions",
+ CellTags->"SliderZoom"],
+Cell[70548, 1508, 393, 10, 35, "ControlSuggestions",
+ CellTags->"GamepadControls"],
+Cell[70944, 1520, 1526, 32, 35, "ControlSuggestions",
+ CellTags->"AutomaticAnimation"],
+Cell[72473, 1554, 908, 21, 35, "ControlSuggestions",
+ CellTags->"BookmarkAnimation"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[73418, 1580, 30, 0, 228, "SearchTermsSection"],
+Cell[73451, 1582, 147, 2, 32, "SearchTerms",
+ CellID->138719224],
+Cell[73601, 1586, 151, 3, 32, "SearchTerms",
+ CellID->328682116]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[73789, 1594, 31, 0, 207, "RelatedLinksSection"],
+Cell[73823, 1596, 489, 10, 32, "RelatedLinks",
+ CellID->88015074]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[74349, 1611, 25, 0, 204, "AuthorSection"],
+Cell[74377, 1613, 383, 11, 32, "Author"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

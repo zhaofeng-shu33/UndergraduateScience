@@ -1,0 +1,106 @@
+﻿\documentclass[10.5pt]{article}
+\usepackage{xeCJK}%preamble part
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage[a4paper, inner=1.5cm, outer=3cm, top=2cm, bottom=3cm, bindingoffset=1cm]{geometry}
+\usepackage{epstopdf}
+\usepackage{array}
+\usepackage{fontspec}
+\usepackage{gensymb}
+\usepackage[lofdepth,lotdepth]{subfig}
+\setCJKmainfont[BoldFont={SimHei}]{SimSun}
+\setCJKmonofont{SimSun}
+\setmainfont{Times New Roman}
+\newCJKfontfamily[hei]\heiti{SimHei}
+\setlength{\extrarowheight}{4pt}
+\begin{document}
+\title{\textbf{\fontsize{15.75pt}{\baselineskip}{微波实验报告}}} % 15.75pt is 3 号 in chinese
+\author{\fontsize{12pt}{\baselineskip}{数33 赵丰 2013012178}}
+\date{\fontsize{12pt}{\baselineskip}{9 21,2016}}
+\maketitle
+\section{\textbf{\fontsize{12pt}{\baselineskip}{引言}}}
+微波是一种频率在GHz,波长在mm量级的电磁波。这个频率范围处于光波和无线电波之间。微波可以在空气中传播，在雷达通信等领域有着非常重要的
+应用。本次实验将研究微波的某些特性。
+\section{\textbf{\fontsize{12pt}{\baselineskip}{实验原理}}}
+
+微波产生的机理：基于半导体砷化镓的耿氏二极管在一定的电压范围内具有负阻效应。在这个电压范围内电流的周期性振荡的频率要远大于普通电子管，因此可以产生更高频率的微波。
+
+微波在波导中传播原理：
+微波在波导中传播时波长公式为:
+\begin{equation}
+\lambda_g=\frac{\lambda}{\sqrt{1-(\frac{\lambda}{2a})^2}}
+\end{equation}
+其中$\lambda$为真空中的波长，可由$c=\lambda f$计算，f是微波频率。
+以沿着波导的方向为z轴，z轴为微波传播方向，在垂直于z轴的方向上电场分量随x呈正弦规律变化，沿y轴方向均匀变化，有$E_y=\sin(\frac{\pi x}{a})$
+为探测微波传输系统中电场的分布，可使用微波测量线，它是一种特殊的波导，可以插入探针，变化的电场在探针上感应出电流。如果将测量线终端短路，微波
+在波导内形成驻波，在z轴方向上场强振幅的大小$E=k'|\sin(\frac{2\pi z}{\lambda_g})|$,其中z的零点应为测量点到短路终端的距离，也可以以一个波节为零点。在微波功率较小的情况下，检波电压与场强的关系可近似为$U=kE^{\alpha}$，其中的参量可看成常数。如在两边取对数，可得到
+$\log U - \log |\sin(2 \pi z /\lambda_g)|$的直线拟合式:
+\begin{equation}
+\log U = K + \alpha \log |\sin \frac{2 \pi z}{\lambda_g}|
+\end{equation}
+
+负载驻波比测量原理:
+当微波在波导中传播遇到负载时，部分能量波负载吸收或透射，另一部分则被反射回来与原来的波叠加，此时波导内的微波既有行波成分也有驻波成分。
+定义波腹电场与波节电场之比为驻波比$\rho$:
+\begin{equation}
+\rho=\frac{E_{max}}{E_{min}}
+\end{equation}
+
+\section{\textbf{\fontsize{12pt}{\baselineskip}{结果与讨论}}}
+\subsection{\textbf{\fontsize{12pt}{\baselineskip}{计算的数据、结果}}}
+实测耿氏二极管的伏安特性及输出微波的相对功率如下图所示:\newpage
+\begin{figure}[!ht]
+\centering
+\caption{耿氏二极管的伏安特性与输出功率相对大小曲线}
+\includegraphics[width=350pt]{D:/ODE/Diode.eps}
+\end{figure}
+
+
+用驻波测量线实测两个驻波波峰的z轴标度分别为$133mm,108mm$,其间距为半个波导导长，从而可求出波导波长$\lambda_g=50mm$.
+由波导波长公式(1)可解出$\lambda=33.74mm$,代入群速度公式$v_g=c \sqrt{1-(\frac{\lambda}{2a})^2}$可求出$v_g=2.02\times 10^8 m/s$
+由$v_g v_p=c^2$可求出相速度为$4.45\times 10^8 m/s$.
+由谐振式频率计给出的微波频率为$f=9.028GHz$,代入波导波长计算公式可得$\lambda_g=48.4mm$.
+
+
+在两个波峰间采样，得到若干组$z - U$的样本，根据(2)式作出散点图并拟合的结果如下：
+\begin{figure}[!ht]
+\centering
+\caption{耿氏二极管的伏安特性与输出功率相对大小曲线}
+\includegraphics[width=350pt]{image/figure2.eps}
+\end{figure}
+
+
+上图中检波电压的单位uV未化为V处理，得到的检波率大小为1.80.\newline
+
+
+驻波比测量,对于匹配负载，为小驻波比，采用测量多组波腹和波节电压再取平均值代入公式$U=k E^{\alpha}$计算的方法，得到
+匹配负载驻波比的测量值为1.06.
+
+对于开路负载，为中驻波比，只需测一组数据计算即可，开路负载驻波比的测量值为1.76.
+
+对于喇叭天线，为小驻波比，喇叭天线驻波比的测量值为1.17.
+
+对于失配负载，为大驻波比，直接测量误差较大，应采用二倍最小值法。结合千分表测得在波节两旁二倍最小值点的间距为3.17mm,
+代入公式$\rho=\sqrt{1+\frac{1}{\sin^2(\pi W/\lambda_g)}}$求得 失配负载驻波比的测量值为5.15.
+
+
+
+\subsection{\textbf{\fontsize{12pt}{\baselineskip}{讨论分析}}}
+对于失配负载，使用单螺调配器可以使其驻波比降至1~2之间，这是因为调配器可以产生一个反射波，其幅度与失配元件产生的反射波幅度相等而相
+位相反，从而抵消失配元件在波导中的反射而减少驻波成分。
+
+在观察波辐射的过程中，按照实验指示说明书的步骤，分别观察金属栅框和金属板对微波的反射和透射特性。实验中发现金属栅框的放置角度对
+微波的反射和透射均有较大影响，这和电场的各向异性有关。而微波几乎不能透过金属板但金属板对微波有较好的反射特性。短路负载即采用波导
+终端接金属板的方法。
+
+\section{\textbf{\fontsize{12pt}{\baselineskip}{结论}}}
+
+通过本次实验，得出以下结论:
+\begin{enumerate}
+\item 耿式二极管具有负阻效应，可以产生高频电磁波--微波。
+\item 微波在波导中传播时波长大于在真空中传播。
+\item 使用单螺调配器可以降低失配负载的驻波比。
+\item 波导中的$TE_{10}$波具有偏振特性。
+\end{enumerate}
+
+\end{document}
