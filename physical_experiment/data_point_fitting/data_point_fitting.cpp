@@ -6,7 +6,9 @@
 #include<stdlib.h>
 #include<cmath>
 #include<fstream>
+#include<cstring>
 // 用直线拟合数据点
+// g++ data_point_fitting.cpp -lGL -lGLU -lglut -o build/dpf
 const double Pi=3.14159, R = 8.314;
 using namespace std;
 int ww=400,wh=400;
