@@ -1,5 +1,4 @@
-﻿\documentclass[10.5pt]{article}
-\usepackage{xeCJK}%preamble part
+﻿\documentclass[10.5pt]{ctexart}
 \usepackage{graphicx}
 \usepackage{indentfirst}
 \usepackage[a4paper, inner=1.5cm, outer=3cm, top=2cm, bottom=3cm, bindingoffset=1cm]{geometry}
@@ -8,10 +7,6 @@
 \usepackage{fontspec}
 \usepackage{gensymb}
 \usepackage[lofdepth,lotdepth]{subfig}
-\setCJKmainfont[BoldFont={SimHei}]{SimSun}
-\setCJKmonofont{SimSun}
-\setmainfont{Times New Roman}
-\newCJKfontfamily[hei]\heiti{SimHei}
 \setlength{\extrarowheight}{4pt}
 \begin{document}
 \title{\textbf{\fontsize{15.75pt}{\baselineskip}{微波实验报告}}} % 15.75pt is 3 号 in chinese
@@ -49,11 +44,11 @@ $\log U - \log |\sin(2 \pi z /\lambda_g)|$的直线拟合式:
 \section{\textbf{\fontsize{12pt}{\baselineskip}{结果与讨论}}}
 \subsection{\textbf{\fontsize{12pt}{\baselineskip}{计算的数据、结果}}}
 实测耿氏二极管的伏安特性及输出微波的相对功率如下图所示:\newpage
-\begin{figure}[!ht]
-\centering
-\caption{耿氏二极管的伏安特性与输出功率相对大小曲线}
-\includegraphics[width=350pt]{D:/ODE/Diode.eps}
-\end{figure}
+%\begin{figure}[!ht]
+%\centering
+%\caption{耿氏二极管的伏安特性与输出功率相对大小曲线}
+%\includegraphics[width=350pt]{D:/ODE/Diode.eps}
+%\end{figure}
 
 
 用驻波测量线实测两个驻波波峰的z轴标度分别为$133mm,108mm$,其间距为半个波导导长，从而可求出波导波长$\lambda_g=50mm$.
@@ -63,11 +58,11 @@ $\log U - \log |\sin(2 \pi z /\lambda_g)|$的直线拟合式:
 
 
 在两个波峰间采样，得到若干组$z - U$的样本，根据(2)式作出散点图并拟合的结果如下：
-\begin{figure}[!ht]
-\centering
-\caption{耿氏二极管的伏安特性与输出功率相对大小曲线}
-\includegraphics[width=350pt]{image/figure2.eps}
-\end{figure}
+%\begin{figure}[!ht]
+%\centering
+%\caption{耿氏二极管的伏安特性与输出功率相对大小曲线}
+%\includegraphics[width=350pt]{image/figure2.eps}
+%\end{figure}
 
 
 上图中检波电压的单位uV未化为V处理，得到的检波率大小为1.80.\newline
