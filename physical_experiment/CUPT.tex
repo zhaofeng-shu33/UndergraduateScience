@@ -1,8 +1,9 @@
 
-\documentclass{article}
+\documentclass{ctexart}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{amsmath}
-
+\def\func#1{\mathop{\rm #1}}%
+\def\doint{\mathop{\displaystyle \oint}}%
 \setcounter{MaxMatrixCols}{10}
 %TCIDATA{OutputFilter=LATEX.DLL}
 %TCIDATA{Version=5.00.0.2552}
@@ -35,7 +36,7 @@
 \newtheorem{solution}[theorem]{Solution}
 \newtheorem{summary}[theorem]{Summary}
 \newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
-\input{tcilatex}
+
 
 \begin{document}
 
@@ -179,7 +180,7 @@ boundary of each region counter-clockwisely. By harmonic function theory,
 such information implies $m$ is the potential field of the sample.(At this
 point
 
-it needs further varification from \U{552f}\U{4e00}\U{6027}\U{5b9a}\U{7406})
+it needs further varification from 唯一性定理)
 
 $V_{CD}=\int \frac{\partial m}{\partial t_{x}}dt_{x}+\frac{\partial m}{%
 \partial t_{y}}dt_{y},$ by Cauchy-Riemann Equation

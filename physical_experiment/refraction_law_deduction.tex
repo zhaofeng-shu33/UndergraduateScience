@@ -1,0 +1,87 @@
+
+\documentclass{ctexart}
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Tuesday, October 20, 2015 18:47:15}
+%TCIDATA{LastRevised=Tuesday, October 20, 2015 20:41:58}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+
+
+\begin{document}
+
+
+折射定律用Fermat Principle+Lagrange Multiplier 
+证明如下
+
+设光经过两种折射率%
+分别为$n_{1},n_{2}$的介质分界%
+面,
+
+设介质$m_{i}$折射率为$n_{i}$,%
+内有点$P_{i}\left( i=1,2\right) $
+
+光经过$P_{1}\in m_{1},P_{2}\in m_{2}$的路%
+径要极小化光程$s=n_{1}\int
+ds_{1}+n_{2}\int ds_{2}$
+
+$\int ds_{i}$分别表示光在介质%
+$m_{i}$中的几何路径$,$若此%
+路径与介面交点为$P$,则%
+极小化$s\iff $极小化$P_{i}P$子%
+路径$\left( i=1,2\right) $
+
+由平面几何线段极小%
+化两点间的路径知,路%
+径$P_{i}P$应取线段,此时极%
+小化光程的必要条件%
+是$ds=0\iff n_{1}ds_{1}+n_{2}ds_{2}=0\qquad \left( \ast \right) $
+
+设介面法线方向为单%
+位向量$\vec{n}$,$\left\vert \overrightarrow{PP}_{i}\cdot 
+\vec{n}\right\vert =l_{i},$由$S_{i}^{2}-l_{i}^{2}=const\implies $
+
+$S_{i}dS_{i}-l_{i}dl_{i}=0$分别代入$\left( \ast
+\right) $式$\implies $
+
+$n_{1}\frac{l_{1}}{S_{1}}dl_{1}+n_{2}\frac{l_{2}}{S_{2}}dl_{2}=0$与$%
+dl_{1}+dl_{2}=0\Longleftarrow l_{1}+l_{2}=const\qquad $联立%
+以解除约束即推得
+
+$n_{1}\frac{l_{1}}{S_{1}}=n_{2}\frac{l_{2}}{S_{2}}$即为$%
+n_{1}\sin i=n_{2}\sin r.$
+
+\end{document}
