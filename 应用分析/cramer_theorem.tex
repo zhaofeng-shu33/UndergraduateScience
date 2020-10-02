@@ -1,0 +1,71 @@
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\title{A simple example for Cramér's Theorem}
+\author{Feng Zhao}
+\date
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+Cramér's Theorem is a general statement in large
+derivation theory, both applicable to discrete and
+continuous random variables. We use the notation
+as Section 2.2 in \cite{dd}.
+We use the example as Exercise 2.2.23 (d) in
+\cite{dd},
+which says that $\Lambda^*(x) = \frac{x^2}{2\sigma^2}$
+if $X \sim \mathcal{N}(0, \sigma^2)$.
+This can be got by consider the definition of
+$\Lambda(x)$ in Definition 2.2.2
+$$
+\Lambda^*(x) \triangleq \sup_{\lambda \in R} \lambda x - \Lambda(\lambda)
+$$
+where $\Lambda(\lambda)$ is the logarithmic moment generating function of random variable $X$.
+For Gaussian distribution $\mathcal{N}(0, \sigma^2)$ we have
+$$
+\Lambda(\lambda) = \frac{\lambda^2}{2}\sigma^2
+$$
+Therefore, we can get $\Lambda^*(x) = \frac{x^2}{2\sigma^2}$.
+
+Now by Cramér's Theorem (Theorem 2.2.3 in \cite{dd}),
+we have
+\begin{equation}\label{eq:np}
+\lim_{n\to \infty} \frac{1}{n}\log P_n = -\frac{x^2}{2\sigma^2}
+\end{equation}
+where
+$$
+P_n = P(\sum_{i=1}^n X_i > nx)
+$$
+and $X_i$ i.i.d. $\sim \mathcal{N}(0, \sigma^2)$.
+Or equivalently, $P_n = P(\bar{X}>x)$ where
+$\bar{X} = \frac{1}{n} \sum_{i=1}^n X_i$.
+
+As an illustration, we use integral techniques to
+show that the conclusion \eqref{eq:np} holds for
+$\sigma = 1$. For general $\sigma$, a simple
+scaling is enough.
+\begin{align*}
+P_n &= \int_{\sqrt{n}x}^{+\infty} \frac{1}{\sqrt{2\pi}}
+\exp(-\frac{t^2}{2})dt \\
+&= \frac{1}{\sqrt{2\pi n}x}\exp(-\frac{nx^2}{2})
+- \int_{\sqrt{n}x}^{+\infty} \frac{1}{\sqrt{2\pi}t^2}
+\exp(-\frac{t^2}{2})dt
+\end{align*}
+The second term has at least $\frac{1}{n^2}$ times
+smaller than $P_n$ and we neglect it as high order term. Therefore, we have
+$$
+P_n \sim \frac{1}{\sqrt{2\pi n}x}\exp(-\frac{nx^2}{2})
+$$
+and \eqref{eq:np} holds.
+
+This technique (integral by parts) in asymptotic analysis is called Laplace's method \cite{aa}.
+\begin{thebibliography}{9}
+\bibitem{dd} Zeitouni, A. Dembo O., and O. Dembo. "Large Deviations Techniques and Applications." (1998).
+\bibitem{aa} J.D. Murray Asymptotic Analysis, Springer-Verlag, Applied Mathematical Sciences,
+1974
+\end{thebibliography}
+\end{document}
