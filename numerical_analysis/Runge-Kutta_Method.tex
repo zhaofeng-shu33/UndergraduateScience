@@ -1,5 +1,5 @@
 
-\documentclass{article}
+\documentclass{ctexart}
 \usepackage{amsmath}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -38,9 +38,15 @@
 
 \begin{document}
 
-
-隐式一级二阶Runge-Kutta方法%
-推导:
+\section{Summary of Explicit Runge-Kutta method}
+The order refers to the order of the global error.
+\begin{enumerate}
+\item One stage, first order: Euler's method
+\item Two stages, second order: Midpoint, improved Euler's method \cite{heun}
+\item Three stages, third order: Heun's third-order method, Kutta's third-order method
+\item Four stages, fourth order: Classic fourth-order method.
+\end{enumerate}
+\section{隐式一级二阶Runge-Kutta方法推导}
 
 设线性迭代公式有形%
 式$y_{n+1}=y_{n}+bhk,$
@@ -76,8 +82,7 @@ b=1,a=\frac{1}{2},c=\frac{1}{2}$
 
 \bigskip 
 
-隐式二级二阶Runge-Kutta方法%
-推导:
+\section{隐式二级二阶Runge-Kutta方法推导}
 
 设线性迭代公式有形%
 式$y_{n+1}=y_{n}+h\left( b_{1}k_{1}+b_{2}k_{2}\right) ,$
@@ -152,5 +157,8 @@ $=\left( 1-b\right) y^{\prime }\left( t_{n}\right) h+\left( \left( \frac{1}{2%
 
 若要求精度达3阶则有$%
 b=1,a=\frac{1}{2},c=\frac{1}{2}$
-
+\bibstyle{plain}
+\begin{thebibliography}{9}
+\bibitem{heun} K. Heun, Über lineare Differentialgleichungen zweiter Ordnung, deren Lösungen durch den Kettenbruchalgorithmus verknüpft sind. Habilitationschrift, 1886
+\end{thebibliography}
 \end{document}
