@@ -46,6 +46,16 @@ The order refers to the order of the global error.
 \item Three stages, third order: Heun's third-order method, Kutta's third-order method
 \item Four stages, fourth order: Classic fourth-order method.
 \end{enumerate}
+Embedding RK methods, which has the ability to estimate the local error.
+\begin{enumerate}
+    \item Two stage, second order embedding Euler (first order): Midpoint(2/1)
+    \item Three stages, third order: Bogacki-Shampine method(3/2)
+    \item Five stages, fourth order: Fehlberg (4/3) \footnote{In Fehlberg's original idea
+    \cite{fehlberg}, the 4th order is used to estimate
+    errors. But we can also use it to step forward, which is implemented in \texttt{OrdinaryDiffEq} package of \texttt{Julia} }
+\end{enumerate}
+    
+
 \section{隐式一级二阶Runge-Kutta方法推导}
 
 设线性迭代公式有形%
@@ -160,5 +170,6 @@ b=1,a=\frac{1}{2},c=\frac{1}{2}$
 \bibstyle{plain}
 \begin{thebibliography}{9}
 \bibitem{heun} K. Heun, Über lineare Differentialgleichungen zweiter Ordnung, deren Lösungen durch den Kettenbruchalgorithmus verknüpft sind. Habilitationschrift, 1886
+\bibitem{fehlberg} Erwin Fehlberg (1969) Low-order classical Runge-Kutta formulas with stepsize control and their application to some heat transfer problems. Vol. 315. National aeronautics and space administration.
 \end{thebibliography}
 \end{document}
