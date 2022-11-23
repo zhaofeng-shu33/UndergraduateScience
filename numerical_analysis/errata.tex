@@ -1,0 +1,17 @@
+\documentclass{ctexart}
+\begin{document}
+    In the third edition of 数值分析基础：
+正文
+\section{浮点数标准}
+    P6页左右介绍的浮点数表示不符合IEEE754标准,
+    如果采用 $\pm 1.d_1\dots d_t \times 2^J$的话
+    第11行中应改为 $m=2^L, M=2^U(2-2^{-t})$，
+    否则极易引起读者的误解。
+\section{选主元的高斯消去法的数值稳定性}
+更常用的一个名称是 LUP分解，其中 $P$ 是 pivoting 的首字母，
+英文全称为 LU decomposition with pivoting。
+定理为可逆矩阵存在 LUP分解。
+P66页定理4.4的Comment中应该是（2）式从（1）式和定理4.1中推出来的。
+误写成了定理4.3。
+
+\end{document}

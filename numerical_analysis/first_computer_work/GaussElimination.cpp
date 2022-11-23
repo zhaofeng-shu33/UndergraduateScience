@@ -57,10 +57,11 @@ class Linear_Equation: public Matrix{
   private: 
     double* solution_vector,*b;
     bool ERROR;
-};  
-int main(){
+};
+
+int main() {
     char ch1;
-    cout << "input the type (R or S)\n";
+    cout << "input the type (R or S), R is regular matrix while S represents sparse matrix\n";
     cin >> ch1;
     if (ch1 != 'S' && ch1 != 'R') {
         cout << "invalid type \n";
@@ -108,9 +109,11 @@ int main(){
     delete [] q;
      
     return 0;
-}    
+}
+
 void Linear_Equation::Solve(){
-   Matrix Left(order);double Permu[order]; 
+   Matrix Left(order);
+   double* Permu = new double[order]; 
    for(int i=0;i<order;i++)
        Permu[i]=i;
     for(int k = 0; k <= order - 2; k++ ){ //从矩阵第一行到第order-1行进行 高斯消去
@@ -131,7 +134,7 @@ void Linear_Equation::Solve(){
       //上面的算法使用选主元的Gauss 消去法使得a[k][k]为所在列绝对值最大的元素。
       //同时记下每步使用的初等排列阵。  
       
-     double l[order];
+     double* l = new double[order];
      for(int i = k+1; i < order; i++ ){
        
          l[i]=initial_address[i*order+k]/initial_address[k*order+k];
@@ -143,7 +146,8 @@ void Linear_Equation::Solve(){
 
           }  
      }
-          //用数组l对Left矩阵进行赋值。
+     delete l;
+     //用数组l对Left矩阵进行赋值。
       
        
   }  
