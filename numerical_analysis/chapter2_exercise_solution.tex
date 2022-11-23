@@ -41,11 +41,11 @@
 \newtheorem{summary}[theorem]{Summary}
 \newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
 \input{macros.tex}
-
+\usepackage{amssymb}
 \begin{document}
 
 
-\bigskip Numurical Analysis 赵丰 2013012178
+\bigskip Numurical Analysis Feng Zhao 2013012178
 
 Problem 1:
 
@@ -244,16 +244,17 @@ matrix:
 
 Problem 2:
 
-$\left( 1\right) $Initial condition: $l_{1}=\sqrt{b_{1}}$and $m_{2}=\frac{%
-a_{2}}{l_{1}};$
+$\left( 1\right) $ Initial condition: $l_{1}=\sqrt{b_{1}}$
 
-Recursive formula: $l_{i}=\sqrt{b_{i}-m_{i}^{2}}$ and $m_{i+1}=\frac{a_{i+1}%
-}{l_{i}}.$
+Recursive formula:
+$m_{i}=\frac{a_{i}}{l_{i-1}}$
+and $l_{i}=\sqrt{b_{i}-m_{i}^{2}}$ for $i=2,\dots, n$.
 
-$\left( 2\right) A=L^{T}L$ and euqation system $Ax=d\iff L\left(
+$\left( 2\right) A=L^{T}L$ and equation
+system $Ax=d\iff L\left(
 L^{T}x\right) =d.$
 
-We first solve $Ly=d,$then solve $L^{T}x=y.$
+We first solve $Ly=d,$ then solve $L^{T}x=y.$
 
 For $Ly=d.\qquad \qquad \qquad \qquad \qquad $For $L^{T}x=y$
 
@@ -337,11 +338,11 @@ Solve the equation $\det (\lambda I-A)=0,$ we get $\lambda _{1,2}=99\pm
 
 $\implies cond(A)_{2}=\left\vert \frac{99+13\sqrt{58}}{99-13\sqrt{58}}%
 \right\vert =\left( 13\sqrt{58}+99\right) ^{2}=\allowbreak 2574\sqrt{58}%
-+19\,603.$
++19\,603 \approx 39206$.
 
 $cond(A)_{\infty }=\left\Vert A\right\Vert _{\infty }\left\Vert
 A^{-1}\right\Vert _{\infty },$where $\left\Vert \cdot \right\Vert _{\infty }$
-represents the infinity norm on $\NEG{R}^{2}.$
+represents the infinity norm on $\mathbb{R}^{2}.$
 
 $\left\Vert A\right\Vert _{\infty }=\underset{i=1or2}{\max }\left(
 \left\vert a_{i1}\right\vert +\left\vert a_{i2}\right\vert \right)
