@@ -9,7 +9,8 @@
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
 %TCIDATA{CSTFile=40 LaTeX article.cst}
-
+\usepackage{ctex}
+\usepackage{amsmath}
 \newtheorem{theorem}{Theorem}
 \newtheorem{acknowledgement}[theorem]{Acknowledgement}
 \newtheorem{algorithm}[theorem]{Algorithm}
@@ -32,13 +33,15 @@
 \newtheorem{solution}[theorem]{Solution}
 \newtheorem{summary}[theorem]{Summary}
 \newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
-\input{macros.tex}
+
 
 \begin{document}
 
-Proof of one conclusion in error domination
 
-Proof of Thm 4.3 left hand in textbook P63
+
+\section{Inequality about the condition number}
+Proof of one conclusion in error domination
+Proof of Thm 4.3 left hand side in textbook P63
 
 $Ax=b,A$ is a $n\times n$ real matrix, $b$ is a n-dimensional column vector,
 x is the solution of this linear
@@ -65,4 +68,34 @@ A^{-1}\right\Vert \left\Vert b\right\Vert }\leq \frac{\left\Vert \left( x-%
 \widetilde{x}\right) \right\Vert }{\left\Vert A^{-1}b\right\Vert }=\frac{%
 \left\Vert \widetilde{x}-x\right\Vert }{\left\Vert x\right\Vert }$
 
+\section{主对角占优矩阵的Jacobi迭代收敛性证明}
+课本81页，定理2.1
+\begin{proof}
+因为 $A$ 是对角占优矩阵，
+$B_J=I-D^{-1}A$。设$B_J=\{b_{ij}\}$。则
+对角元$b_{ii}=0$，非对角元满足
+$\sum_{j=1}^{n} |b_{ij}| < 1$。
+设 $\lambda, x$ 分别是$B_J$的特征值和特征向量，且
+$||x||=1$。
+由 $B_J x = \lambda x$ 可得
+\begin{equation*}
+    |\lambda x_i| = |\sum_{j=1}^n b_j x_j| 
+    \leq \sum_{j=1}^{n} |b_{ij}| < 1, \textrm{ for } i=1,\dots, n
+\end{equation*}
+因此， $|\lambda|<1 \Rightarrow \rho(B_J)<1$。
+由课本定理1.4可知Jacobi迭代法收敛到真值。
+\end{proof}
+\section{Steffensen 加速收敛}
+此节作为课本112页定理3.3的一个注解。
+$\varphi(x) = (x^2-3)/2$ 的不动点迭代用于求解
+$x^2-2x-3=0$。但这个格式不收敛（初始值$x_0=4$），
+使用
+Steffensen 格式构造
+\begin{equation}
+    \psi(x) =     \frac{x\varphi(\varphi(x))
+    - [\varphi(x)]^2}
+    {\varphi(\varphi(x)) - 2\varphi(x) + x}
+\end{equation}
+后再使用不动点迭代即收敛到二次方程一个解$x=3$（迭代3次的结果保留4位有效数字
+是 3.006）。
 \end{document}
