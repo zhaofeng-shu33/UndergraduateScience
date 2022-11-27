@@ -97,5 +97,17 @@ Steffensen 格式构造
     {\varphi(\varphi(x)) - 2\varphi(x) + x}
 \end{equation}
 后再使用不动点迭代即收敛到二次方程一个解$x=3$（迭代3次的结果保留4位有效数字
-是 3.006）。
+是 3.006）。并且可以验证，Steffensen 是二阶收敛的。
+数值实验表明$0.4\leq \frac{e_{n+1}}{e^2_n} \leq 0.8$。
+\section{数据拟合中多项式的阶数与误差的 trade-off}
+出自 Applied Numerical Analysis, 7th Edition, Pearson Education, 3.5 Least-Square Approximations
+
+假设有 $N$ 个数据点，拟合多项式$p(x)$
+的最高阶数为 $n$，$e_i=y_i-p(x_i)$，则$n$的选取应使得
+方差$\sigma^2$最小。
+\begin{equation}
+\sigma^2 = \frac{\sum e_i^2}{N-n-1}
+\end{equation}
+$n=N-1$时过拟合，总的误差也为零。
 \end{document}
+
